@@ -104,10 +104,11 @@ Price ,rating, and alphabet
 
 | id  |  content | Github issue Numb
 | ------ | ------ | ------ |
-|  [#1](https://github.com/JoGorska/bonsai-shop/issues/1) | As an unauthenticated user/customer, I would like website navigation to be fast and easy|  |
-|  [#2](https://github.com/JoGorska/bonsai-shop/issues/2) | As an unauthenticated user/customer, I would like the ability to browse through all the products available on the site.|  |
+|  [#0](https://github.com/rockroman/CI_PP5_Blade/issues/3) | As an unauthenticated user/customer I would Like be able to view a website homepage that provides an overview of the site's offerings|  |
+|  [#1](https://github.com/rockroman/CI_PP5_Blade/issues/4) | As an unauthenticated user/customer I would Like website navigation to be easy and intuitive so it allows me to find products and information I'm looking for|  |
+|  [#2](https://github.com/JoGorska/bonsai-shop/issues/2) | As an unauthenticated user/customer, I would like to be able to see a list of featured products on the homepage, which will highlight some of the most popular or interesting items available for purchase.|  |
 |  [#3](https://github.com/JoGorska/bonsai-shop/issues/3) | As an unauthenticated user/customer, I would like to search the website to see what kind of product are offered to purchase|  |
-|  [#4](https://github.com/JoGorska/bonsai-shop/issues/4) | A s an unauthenticated user/customer, I would like to see a details of a products on a website such as(description, price)|  |
+|  [#4](https://github.com/JoGorska/bonsai-shop/issues/4) | As an unauthenticated user/customer, I would like to see a details of a products on a website such as(description, price)|  |
 |  [#5](https://github.com/JoGorska/bonsai-shop/issues/6) | As an unauthenticated user/customer, I would like functionality to refine my search of products on a website by
 Price ,rating, and alphabet ||
 |  [#6](https://github.com/JoGorska/bonsai-shop/issues/7) | As an unauthenticated user/customer, I would like functionality to select product and add it to my shopping basket| trol |
