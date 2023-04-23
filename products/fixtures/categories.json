@@ -1,0 +1,35 @@
+[
+    {
+        "pk": 1,
+        "model": "products.category",
+        "fields": {
+            "name": "Gentelman",
+            "notes": "Knives made for sharp and classy Gentleman's",
+            "slug": "",
+            "friendly_name": "Gentelman "
+        }
+    },
+    {
+        "pk": 2,
+        "model": "products.category",
+        "fields": {
+            "name": "Craftsman",
+            "notes": "Knives made for a true man of Craft and style",
+            "slug": "",
+            "friendly_name": "Craftsman"
+        }
+    },
+    {
+        "pk": 3,
+        "model": "products.category",
+        "fields": {
+            "name": "Explorer",
+            "notes": "Knives made for soul of a fearlees Explorer",
+            "slug": "",
+            "friendly_name": "Explorer"
+        }
+    }
+]
+
+
+
