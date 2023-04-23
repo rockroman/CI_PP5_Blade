@@ -17,6 +17,9 @@ class Category(models.Model):
     """
     class for category model
     """
+    class Meta:
+        verbose_name_plural = 'Categories'
+
     name = models.CharField(max_length=254)
     notes = models.TextField(null=True, blank=True)
     slug = models.SlugField(max_length=254, blank=True, null=True)
