@@ -95,7 +95,7 @@ html{
     color: #a9a6a6;
   }
 
-  label.radio {
+  /* label.radio {
     cursor: pointer;
   }
 
@@ -124,4 +124,4 @@ html{
     border-color: #dc3545;
     background-color: #dc3545;
     color: #fff;
-  }
+  } */

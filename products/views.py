@@ -14,7 +14,7 @@ def store_products(request):
     template = 'products/store_products.html'
 
     context = {
-        'products ': products,
+        'products': products,
     }
 
     return render(request,template, context)
