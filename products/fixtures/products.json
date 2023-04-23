@@ -1,0 +1,62 @@
+[
+    {
+        "pk": 1,
+        "model": "products.product",
+        "fields": {
+            "category": 2,
+            "item_no": "A123",
+            "name": "Dark Moon",
+            "description":"nice knife uuuu",
+            "price": 245.50,
+            "blade_length":"9.2",
+            "handle_material":"Camel bone",
+            "image_url": "",
+            "image": "dark_moon.jpg"
+        }
+    },
+    {
+        "pk": 2,
+        "model": "products.product",
+        "fields": {
+            "category": 1,
+            "item_no": "A683",
+            "name": "Smooth Gentleman",
+            "description":"very good thing",
+            "price": 285.00,
+            "blade_length":"9.2",
+            "handle_material":"Fibre Glass",
+            "image_url": "",
+            "image": "smooth_gent.jpg"
+        }
+    },
+    {
+        "pk": 3,
+        "model": "products.product",
+        "fields": {
+            "category": 3,
+            "item_no": "A243",
+            "name": "Silk Light",
+            "description":"very good thing ooooooo",
+            "price": 185.00,
+            "blade_length":"8.5",
+            "handle_material":"Marble thing",
+            "image_url": "",
+            "image": "silk_light.jpg"
+        }
+    },
+    {
+        "pk": 4,
+        "model": "products.product",
+        "fields": {
+            "category": 1,
+            "item_no": "A943",
+            "name": "Brown Dagger",
+            "description":"very baad thing ooooooo",
+            "price": 185.00,
+            "blade_length":"8.2",
+            "handle_material":"oak",
+            "image_url": "",
+            "image": "brown_dagger.jpg"
+        }
+    }
+]
