@@ -85,8 +85,8 @@ Price ,rating, and alphabet
 18.
 19.
 20.
-21.
-22.
+21. As an authenticated user/customer, I would like functionality to delete an account(profile) if I find no use in using the website anymore
+22. As an authenticated user/customer, I would like functionality to leave review on a product in the means of a comment so that other users can have some insight to help them in purchasing decision
 23.
 24.
 25.
