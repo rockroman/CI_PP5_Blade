@@ -37,10 +37,11 @@
                         Categories
                     </a>
                 <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="#">Action</a></li>
-                    <li><a class="dropdown-item" href="#">Another action</a></li>
-                    <li><a class="dropdown-item" href="#">Another action</a></li>
-                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                    <li><a class="dropdown-item" href="{% url 'products:store_products'%}?category=Explorer">Explorer</a></li>
+                    <li><a class="dropdown-item" href="{% url 'products:store_products'%}?category=Craftsman">Craftsman</a></li>
+                    <li><a class="dropdown-item" href="{% url 'products:store_products'%}?category=Gentleman">Gentleman</a></li>
+                    <li><a class="dropdown-item" href="{% url 'products:store_products'%}?category=Explorer,Craftsman,Gentleman">All categories</a></li>
+
                 </ul>
                 </li>
                 <li class="nav-item">
@@ -68,7 +69,7 @@
         <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
     </div>
     <div class="offcanvas-body">
-        <form class="d-flex " method="GET" >
+        <form class="d-flex " method="GET" action="{% url 'products:store_products' %}">
             <div class="input-group">
                 <input class="form-control" type="search" name="q" placeholder="Search" aria-label="Search">
                 <button class="btn" type="submit"><i class="bi bi-search"></i></button>
