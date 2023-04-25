@@ -24,13 +24,14 @@
                 </li> -->
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        Products
+                       All Knives
                     </a>
                 <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="{% url 'products:store_products' %}">All products</a></li>
-                    <li><a class="dropdown-item" href="#">Another action</a></li>
-                    <li><a class="dropdown-item" href="#">Another action</a></li>
-                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                    <li><a class="dropdown-item" href="{% url 'products:store_products' %}?sort=price&direction=asc">By Price</a></li>
+                    <li><a class="dropdown-item" href="{% url 'products:store_products' %}?sort=blade_length&direction=desc">By Blade Length </a></li>
+                    <li><a class="dropdown-item" href="{% url 'products:store_products' %}?sort=handle_material&direction=desc">By Handle Material</a></li>
+                    <li><a class="dropdown-item" href="{% url 'products:store_products' %}?sort=category&direction=asc">By Category</a></li>
+                    <li><a class="dropdown-item" href="{% url 'products:store_products' %}">All Knives</a></li>
                 </ul>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -45,7 +46,7 @@
                 </ul>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link ">Disabled</a>
+                    <a class="nav-link ">About</a>
                 </li>
             </ul>
             <div class="d-none d-lg-flex flex-row w-auto" >
@@ -91,20 +92,29 @@
     <div class="offcanvas-body">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Home</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Link</a>
+                <a class="nav-link active" aria-current="page" href="{% url 'home:home' %}">Home</a>
             </li>
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                Products
+                All Knives
                 </a>
             <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="{% url 'products:store_products' %}">All Products</a></li>
-                <li><a class="dropdown-item" href="#">Another action</a></li>
-                <li><a class="dropdown-item" href="#">Another action</a></li>
-                <li><a class="dropdown-item" href="#">Something else here</a></li>
+                <li><a class="dropdown-item" href="{% url 'products:store_products' %}?sort=price&direction=asc">By Price</a></li>
+                <li><a class="dropdown-item" href="{% url 'products:store_products' %}?sort=blade_length&direction=desc">By Blade Length </a></li>
+                <li><a class="dropdown-item" href="{% url 'products:store_products' %}?sort=handle_material&direction=desc">By Handle Material</a></li>
+                <li><a class="dropdown-item" href="{% url 'products:store_products' %}?sort=category&direction=asc">By Category</a></li>
+                <li><a class="dropdown-item" href="{% url 'products:store_products' %}">All Knives</a></li>
+            </ul>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Categories
+                </a>
+            <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="{% url 'products:store_products'%}?category=Explorer">Explorer</a></li>
+                    <li><a class="dropdown-item" href="{% url 'products:store_products'%}?category=Craftsman">Craftsman</a></li>
+                    <li><a class="dropdown-item" href="{% url 'products:store_products'%}?category=Gentleman">Gentleman</a></li>
+                    <li><a class="dropdown-item" href="{% url 'products:store_products'%}?category=Explorer,Craftsman,Gentleman">All categories</a></li>
             </ul>
             </li>
             <li class="nav-item">
