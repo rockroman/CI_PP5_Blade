@@ -5,15 +5,51 @@
 {% include 'partials/top_main_nav.html' %}
 
 <div class="container-fluid mt-3 mb-1">
-    <div class="row">
-        <div class="col text-center mt-3">
-            PRODUCTS
+    <h1 class="text-center">
+        {% if current_categories  %}
 
+         KNIVES
+        {% else %}
+        KNIVES
+
+        {% endif %}
+
+    </h1>
+    <div class="row">
+            <!-- sorting option -->
+
+            <div class="row mt-1 mb-2 d-flex justify-content-between">
+                <div class="col-sm-6 col-md-6 col-lg-4 col-xl-4 my-auto order-md-last d-flex justify-content-center justify-content-md-end ">
+                    <div class="sort-select-wrapper w-50">
+
+                        <select id="sort-selector" class="custom-select p-1 custom-select-sm rounded-2 border border-{% if sorting != 'None_None' %}info{% else %}black{% endif %}">
+                            <option value="reset" {% if sorting == 'None_None' %}selected{% endif %}>Filter</option>
+                            <option value="price_asc" {% if sorting == 'price_asc' %}selected{% endif %}>Price (low to high)</option>
+                            <option value="price_desc" {% if sorting == 'price_desc' %}selected{% endif %}>Price (high to low)</option>
+                            <option value="rating_asc" {% if sorting == 'blade_length_asc' %}selected{% endif %}>Blade Length (low to high)</option>
+                            <option value="rating_desc" {% if sorting == 'blade_length_desc' %}selected{% endif %}>Blade Length (high to low)</option>
+                            <option value="name_asc" {% if sorting == 'name_asc' %}selected{% endif %}>Name (A-Z)</option>
+                            <option value="name_desc" {% if sorting == 'name_desc' %}selected{% endif %}>Name (Z-A)</option>
+                            <option value="category_asc" {% if sorting == 'category_asc' %}selected{% endif %}>Category (A-Z)</option>
+                            <option value="category_desc" {% if sorting == 'category_desc' %}selected{% endif %}>Category (Z-A)</option>
+                        </select>
+                    </div>
+            </div>
+            <div class="col-sm-6 col-md-6 col-lg-4 col-xl-4  order-md-last">
+                <p class="text-muted mt-3 text-center text-md-left">
+                    {% if search_term or current_categories or sorting != 'None_None' %}
+                    {% endif %}
+                    {{ products|length }} Products{% if search_term %} found for <strong>"{{ search_term }}"</strong>{% endif %}
+                </p>
+            </div>
         </div>
+
+            <!-- sorting option -->
     </div>
 
     <div class="row">
         <div class="product-container col-10 offset-1 ">
+
             <div class="row g-3">
                 {% for product in products %}
                 <div class="col-sm-6 col-md-6 col-lg-4 col-xl-4 ">
@@ -34,7 +70,15 @@
                                 {{ product.price }} €
                             </div>
                             <div class="d-flex justify-content-between align-items-center mt-2 mb-2">
-                                <div class="ratings"> <i class="fa fa-star"></i> <span>4.5</span></div>
+                                {% if product.category  %}
+                                <div>
+                                    <a class="text-dark text-decoration-none" href="{% url 'products:store_products' %}?category={{ product.category.name }}">
+                                        {{ product.category.friendly_name }}
+                                    </a>
+
+                                </div>
+                                {% else %}
+                                {% endif %}
                                 <div class="">
                                     <a class="btn" href="#"><i class="bi bi-cart3" style="-webkit-text-stroke-width: 1px; font-size: 1.3rem;"></i></a>
                                     <a class="btn" href="#"><i class="bi bi-eye" style="-webkit-text-stroke-width: 1px; font-size: 1.3rem;"></i> </a>
