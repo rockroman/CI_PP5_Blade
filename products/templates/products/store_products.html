@@ -5,7 +5,9 @@
 {% include 'partials/top_main_nav.html' %}
 
 <div class="container-fluid mt-3 mb-1">
+
     <h1 class="text-center">
+
         {% if current_categories  %}
 
          KNIVES
@@ -18,16 +20,16 @@
     <div class="row">
             <!-- sorting option -->
 
-            <div class="row mt-1 mb-2 d-flex justify-content-between">
-                <div class="col-sm-6 col-md-6 col-lg-4 col-xl-4 my-auto order-md-last d-flex justify-content-center justify-content-md-end ">
-                    <div class="sort-select-wrapper w-50">
+            <div class="row mt-1 mb-2 d-flex justify-content-around mx-auto">
+                <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4 my-auto  d-flex justify-content-center ">
+                    <div class="sort-select-wrapper">
 
                         <select id="sort-selector" class="custom-select p-1 custom-select-sm rounded-2 border border-{% if sorting != 'None_None' %}info{% else %}black{% endif %}">
                             <option value="reset" {% if sorting == 'None_None' %}selected{% endif %}>Filter</option>
                             <option value="price_asc" {% if sorting == 'price_asc' %}selected{% endif %}>Price (low to high)</option>
                             <option value="price_desc" {% if sorting == 'price_desc' %}selected{% endif %}>Price (high to low)</option>
-                            <option value="rating_asc" {% if sorting == 'blade_length_asc' %}selected{% endif %}>Blade Length (low to high)</option>
-                            <option value="rating_desc" {% if sorting == 'blade_length_desc' %}selected{% endif %}>Blade Length (high to low)</option>
+                            <option value="blade_length_asc" {% if sorting == 'blade_length_asc' %}selected{% endif %}>Blade Length (low to high)</option>
+                            <option value="blade_length_desc" {% if sorting == 'blade_length_desc' %}selected{% endif %}>Blade Length (high to low)</option>
                             <option value="name_asc" {% if sorting == 'name_asc' %}selected{% endif %}>Name (A-Z)</option>
                             <option value="name_desc" {% if sorting == 'name_desc' %}selected{% endif %}>Name (Z-A)</option>
                             <option value="category_asc" {% if sorting == 'category_asc' %}selected{% endif %}>Category (A-Z)</option>
@@ -114,5 +116,11 @@
         </div>
     </div>
 </div>
+<div class="btt-button">
+    <a class="back-to-top d-flex h-100">
+        <i class="bi bi-arrow-up-square-fill" id="back-to-top" ></i>
+    </a>
+</div>
 
 {% endblock %}
+
