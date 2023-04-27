@@ -9,10 +9,10 @@ from . import views
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
-app_name = 'products'
+app_name = 'shopping_cart'
 
 urlpatterns = [
-    # path('c/', views.store_products, name='store_products'),
+    path('cart/', views.cart, name='cart'),
 
 
 ]
