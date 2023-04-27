@@ -12,6 +12,7 @@ from .models import Product, Category
 
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+
 def store_products(request):
 
     products = Product.objects.all()
@@ -22,13 +23,13 @@ def store_products(request):
     direction = None
 
     if request.GET:
-        if 'sort' in  request.GET:
+        if 'sort' in request.GET:
             sortkey = request.GET['sort']
             sort = sortkey
             if sortkey == 'name':
                 sortkey = 'lower_name'
                 products = products.annotate(lower_name=Lower('name'))
-            if sortkey =='category':
+            if sortkey == 'category':
                 sortkey = 'category__name'
             if 'direction' in request.GET:
                 direction = request.GET['direction']
@@ -44,7 +45,7 @@ def store_products(request):
         if 'q' in request.GET:
             query = request.GET['q']
             if not query:
-                messages.error(request,'Your search criteria is empty')
+                messages.error(request, 'Your search criteria is empty')
                 return redirect(reverse('store_products'))
 
             queries = Q(name__icontains=query) | Q(description__icontains=query)
@@ -59,7 +60,7 @@ def store_products(request):
         'sorting': sorting,
     }
 
-    return render(request,template, context)
+    return render(request, template, context)
 
 
 def product_detail(request, product_id):
@@ -70,4 +71,4 @@ def product_detail(request, product_id):
         'product': product,
     }
 
-    return render(request,template, context)
+    return render(request, template, context)
