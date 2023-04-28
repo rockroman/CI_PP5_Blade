@@ -11,7 +11,9 @@
             <button type="button" class="btn" ><i class="bi bi-person" style="font-size:1.5rem; -webkit-text-stroke-width: 1px;"></i></button>
             <!-- <button type="button" class="btn"><i class="bi bi-cart3"></i></button> -->
 
-            <a class="btn py-3" role="button" href="{% url 'shopping_cart:cart' %}"><i class="bi bi-cart3"></i></a>
+            <a class="btn py-3" role="button" href="{% url 'shopping_cart:cart' %}">
+                <i class="bi bi-cart3"></i> <span class="cart-total">{{ request.session.cart|length }}</span>
+            </a>
 
         </div>
 
@@ -58,7 +60,13 @@
                     <button class="btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample-right"><i class="bi bi-search" style="font-size:1rem; -webkit-text-stroke-width: 1px;"></i></button>
                     <button type="button" class="btn" ><i class="bi bi-person" style="font-size:1.5rem; -webkit-text-stroke-width: 1px;"></i></button>
                     <!-- <button type="button" class="btn"><i class="bi bi-cart3"></i></button> -->
-                    <a class="btn py-3" role="button" href="{% url 'shopping_cart:cart' %}"><i class="bi bi-cart3"></i></a>
+                    <a class="btn py-3" role="button" href="{% url 'shopping_cart:cart' %}">
+                        <i class="bi bi-cart3"></i>
+
+
+
+                    </a>
+
                 <!-- </div> -->
             </div>
         </div>
