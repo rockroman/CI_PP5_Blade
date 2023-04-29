@@ -46,7 +46,8 @@ def store_products(request):
             query = request.GET['q']
             if not query:
                 messages.error(request, 'Your search criteria is empty')
-                return redirect(reverse('store_products'))
+
+                return redirect(reverse('products:store_products'))
 
             queries = Q(name__icontains=query) | Q(description__icontains=query)
             products = products.filter(queries)

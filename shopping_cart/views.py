@@ -44,29 +44,27 @@ def cart(request):
 #     return JsonResponse({'data': request.session['cartdata'], 'totalitems': len(request.session['cartdata'])})
 
 
-# def add_to_cart(request):
-
-#     cart_item = {}
-#     cart_item[str(request.POST['id'])] = {
-#         'name': request.POST['name'],
-#         'image': request.POST['image'],
-#         'qty': int(request.POST['qty']),
-#         'price': request.POST['price'],
-#     }
-#     if 'cart' in request.session:
-#         if str(request.POST['id']) in request.session['cart']:
-#             cart_data = request.session['cart']
-#             cart_data[str(request.POST['id'])]['qty'] += int(request.POST['qty'])
-#             cart_data.update(cart_data)
-#             request.session['cart'] = cart_data
-#         else:
-#             cart_data = request.session['cart']
-#             cart_data.update(cart_item)
-#             request.session['cart'] = cart_data
-
-#     else:
-#         request.session['cart'] = cart_item
-
-#     return JsonResponse({'data': request.session['cart'], 'totalitems': len(request.session['cart'])})
 def add_to_cart(request):
-    return JsonResponse()
+
+    cart_item = {}
+    cart_item[str(request.POST['id'])] = {
+        'name': request.POST['name'],
+        'image': request.POST['image'],
+        'qty': int(request.POST['qty']),
+        'price': request.POST['price'],
+    }
+    if 'cart' in request.session:
+        if str(request.POST['id']) in request.session['cart']:
+            cart_data = request.session['cart']
+            cart_data[str(request.POST['id'])]['qty'] += int(request.POST['qty'])
+            cart_data.update(cart_data)
+            request.session['cart'] = cart_data
+        else:
+            cart_data = request.session['cart']
+            cart_data.update(cart_item)
+            request.session['cart'] = cart_data
+
+    else:
+        request.session['cart'] = cart_item
+
+    return JsonResponse({'data': request.session['cart'], 'total_items': len(request.session['cart'])})

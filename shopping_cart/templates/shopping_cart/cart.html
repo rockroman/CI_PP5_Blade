@@ -22,17 +22,20 @@
                                     </div>
                                     <hr class="my-4">
                                     {% if cart_items %}
-                                    {{ cart_items }}
+
 
                                     {% for product_id,product in cart_data.items %}
+
                                     <div class="row mb-4 d-flex justify-content-between align-items-center">
                                         <div class="col-md-2 col-lg-3 col-xl-3">
                                             <img src="{{ product.image }}"
                                                 class="img-fluid rounded-3" alt="Cotton T-shirt">
                                         </div>
                                         <div class="col-md-2 col-lg-2 col-xl-2">
-                                            <small class="text-black">{{ product.category }}</small>
-                                            <h6 class="text-black mb-0">{{ product.name }} {{ product.category }}</h6>
+
+                                            <small class="text-black"></small>
+
+                                            <h6 class="text-black mb-0">{{ product.name }} {{ product.item_no }}</h6>
                                         </div>
 
                                         <div class="col-md-3 col-lg-3 col-xl-3 col-sm-6 d-flex">
@@ -98,7 +101,7 @@
 
                                     <div class="d-flex justify-content-between mb-5">
                                         <h5 class="text-uppercase">Total price</h5>
-                                        <h5>€ {{ total }}</h5>
+                                        <h5>€ {{ total|floatformat:2 }}</h5>
                                     </div>
 
                                     <button type="button" class="btn btn-dark btn-block btn-lg"

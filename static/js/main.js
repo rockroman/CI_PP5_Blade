@@ -84,6 +84,7 @@ $('#addToCartBtn').on('click', function(){
     var _productPrice = $('.product-price').val();
     console.log(_productPrice);
 
+
     // Ajax
     $.ajax({
         url:'/add_to_cart/',
@@ -103,7 +104,7 @@ $('#addToCartBtn').on('click', function(){
             _addBtn.attr('disabled',true);
         },
         success:function(res){
-            $('.cart-total').text(res.totalitems);
+            $('.cart-total').text(res.total_items);
             _addBtn.attr('disabled',false);
         }
     });
