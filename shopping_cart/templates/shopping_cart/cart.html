@@ -26,6 +26,7 @@
 
                                     {% for product_id,product in cart_data.items %}
 
+
                                     <div class="row mb-4 d-flex justify-content-between align-items-center">
                                         <div class="col-md-2 col-lg-3 col-xl-3">
                                             <img src="{{ product.image }}"
@@ -35,43 +36,46 @@
 
                                             <small class="text-black"></small>
 
-                                            <h6 class="text-black mb-0">{{ product.name }} {{ product.item_no }}</h6>
+                                            <h6 class="text-black mb-0">{{ product.name }} {{ product.id }}</h6>
                                         </div>
 
                                         <div class="col-md-3 col-lg-3 col-xl-3 col-sm-6 d-flex">
-                                            <div class="input-group ">
-                                                <div class="input-group-prepend">
-                                                    <button class="decrement-qty btn btn-danger rounded-0"
-                                                        data-item_id="{{ product.id }}" id="decrement-qty_{{ product.id }}">
-                                                        <span class="icon">
-                                                            <i class="fas fa-minus"></i>
-                                                        </span>
-                                                    </button>
+                                            <form action="" method="POST" class="w-100 cart-form">
+                                                {% csrf_token %}
+                                                <div class="input-group ">
+                                                    <div class="input-group-prepend">
+                                                        <button class="decrement-qty btn btn-danger rounded-0"
+                                                            data-item_id="{{ product_id }}" id="decrement-qty_{{ product_id }}">
+                                                            <span class="icon">
+                                                                <i class="fas fa-minus"></i>
+                                                            </span>
+                                                        </button>
+                                                    </div>
+                                                    <input class="form-control qty_input" type="number"
+                                                        name="quantity" value="{{product.qty}}" min="1" max="5"
+                                                        data-item_id="{{ product.id }}"
+                                                        id="id_qty_{{ product_id }}">
+                                                    <div class="input-group-append">
+                                                        <button class="increment-qty btn btn-success rounded-0"
+                                                            data-item_id="{{ product_id }}" id="increment-qty_{{ product_id }}">
+                                                            <span class="icon">
+                                                                <i class="fas fa-plus"></i>
+                                                            </span>
+                                                        </button>
+                                                    </div>
                                                 </div>
-                                                <input class="form-control qty_input" type="number"
-                                                    name="quantity" value="{{product.qty}}" min="1" max="5"
-                                                    data-item_id="{{ product.id }}"
-                                                    id="id_qty_{{ product.id }}">
-
-
-                                                <div class="input-group-append">
-                                                    <button class="increment-qty btn btn-success rounded-0"
-                                                        data-item_id="{{ product.id }}" id="increment-qty_{{ product_id }}">
-                                                        <span class="icon">
-                                                            <i class="fas fa-plus"></i>
-                                                        </span>
-                                                    </button>
-                                                </div>
-
-                                            </div>
+                                            </form>
                                         </div>
 
                                         <div class="col-md-3 col-lg-2 col-xl-2 d-flex justify-content-between align-items-center p-0">
                                             <h6 class="mb-0">{{ product.price }}</h6>
-                                            <a href="#!" class="text-muted"><i class="fas fa-times"></i></a>
-                                            <a href="#!" class="text-muted"><i class="fas fa-times"></i></a>
+                                           <div>
+                                               <a href="#" class="update-link text-success">update</a>
+                                                <a href="#" class="remove-item text-danger" id="remove_{{ product_id }}" >remove</a>
+                                           </div>
                                         </div>
-                                        <!-- <div class="col-md-1 col-lg-1 col-xl-1 text-end">
+                                        <!-- <div class="col-md-1 col-lg-1 col-xl-1 text-end d-flex justify-content-between w-50" >
+                                            <a href="#!" class="text-muted"><i class="fas fa-times"></i></a>
                                             <a href="#!" class="text-muted"><i class="fas fa-times"></i></a>
                                         </div> -->
                                     </div>
@@ -105,7 +109,7 @@
                                     </div>
 
                                     <button type="button" class="btn btn-dark btn-block btn-lg"
-                                        data-mdb-ripple-color="dark">Register</button>
+                                        data-mdb-ripple-color="dark">Checkout</button>
 
                                 </div>
                             </div>
@@ -129,6 +133,12 @@
 {% endif %}
 
 
+
+{% endblock %}
+{% block postload_js%}
+{{ block.super }}
+
+{% include 'partials/quantity_input_script.html' %}
 
 {% endblock %}
 

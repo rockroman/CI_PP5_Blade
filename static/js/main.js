@@ -75,6 +75,47 @@ $('.back-to-top').click(function(e) {
 //     // End
 
 // })
+
+// $('#addToCartBtn').on('click', function(){
+//     var _addBtn = $(this);
+//     var _qty = $('.product-qty').val();
+//     var _productId = $('.product-id').val();
+//     var _productName = $('.product-name').text();
+//     var _productImage = $('.product-image').val();
+//     var _productPrice = $('.product-price').val();
+//     console.log(_productPrice);
+
+
+//     // Ajax
+//     $.ajax({
+//         url:'/add_to_cart/',
+//         type : 'POST',
+//         headers: {
+//             'X-CSRFToken': $('#csrf_token').val()
+//         },
+//         data:{
+//             'id':_productId,
+//             'image':_productImage,
+//             'qty':_qty,
+//             'name':_productName,
+//             'price':_productPrice,
+//         },
+//         dataType:'json',
+//         beforeSend:function(){
+
+//             _addBtn.attr('disabled',true);
+//         },
+//         success:function(res){
+
+//             $('.cart-total').text(res.total_items);
+//             _addBtn.attr('disabled',false);
+
+//         }
+//     });
+
+
+// })
+
 $('#addToCartBtn').on('click', function(){
     var _addBtn = $(this);
     var _qty = $('.product-qty').val();
@@ -84,8 +125,22 @@ $('#addToCartBtn').on('click', function(){
     var _productPrice = $('.product-price').val();
     console.log(_productPrice);
 
+    if (_qty > 10 || _qty <= 0) {
+        // code taken from https://djangocentral.com/django-ajax-with-jquery/
+        // $('#addToCartBtn').addClass('active')
+        _addBtn.removeClass('active').blur();
+        $('.product-qty').removeClass('is-valid').addClass('is-invalid');
+        $('.product-qty').blur();
+        $('#Error').remove()
+        $('.error-qty').before('<div class="invalid-feedback d-block" id="Error">quantity must be range 1 -10!</div>');
 
-    // Ajax
+        return
+
+
+    }
+
+
+    // Ajaxs
     $.ajax({
         url:'/add_to_cart/',
         type : 'POST',
@@ -101,14 +156,20 @@ $('#addToCartBtn').on('click', function(){
         },
         dataType:'json',
         beforeSend:function(){
+
             _addBtn.attr('disabled',true);
         },
         success:function(res){
+
             $('.cart-total').text(res.total_items);
+            $('.product-qty').removeClass('is-invalid')
+            $('#Error').remove()
+
             _addBtn.attr('disabled',false);
+
         }
     });
-    // End
+
 
 })
 
