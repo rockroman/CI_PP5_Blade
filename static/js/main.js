@@ -164,6 +164,7 @@ $('#addToCartBtn').on('click', function(){
             $('.cart-total').text(res.total_items);
             $('.product-qty').removeClass('is-invalid')
             $('#Error').remove()
+            $('.product-qty').val(1)
 
             _addBtn.attr('disabled',false);
 

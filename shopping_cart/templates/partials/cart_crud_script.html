@@ -1,16 +1,58 @@
-<script type="text/javascript">
+<script>
     // Update quantity on click
     $('.update-link').click(function(e) {
-        var form = $(this).prev('.cart-form');
+        // var form = $('.update-form');
+
+        // var form = $(this).closest('.update-form');
+        // var newQuantity = $(form).find('.qty_input').val()
+        // console.log(newQuantity);
+
+        // if (newQuantity > 10 || newQuantity < 0){
+
+        // $(form).find('.product-qty').removeClass('is-valid').addClass('is-invalid');
+        // $(form).find('.product-qty').blur();
+        // $(form).find('#Error').remove()
+        // $(form).find('.error-qty').before('<div class="invalid-feedback d-block" id="Error">quantity must be range 1 -10!</div>');
+
+        // return
+        // }else{
+        //     form.submit();
+
+        // }
+
+
+        var targetedId = $(this).attr('id');
+        var form = $('#'+targetedId)
+        // var newQuantity = $(form).find('.qty_input').val()
+        // console.log(newQuantity);
+
+        // if (newQuantity > 10 || newQuantity < 0){
+
+        // $(form).find('.product-qty').removeClass('is-valid').addClass('is-invalid');
+        // $(form).find('.product-qty').blur();
+        // $(form).find('#Error').remove()
+        // $(form).find('.error-qty').before('<div class="invalid-feedback d-block" id="Error">quantity must be range 1 -10!</div>');
+
+        // return
+        // }else{
+        //     form.submit();
+
+        // }
         form.submit();
+
+
+
+
+
     })
 
     // Remove item and reload on click
     $('.remove-item').click(function(e) {
         var csrfToken = "{{ csrf_token }}";
         var itemId = $(this).attr('id').split('remove_')[1]
-        var url = `/shopping_cart/remove/${itemId}`;
-        var data = {'csrfmiddlewaretoken': csrfToken, 'size': size};
+        console.log(itemId);
+        var url = `/remove/${itemId}/`;
+        var data = {'csrfmiddlewaretoken': csrfToken, 'itemId':itemId};
 
         $.post(url, data)
          .done(function() {

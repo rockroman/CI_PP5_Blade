@@ -1,7 +1,7 @@
 # Imports
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 # 3rd party:
-from django.shortcuts import render
+from django.shortcuts import render, redirect, reverse, HttpResponse
 from django.http import JsonResponse
 
 # Internal:
@@ -68,3 +68,37 @@ def add_to_cart(request):
         request.session['cart'] = cart_item
 
     return JsonResponse({'data': request.session['cart'], 'total_items': len(request.session['cart'])})
+
+
+def update_cart(request, product_id):
+    """
+    update quantty of tems in a bag to desired value
+    """
+    quantity = int(request.POST.get('quantity'))
+    cart_data = request.session.get('cart', {})
+
+    if quantity > 0:
+        cart_data[product_id]['qty'] = quantity
+
+    else:
+        cart_data.pop(product_id)
+
+    request.session['cart'] = cart_data
+
+    return redirect(reverse('shopping_cart:cart'))
+
+
+def remove_from_cart(request, product_id):
+    """
+    update quantty of tems in a bag to desired value
+    """
+    cart_data = request.session.get('cart', {})
+    try:
+        cart_data.pop(product_id)
+
+        request.session['cart'] = cart_data
+
+        return HttpResponse(status=200)
+
+    except Exception as e:
+        return HttpResponse(status=500)

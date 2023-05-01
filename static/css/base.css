@@ -97,15 +97,18 @@ html{
 
 /* back to top button */
 
-.btt-button {
+.btt-button{
   height: 42px;
   width: 42px;
   position: fixed;
   bottom: 10px;
   right: 10px;
+
 }
 
-.back-to-top {
+.back-to-top,
+.update-link,
+.remove-item {
   cursor: pointer;
 }
 
