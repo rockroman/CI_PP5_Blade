@@ -1,10 +1,14 @@
 # Imports
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 # 3rd party:
-from django.shortcuts import render, redirect, reverse, HttpResponse
+from django.shortcuts import (render, redirect,
+                              reverse, HttpResponse, get_object_or_404)
+from django.contrib import messages
 from django.http import JsonResponse
 
 # Internal:
+from products.models import Product
+
 
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -74,11 +78,13 @@ def update_cart(request, product_id):
     """
     update quantty of tems in a bag to desired value
     """
+    product = get_object_or_404(Product, pk=product_id)
     quantity = int(request.POST.get('quantity'))
     cart_data = request.session.get('cart', {})
 
     if quantity > 0:
         cart_data[product_id]['qty'] = quantity
+        messages.success(request, f'Updated {product.name} quantity to {cart_data[product_id]["qty"]}')
 
     else:
         cart_data.pop(product_id)

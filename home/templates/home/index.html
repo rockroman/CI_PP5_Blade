@@ -2,6 +2,15 @@
 {% load static %}
 
 {% block content %}
+{% if messages %}
+<div class="message-container">
+    {% for message in messages %}
+
+    {% include 'partials/toast_msg/toast_success.html' %}
+
+    {% endfor %}
+</div>
+{% endif %}
 {% include 'partials/top_main_nav.html' %}
 
 <!-- carousel -->
