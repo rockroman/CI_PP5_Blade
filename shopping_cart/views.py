@@ -69,6 +69,7 @@ def add_to_cart(request):
             request.session['cart'] = cart_data
 
     else:
+        messages.success(request, f'Updated')
         request.session['cart'] = cart_item
 
     return JsonResponse({'data': request.session['cart'], 'total_items': len(request.session['cart'])})
@@ -88,6 +89,7 @@ def update_cart(request, product_id):
 
     else:
         cart_data.pop(product_id)
+        messages.success(request, f'Removed {product.name} from your Shopping cart')
 
     request.session['cart'] = cart_data
 
@@ -98,13 +100,16 @@ def remove_from_cart(request, product_id):
     """
     update quantty of tems in a bag to desired value
     """
+    product = get_object_or_404(Product, pk=product_id)
     cart_data = request.session.get('cart', {})
     try:
         cart_data.pop(product_id)
+        messages.success(request, f'Removed {product.name} from your Shopping cart')
 
         request.session['cart'] = cart_data
 
         return HttpResponse(status=200)
 
     except Exception as e:
+        messages.error(request, f'Error removing item: {e}')
         return HttpResponse(status=500)

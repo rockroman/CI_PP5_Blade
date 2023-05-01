@@ -123,7 +123,9 @@ $('#addToCartBtn').on('click', function(){
     var _productName = $('.product-name').text();
     var _productImage = $('.product-image').val();
     var _productPrice = $('.product-price').val();
+    var _msg = $('.msg').text();
     console.log(_productPrice);
+    console.log(_msg);
 
     if (_qty > 10 || _qty <= 0) {
         // code taken from https://djangocentral.com/django-ajax-with-jquery/
@@ -162,9 +164,11 @@ $('#addToCartBtn').on('click', function(){
         success:function(res){
 
             $('.cart-total').text(res.total_items);
+
             $('.product-qty').removeClass('is-invalid')
             $('#Error').remove()
             $('.product-qty').val(1)
+            $('.msg-success').toast('show')
 
             _addBtn.attr('disabled',false);
 

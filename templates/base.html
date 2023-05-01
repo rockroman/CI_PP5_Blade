@@ -40,15 +40,29 @@
 </head>
 
 <body>
-
+    {% include 'partials/toast_msg/toast_success.html' %}
 
     {% if messages %}
         <div class="message-container">
             {% for message in messages %}
+            {% with message.level as level %}
 
-            {% include 'partials/toast_msg/toast_success.html' %}
+            {% if level == 40 %}
+                {% include 'partials/toast_msg/toast_error.html' %}
+            {% elif level == 30 %}
+                {% include 'partials/toast_msg/toast_warning.html' %}
+            {% elif level == 25 %}
+                {% include 'partials/toast_msg/toast_success.html' %}
+            {% else %}
+                {% include 'partials/toast_msg/toast_info.html' %}
+            {% endif %}
+
+            {% endwith %}
+
 
             {% endfor %}
+
+
         </div>
     {% endif %}
 
@@ -76,3 +90,5 @@
 </body>
 
 </html>
+
+
