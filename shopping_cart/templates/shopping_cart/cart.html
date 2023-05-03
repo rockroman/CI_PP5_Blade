@@ -24,6 +24,7 @@
                                     {% if cart_items %}
 
 
+
                                     {% for product_id,product in cart_data.items %}
 
 <!--
@@ -57,7 +58,7 @@
                                                         </button>
                                                     </div>
                                                     <div class="error-qty"></div>
-                                                    <input class="form-control qty_input" type="number"
+                                                    <input class="form-control qty_input cart_form" type="number"
                                                         name="quantity" value="{{product.qty}}" min="1" max="5"
                                                         data-item_id="{{ product_id }}"
                                                         id="id_qty_{{ product_id }}">
@@ -101,7 +102,7 @@
                             </div>
                             <div class="col-lg-4 bg-grey">
                                 <div class="p-5">
-                                    <h3 class="fw-bold mb-5 mt-2 pt-1">Summary</h3>
+                                    <h3 class="fw-bold mb-5 mt-2 pt-1" id="subtotal" >Summary</h3>
                                     <hr class="my-4">
 
                                     <div class="d-flex justify-content-between mb-4">
@@ -114,7 +115,7 @@
 
                                     <div class="d-flex justify-content-between mb-5">
                                         <h5 class="text-uppercase">Total price</h5>
-                                        <h5>€ {{ total|floatformat:2 }}</h5>
+                                        <h6 class="h5">€ {{ total|floatformat:2 }}</h5>
                                     </div>
 
                                     <button type="button" class="btn btn-dark btn-block btn-lg"

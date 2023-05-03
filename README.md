@@ -180,3 +180,10 @@ Price ,rating, and alphabet ||
 
 
 ### Wireframes
+
+<details><summary>images</summary>
+
+<details><summary>Home page</summary>
+  <img src="docs/wireframes/home-desk-wireframe.png" >
+
+</details>

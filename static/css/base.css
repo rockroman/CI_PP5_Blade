@@ -121,11 +121,20 @@ html{
 
 /* ------------------------------- bootstrap toasts */
 
-.message-container {
+.message-container,
+.my-message {
     position: fixed;
     top: 72px;
     right: 15px;
     z-index: 99999999999;
+}
+
+#success-message{
+  position: fixed;
+  top: 72px;
+  right: 15px;
+  z-index: 99999999999;
+
 }
 
 .custom-toast {

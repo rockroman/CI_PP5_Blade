@@ -12,7 +12,7 @@
             <!-- <button type="button" class="btn"><i class="bi bi-cart3"></i></button> -->
 
             <a class="btn py-3" role="button" href="{% url 'shopping_cart:cart' %}">
-                <i class="bi bi-cart3"></i> <span class="cart-total">{{ request.session.cart|length }}</span>
+                <i class="bi bi-cart3"></i> <span class="cart-total">{{ current_cart }}</span>
                 <span class="total-amount"></span>
             </a>
 
@@ -62,7 +62,7 @@
                     <button type="button" class="btn" ><i class="bi bi-person" style="font-size:1.5rem; -webkit-text-stroke-width: 1px;"></i></button>
                     <!-- <button type="button" class="btn"><i class="bi bi-cart3"></i></button> -->
                     <a class="btn py-3" role="button" href="{% url 'shopping_cart:cart' %}">
-                        <i class="bi bi-cart3"></i> <span class="cart-total">{{ request.session.cart|length }}</span>
+                        <i class="bi bi-cart3"></i> <span class="cart-total">{{ current_cart }}</span>
 
 
 

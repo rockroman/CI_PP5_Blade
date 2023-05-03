@@ -8,7 +8,7 @@ def cart_content(request):
 
     cart_items = []
     total = 0
-    product_count = 0
+    all_items = 0
     product = None
     cart_data = request.session.get('cart', {})
     for product_id, cart_item in cart_data.items():
@@ -23,6 +23,8 @@ def cart_content(request):
 
             })
 
+    all_items = sum(cart_item['qty'] for cart_item in cart_data.values())
+
     context = {
 
         'cart_data': cart_data,
@@ -30,9 +32,14 @@ def cart_content(request):
         'total_items': len(cart_data),
         'cart_items': cart_items,
         'product': product,
+        'all_items': all_items,
 
 
     }
-
     return context
+
+
+def my_cart(request):
+    current_cart = request.session.get('cart', {})
+    return {'current_cart': current_cart}
 

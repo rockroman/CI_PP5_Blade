@@ -115,7 +115,7 @@ $('.back-to-top').click(function(e) {
 
 
 // })
-
+let count = 0
 $('#addToCartBtn').on('click', function(){
     var _addBtn = $(this);
     var _qty = $('.product-qty').val();
@@ -123,9 +123,8 @@ $('#addToCartBtn').on('click', function(){
     var _productName = $('.product-name').text();
     var _productImage = $('.product-image').val();
     var _productPrice = $('.product-price').val();
-    var _msg = $('.msg').text();
+
     console.log(_productPrice);
-    console.log(_msg);
 
     if (_qty > 10 || _qty <= 0) {
         // code taken from https://djangocentral.com/django-ajax-with-jquery/
@@ -163,20 +162,60 @@ $('#addToCartBtn').on('click', function(){
         },
         success:function(res){
 
-            $('.cart-total').text(res.total_items);
-
+           console.log(res.data);
             $('.product-qty').removeClass('is-invalid')
             $('#Error').remove()
             $('.product-qty').val(1)
-            $('.msg-success').toast('show')
+            // location.reload()
+            // $('.msg-success').removeClass('d-none')
+            // $('#reboot').on('click', function(){
+            //     $('.msg-success').addClass('d-none')
+
+            // })
+
+
+
+// working
+            // initialize the count variable
+            // let count = 0;
+
+            // iterate through the nested dictionary
+            // for (const key in res.data) {
+            // if (res.data.hasOwnProperty(key)) {
+            //     count += res.data[key]['qty'];
+            //     }
+            // }
+
+         // inject the count to the template
+            // $('.items-num').text(count);
+
+// working
+        // let count = 0;
+
+        // Get array of keys from res.data object
+        // const keys = Object.keys(res.data);
+
+        // Iterate through the keys array
+        // for (const key of keys) {
+        // count += res.data[key]['qty'];
+        // }
+
+        // Inject the count to the template
+        // $('.items-num').text(count);
 
             _addBtn.attr('disabled',false);
+            // console.log(res.message);
 
         }
     });
 
 
+
 })
+
+
+
+// $('.items-num').text(count);
 
 
 
