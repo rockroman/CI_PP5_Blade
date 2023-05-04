@@ -10,7 +10,6 @@ import string
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
-
 # Create your models here.
 
 class Category(models.Model):
