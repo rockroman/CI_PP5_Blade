@@ -106,7 +106,7 @@
                                     <hr class="my-4">
 
                                     <div class="d-flex justify-content-between mb-4">
-                                        <h5 class="text-uppercase">{{ total_items }} items</h5>
+                                        <h5 class="text-uppercase">€{{ total_items }} items</h5>
                                         <h5>€ 132.00</h5>
                                     </div>
 
@@ -115,8 +115,10 @@
 
                                     <div class="d-flex justify-content-between mb-5">
                                         <h5 class="text-uppercase">Total price</h5>
-                                        <h6 class="h5">€ {{ total|floatformat:2 }}</h5>
+
+                                        <h6 class="h5" >€ {{ total|floatformat:2 }}</h5>
                                     </div>
+
 
                                     <button type="button" class="btn btn-dark btn-block btn-lg"
                                         data-mdb-ripple-color="dark">Checkout</button>

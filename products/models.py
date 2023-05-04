@@ -40,6 +40,7 @@ def random_generated_string():
             not_unique = False
     return str(key)
 
+
 class Product(models.Model):
     category = models.ForeignKey('Category', null=True, blank=True, on_delete=models.SET_NULL)
     item_no = models.CharField(max_length=254, default=random_generated_string,unique=True )

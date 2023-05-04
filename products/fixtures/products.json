@@ -3,13 +3,13 @@
         "pk": 1,
         "model": "products.product",
         "fields": {
-            "category": 2,
-            "item_no": "A123",
+            "category": 1,
+            "item_no": "B123",
             "name": "Dark Moon",
-            "description":"nice knife uuuu",
+            "description": "The Dark Moon  a custom folding knife that embodies the sharpness and sophistication of a true gentleman,With a 9.2 inch high carbon steel blade and a stylish camel bone handle, this knife is both sharp and elegant. Perfect for formal occasions or everyday use, the Dark Moonblade is a must-have for any gentleman who values style and functionality in their knife collection.",
             "price": 245.50,
-            "blade_length":"9.2",
-            "handle_material":"Camel bone",
+            "blade_length": "9.2",
+            "handle_material": "Camel bone",
             "image_url": "",
             "image": "dark_moon.jpg"
         }
@@ -19,12 +19,359 @@
         "model": "products.product",
         "fields": {
             "category": 1,
+            "item_no": "",
+            "name": "",
+            "description": "",
+            "price": 245.50,
+            "blade_length": "9.2",
+            "handle_material": "",
+            "image_url": "",
+            "image": "dark_moon.jpg"
+        }
+    },
+    {
+        "pk": 3,
+        "model": "products.product",
+        "fields": {
+            "category": 1,
+            "item_no": "",
+            "name": "",
+            "description": "",
+            "price": 245.50,
+            "blade_length": "9.2",
+            "handle_material": "",
+            "image_url": "",
+            "image": "dark_moon.jpg"
+        }
+    },
+    {
+        "pk": 4,
+        "model": "products.product",
+        "fields": {
+            "category": 1,
+            "item_no": "",
+            "name": "",
+            "description": "",
+            "price": 245.50,
+            "blade_length": "9.2",
+            "handle_material": "",
+            "image_url": "",
+            "image": "dark_moon.jpg"
+        }
+    },
+
+
+    {
+        "pk": 5,
+        "model": "products.product",
+        "fields": {
+            "category": 1,
+            "item_no": "",
+            "name": "",
+            "description": "",
+            "price": 245.50,
+            "blade_length": "9.2",
+            "handle_material": "",
+            "image_url": "",
+            "image": "dark_moon.jpg"
+        }
+    },
+
+
+    {
+        "pk": 6,
+        "model": "products.product",
+        "fields": {
+            "category": 1,
+            "item_no": "",
+            "name": "",
+            "description": "",
+            "price": 245.50,
+            "blade_length": "9.2",
+            "handle_material": "",
+            "image_url": "",
+            "image": "dark_moon.jpg"
+        }
+    },
+
+
+    {
+        "pk": 7,
+        "model": "products.product",
+        "fields": {
+            "category": 1,
+            "item_no": "",
+            "name": "",
+            "description": "",
+            "price": 245.50,
+            "blade_length": "9.2",
+            "handle_material": "",
+            "image_url": "",
+            "image": "dark_moon.jpg"
+        }
+    },
+
+
+    {
+        "pk": 8,
+        "model": "products.product",
+        "fields": {
+            "category": 1,
+            "item_no": "",
+            "name": "",
+            "description": "",
+            "price": 245.50,
+            "blade_length": "9.2",
+            "handle_material": "",
+            "image_url": "",
+            "image": "dark_moon.jpg"
+        }
+    },
+
+    {
+        "pk": 9,
+        "model": "products.product",
+        "fields": {
+            "category": 1,
+            "item_no": "",
+            "name": "",
+            "description": "",
+            "price": 245.50,
+            "blade_length": "9.2",
+            "handle_material": "",
+            "image_url": "",
+            "image": "dark_moon.jpg"
+        }
+    },
+
+    {
+        "pk": 10,
+        "model": "products.product",
+        "fields": {
+            "category": 1,
+            "item_no": "",
+            "name": "",
+            "description": "",
+            "price": 245.50,
+            "blade_length": "9.2",
+            "handle_material": "",
+            "image_url": "",
+            "image": "dark_moon.jpg"
+        }
+    },
+
+
+
+
+
+
+
+
+
+    {
+        "pk": 11,
+        "model": "products.product",
+        "fields": {
+            "category": 2,
+            "item_no": "",
+            "name": "",
+            "description": "",
+            "price": 245.50,
+            "blade_length": "9.2",
+            "handle_material": "",
+            "image_url": "",
+            "image": "dark_moon.jpg"
+        }
+    },
+
+    {
+        "pk": 12,
+        "model": "products.product",
+        "fields": {
+            "category": 2,
+            "item_no": "",
+            "name": "",
+            "description": "",
+            "price": 245.50,
+            "blade_length": "9.2",
+            "handle_material": "",
+            "image_url": "",
+            "image": "dark_moon.jpg"
+        }
+    },
+
+    {
+        "pk": 13,
+        "model": "products.product",
+        "fields": {
+            "category": 2,
+            "item_no": "",
+            "name": "",
+            "description": "",
+            "price": 245.50,
+            "blade_length": "9.2",
+            "handle_material": "",
+            "image_url": "",
+            "image": "dark_moon.jpg"
+        }
+    },
+
+    {
+        "pk": 14,
+        "model": "products.product",
+        "fields": {
+            "category": 2,
+            "item_no": "",
+            "name": "",
+            "description": "",
+            "price": 245.50,
+            "blade_length": "9.2",
+            "handle_material": "",
+            "image_url": "",
+            "image": "dark_moon.jpg"
+        }
+    },
+
+    {
+        "pk": 11,
+        "model": "products.product",
+        "fields": {
+            "category": 2,
+            "item_no": "",
+            "name": "",
+            "description": "",
+            "price": 245.50,
+            "blade_length": "9.2",
+            "handle_material": "",
+            "image_url": "",
+            "image": "dark_moon.jpg"
+        }
+    },
+
+    {
+        "pk": 12,
+        "model": "products.product",
+        "fields": {
+            "category": 2,
+            "item_no": "",
+            "name": "",
+            "description": "",
+            "price": 245.50,
+            "blade_length": "9.2",
+            "handle_material": "",
+            "image_url": "",
+            "image": "dark_moon.jpg"
+        }
+    },
+
+    {
+        "pk": 13,
+        "model": "products.product",
+        "fields": {
+            "category": 2,
+            "item_no": "",
+            "name": "",
+            "description": "",
+            "price": 245.50,
+            "blade_length": "9.2",
+            "handle_material": "",
+            "image_url": "",
+            "image": "dark_moon.jpg"
+        }
+    },
+
+    {
+        "pk": 14,
+        "model": "products.product",
+        "fields": {
+            "category": 2,
+            "item_no": "",
+            "name": "",
+            "description": "",
+            "price": 245.50,
+            "blade_length": "9.2",
+            "handle_material": "",
+            "image_url": "",
+            "image": "dark_moon.jpg"
+        }
+    },
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    {
+        "pk": 2,
+        "model": "products.product",
+        "fields": {
+            "category": 1,
             "item_no": "A683",
             "name": "Smooth Gentleman",
-            "description":"very good thing",
+            "description": "very good thing",
             "price": 285.00,
-            "blade_length":"9.2",
-            "handle_material":"Fibre Glass",
+            "blade_length": "9.2",
+            "handle_material": "Fibre Glass",
             "image_url": "",
             "image": "smooth_gent.jpg"
         }
@@ -36,10 +383,10 @@
             "category": 3,
             "item_no": "A243",
             "name": "Silk Light",
-            "description":"very good thing ooooooo",
+            "description": "very good thing ooooooo",
             "price": 185.00,
-            "blade_length":"8.5",
-            "handle_material":"Marble thing",
+            "blade_length": "8.5",
+            "handle_material": "Marble thing",
             "image_url": "",
             "image": "silk_light.jpg"
         }
@@ -51,10 +398,10 @@
             "category": 1,
             "item_no": "A943",
             "name": "Brown Dagger",
-            "description":"very baad thing ooooooo",
+            "description": "Compact yet powerful custom folding knife  With an 8.2 inch high carbon steel blade and a sturdy oak handle, this knife is perfect for everyday use. Whether you need to open packages or tackle tough materials. With its exceptional quality and attention to detail, this custom folding knife is sure to become a go-to tool for any cutting task.",
             "price": 185.00,
-            "blade_length":"8.2",
-            "handle_material":"oak",
+            "blade_length": "8.2",
+            "handle_material": "oak",
             "image_url": "",
             "image": "brown_dagger.jpg"
         }
