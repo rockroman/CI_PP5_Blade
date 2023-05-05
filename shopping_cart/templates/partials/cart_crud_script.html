@@ -1,43 +1,15 @@
 <script>
     // Update quantity on click
     $('.update-link').click(function(e) {
-        // var form = $('.update-form');
-
-        // var form = $(this).closest('.update-form');
-        // var newQuantity = $(form).find('.qty_input').val()
-        // console.log(newQuantity);
-
-        // if (newQuantity > 10 || newQuantity < 0){
-
-        // $(form).find('.product-qty').removeClass('is-valid').addClass('is-invalid');
-        // $(form).find('.product-qty').blur();
-        // $(form).find('#Error').remove()
-        // $(form).find('.error-qty').before('<div class="invalid-feedback d-block" id="Error">quantity must be range 1 -10!</div>');
-
-        // return
-        // }else{
-        //     form.submit();
-
-        // }
 
 
-        var targetedId = $(this).attr('id');
-        var form = $('#'+targetedId)
-        // var newQuantity = $(form).find('.qty_input').val()
-        // console.log(newQuantity);
 
-        // if (newQuantity > 10 || newQuantity < 0){
+        var targetedId = $(this).attr('target');
+        var form = $('#'+targetedId);
 
-        // $(form).find('.product-qty').removeClass('is-valid').addClass('is-invalid');
-        // $(form).find('.product-qty').blur();
-        // $(form).find('#Error').remove()
-        // $(form).find('.error-qty').before('<div class="invalid-feedback d-block" id="Error">quantity must be range 1 -10!</div>');
+        form.submit();
+        console.log('jaa');
 
-        // return
-        // }else{
-        //     form.submit();
-
-        // }
         form.submit();
 
 

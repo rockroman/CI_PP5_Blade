@@ -47,6 +47,11 @@ INSTALLED_APPS = [
     'products',
     'shopping_cart',
     'checkout',
+
+    #  external
+    'crispy_forms',
+    "crispy_bootstrap5",
+
 ]
 
 MIDDLEWARE = [
@@ -81,6 +86,12 @@ TEMPLATES = [
                 'shopping_cart.context.cart_content',
                 'shopping_cart.context.my_cart',
             ],
+            'builtins': [
+                'crispy_forms.templatetags.crispy_forms_tags',
+                'crispy_forms.templatetags.crispy_forms_field',
+            ]
+
+
         },
     },
 ]
