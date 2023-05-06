@@ -12,7 +12,8 @@ from . import views
 app_name = 'checkout'
 
 urlpatterns = [
-    path('checkout/', views.store_checkout, name='store_checkout')
+    path('checkout/', views.store_checkout, name='store_checkout'),
+    path('checkout_success/<order_number>', views.checkout_success, name='checkout_success')
 
 
 ]

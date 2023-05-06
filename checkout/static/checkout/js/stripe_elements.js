@@ -6,9 +6,14 @@
     https://stripe.com/docs/stripe-js
 */
 
-var stripePublic_key = $('#id_stripe_public_key').text().slice(1, -1);
+var stripePublicKey = $('#id_stripe_public_key').text().slice(1, -1);
 var clientSecret = $('#id_client_secret').text().slice(1, -1);
-var stripe = Stripe(stripePublic_key);
+var checkoutHeader = document.getElementById("check");
+checkoutHeader.addEventListener("click", function() {
+  console.log(clientSecret);
+});
+console.log(clientSecret);
+var stripe = Stripe(stripePublicKey);
 var elements = stripe.elements();
 var style = {
     base: {
@@ -28,8 +33,7 @@ var style = {
 var card = elements.create('card', {style: style});
 card.mount('#card-element');
 
-// error validation of a card element
-
+// Handle realtime validation errors on the card element
 card.addEventListener('change', function (event) {
     var errorDiv = document.getElementById('card-errors');
     if (event.error) {
