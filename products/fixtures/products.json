@@ -19,12 +19,12 @@
         "model": "products.product",
         "fields": {
             "category": 1,
-            "item_no": "",
-            "name": "",
-            "description": "",
+            "item_no": "P416",
+            "name": "Green_gent",
+            "description": "knife that combines elegance with function. With an 8.8 inch stainless steel blade and a unique abalone shell handle, this knife is perfect for formal occasions or as a statement piece. A must-have for any gentleman who values style and functionality in their knife collection.",
             "price": 245.50,
-            "blade_length": "9.2",
-            "handle_material": "",
+            "blade_length": "8.8",
+            "handle_material": "abalone shell",
             "image_url": "",
             "image": "dark_moon.jpg"
         }
@@ -34,12 +34,12 @@
         "model": "products.product",
         "fields": {
             "category": 1,
-            "item_no": "",
-            "name": "",
-            "description": "",
+            "item_no": "G876",
+            "name": "Oracle,",
+            "description": " Oracle, a custom folding knife designed for the modern gentleman.With an 8.4 inch Damascus stainless steel blade and a handle crafted from premium Irish oak, this knife is both stylish and functional, and overall it represents the perfect blend of style and performance ",
             "price": 245.50,
-            "blade_length": "9.2",
-            "handle_material": "",
+            "blade_length": "8.4",
+            "handle_material": "Irish oak",
             "image_url": "",
             "image": "dark_moon.jpg"
         }
@@ -49,9 +49,9 @@
         "model": "products.product",
         "fields": {
             "category": 1,
-            "item_no": "",
-            "name": "",
-            "description": "",
+            "item_no": "S465",
+            "name": "Obsidian-scout",
+            "description": "custom folding knife that combines style and function. With a 9 inch Damascus stainless steel blade and a stabilized camel bone handle, Obsidian-scout is a top-of-the-line custom folding knife that is sure to impress any knife enthusiast with its exceptional design and performance. A perfect addition to any gentleman's everyday carry. ",
             "price": 245.50,
             "blade_length": "9.2",
             "handle_material": "",
@@ -144,21 +144,24 @@
         }
     },
 
+
     {
         "pk": 10,
         "model": "products.product",
         "fields": {
             "category": 1,
-            "item_no": "",
-            "name": "",
-            "description": "",
-            "price": 245.50,
-            "blade_length": "9.2",
-            "handle_material": "",
+            "item_no": "A943",
+            "name": "Brown Dagger",
+            "description": "Compact yet powerful custom folding knife  With an 8.2 inch high carbon steel blade and a sturdy oak handle, this knife is perfect for everyday use. Whether you need to open packages or tackle tough materials. With its exceptional quality and attention to detail, this custom folding knife is sure to become a go-to tool for any cutting task.",
+            "price": 185.00,
+            "blade_length": "8.2",
+            "handle_material": "oak",
             "image_url": "",
-            "image": "dark_moon.jpg"
+            "image": "brown_dagger.jpg"
         }
     },
+
+
 
 
 
@@ -391,19 +394,4 @@
             "image": "silk_light.jpg"
         }
     },
-    {
-        "pk": 4,
-        "model": "products.product",
-        "fields": {
-            "category": 1,
-            "item_no": "A943",
-            "name": "Brown Dagger",
-            "description": "Compact yet powerful custom folding knife  With an 8.2 inch high carbon steel blade and a sturdy oak handle, this knife is perfect for everyday use. Whether you need to open packages or tackle tough materials. With its exceptional quality and attention to detail, this custom folding knife is sure to become a go-to tool for any cutting task.",
-            "price": 185.00,
-            "blade_length": "8.2",
-            "handle_material": "oak",
-            "image_url": "",
-            "image": "brown_dagger.jpg"
-        }
-    }
 ]

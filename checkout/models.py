@@ -41,6 +41,7 @@ class Order(models.Model):
 
         """
         self.grand_total = self.lineitems.aggregate(Sum('lineitem_total'))['lineitem_total__sum'] or 0
+        self.order_total = self.grand_total
         self.save()
 
     def save(self, *args, **kwargs):
