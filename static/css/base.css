@@ -69,11 +69,14 @@ html{
 .img-container {
   position: relative;
 
+
 }
 
 .img-container .first {
   position: absolute;
-  /* width: 100%; */
+
+
+
 
 }
 
@@ -85,6 +88,9 @@ html{
 
 .product-detail-container {
   padding: 10px;
+  /* new added */
+  height: 150px; /* adjust the height as needed */
+  padding: 1rem;
 }
 
 .ratings i {

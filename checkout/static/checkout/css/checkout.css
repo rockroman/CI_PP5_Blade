@@ -51,9 +51,9 @@ select option[value=""] {
 	position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(23, 162, 184, .85);
+    width: 20%;
+    height: 20%;
+    background: rgba(16, 106, 218, 0.85);
     z-index: 9999;
 }
 
@@ -62,5 +62,5 @@ select option[value=""] {
     align-items: center;
     justify-content: center;
     margin: 0;
-    height: 100%;
+    height: 10%;
 }
