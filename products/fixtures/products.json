@@ -66,12 +66,12 @@
         "model": "products.product",
         "fields": {
             "category": 1,
-            "item_no": "",
-            "name": "",
-            "description": "",
+            "item_no": "G549",
+            "name": "Nightfal",
+            "description": "knife that combines sleek design with exceptional performance. With an 8.6 inch Damascus stainless steel blade and a handle made from premium micarta, this knife is both durable and stylish.Overall, the Nightfall is a top-of-the-line custom folding knife that is sure to impress any knife enthusiast with its exceptional design and performance",
             "price": 245.50,
-            "blade_length": "9.2",
-            "handle_material": "",
+            "blade_length": "8.6",
+            "handle_material": "micarta",
             "image_url": "",
             "image": "dark_moon.jpg"
         }

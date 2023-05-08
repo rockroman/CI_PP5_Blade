@@ -4,6 +4,7 @@
 from django.shortcuts import (render, redirect,
                               reverse, HttpResponse, get_object_or_404)
 from django.contrib import messages
+from django.views.decorators.http import require_POST
 from django.http import JsonResponse
 from django.conf import settings
 import math
@@ -19,11 +20,12 @@ from shopping_cart.context import cart_content
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
+@require_POST
 def cache_checkout_data(request):
     try:
         pid = request.POST.get('client_secret').split('_secret')[0]
         stripe.api_key = settings.STRIPE_SECRET_KEY
-        stripe.PaymentIntent.modify(pid, metdata={
+        stripe.PaymentIntent.modify(pid, metadata={
             'cart': json.dumps(request.session.get('cart', {})),
             'save_info': request.POST.get('save_info'),
             'username': request.user,
@@ -40,8 +42,6 @@ def store_checkout(request):
 
     stripe_public_key = settings.STRIPE_PUBLIC_KEY
     stripe_secret_key = settings.STRIPE_SECRET_KEY
-    print(settings.STRIPE_SECRET_KEY)
-    print(stripe_secret_key)
 
     if request.method == 'POST':
         cart_data = request.session.get('cart', {})
@@ -59,7 +59,11 @@ def store_checkout(request):
         }
         order_form = OrderForm(form_data)
         if order_form.is_valid():
-            order = order_form.save()
+            order = order_form.save(commit=False)
+            pid = request.POST.get('client_secret').split('_secret')[0]
+            order.stripe_pid = pid
+            order.original_cart = json.dumps(cart_data)
+            order.save()
             for product_id, cart_item in cart_data.items():
                 try:
                     product = Product.objects.get(id=product_id)
