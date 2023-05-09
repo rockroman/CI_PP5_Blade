@@ -1,9 +1,13 @@
 html{
-    height: 100%;
     scroll-behavior: smooth;
 }
 
 /* navbar */
+.my_logo{
+  width: 50px;
+  height: 50px;
+
+}
 
 
 /* carousel */
