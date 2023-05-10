@@ -167,10 +167,20 @@ html{
 .account-body{
 
   height: 100vh;
+}
 
+input{
+  border: 1px solid black !important;
+  box-shadow: unset !important;
 
- }
+}
 
+label {
+  display: none;
+}
+input::placeholder {
+  opacity: 50% !important;
+}
 
 /*   end allauth    */
 
