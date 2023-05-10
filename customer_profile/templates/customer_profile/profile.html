@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'customer_profile/css/profile.css' %}">
+{% endblock  %}
+
+
+
+{% include 'partials/top_main_nav.html' %}
+
+<h1 class="text-center">Profile</h1>
+
+
+
+{% endblock  %}
+
+
+
