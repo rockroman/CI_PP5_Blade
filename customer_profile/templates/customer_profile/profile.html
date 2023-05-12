@@ -11,7 +11,102 @@
 
 {% include 'partials/top_main_nav.html' %}
 
-<h1 class="text-center">Profile</h1>
+<h1 class="text-center my-3">My Profile</h1>
+<div class="container-fluid">
+    <div class="row mx-auto">
+        <div class="col-lg-6 col-md-10 mt-2">
+            <!-- accordion -->
+            <div class="accordion" id="order-accordion">
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="headingOne">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                      Order History
+                    </button>
+                  </h2>
+                  <div id="collapseOne" class="accordion-collapse collapse " aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                      <strong>
+                        This is the first item's accordion body.
+                    </strong>
+                    </div>
+                  </div>
+                </div>
+            </div>
+
+
+
+
+            <!-- accordion -->
+
+
+        </div>
+        <div class="col-lg-6 col-md-10 mt-2">
+
+            <table class="table table-borderless">
+            <!--<thead>
+                <tr>
+                <th scope="col">nesto</th>
+                <th scope="col">First</th>
+
+                </tr>
+            </thead> -->
+            <tbody>
+                <tr>
+                <th scope="row">Name:</th>
+                <td>{{ customer_profile.user.username }}</td>
+
+                </tr>
+                <tr>
+                <th scope="row">E-mail:</th>
+                <td>{{ customer_profile.user.email }}</td>
+
+                </tr>
+                <form action="" method="POST" class="">
+
+                    {% csrf_token %}
+
+                    <tr>
+                    <th scope="row">Address 1:</th>
+                    <th >{{ form.default_street_address1|as_crispy_field }}</th>
+                    </tr>
+                    <tr>
+                        <th scope="row">Address 2:</th>
+                        <th>{{ form.default_street_address2|as_crispy_field }}</th>
+                    </tr>
+                    <tr>
+                        <th scope="row">Phone number:</th>
+                        <th>{{ form.default_phone_number|as_crispy_field }}</th>
+                    </tr>
+                    <tr>
+                        <th scope="row">Town or City:</th>
+                        <th>{{ form.default_town_or_city|as_crispy_field }}</th>
+                    </tr>
+                    <tr>
+                        <th scope="row">County | Post code</th>
+                        <th>{{ form.default_county|as_crispy_field }}
+                            {{ form.default_postcode|as_crispy_field }}</th>
+                    </tr>
+                    <tr>
+                        <th scope="row">Country</th>
+                        <th>{{ form.default_country|as_crispy_field }}</th>
+                    </tr>
+
+                    </tbody>
+
+
+
+                </form>
+            </table>
+
+
+        </div>
+
+    </div>
+</div>
+
+
+
+
 
 
 

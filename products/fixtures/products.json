@@ -8,8 +8,9 @@
             "name": "Dark Moon",
             "description": "The Dark Moon  a custom folding knife that embodies the sharpness and sophistication of a true gentleman,With a 9.2 inch high carbon steel blade and a stylish camel bone handle, this knife is both sharp and elegant. Perfect for formal occasions or everyday use, the Dark Moonblade is a must-have for any gentleman who values style and functionality in their knife collection.",
             "price": 245.50,
-            "blade_length": "9.2",
-            "handle_material": "Camel bone",
+            "bladelength": "9.2",
+            "blade": "Damaskus steel",
+            "handlematerial": "Camel bone",
             "image_url": "",
             "image": "dark_moon.jpg"
         }
@@ -22,11 +23,12 @@
             "item_no": "P416",
             "name": "Green_gent",
             "description": "knife that combines elegance with function. With an 8.8 inch stainless steel blade and a unique abalone shell handle, this knife is perfect for formal occasions or as a statement piece. A must-have for any gentleman who values style and functionality in their knife collection.",
-            "price": 245.50,
-            "blade_length": "8.8",
-            "handle_material": "abalone shell",
+            "price": 200.00,
+            "bladelength": "8.8",
+            "blade": "O1 tool steel",
+            "handlematerial": "abalone shell",
             "image_url": "",
-            "image": "dark_moon.jpg"
+            "image": "green_gent.jpg"
         }
     },
     {
@@ -37,11 +39,12 @@
             "item_no": "G876",
             "name": "Oracle,",
             "description": " Oracle, a custom folding knife designed for the modern gentleman.With an 8.4 inch Damascus stainless steel blade and a handle crafted from premium Irish oak, this knife is both stylish and functional, and overall it represents the perfect blend of style and performance ",
-            "price": 245.50,
-            "blade_length": "8.4",
-            "handle_material": "Irish oak",
+            "price": 185.00,
+            "bladelength": "8.4",
+            "blade": "Damaskus steel",
+            "handlematerial": "Irish oak",
             "image_url": "",
-            "image": "dark_moon.jpg"
+            "image": "oracle.jpg"
         }
     },
     {
@@ -52,11 +55,12 @@
             "item_no": "S465",
             "name": "Obsidian-scout",
             "description": "custom folding knife that combines style and function. With a 9 inch Damascus stainless steel blade and a stabilized camel bone handle, Obsidian-scout is a top-of-the-line custom folding knife that is sure to impress any knife enthusiast with its exceptional design and performance. A perfect addition to any gentleman's everyday carry. ",
-            "price": 245.50,
-            "blade_length": "9.2",
-            "handle_material": "",
+            "price": 225.50,
+            "bladelength": "9.2",
+            "blade": "Laminated Damaskus steel",
+            "handlematerial": "",
             "image_url": "",
-            "image": "dark_moon.jpg"
+            "image": "obsidian_scout.jpg"
         }
     },
 
@@ -69,11 +73,12 @@
             "item_no": "G549",
             "name": "Nightfal",
             "description": "knife that combines sleek design with exceptional performance. With an 8.6 inch Damascus stainless steel blade and a handle made from premium micarta, this knife is both durable and stylish.Overall, the Nightfall is a top-of-the-line custom folding knife that is sure to impress any knife enthusiast with its exceptional design and performance",
-            "price": 245.50,
-            "blade_length": "8.6",
-            "handle_material": "micarta",
+            "price": 245.00,
+            "bladelength": "8.6",
+            "blade": "O1 tool steel",
+            "handlematerial": "micarta",
             "image_url": "",
-            "image": "dark_moon.jpg"
+            "image": "nightfall.jpg"
         }
     },
 
@@ -83,14 +88,15 @@
         "model": "products.product",
         "fields": {
             "category": 1,
-            "item_no": "",
-            "name": "",
-            "description": "",
-            "price": 245.50,
-            "blade_length": "9.2",
-            "handle_material": "",
+            "item_no": "G316",
+            "name": "Teal",
+            "description": "knife that combines style and functionality in one beautiful package.With an 8.6 inch high carbon steel blade and a handle made from premium blue micarta, this knife is both elegant and durable and it's sure to impress any knife enthusiast with its exceptional design and performance",
+            "price": 200.00,
+            "bladelength": "8.6",
+            "handlematerial": "Blue micarta",
+            "blade": "High carbon steel",
             "image_url": "",
-            "image": "dark_moon.jpg"
+            "image": "teal.jpg"
         }
     },
 
@@ -100,14 +106,15 @@
         "model": "products.product",
         "fields": {
             "category": 1,
-            "item_no": "",
-            "name": "",
-            "description": "",
-            "price": 245.50,
-            "blade_length": "9.2",
-            "handle_material": "",
+            "item_no": "G729",
+            "name": "Ruby ranger",
+            "description": "With its unique design and premium materials razor-sharp 9.2 cm AEB-L steel blade, paired with a sleek G-10 handle that ensures a comfortable grip during use., the Ruby Ranger is a true standout in any collection. Its sturdy build and reliable performance make it the ideal choice for outdoor adventures or everyday carry.",
+            "price": 215.50,
+            "bladelength": "9.2",
+            "handlematerial": "G-10",
+            "blade": "AEB-L steel",
             "image_url": "",
-            "image": "dark_moon.jpg"
+            "image": "ruby_ranger.jpg"
         }
     },
 
@@ -117,14 +124,15 @@
         "model": "products.product",
         "fields": {
             "category": 1,
-            "item_no": "",
-            "name": "",
-            "description": "",
-            "price": 245.50,
-            "blade_length": "9.2",
-            "handle_material": "",
+            "item_no": "S523",
+            "name": "Ember",
+            "description": "This knife is truly a work of art. Its sharp blade and ergonomic handle make it the perfect tool for any outdoor adventure or daily use.With its unique blend of premium materials and exceptional craftsmanship, it a must-have for collectors and knife enthusiasts",
+            "price": 290.00,
+            "bladelength": "8.6",
+            "blade": "O1 tool steel",
+            "handlematerial": "Vanadis 4",
             "image_url": "",
-            "image": "dark_moon.jpg"
+            "image": "ember.jpg"
         }
     },
 
@@ -133,14 +141,15 @@
         "model": "products.product",
         "fields": {
             "category": 1,
-            "item_no": "",
-            "name": "",
-            "description": "",
-            "price": 245.50,
-            "blade_length": "9.2",
-            "handle_material": "",
+            "item_no": "F524",
+            "name": "Smooth gent.",
+            "description": "With its smooth lines and minimalist design, the Smooth Gent is a knife that is sure to impress. Whether you're looking for a practical tool for everyday use or a stylish accessory for special occasions, this knife has you covered.",
+            "price": 200.00,
+            "bladelength": "8.8",
+            "blade": "RWL-34 steel",
+            "handlematerial": "G-10",
             "image_url": "",
-            "image": "dark_moon.jpg"
+            "image": "smooth_gent.jpg"
         }
     },
 
@@ -154,8 +163,9 @@
             "name": "Brown Dagger",
             "description": "Compact yet powerful custom folding knife  With an 8.2 inch high carbon steel blade and a sturdy oak handle, this knife is perfect for everyday use. Whether you need to open packages or tackle tough materials. With its exceptional quality and attention to detail, this custom folding knife is sure to become a go-to tool for any cutting task.",
             "price": 185.00,
-            "blade_length": "8.2",
-            "handle_material": "oak",
+            "bladelength": "8.2",
+            "blade": "High carbon steel",
+            "handlematerial": "Bakelit",
             "image_url": "",
             "image": "brown_dagger.jpg"
         }
@@ -176,222 +186,338 @@
         "model": "products.product",
         "fields": {
             "category": 2,
-            "item_no": "",
-            "name": "",
-            "description": "",
-            "price": 245.50,
-            "blade_length": "9.2",
-            "handle_material": "",
-            "image_url": "",
-            "image": "dark_moon.jpg"
-        }
-    },
-
-    {
-        "pk": 12,
-        "model": "products.product",
-        "fields": {
-            "category": 2,
-            "item_no": "",
-            "name": "",
-            "description": "",
-            "price": 245.50,
-            "blade_length": "9.2",
-            "handle_material": "",
-            "image_url": "",
-            "image": "dark_moon.jpg"
-        }
-    },
-
-    {
-        "pk": 13,
-        "model": "products.product",
-        "fields": {
-            "category": 2,
-            "item_no": "",
-            "name": "",
-            "description": "",
-            "price": 245.50,
-            "blade_length": "9.2",
-            "handle_material": "",
-            "image_url": "",
-            "image": "dark_moon.jpg"
-        }
-    },
-
-    {
-        "pk": 14,
-        "model": "products.product",
-        "fields": {
-            "category": 2,
-            "item_no": "",
-            "name": "",
-            "description": "",
-            "price": 245.50,
-            "blade_length": "9.2",
-            "handle_material": "",
-            "image_url": "",
-            "image": "dark_moon.jpg"
-        }
-    },
-
-    {
-        "pk": 11,
-        "model": "products.product",
-        "fields": {
-            "category": 2,
-            "item_no": "",
-            "name": "",
-            "description": "",
-            "price": 245.50,
-            "blade_length": "9.2",
-            "handle_material": "",
-            "image_url": "",
-            "image": "dark_moon.jpg"
-        }
-    },
-
-    {
-        "pk": 12,
-        "model": "products.product",
-        "fields": {
-            "category": 2,
-            "item_no": "",
-            "name": "",
-            "description": "",
-            "price": 245.50,
-            "blade_length": "9.2",
-            "handle_material": "",
-            "image_url": "",
-            "image": "dark_moon.jpg"
-        }
-    },
-
-    {
-        "pk": 13,
-        "model": "products.product",
-        "fields": {
-            "category": 2,
-            "item_no": "",
-            "name": "",
-            "description": "",
-            "price": 245.50,
-            "blade_length": "9.2",
-            "handle_material": "",
-            "image_url": "",
-            "image": "dark_moon.jpg"
-        }
-    },
-
-    {
-        "pk": 14,
-        "model": "products.product",
-        "fields": {
-            "category": 2,
-            "item_no": "",
-            "name": "",
-            "description": "",
-            "price": 245.50,
-            "blade_length": "9.2",
-            "handle_material": "",
-            "image_url": "",
-            "image": "dark_moon.jpg"
-        }
-    },
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    {
-        "pk": 2,
-        "model": "products.product",
-        "fields": {
-            "category": 1,
-            "item_no": "A683",
-            "name": "Smooth Gentleman",
-            "description": "very good thing",
-            "price": 285.00,
-            "blade_length": "9.2",
-            "handle_material": "Fibre Glass",
-            "image_url": "",
-            "image": "smooth_gent.jpg"
-        }
-    },
-    {
-        "pk": 3,
-        "model": "products.product",
-        "fields": {
-            "category": 3,
-            "item_no": "A243",
-            "name": "Silk Light",
-            "description": "very good thing ooooooo",
-            "price": 185.00,
-            "blade_length": "8.5",
-            "handle_material": "Marble thing",
+            "item_no": "Z878",
+            "name": "Silk light",
+            "description": "knife that combines elegance and functionality in equal measure.Silk light  is a one-of-a-kind knife that is sure to impress. Add it to your collection today and experience the perfect blend of form and function.",
+            "price": 325.00,
+            "bladelength": "9.2",
+            "blade": "RWL-34 steel",
+            "handlematerial": "Stabilized Giraffe bone",
             "image_url": "",
             "image": "silk_light.jpg"
         }
     },
+
+    {
+        "pk": 12,
+        "model": "products.product",
+        "fields": {
+            "category": 2,
+            "item_no": "F382",
+            "name": "Glacier",
+            "description": "For the discerning craftsman, the Glacier knife is the perfect tool for precision cutting and carving.Whether you're working on a delicate project or something more rugged, the Glacier knife is a reliable and stylish choice",
+            "price": 245.00,
+            "bladelength": "9",
+            "blade": "O1 tool steel",
+            "handlematerial": "Stabilized Camel bone",
+            "image_url": "",
+            "image": "glacier.jpg"
+        }
+    },
+
+    {
+        "pk": 13,
+        "model": "products.product",
+        "fields": {
+            "category": 2,
+            "item_no": "C789",
+            "name": "Indigo scout",
+            "description": "Indigo Scout is a sleek and stylish knife designed for the modern craftsman. With its sharp O1 tool steel blade and lightweight carbon fiber handle, this knife is perfect for outdoor adventures or everyday use.",
+            "price": 245.50,
+            "bladelength": "8.8",
+            "blade": "O1 tool steel",
+            "handlematerial": "Carbon fiber",
+            "image_url": "",
+            "image": "indigo_scout.jpg"
+        }
+    },
+
+    {
+        "pk": 14,
+        "model": "products.product",
+        "fields": {
+            "category": 2,
+            "item_no": "T837",
+            "name": "Oak outlaw",
+            "description": "With its stunning desert iron wood handle and razor-sharp Damascus steel blade, the Oak Outlaw is a true masterpiece crafted by skilled artisans. Perfect for the discerning craftsman, this knife is both functional and beautifully designed.",
+            "price": 250.00,
+            "bladelength": "8.2",
+            "blade": "Damaskus steel",
+            "handlematerial": "Desert iron wood",
+            "image_url": "",
+            "image": "oak_outlaw.jpg"
+        }
+    },
+
+    {
+        "pk": 15,
+        "model": "products.product",
+        "fields": {
+            "category": 2,
+            "item_no": "C732",
+            "name": "Cavalier",
+            "description": "The Cavalier is a classic yet elegant knife, perfect for any craftsman. Its sharp high carbon steel blade and plain wood handle make it a reliable tool for any task at hand",
+            "price": 225.00,
+            "bladelength": "9",
+            "blade": "High carbon steel",
+            "handlematerial": "Plain wood",
+            "image_url": "",
+            "image": "cavalier.jpg"
+        }
+    },
+
+    {
+        "pk": 16,
+        "model": "products.product",
+        "fields": {
+            "category": 2,
+            "item_no": "K851",
+            "name": "Crimson trail",
+            "description": " Blaze your own trail with the Crimson Trail knife. With its razor-sharp RWL-34 steel blade and durable G-10 handle, this knife is built for tough outdoor tasks. Its sleek design and crimson accents make it a stylish addition to any collection.",
+            "price": 205.00,
+            "bladelength": "9.4",
+            "blade": "RWL-34 steel",
+            "handlematerial": "G-10",
+            "image_url": "",
+            "image": "crimson_trail.jpg"
+        }
+    },
+
+    {
+        "pk": 17,
+        "model": "products.product",
+        "fields": {
+            "category": 2,
+            "item_no": "K573",
+            "name": "Worker",
+            "description": "The Worker is a sturdy and reliable knife, perfect for heavy-duty tasks. Its razor-sharp O1 tool steel blade is complemented by a beautiful handle made from stabilized giraffe bone, providing both style and functionality. Get the job done with the Worker.",
+            "price": 245.50,
+            "bladelength": "8.4",
+            "blade": "O1 tool steel",
+            "handlematerial": "Stabilized Giraffe bone",
+            "image_url": "",
+            "image": "worker.jpg"
+        }
+    },
+
+    {
+        "pk": 18,
+        "model": "products.product",
+        "fields": {
+            "category": 2,
+            "item_no": "T467",
+            "name": "Frost",
+            "description": "Experience the chill of the Frost knife, crafted with a sharp and durable Damascus steel blade and a handle made of beautifully stabilized Camel bone. Perfect for the outdoorsman or collector, this knife is a masterpiece of craftsmanship.",
+            "price": 305.00,
+            "bladelength": "8",
+            "blade": "Damaskus steel",
+            "handlematerial": "Stabilized Camel bone",
+            "image_url": "",
+            "image": "frost.jpg"
+        }
+    },
+
+    {
+        "pk": 19,
+        "model": "products.product",
+        "fields": {
+            "category": 3,
+            "item_no": "E836",
+            "name": "Canyon",
+            "description": "A reliable and sturdy companion for outdoor adventures, the Canyon features a sharp O1 tool steel blade and a comfortable handle made of stabilized walnut. Perfect for any outdoor enthusiast.",
+            "price": 175.00,
+            "bladelength": "8",
+            "blade": "O1 tool steel",
+            "handlematerial": "Stabilized walnut",
+            "image_url": "",
+            "image": "canyon.jpg"
+        }
+    },
+
+    {
+        "pk": 20,
+        "model": "products.product",
+        "fields": {
+            "category": 3,
+            "item_no": "N222",
+            "name": "Bone bowie",
+            "description": " rugged and dependable knife designed for explorers and outdoorsmen who demand the very best. With a blade length of 8 inches and made of tough O1 tool steel, this knife is built to handle even the most challenging cutting tasks. The handle is made of genuine stag, giving it a timeless and classic appearance, while also providing a comfortable and secure grip. Whether you're trekking through the wilderness or just need a reliable tool for everyday use, the Bone Bowie is a great choice that won't let you down.",
+            "price": 210.00,
+            "bladelength": "8.6",
+            "blade": "O1 tool steel",
+            "handlematerial": "Stag",
+            "image_url": "",
+            "image": "bone_bowie.jpg"
+        }
+    },
+
+    {
+        "pk": 21,
+        "model": "products.product",
+        "fields": {
+            "category": 3,
+            "item_no": "E314",
+            "name": "Shaper",
+            "description": "Versatile and reliable knife designed for explorers and adventurers. Its 8.2 inch blade is made of high carbon steel, providing durability and sharpness for a variety of cutting tasks. The handle is crafted from stabilized poplar wood, ensuring a comfortable grip even in wet or slippery conditions. With its lightweight design and sleek profile, the Shaper is the perfect tool for any outdoor excursion.",
+            "price": 180.00,
+            "bladelength": "8",
+            "blade": "High carbon steel",
+            "handlematerial": "Stabilized Poplar wood",
+            "image_url": "",
+            "image": "shaper.jpg"
+        }
+    },
+
+    {
+        "pk": 22,
+        "model": "products.product",
+        "fields": {
+            "category": 3,
+            "item_no": "C505",
+            "name": "Cherry sentinel",
+            "description": "With its sturdy O1 tool steel blade and reliable bakelite handle, the Cherry Sentinel is a trustworthy companion for any explorer. Its compact 8.2 inch blade is perfect for tackling any task, while the vibrant cherry red handle adds a touch of style to your outdoor gear.",
+            "price": 245.00,
+            "bladelength": "8.8",
+            "blade": "O1 tool steel",
+            "handlematerial": "Bakelit",
+            "image_url": "",
+            "image": "cherry_sentinel.jpg"
+        }
+    },
+
+    {
+        "pk": 23,
+        "model": "products.product",
+        "fields": {
+            "category": 3,
+            "item_no": "E537",
+            "name": "Whitetail",
+            "description": "A masterful hunting knife, the Whitetail boasts a razor-sharp RWL-34 steel blade and a handle made of ivory micarta that provides a secure and comfortable grip even in the wettest of conditions. Ideal for hunters and outdoorsmen alike, this knife is a trusty companion on any expedition.",
+            "price": 245.50,
+            "bladelength": "8.2",
+            "blade": "RWL-34 steel",
+            "handlematerial": "Ivory micarta",
+            "image_url": "",
+            "image": "whitetail.jpg"
+        }
+    },
+
+    {
+        "pk": 24,
+        "model": "products.product",
+        "fields": {
+            "category": 3,
+            "item_no": "E542",
+            "name": "Onyx",
+            "description": "sleek and stylish explorer knife designed for the modern adventurer. Its 8.4 inch blade is made from durable O1 tool steel, ensuring it can withstand tough outdoor conditions. The handle is crafted from beautiful ebony wood, which not only looks great but also provides a comfortable grip for extended use. With its black and silver color scheme, this knife is as striking as it is practical. Whether you're camping, hiking, or simply exploring the great outdoors, the Onyx is the perfect companion to have by your side.",
+            "price": 245.50,
+            "bladelength": "8.4",
+            "blade": "O1 tool steel",
+            "handlematerial": "Ebony wood",
+            "image_url": "",
+            "image": "onyx.jpg"
+        }
+    },
+
+    {
+        "pk": 25,
+        "model": "products.product",
+        "fields": {
+            "category": 3,
+            "item_no": "E302",
+            "name": "Ivory clipper",
+            "description": "durable and versatile knife designed for explorers and adventurers. Its 8-inch blade is made of tough O1 tool steel, providing a sharp and durable edge for various cutting tasks. The handle is crafted from stabilized Camel bone, offering a comfortable and secure grip. With its classic design and reliable performance, the Ivory clipper is a must-have tool for any outdoor enthusiast.",
+            "price": 155.00,
+            "bladelength": "8",
+            "blade": "O1 tool steel",
+            "handlematerial": "Stabilized Camel bone",
+            "image_url": "",
+            "image": "ivory_clipper.jpg"
+        }
+    },
+
+    {
+        "pk": 26,
+        "model": "products.product",
+        "fields": {
+            "category": 3,
+            "item_no": "",
+            "name": "Savannah",
+            "description": "This knife is a reliable and sturdy tool designed for the adventurous explorer. With its 8-inch O1 tool steel blade and stabilized walnut handle, this knife can easily handle tough outdoor tasks such as preparing food, and crafting shelter. Its sleek design and durable construction make it a must-have item for your collection",
+            "price": 250.00,
+            "bladelength": "8",
+            "blade": "O1 tool steel",
+            "handlematerial": "Stabilized walnut",
+            "image_url": "",
+            "image": "savannah.jpg"
+        }
+    }
+
+
+
 ]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

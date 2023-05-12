@@ -12,7 +12,7 @@
             <div class="image-container mt-5">
                 {% if product.image %}
                     <a href="{{ product.image.url }}" target="_blank">
-                        <img class="card-img-top img-fluid" src="{{ product.image.url }}" alt="{{ product.name }}">
+                        <img class="card-img-top img-fluid" src="{{ product.image.url }}" alt="{{ product.name }}" height="400px">
                     </a>
                     {% else %}
                     <a href="">
@@ -25,10 +25,10 @@
         </div>
         <div class="col-sm-6 col-md-6 col-lg-4">
             <div class="product-details-container mb-5 mt-md-5 ">
-                <h3 class="mb-1 fw-bold product-name">{{ product.name }}</h3>
-                <p class="lead mb-0 text-left font-weight-bold">{{ product.price }}</p>
-                <p class="mt-3"> Handle Material:</p>
-                <p class="mt-3"> Blade Length: {{ product.blade_length}}cm</p>
+                <h3 class="mb-1 fw-bold product-name text-uppercase">{{ product.name }}</h3>
+                <p class="lead mb-0 text-left font-weight-bold text-success fw-bold">€{{ product.price }}</p>
+                <p class="mt-3"> <strong>Handle Material:</strong>{{ product.handlematerial}}</p>
+                <p class="mt-3"> <strong>Blade Length:</strong> {{ product.bladelength}}cm</p>
 
                 {% if product.category  %}
                 <div>
@@ -39,9 +39,9 @@
                 {% else %}
                 {% endif %}
 
-                <small class="text-muted"><i class="fas fa-star mr-1"></i>rating / 5</small>
+                <!-- <small class="text-muted"><i class="fas fa-star mr-1"></i>rating / 5</small>
 
-                <small class="text-muted">No Rating</small>
+                <small class="text-muted">No Rating</small> -->
 
 
                 <small class="ml-3">

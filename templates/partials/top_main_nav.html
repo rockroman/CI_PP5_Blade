@@ -1,5 +1,5 @@
 <!-- main navigation -->
-<nav class="navbar navbar-expand-lg navbar-light py-0">
+<nav class="navbar navbar-expand-lg navbar-light py-0 ">
     <div class="container-fluid">
         <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample-left">
             <span class="navbar-toggler-icon"></span>
@@ -47,8 +47,8 @@
                     </a>
                 <ul class="dropdown-menu">
                     <li><a class="dropdown-item" href="{% url 'products:store_products' %}?sort=price&direction=asc">By Price</a></li>
-                    <li><a class="dropdown-item" href="{% url 'products:store_products' %}?sort=blade_length&direction=desc">By Blade Length </a></li>
-                    <li><a class="dropdown-item" href="{% url 'products:store_products' %}?sort=handle_material&direction=desc">By Handle Material</a></li>
+                    <li><a class="dropdown-item" href="{% url 'products:store_products' %}?sort=bladelength&direction=desc">By Blade Length </a></li>
+                    <li><a class="dropdown-item" href="{% url 'products:store_products' %}?sort=name&direction=desc">Name</a></li>
                     <li><a class="dropdown-item" href="{% url 'products:store_products' %}?sort=category&direction=asc">By Category</a></li>
                     <li><a class="dropdown-item" href="{% url 'products:store_products' %}">All Knives</a></li>
                 </ul>
@@ -138,8 +138,8 @@
                 </a>
             <ul class="dropdown-menu">
                 <li><a class="dropdown-item" href="{% url 'products:store_products' %}?sort=price&direction=asc">By Price</a></li>
-                <li><a class="dropdown-item" href="{% url 'products:store_products' %}?sort=blade_length&direction=desc">By Blade Length </a></li>
-                <li><a class="dropdown-item" href="{% url 'products:store_products' %}?sort=handle_material&direction=desc">By Handle Material</a></li>
+                <li><a class="dropdown-item" href="{% url 'products:store_products' %}?sort=bladelength&direction=desc">By Blade Length </a></li>
+                <li><a class="dropdown-item" href="{% url 'products:store_products' %}?sort=name&direction=desc">By Name</a></li>
                 <li><a class="dropdown-item" href="{% url 'products:store_products' %}?sort=category&direction=asc">By Category</a></li>
                 <li><a class="dropdown-item" href="{% url 'products:store_products' %}">All Knives</a></li>
             </ul>

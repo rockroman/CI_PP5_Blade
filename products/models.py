@@ -46,8 +46,9 @@ class Product(models.Model):
     name = models.CharField(max_length=254)
     description = models.TextField()
     price = models.DecimalField(max_digits=6, decimal_places=2)
-    blade_length = models.DecimalField(max_digits=5, decimal_places=2 )
-    handle_material = models.CharField(max_length=254)
+    bladelength = models.DecimalField(max_digits=5, decimal_places=2 )
+    handlematerial = models.CharField(max_length=254)
+    blade = models.CharField(max_length=254)
     image_url = models.URLField(max_length=1024, null=True, blank=True)
     image = models.ImageField(null=True, blank=True)
 

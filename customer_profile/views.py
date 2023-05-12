@@ -10,6 +10,9 @@ from django.conf import settings
 
 
 # Internal:
+from customer_profile.models import CustomerProfile
+from .forms import CustomerProfileForm
+from checkout.models import Order
 
 
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -18,7 +21,15 @@ def profile(request):
     """
     view handling user profile
     """
-    print('view called')
+
+    customer_profile = get_object_or_404(CustomerProfile, user=request.user)
+    form = CustomerProfileForm(instance=customer_profile)
+    orders = customer_profile.orders.all()
     template = 'customer_profile/profile.html'
-    context = {}
+    context = {
+
+        'form': form,
+        'orders': orders,
+        'customer_profile': customer_profile,
+    }
     return render(request, template, context)
