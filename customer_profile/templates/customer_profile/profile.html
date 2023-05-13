@@ -16,7 +16,7 @@
     <div class="row mx-auto">
         <div class="col-lg-6 col-md-10 mt-2">
             <!-- accordion -->
-            <div class="accordion" id="order-accordion">
+            <!-- <div class="accordion" id="order-accordion">
                 <div class="accordion-item">
                   <h2 class="accordion-header" id="headingOne">
                     <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
@@ -24,13 +24,81 @@
                     </button>
                   </h2>
                   <div id="collapseOne" class="accordion-collapse collapse " aria-labelledby="headingOne" data-bs-parent="#accordionExample">
-                    <div class="accordion-body">
-                      <strong>
-                        This is the first item's accordion body.
-                    </strong>
-                    </div>
+                        <div class="accordion-body">
+                        <strong>
+                            This is the first item's accordion body.
+                        </strong>
+                        </div>
                   </div>
                 </div>
+            </div> -->
+
+            <div class="accordion" id="order-accordion">
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="headingOne">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                      <strong>Order History </strong>({{ orders|length}})
+                    </button>
+                  </h2>
+
+                  <!-- <div id="collapseOne" class="accordion-collapse collapse " aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                        <div class="d-flex justify-content-between">
+                            <strong>
+                                order num.
+                            </strong>
+                            <strong>
+                                date
+                            </strong>
+                            <strong>
+                               items
+                            </strong>
+                        </div>
+
+                        </div>
+                  </div> -->
+                </div>
+                {% for order in orders %}
+                <div class="accordion-item">
+                    <h2 class="accordion-header text-center" id="heading{{ order.order_number|truncatechars:7 }}">
+                      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#{{ order.order_number|truncatechars:6 }}" aria-expanded="true" aria-controls="collapseOne">
+                        <span class="text-success">{{ order.order_number }}</span>
+                      </button>
+                    </h2>
+
+                    <div id="{{ order.order_number|truncatechars:6 }}" class="accordion-collapse collapse " aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                          <div class="accordion-body">
+                            {% for item in order.lineitems.all %}
+                          <div class="">
+
+                            <table class="table">
+                                <thead>
+                                  <tr>
+                                    <th scope="col">Order num.</th>
+                                    <th scope="col">Date</th>
+                                    <th scope="col">Items</th>
+                                    <th scope="col">Order total</th>
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                  <tr>
+                                    <th scope="row">{{ order.order_number|truncatechars:6 }}</th>
+                                    <td>{{ order.date }}</td>
+                                    <td>{{ item.product.name }}({{ item.quantity }})</td>
+                                    <td>€{{ order.grand_total }}</td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                          </div>
+                          {% endfor %}
+
+                          </div>
+                    </div>
+                  </div>
+                  {% endfor %}
+
+
+
             </div>
 
 
@@ -42,61 +110,72 @@
         </div>
         <div class="col-lg-6 col-md-10 mt-2">
 
-            <table class="table table-borderless">
-            <!--<thead>
-                <tr>
-                <th scope="col">nesto</th>
-                <th scope="col">First</th>
-
-                </tr>
-            </thead> -->
-            <tbody>
-                <tr>
-                <th scope="row">Name:</th>
-                <td>{{ customer_profile.user.username }}</td>
-
-                </tr>
-                <tr>
-                <th scope="row">E-mail:</th>
-                <td>{{ customer_profile.user.email }}</td>
-
-                </tr>
-                <form action="" method="POST" class="">
-
-                    {% csrf_token %}
-
+                <table class="table table-borderless mb-0">
+                <!--<thead>
                     <tr>
-                    <th scope="row">Address 1:</th>
-                    <th >{{ form.default_street_address1|as_crispy_field }}</th>
+                    <th scope="col">nesto</th>
+                    <th scope="col">First</th>
+
+                    </tr>
+                </thead> -->
+                <tbody>
+                    <tr>
+                    <th scope="row">Name:</th>
+                    <td>{{ customer_profile.user.username }}</td>
+
                     </tr>
                     <tr>
-                        <th scope="row">Address 2:</th>
-                        <th>{{ form.default_street_address2|as_crispy_field }}</th>
-                    </tr>
-                    <tr>
-                        <th scope="row">Phone number:</th>
-                        <th>{{ form.default_phone_number|as_crispy_field }}</th>
-                    </tr>
-                    <tr>
-                        <th scope="row">Town or City:</th>
-                        <th>{{ form.default_town_or_city|as_crispy_field }}</th>
-                    </tr>
-                    <tr>
-                        <th scope="row">County | Post code</th>
-                        <th>{{ form.default_county|as_crispy_field }}
-                            {{ form.default_postcode|as_crispy_field }}</th>
-                    </tr>
-                    <tr>
-                        <th scope="row">Country</th>
-                        <th>{{ form.default_country|as_crispy_field }}</th>
-                    </tr>
+                    <th scope="row">E-mail:</th>
+                    <td>{{ customer_profile.user.email }}</td>
 
-                    </tbody>
+                    </tr>
+                    <form action="" method="POST" class="" id="profile-form">
+
+                        {% csrf_token %}
+
+                        <tr>
+                        <th scope="row">Address 1:</th>
+                        <th >{{ form.default_street_address1|as_crispy_field }}</th>
+                        </tr>
+                        <tr>
+                            <th scope="row">Address 2:</th>
+                            <th>{{ form.default_street_address2|as_crispy_field }}</th>
+                        </tr>
+                        <tr>
+                            <th scope="row">Phone number:</th>
+                            <th>{{ form.default_phone_number|as_crispy_field }}</th>
+                        </tr>
+                        <tr>
+                            <th scope="row">Town or City:</th>
+                            <th>{{ form.default_town_or_city|as_crispy_field }}</th>
+                        </tr>
+                        <tr>
+                            <th scope="row">County | Post code</th>
+                            <th>{{ form.default_county|as_crispy_field }}
+                                {{ form.default_postcode|as_crispy_field }}</th>
+                        </tr>
+                        <tr>
+                            <th scope="row">Country</th>
+                            <th>{{ form.default_country|as_crispy_field }}</th>
+
+                        </tr>
+
+
+                        </tbody>
 
 
 
-                </form>
+
+                    </form>
             </table>
+
+            <div class="d-flex justify-content-end">
+                <button class="btn-dark p-1 px-2 fw-bold" type="submit" form="profile-form">
+                    Update profile
+                    <i class="bi bi-person"></i>
+                </button>
+            </div>
+
 
 
         </div>

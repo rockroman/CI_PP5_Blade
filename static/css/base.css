@@ -262,7 +262,15 @@ img {
   /* left: 10px; */
   right: 10px;
   position: absolute;
-  top: 1px;
+  bottom: 1px;
+
+}
+
+.heart{
+  background-color: #f9f9f9cd;
+  border-radius: 50%;
+
+
 }
 /* .product-card__like-check, .product-card__heart--filled {
   display: none;
@@ -296,6 +304,59 @@ img {
 
 
 /* end all products page */
+
+
+/* product detail page  */
+
+
+/* end product detail page  */
+/* reviews */
+.bdge {
+  height: 21px;
+  background-color: orange;
+  color: #fff;
+  font-size: 11px;
+  padding: 8px;
+  border-radius: 4px;
+  line-height: 3px;
+}
+
+.comments {
+  text-decoration: underline;
+  text-underline-position: under;
+  cursor: pointer;
+}
+
+.dot {
+  height: 7px;
+  width: 7px;
+  margin-top: 3px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.hit-voting:hover {
+  color: blue;
+}
+
+.hit-voting {
+  cursor: pointer;
+}
+
+
+/* img on detail page */
+.detail-image-container{
+  width: 82%;
+}
+
+@media(max-width: 767px){
+
+  .detail-image-container{
+    width: 100%;
+  }
+
+}
 
 
 
