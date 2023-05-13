@@ -11,6 +11,8 @@ from .models import CustomerProfile
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 class CustomerProfileForm(forms.ModelForm):
+    # email = forms.EmailField(max_length=50)
+
     class Meta:
         model = CustomerProfile
         exclude = ('user',)
@@ -29,6 +31,7 @@ class CustomerProfileForm(forms.ModelForm):
             'default_street_address1': 'Street Address 1',
             'default_street_address2': 'Street Address 2',
             'default_county': 'County, State or Locality',
+            'email':'email',
 
         }
 
@@ -42,5 +45,15 @@ class CustomerProfileForm(forms.ModelForm):
                 self.fields[field].widget.attrs['placeholder'] = placeholder
             self.fields[field].widget.attrs['class'] = 'profile-form-input'
             self.fields[field].label = False
+
+    # def save(self, *args, **kwargs):
+    #     """
+    #     Update the primary email address on the related User object as well.
+    #     """
+    #     u = self.instance.user
+    #     u.email = self.cleaned_data['email']
+    #     u.save()
+    #     customer_profile = super(CustomerProfileForm, self).save(*args, **kwargs)
+    #     return customer_profile
 
 

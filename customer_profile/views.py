@@ -20,11 +20,16 @@ from checkout.models import Order
 def profile(request):
     """
     view handling user profile
+
     """
-
     customer_profile = get_object_or_404(CustomerProfile, user=request.user)
-    form = CustomerProfileForm(instance=customer_profile)
+    if request.method == 'POST':
+        form = CustomerProfileForm(request.POST, instance=customer_profile)
+        if form.is_valid():
+            form.save()
+            messages.success(request, "Your profile is updated")
 
+    form = CustomerProfileForm(instance=customer_profile)
     orders = customer_profile.orders.all()
     template = 'customer_profile/profile.html'
     context = {
@@ -32,6 +37,7 @@ def profile(request):
         'form': form,
         'orders': orders,
         'customer_profile': customer_profile,
+        'on_profile_page': True
 
     }
     return render(request, template, context)

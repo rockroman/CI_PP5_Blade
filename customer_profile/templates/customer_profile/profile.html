@@ -36,7 +36,7 @@
             <div class="accordion" id="order-accordion">
                 <div class="accordion-item">
                   <h2 class="accordion-header" id="headingOne">
-                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                    <button class="accordion-button" type="button" >
                       <strong>Order History </strong>({{ orders|length}})
                     </button>
                   </h2>
@@ -60,13 +60,13 @@
                 </div>
                 {% for order in orders %}
                 <div class="accordion-item">
-                    <h2 class="accordion-header text-center" id="heading{{ order.order_number|truncatechars:7 }}">
-                      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#{{ order.order_number|truncatechars:6 }}" aria-expanded="true" aria-controls="collapseOne">
+                    <h2 class="accordion-header text-center" id="heading{{ order.order_number|truncatechars:6 }}">
+                      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#my_{{ order.order_number }}" aria-expanded="true" aria-controls="my_{{ order.order_number }}">
                         <span class="text-success">{{ order.order_number }}</span>
                       </button>
                     </h2>
 
-                    <div id="{{ order.order_number|truncatechars:6 }}" class="accordion-collapse collapse " aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                    <div id="my_{{ order.order_number }}" class="accordion-collapse collapse " aria-labelledby="headingOne" data-bs-parent="#order-accordion">
                           <div class="accordion-body">
                             {% for item in order.lineitems.all %}
                           <div class="">
@@ -97,41 +97,37 @@
                   </div>
                   {% endfor %}
 
-
-
             </div>
 
-
-
-
             <!-- accordion -->
-
-
         </div>
-        <div class="col-lg-6 col-md-10 mt-2">
 
-                <table class="table table-borderless mb-0">
-                <!--<thead>
-                    <tr>
-                    <th scope="col">nesto</th>
-                    <th scope="col">First</th>
+        <div class="col-lg-6 col-md-10 mt-2 ">
 
-                    </tr>
-                </thead> -->
-                <tbody>
-                    <tr>
-                    <th scope="row">Name:</th>
-                    <td>{{ customer_profile.user.username }}</td>
 
-                    </tr>
-                    <tr>
-                    <th scope="row">E-mail:</th>
-                    <td>{{ customer_profile.user.email }}</td>
-
-                    </tr>
-                    <form action="" method="POST" class="" id="profile-form">
+                    <form  method="POST" class="px-3" id="profile-form">
 
                         {% csrf_token %}
+                        <table class="table table-borderless mb-0">
+                          <!--<thead>
+                              <tr>
+                              <th scope="col">nesto</th>
+                              <th scope="col">First</th>
+
+                              </tr>
+                          </thead> -->
+                          <tbody>
+                              <tr>
+                              <th scope="row">Name:</th>
+                              <td>{{ customer_profile.user.username }}</td>
+
+                              </tr>
+                              <!-- <tr>
+                              <th scope="row">E-mail:</th>
+                              <td>{{ customer_profile.user.email }}</td>
+
+                              </tr> -->
+
 
                         <tr>
                         <th scope="row">Address 1:</th>
@@ -165,12 +161,12 @@
 
 
 
-
+                      </table>
                     </form>
-            </table>
 
-            <div class="d-flex justify-content-end">
-                <button class="btn-dark p-1 px-2 fw-bold" type="submit" form="profile-form">
+
+            <div class="d-flex justify-content-end px-4">
+                <button class="btn-dark p-1 px-2 fw-bold " type="submit" form="profile-form">
                     Update profile
                     <i class="bi bi-person"></i>
                 </button>
