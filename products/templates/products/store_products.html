@@ -73,18 +73,26 @@
                     <div class="text-start">
                         <span class="text-success fw-bold">{{ product.price }} €</span>
 
+
                     </div>
                     <div class="d-flex justify-content-between align-items-center mt-2">
                         {% if product.category  %}
                         <div class="ratings">{{ product.category.friendly_name }} </div>
                         {% else %}
                         {% endif %}
-                        <div>
-                            <!-- <button type="btn"><i class="bi bi-cart"></i></button>
-                            <button type="btn"><i class="bi bi-eye"></i></button> -->
-                            <a class="btn" href="#"><i class="bi bi-cart" style="-webkit-text-stroke-width: 1px; font-size: 1.2rem;"></i></a>
-                            <a class="btn" href="#"><i class="bi bi-eye" style="-webkit-text-stroke-width: 1px; font-size: 1.2rem;"></i> </a>
-                        </div>
+                        <form method="POST">
+                            {% csrf_token %}
+                            <div class="all_products">
+                                <!-- hidden inputs for ajax call -->
+                                <input type="hidden" class="product-id" value="{{ product.id }}" >
+                                <input type="hidden" class="product-image" value="{{ product.image.url }}" >
+                                <input type="hidden" class="product-price" value="{{ product.price }}">
+                                <input type="hidden" class="product-name" value="{{ product.name }}">
+                                <input type="hidden" class="csrf_token" value="{{ csrf_token }}">
+                                <a class="btn addToCartBtn" href="#"><i class="bi bi-cart-check" style="-webkit-text-stroke-width: 1.5px; font-size: 1.5rem; color: rgb(8, 143, 14);"></i></a>
+                                <a class="btn" href="#"><i class="bi bi-eye-fill" style=" font-size: 1.5rem;"></i> </a>
+                            </div>
+                        </form>
 
                     </div>
 

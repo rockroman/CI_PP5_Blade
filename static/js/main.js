@@ -119,6 +119,55 @@ $('#addToCartBtn').on('click', function(){
 
 })
 
+$('.addToCartBtn').on('click', function(){
+    var _addBtn = $(this);
+    var _qty = 1;
+    var _productName = $(this).closest('.all_products').find('.product-name').val();
+    var _productId = $(this).closest('.all_products').find('.product-id').val();
+    var _productName = $(this).closest('.all_products').find('.product-name').val();
+    var _productImage = $(this).closest('.all_products').find('.product-image').val();
+    var _productPrice = $(this).closest('.all_products').find('.product-price').val();
+
+    console.log(_productId);
+    console.log(_productName);
+    console.log(_productPrice);
+
+    $.ajax({
+        url:'/add_to_cart/',
+        type : 'POST',
+        headers: {
+            'X-CSRFToken': $(this).closest('.all_products').find('.csrf_token').val()
+        },
+        data:{
+            'id':_productId,
+            'image':_productImage,
+            'qty':_qty,
+            'name':_productName,
+            'price':_productPrice,
+        },
+
+        dataType:'json',
+        beforeSend:function(){
+
+            _addBtn.attr('disabled',true);
+        },
+        success:function(res){
+
+            updateCartTotal()
+            console.log(res.data);
+
+
+
+
+
+
+        }
+    });
+
+
+
+})
+
 
 $(document).ready(function() {
     window.onpageshow = function(event) {
