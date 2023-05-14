@@ -8,7 +8,12 @@
 {% include 'partials/top_main_nav.html' %}
 
 <h1 class="text-center">My wishlist</h1>
+{% for item in wishlist_items %}
+<h2 class="text-success">
+    {{item.product.name}}
 
+</h2>
+{% endfor %}
 
 
 

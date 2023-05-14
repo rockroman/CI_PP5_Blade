@@ -60,7 +60,12 @@
 
                     <div class="product-card__like">
 
-                        <a class="btn heart"><i class="product-card__heart bi bi-suit-heart" style="font-size: 2rem;-webkit-text-stroke-width: 1px;"></i></a>
+                        <form action="{% url 'wishlist:add_to_wishlist' %}" method="POST" >
+                            {% csrf_token %}
+                            <input type="hidden" name="product-id" value="{{ product.id }}" >
+                            <button type="submit" class="btn heart"><i class="product-card__heart bi bi-suit-heart" style="font-size: 2rem;-webkit-text-stroke-width: 1px;"></i></button>
+                            <input type="hidden" name="my_redirect_url" value="{{ request.path }}">
+                        </form>
                     </div>
 
                     <a href="{% url 'products:product_detail' product.id %}" class="btn product-card__btn">See more</a>

@@ -7,7 +7,9 @@
         <a class="navbar-brand" href="">
             <img src="{{ MEDIA_URL }}my_logo.png" alt="" class="my_logo img-fluid">
         </a>
-        <div class="d-flex d-lg-none" >
+        <div class="d-flex d-lg-none align-items-center" >
+            <a href="{% url 'wishlist:wishlist' %}"  role="button" class="btn py-3"><i class="bi bi-suit-heart" style="font-size:1.2rem; -webkit-text-stroke-width: 1px;"></i></a>
+
             <div class="dropdown">
 
                     <button type="button" id="dropdownProfile1" class="btn dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
@@ -22,14 +24,14 @@
                     <li><a class="dropdown-item " href="#">Shop management</a></li>
                 </ul>
           </div>
-          <button class="btn"  type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample-right"><i class="bi bi-search"></i></button>
+          <button class="btn"  type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample-right">
+            <i class="bi bi-search" style="font-size:1.2rem; -webkit-text-stroke-width: 1px;"></i>
+        </button>
 
             <a class="btn py-3" role="button" href="{% url 'shopping_cart:cart' %}">
                 <i class="bi bi-cart3"></i> <span class="cart-total">{{ all_items }}</span>
 
             </a>
-            <span class="total-price">0</span>
-
         </div>
 
 
@@ -68,10 +70,11 @@
                     <a class="nav-link ">About</a>
                 </li>
             </ul>
-            <div class="d-none d-lg-flex flex-row w-auto" >
+            <div class="d-none d-lg-flex flex-row w-auto align-items-center" >
                 <!-- <div class="input-group"> -->
                     <!-- <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"> -->
-                    <button type="button" class="btn"><i class="bi bi-suit-heart"></i></button>
+                    <a href="{% url 'wishlist:wishlist' %}" role="button" class="btn py-3"><i class="bi bi-suit-heart" style="font-size:1.2rem; -webkit-text-stroke-width: 1px;"></i></a>
+
                     <div class="dropdown">
 
                         <button type="button" id="dropdownProfile2" class="btn dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
