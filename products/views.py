@@ -59,6 +59,7 @@ def store_products(request):
         'search_term': query,
         'current_categories': categories,
         'sorting': sorting,
+
     }
 
     return render(request, template, context)
@@ -70,6 +71,7 @@ def product_detail(request, product_id):
 
     context = {
         'product': product,
+        'on_products_page': True
     }
 
     return render(request, template, context)

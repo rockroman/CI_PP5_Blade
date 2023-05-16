@@ -390,3 +390,26 @@ img {
     object-fit: cover;
   }
 }
+
+
+
+/* modal */
+.modal-dialog{
+  top: 20px;
+
+  transform: translateX(70%)!important;
+
+}
+
+
+.modal-content {
+  border-radius: 0;
+
+}
+
+
+.modal-backdrop {
+  background-color: transparent !important;
+
+}
+/* modal */

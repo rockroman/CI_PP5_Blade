@@ -33,9 +33,21 @@ def add_to_wishlist(request):
         try:
             wish_item = Wishlist.objects.get(user=request.user, product=product)
             if wish_item:
-                messages.info(request, f'{wish_item} already on a wishlist')
+                messages.info(request, f'{wish_item.product} already on a wishlist')
         except Wishlist.DoesNotExist:
             Wishlist.objects.create(user=request.user, product=product)
             messages.success(request, f'{product.name} added to wishlist')
 
         return HttpResponseRedirect(redirect_url)
+
+
+def remove_from_wishlist(request):
+
+    if request.method == 'POST':
+        item_id = request.POST.get('item-id')
+        print(item_id)
+        wish_item = get_object_or_404(Wishlist, pk=item_id)
+        wish_item.delete()
+        messages.success(request, f'{wish_item.product.name} deleted from wishlist')
+    return HttpResponseRedirect(reverse('wishlist:wishlist'))
+

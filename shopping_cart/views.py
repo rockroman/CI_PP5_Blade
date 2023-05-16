@@ -21,7 +21,11 @@ def cart(request):
     """
     template = 'shopping_cart/cart.html'
 
-    return render(request, template)
+    context = {
+        'on_cart_page': True,
+    }
+
+    return render(request, template, context)
 
 
 # def add_to_cart(request):
@@ -59,7 +63,7 @@ def add_to_cart(request):
         'qty': int(request.POST['qty']),
         'price': float(request.POST['price']),
     }
-    message = ''
+    my_message = ''
     items = 0
     all_items = 0
     if 'cart' in request.session:
@@ -68,6 +72,7 @@ def add_to_cart(request):
             cart_data[str(request.POST['id'])]['qty'] += int(request.POST['qty'])
             cart_data.update(cart_data)
             request.session['cart'] = cart_data
+            my_message = f'{cart_item[str(request.POST["id"])]["name"]} added to cart'
 
         else:
             cart_data = request.session['cart']
@@ -79,32 +84,31 @@ def add_to_cart(request):
     else:
         request.session['cart'] = cart_item
 
-        # message = f'{cart_item[str(request.POST["id"])]["name"]} added to cart'
-
-    # return JsonResponse({'data': request.session['cart'],
-    #                     'total_items': len(request.session['cart']),
-    #                      'message': message})
     print(request.session['cart'])
     # all_items = sum(item['qty'] for item in request.session['cart'].values())
     response_data = {'data': request.session['cart'],
                      'total_items': len(request.session['cart']),
+                     'my_message': my_message,
                      }
     return JsonResponse(response_data)
 
 
 def get_cart_total(request):
     total = 0
-    total_price = 0
+
     if 'cart' in request.session:
+        cart_item = request.session['cart']
         total_items = sum(item['qty'] for item in request.session['cart'].values())
-        # total_price = request.POST.get('total')
-        # total = [item['price'] for item in request.session['cart'].values()]
-        # for item in total:
-        #     total_price += item
+        my_msg = str(f'item added to a cart')
+
     else:
         total_items = 0
 
-    return JsonResponse({'total_items': total_items})
+    return JsonResponse({
+        'total_items': total_items,
+        'message': my_msg,
+
+        })
 
 
 def update_cart(request, product_id):

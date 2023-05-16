@@ -3,18 +3,92 @@
 
 {% block content %}
 
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'wishlist/css/wishlist.css' %}">
+{% endblock  %}
+
 
 
 {% include 'partials/top_main_nav.html' %}
 
-<h1 class="text-center">My wishlist</h1>
-{% for item in wishlist_items %}
-<h2 class="text-success">
-    {{item.product.name}}
 
-</h2>
-{% endfor %}
 
+
+<div class="container">
+    <div class="row pt-4 d-flex justify-content-center">
+        <div class="col-lg-8">
+            <!-- <p class="pb-2 fw-bold">Order</p> -->
+            <div class="card">
+                <div class="ribbon ribbon-top-right"><span>WISHLIST</span></div>
+                <div>
+                    <div class="table-responsive px-md-4 px-2 pt-3">
+                        <table class="table table-borderless">
+                            <tbody>
+                                {% for item in wishlist_items %}
+                                <tr class="border-bottom mb-2">
+                                    <td>
+                                        <div class="d-flex align-items-center">
+                                            <div> <img class="pic" src="{{ item.product.image.url }}" alt=""> </div>
+                                            <div class="ps-2 d-flex flex-column justify-content">
+                                                <p class="fw-bold">{{ item.product.name }}</p>
+                                                <small class=" d-flex">
+                                                     <span class=" text-muted"></span> <span class=" fw-bold">{{ item.product.blade }}</span>
+                                                </small>
+                                                <hr class="my-1">
+                                                 <small class="">
+                                                     <span class=" text-muted"></span> <span class=" fw-bold">{{ item.product.handlematerial }}</span>
+                                                </small>
+                                            </div>
+                                            <!-- <div class="mx-auto">
+                                                <button>rtterte</button>
+                                                <button>sdffdfsdfsd</button>
+                                            </div> -->
+
+                                        </div>
+                                        <!-- <hr class="my-1"> -->
+                                        <div class="w-75 d-flex">
+                                            {{ item.product.description }}
+
+
+
+                                        </div>
+                                        <div class="w-100">
+                                            <form  method="POST" action="{% url 'wishlist:remove_from_wishlist' %}">
+                                                {% csrf_token %}
+                                                <button class="btn btn-danger mt-3" type="submit"><i class="bi bi-trash3"></i></button>
+                                                <input type="hidden" name="item-id" value="{{ item.id }}">
+
+                                            <button type="button"   class="btn btn-success  text-uppercase mt-3 addToCartBtn">
+                                                <i class="bi-cart-fill me-1"></i>
+                                                Add to cart
+                                            </button>
+                                        </form>
+                                        </div>
+
+                                    </td>
+                                    <td>
+                                        <div class="d-flex">
+                                            <p class="my-3"><span class="text-success fw-bold">€{{ item.product.price }}</span></p>
+
+                                        </div>
+                                    </td>
+
+
+
+
+                                </tr>
+                                <!-- try -->
+
+                                {% endfor %}
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
 
 
