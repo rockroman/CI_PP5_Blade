@@ -9,6 +9,7 @@ from django.db.models.functions import Lower
 
 # Internal:
 from .models import Product, Category
+from .forms import ProductForm
 
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -72,6 +73,19 @@ def product_detail(request, product_id):
     context = {
         'product': product,
         'on_products_page': True
+    }
+
+    return render(request, template, context)
+
+
+def add_product(request):
+    """
+    adding products to a store
+    """
+    form = ProductForm()
+    template = 'products/add_product.html'
+    context = {
+        'form': form,
     }
 
     return render(request, template, context)

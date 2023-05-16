@@ -197,6 +197,12 @@ input{
 label {
   display: none;
 }
+
+.product-form label{
+  display: block !important;
+}
+
+
 input::placeholder {
   opacity: 50% !important;
 }
@@ -285,15 +291,7 @@ img {
 
 
 }
-/* .product-card__like-check, .product-card__heart--filled {
-  display: none;
-}
-.product-card__like-check:checked + .product-card__heart {
-  display: none;
-}
-.product-card__like-check:checked + .product-card__heart + .product-card__heart--filled {
-  display: inline;
-} */
+
 .product-card__btn {
   background-color: rgb(63, 57, 57);
   border-radius: 5px;
@@ -371,6 +369,18 @@ img {
 
 }
 
+/* end review */
+
+/* add product */
+
+
+
+.product-form {
+
+}
+
+
+/* end add product */
 
 
 
@@ -410,10 +420,8 @@ img {
 .modal-dialog{
   max-width: 500px;
 
-
-  /* transform: translateX(70%)!important; */
-
 }
+
 .custom-modal-dialog {
   max-width: 380px; /* Adjust the desired width here */
 
