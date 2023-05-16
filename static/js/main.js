@@ -172,6 +172,8 @@ $('.addToCartBtn').on('click', function(){
         success:function(res){
 
             updateCartTotal()
+            $('.success-modal').modal('show');
+            _addBtn.attr('disabled',false);
             console.log(res.data);
 
 

@@ -137,13 +137,26 @@ html{
 
 /* ------------------------------- bootstrap toasts */
 
-.message-container,
+/* .message-container,
 .my-message {
     position: fixed;
     top: 72px;
-    right: 15px;
+    transform: translateX(50%);
+
     z-index: 99999999999;
+} */
+
+.message-container{
+
+  position: fixed;
+
+  top:20px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 99999999999;
+
 }
+
 
 #success-message{
   position: fixed;
@@ -395,9 +408,14 @@ img {
 
 /* modal */
 .modal-dialog{
-  top: 20px;
+  max-width: 500px;
 
-  transform: translateX(70%)!important;
+
+  /* transform: translateX(70%)!important; */
+
+}
+.custom-modal-dialog {
+  max-width: 380px; /* Adjust the desired width here */
 
 }
 

@@ -28,32 +28,6 @@ def cart(request):
     return render(request, template, context)
 
 
-# def add_to_cart(request):
-#     # del request.session['cartdata']
-#     cart_item = {}
-#     cart_item[str(request.GET['id'])] = {
-#         'name': request.GET['name'],
-#         'image': request.GET['image'],
-#         'qty': int(request.GET['qty']),
-#         'price': request.GET['price'],
-#     }
-#     if 'cartdata' in request.session:
-#         if str(request.GET['id']) in request.session['cartdata']:
-#             cart_data = request.session['cartdata']
-#             cart_data[str(request.GET['id'])]['qty'] = int(cart_item[str(request.GET['id'])]['qty'])
-#             cart_data.update(cart_data)
-#             request.session['cartdata'] = cart_data
-#         else:
-#             cart_data = request.session['cartdata']
-#             cart_data.update(cart_item)
-#             request.session['cartdata'] = cart_data
-
-#     else:
-#         request.session['cartdata'] = cart_item
-
-#     return JsonResponse({'data': request.session['cartdata'], 'totalitems': len(request.session['cartdata'])})
-
-
 def add_to_cart(request):
 
     cart_item = {}
@@ -79,13 +53,12 @@ def add_to_cart(request):
             cart_data.update(cart_item)
             request.session['cart'] = cart_data
             print(cart_data)
-        # message = f'{cart_item[str(request.POST["id"])]["name"]} added to cart'
 
     else:
         request.session['cart'] = cart_item
 
     print(request.session['cart'])
-    # all_items = sum(item['qty'] for item in request.session['cart'].values())
+
     response_data = {'data': request.session['cart'],
                      'total_items': len(request.session['cart']),
                      'my_message': my_message,
@@ -94,8 +67,8 @@ def add_to_cart(request):
 
 
 def get_cart_total(request):
-    total = 0
 
+    my_msg = ''
     if 'cart' in request.session:
         cart_item = request.session['cart']
         total_items = sum(item['qty'] for item in request.session['cart'].values())

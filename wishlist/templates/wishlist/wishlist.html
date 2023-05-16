@@ -48,15 +48,21 @@
                                         <!-- <hr class="my-1"> -->
                                         <div class="w-75 d-flex">
                                             {{ item.product.description }}
-
+item.
 
 
                                         </div>
                                         <div class="w-100">
-                                            <form  method="POST" action="{% url 'wishlist:remove_from_wishlist' %}">
+                                            <form  method="POST" action="{% url 'wishlist:remove_from_wishlist' %}" class="all_products">
                                                 {% csrf_token %}
                                                 <button class="btn btn-danger mt-3" type="submit"><i class="bi bi-trash3"></i></button>
                                                 <input type="hidden" name="item-id" value="{{ item.id }}">
+                                                <!-- hidden inputs for ajax call -->
+                                                <input type="hidden" class="product-id" value="{{ item.product.id }}" >
+                                                <input type="hidden" class="product-image" value="{{ item.product.image.url }}" >
+                                                <input type="hidden" class="product-price" value="{{ item.product.price }}">
+                                                <input type="hidden" class="product-name" value="{{ item.product.name }}">
+                                                <input type="hidden" class="csrf_token" value="{{ csrf_token }}">
 
                                             <button type="button"   class="btn btn-success  text-uppercase mt-3 addToCartBtn">
                                                 <i class="bi-cart-fill me-1"></i>
