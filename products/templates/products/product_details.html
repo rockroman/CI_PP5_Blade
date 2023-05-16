@@ -10,16 +10,10 @@
     <div class="row gx-4 gx-lg-5 align-items-start">
         <div class="col-md-6">
             <div class="detail-image-container">
-                {% if product.image %}
+
                 <a href="{{ product.image.url }}" target="_blank">
                 <img class="card-img-top mb-5 mb-md-0" src="{{ product.image.url }}" alt="..." />
                 </a>
-                {% else %}
-                <a href="">
-                    <img class="card-img-top mb-5 mb-md-0" src="{{ MEDIA_URL }}noimage.png"  alt="..." />
-
-                </a>
-                {% endif %}
 
             </div>
 

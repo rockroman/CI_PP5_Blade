@@ -21,7 +21,7 @@
                     <li><a class="dropdown-item" href="{% url 'account_login' %}">Login</a></li>
                     <li><a class="dropdown-item" href="{% url 'account_signup' %}">Register</a></li>
                     <li><a class="dropdown-item" href="{% url 'account_logout' %}">Logout</a></li>
-                    <li><a class="dropdown-item " href="#">Shop management</a></li>
+                    <li><a class="dropdown-item " href="{% url 'products:add_product' %}">Shop management</a></li>
                 </ul>
           </div>
           <button class="btn"  type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample-right">
@@ -86,7 +86,7 @@
                     <li><a class="dropdown-item" href="{% url 'account_login' %}">Login</a></li>
                     <li><a class="dropdown-item" href="{% url 'account_signup' %}">Register</a></li>
                     <li><a class="dropdown-item" href="{% url 'account_logout' %}">Logout</a></li>
-                    <li><a class="dropdown-item " href="#">Shop management</a></li>
+                    <li><a class="dropdown-item " href="{% url 'products:add_product' %}">Shop management</a></li>
 
                     </ul>
               </div>

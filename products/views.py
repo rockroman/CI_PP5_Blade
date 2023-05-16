@@ -17,6 +17,7 @@ from .forms import ProductForm
 def store_products(request):
 
     products = Product.objects.all()
+
     template = 'products/store_products.html'
     query = None
     categories = None
@@ -62,6 +63,8 @@ def store_products(request):
         'sorting': sorting,
 
     }
+    my_product = products.filter(image='')
+    print(my_product)
 
     return render(request, template, context)
 
@@ -82,7 +85,19 @@ def add_product(request):
     """
     adding products to a store
     """
-    form = ProductForm()
+    if request.method == "POST":
+        form = ProductForm(request.POST, request.FILES)
+        if form.is_valid():
+            my_img = form.cleaned_data['image']
+            print(my_img)
+            form.save()
+            messages.success(request, "New product added successfully")
+            return redirect(reverse('products:add_product'))
+        else:
+            messages.error(request, 'Failed to add product please check your form for errors')
+    else:
+        form = ProductForm()
+
     template = 'products/add_product.html'
     context = {
         'form': form,

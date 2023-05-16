@@ -54,9 +54,19 @@
             {% for product in products %}
             <div class="product-card">
                 <div class="product-card__images">
+
                     <div class="product-card__img">
+
+                        {% if product.my_product.image %}
                         <img class="img-1" src="{{ product.image.url }}" />
+
+                        {% else %}
+                        <h1>No image available</h1>
+
+                        {% endif %}
+
                     </div>
+
 
                     <div class="product-card__like">
 
