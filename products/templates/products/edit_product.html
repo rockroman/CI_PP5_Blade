@@ -24,14 +24,14 @@
         <div class="col-12 col-md-6 mt-3">
             <hr>
             <h2 class="logo-font mb-4">Product Management</h2>
-            <h5 class="text-muted">Add a Product</h5>
+            <h5 class="text-muted">Edit Product</h5>
             <hr>
             <div>
                 loGo
             </div>
         </div>
         <div class="col-12 col-md-6 mt-3">
-            <form enctype="multipart/form-data" method="POST" action="{% url 'products:add_product' %}"
+            <form enctype="multipart/form-data" method="POST" action="{% url 'products:edit_product' product.id %}"
                 class="mb-2 product-form ">
                 {% csrf_token %}
                 <div class="row">
@@ -70,7 +70,6 @@
                     </div>
 
                 </div>
-
                 <div class="row">
                     <div class="col-12">
                         {{ form.image_url|as_crispy_field }}
@@ -82,6 +81,7 @@
                         {{ form.image|as_crispy_field }}
                     </div>
 
+
                 </div>
 
 
@@ -90,7 +90,7 @@
 
                 <div class="text-right">
                     <a class="btn btn-danger rounded-0" href="">Cancel</a>
-                    <button class="btn btn-success rounded-0" type="submit">Add Product</button>
+                    <button class="btn btn-success rounded-0" type="submit">Edit Product</button>
                 </div>
             </form>
         </div>

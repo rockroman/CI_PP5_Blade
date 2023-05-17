@@ -3,10 +3,10 @@
         "pk": 1,
         "model": "products.category",
         "fields": {
-            "name": "Gentelman",
+            "name": "Gentleman",
             "notes": "Knives made for sharp and classy Gentleman's",
             "slug": "",
-            "friendly_name": "Gentelman "
+            "friendly_name": "Gentleman "
         }
     },
     {
