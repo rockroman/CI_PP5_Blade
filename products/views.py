@@ -5,6 +5,7 @@ from django.shortcuts import render, get_object_or_404, redirect, reverse
 from django.contrib import messages
 from django.db.models import Q
 from django.db.models.functions import Lower
+from django.contrib.auth.decorators import login_required
 
 
 # Internal:
@@ -81,10 +82,15 @@ def product_detail(request, product_id):
     return render(request, template, context)
 
 
+@login_required
 def add_product(request):
     """
     adding products to a store
     """
+    if not request.user.is_superuser:
+        messages.error(request, 'SORRY Only store owners have  access')
+        return redirect(reverse('home:home'))
+
     if request.method == "POST":
         form = ProductForm(request.POST, request.FILES)
         if form.is_valid():
@@ -104,12 +110,16 @@ def add_product(request):
     return render(request, template, context)
 
 
+@login_required
 def edit_product(request, product_id):
     """
     editing products from a store
     """
-    product = get_object_or_404(Product, pk=product_id)
+    if not request.user.is_superuser:
+        messages.error(request, 'SORRY Only store owners have  access')
+        return redirect(reverse('home:home'))
 
+    product = get_object_or_404(Product, pk=product_id)
     if request.method == 'POST':
         form = ProductForm(request.POST, request.FILES, instance=product)
         if form.is_valid():
@@ -131,12 +141,16 @@ def edit_product(request, product_id):
     return render(request, template, context)
 
 
+@login_required
 def delete_product(request, product_id):
     """
     editing products from a store
     """
+    if not request.user.is_superuser:
+        messages.error(request, 'SORRY Only store owners have  access')
+        return redirect(reverse('home:home'))
+
     product = get_object_or_404(Product, pk=product_id)
     product.delete()
     messages.success(request, 'Product deleted')
     return redirect(reverse('products:store_products'))
-

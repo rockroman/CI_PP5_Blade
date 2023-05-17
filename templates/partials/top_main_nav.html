@@ -16,12 +16,25 @@
                         <i class="bi bi-person" style="font-size:1.5rem; -webkit-text-stroke-width: 1px;"></i></button>
 
                 <ul class="dropdown-menu " aria-labelledby="dropdownProfile1">
-                    <li><a class="dropdown-item " href="{% url 'customer_profile:profile' %}" >
-                        Profile</a></li>
-                    <li><a class="dropdown-item" href="{% url 'account_login' %}">Login</a></li>
-                    <li><a class="dropdown-item" href="{% url 'account_signup' %}">Register</a></li>
-                    <li><a class="dropdown-item" href="{% url 'account_logout' %}">Logout</a></li>
+                    {% if request.user.is_authenticated %}
+                    <li>
+                        <a class="dropdown-item " href="{% url 'customer_profile:profile' %}">Profile</a>
+                    </li>
+                    {% endif %}
+                    <li>
+                        <a class="dropdown-item" href="{% url 'account_login' %}">Login</a>
+                    </li>
+                    <li>
+                        <a class="dropdown-item" href="{% url 'account_signup' %}">Register</a>
+                    </li>
+                    {% if request.user.is_authenticated %}
+                    <li>
+                        <a class="dropdown-item" href="{% url 'account_logout' %}">Logout</a>
+                    </li>
+                    {% endif %}
+                    {% if request.user.is_superuser %}
                     <li><a class="dropdown-item " href="{% url 'products:add_product' %}">Shop management</a></li>
+                    {% endif %}
                 </ul>
           </div>
           <button class="btn"  type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample-right">
@@ -78,15 +91,22 @@
                     <div class="dropdown">
 
                         <button type="button" id="dropdownProfile2" class="btn dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-                            <i class="bi bi-person" style="font-size:1.5rem; -webkit-text-stroke-width: 1px;"></i></button>
+                            <i class="bi bi-person" style="font-size:1.5rem; -webkit-text-stroke-width: 1px;"></i>
+                        </button>
+
 
                     <ul class="dropdown-menu " aria-labelledby="dropdownProfile2">
-                        <li><a class="dropdown-item " href="{% url 'customer_profile:profile' %}"  >
-                            Profile</a></li>
-                    <li><a class="dropdown-item" href="{% url 'account_login' %}">Login</a></li>
-                    <li><a class="dropdown-item" href="{% url 'account_signup' %}">Register</a></li>
-                    <li><a class="dropdown-item" href="{% url 'account_logout' %}">Logout</a></li>
-                    <li><a class="dropdown-item " href="{% url 'products:add_product' %}">Shop management</a></li>
+                        {% if request.user.is_authenticated %}
+                        <li><a class="dropdown-item " href="{% url 'customer_profile:profile' %}">Profile</a></li>
+                        {% endif %}
+                        <li><a class="dropdown-item" href="{% url 'account_login' %}">Login</a></li>
+                        <li><a class="dropdown-item" href="{% url 'account_signup' %}">Register</a></li>
+                        {% if request.user.is_authenticated %}
+                        <li><a class="dropdown-item" href="{% url 'account_logout' %}">Logout</a></li>
+                        {% endif %}
+                        {% if request.user.is_superuser %}
+                        <li><a class="dropdown-item " href="{% url 'products:add_product' %}">Shop management</a></li>
+                        {% endif %}
 
                     </ul>
               </div>
