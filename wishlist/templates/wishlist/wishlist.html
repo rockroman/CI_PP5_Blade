@@ -28,7 +28,13 @@
                                 <tr class="border-bottom mb-2">
                                     <td>
                                         <div class="d-flex align-items-center">
-                                            <div> <img class="pic" src="{{ item.product.image.url }}" alt=""> </div>
+                                            <div>
+                                                {% if item.product.image %}
+                                                    <img class="pic product-image" src="{{ item.product.image.url }}" alt="">
+                                                {% else %}
+                                                    <img class="pic product-image" src="{{ MEDIA_URL }}no_image.jpg" alt="{{ product.name }}">
+                                                {% endif %}
+                                            </div>
                                             <div class="ps-2 d-flex flex-column justify-content">
                                                 <p class="fw-bold">{{ item.product.name }}</p>
                                                 <small class=" d-flex">
@@ -48,28 +54,36 @@
                                         <!-- <hr class="my-1"> -->
                                         <div class="w-75 d-flex">
                                             {{ item.product.description }}
-item.
+
 
 
                                         </div>
-                                        <div class="w-100">
-                                            <form  method="POST" action="{% url 'wishlist:remove_from_wishlist' %}" class="all_products">
+
+
+                                            <form  method="POST" action="{% url 'wishlist:remove_from_wishlist' %}" class="wishlist_products">
                                                 {% csrf_token %}
-                                                <button class="btn btn-danger mt-3" type="submit"><i class="bi bi-trash3"></i></button>
-                                                <input type="hidden" name="item-id" value="{{ item.id }}">
-                                                <!-- hidden inputs for ajax call -->
-                                                <input type="hidden" class="product-id" value="{{ item.product.id }}" >
-                                                <input type="hidden" class="product-image" value="{{ item.product.image.url }}" >
-                                                <input type="hidden" class="product-price" value="{{ item.product.price }}">
-                                                <input type="hidden" class="product-name" value="{{ item.product.name }}">
-                                                <input type="hidden" class="csrf_token" value="{{ csrf_token }}">
+                                                <div class="w-100 ">
+                                                    {% if item.product.image %}
+                                                    <input type="hidden" class="product-image" value="{{ item.product.image.url }}" >
+                                                    {% else %}
+                                                    <input type="hidden" class="product-image" value="{{ MEDIA_URL }}no_image.jpg" >
+                                                    {% endif %}
 
-                                            <button type="button"   class="btn btn-success  text-uppercase mt-3 addToCartBtn">
-                                                <i class="bi-cart-fill me-1"></i>
-                                                Add to cart
-                                            </button>
+                                                    <button class="btn btn-danger mt-3" type="submit"><i class="bi bi-trash3"></i></button>
+                                                    <button type="button"   class="btn btn-success  text-uppercase mt-3 addToCartBtnWish">
+                                                        <i class="bi-cart-fill me-1"></i>
+                                                        Add to cart
+                                                    </button>
+                                                    <!-- hidden inputs for ajax call -->
+                                                    <input type="hidden" name="item-id" value="{{ item.id }}">
+                                                    <input type="hidden" class="product-id" value="{{ item.product.id }}" >
+
+                                                    <input type="hidden" class="product-price" value="{{ item.product.price }}">
+                                                    <input type="hidden" class="product-name" value="{{ item.product.name }}">
+                                                    <input type="hidden" class="csrf_token" value="{{ csrf_token }}">
+                                                </div>
                                         </form>
-                                        </div>
+
 
                                     </td>
                                     <td>

@@ -55,11 +55,13 @@
                     <div class="product-card__img">
 
                         {% if product.image %}
-                        <img class="img-1" src="{{ product.image.url }}">
-
+                        <a href="{% url 'products:product_detail' product.id %}">
+                            <img class="card-img-top img-fluid" src="{{ product.image.url }}" alt="{{ product.name }}">
+                        </a>
                         {% else %}
-                        <h1>No image available</h1>
-
+                        <a href="{% url 'products:product_detail' product.id %}">
+                            <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}no_image.jpg" alt="{{ product.name }}">
+                        </a>
                         {% endif %}
 
                     </div>
@@ -95,13 +97,18 @@
                         <form method="POST">
                             {% csrf_token %}
                             <div class="all_products">
+                                <a class="btn addToCartBtn" href="#"><i class="bi bi-cart-check" style="-webkit-text-stroke-width: 1.5px; font-size: 1.5rem; color: rgb(8, 143, 14);"></i></a>
                                 <!-- hidden inputs for ajax call -->
                                 <input type="hidden" class="product-id" value="{{ product.id }}" >
+                                {% if product.image %}
                                 <input type="hidden" class="product-image" value="{{ product.image.url }}" >
+                                {% else %}
+                                <input type="hidden" class="product-image" value="{{ MEDIA_URL }}no_image.jpg" >
+                                {% endif %}
                                 <input type="hidden" class="product-price" value="{{ product.price }}">
                                 <input type="hidden" class="product-name" value="{{ product.name }}">
                                 <input type="hidden" class="csrf_token" value="{{ csrf_token }}">
-                                <a class="btn addToCartBtn" href="#"><i class="bi bi-cart-check" style="-webkit-text-stroke-width: 1.5px; font-size: 1.5rem; color: rgb(8, 143, 14);"></i></a>
+
                                 <a class="btn" href="#"><i class="bi bi-eye-fill" style=" font-size: 1.5rem;"></i> </a>
                             </div>
                         </form>
