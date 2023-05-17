@@ -16,7 +16,11 @@
         {% for item in cart_items %}
             <div class="row">
                 <div class="col-3 my-1">
+                    {% if item.product.image %}
                     <img class="w-100" src="{{ item.product.image.url }}">
+                    {% else %}
+                    <h1>rrr</h1>
+                    {% endif %}
                 </div>
                 <div class="col-9">
                     <p class="my-0"><strong>{{ item.product.name }}</strong></p>

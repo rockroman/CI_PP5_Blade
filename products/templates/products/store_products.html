@@ -8,13 +8,10 @@
 
     <h1 class="text-center">
 
-        {% if current_categories  %}
+
 
          KNIVES
-        {% else %}
-        KNIVES
 
-        {% endif %}
 
     </h1>
     <div class="row">
@@ -57,8 +54,8 @@
 
                     <div class="product-card__img">
 
-                        {% if product.my_product.image %}
-                        <img class="img-1" src="{{ product.image.url }}" />
+                        {% if product.image %}
+                        <img class="img-1" src="{{ product.image.url }}">
 
                         {% else %}
                         <h1>No image available</h1>
@@ -70,7 +67,7 @@
 
                     <div class="product-card__like">
 
-                        <form action="{% url 'wishlist:add_to_wishlist' %}" method="POST" >
+                        <form action="{% url 'wishlist:add_to_wishlist' %}" method="POST" enctype = "multipart/form-data" >
                             {% csrf_token %}
                             <input type="hidden" name="product-id" value="{{ product.id }}" >
                             <button type="submit" class="btn heart"><i class="product-card__heart bi bi-suit-heart" style="font-size: 2rem;-webkit-text-stroke-width: 1px;"></i></button>

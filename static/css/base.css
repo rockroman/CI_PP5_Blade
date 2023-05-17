@@ -238,12 +238,7 @@ img {
   flex-basis: 250px;
   flex-grow: 1;
   background-color: white;
-  /* Top part of the card */
-  /* Bottom part of the card */
-  /* Like button */
-  /* Hide the checkbox and the filled heart by default */
-  /* Toggle hearts display w/CSS */
-  /* See more button */
+
 }
 @media screen and (max-width: 440px) {
   .product-card {
@@ -251,9 +246,9 @@ img {
   }
 }
 .product-card__images {
-  /* cursor: pointer; */
+
   position: relative;
-  /* Show the 'see more' button on hover */
+
 }
 .product-card__images:hover .product-card__btn, .product-card__images:focus .product-card__btn {
   display: block;
@@ -269,7 +264,7 @@ img {
   text-transform: capitalize;
 }
 .product-card__price {
-  /* color: var(--matise); */
+
   font-size: 13px;
   margin: 10px 0;
 }
@@ -277,8 +272,7 @@ img {
 .product-card__like {
   color: #353333;
   cursor: pointer;
-  /* font-size: 40px; */
-  /* left: 10px; */
+
   right: 10px;
   position: absolute;
   bottom: 1px;
@@ -375,9 +369,7 @@ img {
 
 
 
-.product-form {
 
-}
 
 
 /* end add product */

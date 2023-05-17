@@ -88,8 +88,6 @@ def add_product(request):
     if request.method == "POST":
         form = ProductForm(request.POST, request.FILES)
         if form.is_valid():
-            my_img = form.cleaned_data['image']
-            print(my_img)
             form.save()
             messages.success(request, "New product added successfully")
             return redirect(reverse('products:add_product'))

@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap');
+
 
 
 
@@ -231,17 +231,3 @@ input:focus {
 
 
 
-/*
-// $(document).ready(function() {
-    //     window.onpageshow = function(event) {
-    //       if (event.persisted) {
-    //         // The page is loaded from the cache
-    //         // location.reload(true); // Reload the page
-    //         updateCartTotal();
-    //       } else {
-    //         // The page is loaded from the server
-    //         updateCartTotal(); // Update the cart total
-    //       }
-    //     };
-    //   });
-     */

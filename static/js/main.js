@@ -29,22 +29,7 @@ $('.back-to-top').click(function(e) {
 
 
 
-// function updateCartTotal() {
-//     $.ajax({
-//         url: '/get_cart_total/',
-//         dataType: 'json',
-//         success: function (res) {
-//             var message = res.message;
-//             console.log(res);
-//             $('.cart-total').text(res.total_items);
-//             $('my_custom').toast('show');
 
-
-//         }
-//     });
-// }
-
-// new try
 
 function updateCartTotal() {
     $.ajax({
@@ -190,46 +175,7 @@ $('.addToCartBtn').on('click', function(){
 
 
 
-//
-
-// $(document).ready(function() {
-//     // Retrieve cart information from the local storage
-//     var cartData = JSON.parse(localStorage.getItem('cart'));
-
-//     // Update the cart counter
-//     if (cartData) {
-//       var totalItems = cartData.total_items;
-//       $('.cart-total').text(totalItems);
-//     }
-//   });
-
-//   $(window).on('popstate', function() {
-//     // Retrieve cart information from the local storage
-//     var cartData = JSON.parse(localStorage.getItem('cart'));
-
-//     // Update the cart counter
-//     if (cartData) {
-//       var totalItems = cartData.total_items;
-//       $('.cart-total').text(totalItems);
-
-//     }
-//   });
-
-
-// $(document).ready(function () {
-//     // Initialize cart counter with value from localStorage
-//     var total_items = localStorage.getItem('total_items');
-//     if (total_items) {
-//         $('.cart-total').text(total_items);
-//     }
-
-//     // Listen for updates to cart counter and update localStorage
-//     $(document).on('cartUpdated', function (event, total_items) {
-//         $('.cart-total').text(total_items);
-//         localStorage.setItem('total_items', total_items);
-//     });
-// });
-
+/
 
 $(document).ready(function () {
     updateCartTotal();
