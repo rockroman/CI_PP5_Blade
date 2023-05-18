@@ -3,21 +3,77 @@
 {% load cart_tool %}
 
 {% block content %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'contact_about/css/about.css' %}">
+{% endblock %}
 {% include 'partials/top_main_nav.html' %}
 
 
-<h1 class="text-center">About and contact</h1>
+
 <div class="container-fluid">
 
-    <form action="{% url 'contact_about:contact_about'%}" method="POST">
-        {% csrf_token %}
-        {{ form|crispy }}
-        <button type="submit" class="btn btn-success">Send message</button>
-    </form>
+    <!-- Top Section -->
+    <div class="row top-section">
+
+    </div>
+
+    <!-- About Us Section -->
+    <div class="row">
+        <div class=" col-xl-5 col-md-12 about-us-section">
+            <h2 class="p-3 w-50 mx-auto">About Us</h2>
+            <p class="p-3 w-50 mx-auto">Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis debitis dicta nulla eaque doloremque!
+                Commodi id aperiam ab illum quaerat delectus mollitia repellendus neque amet voluptatum, eaque voluptate
+                esse quam corrupti repudiandae fuga optio dolorum quod enim nulla. Ab nam facere exercitationem harum
+                veniam saepe cupiditate eveniet, tenetur incidunt repellat illo voluptate id eum quam inventore soluta
+                consectetur eaque sed? Voluptates magni voluptatem cumque ullam odit! Fugiat dolores consequuntur
+                beatae!</p>
+        </div>
+        <div class="col-xl-7 col-md-12 overlap-image-column">
+            <div class="overlap-container d-flex justify-content-center p-5">
+                <!-- <div class="overlap-image1 h-75"></div>
+          <div class="overlap-image2"></div> -->
+                <div class="overlap-image1 h-75"><img src="{{MEDIA_URL}}carousel1.jpg" alt=""></div>
+                <div class="overlap-image2"><img src="{{MEDIA_URL}}carousel1.jpg" alt=""></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Small Text and Icon Section -->
+    <div class="row orange-row">
+        <div class="col-md-4">
+            <i class="bi bi-icon"></i>
+            <p>Small Text 1</p>
+        </div>
+        <div class="col-md-4">
+            <i class="bi bi-icon"></i>
+            <p>Small Text 2</p>
+        </div>
+        <div class="col-md-4">
+            <i class="bi bi-icon"></i>
+            <p>Small Text 3</p>
+        </div>
+    </div>
+
+    <!-- Contact and Image Section -->
+    <div class="row contact-row">
+        <div class="col-md-6 contact-column">
+            <!-- Contact Form will be inserted here -->
+            <form action="{% url 'contact_about:contact_about'%}" method="POST">
+                {% csrf_token %}
+                {{ form|crispy }}
+                <button type="submit" class="btn btn-success">Send message</button>
+            </form>
+        </div>
+        <div class="col-md-6 image-column">
+            <div class="contact-img h-75 py-3">
+
+            </div>
+
+        </div>
+    </div>
+
+
 </div>
 
 {% endblock%}
-
-
-
-

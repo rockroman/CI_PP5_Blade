@@ -1,0 +1,57 @@
+.top-section {
+    background-color: black;
+    background-image: url('/media/316084530_1775035716186084_6384014191798620920_n_wHAGkre.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    height: 60vh;
+  }
+
+  .about-us-section {
+    background-color: white;
+    /* border: 1px solid #ccc; */
+    padding: 20px;
+  }
+
+  .image-column {
+    background-color: white;
+
+    /* border: 1px solid #ccc; */
+    padding: 20px;
+    position: relative;
+  }
+
+  .overlap-container {
+    /* height: 400px; */
+
+
+  }
+
+  .overlap-image1 {
+
+    margin-top: 20px;
+  }
+
+  .overlap-image2 {
+    margin-left: -25px;
+
+  }
+
+.orange-row {
+    background-color: orange;
+}
+
+.contact-row {
+    background-color: white;
+}
+
+.contact-img {
+    background-image: url('/media/carousel2.jpeg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: white;
+    border: 1px solid #ccc;
+    padding: 20px;
+}
