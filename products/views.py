@@ -11,6 +11,8 @@ from django.contrib.auth.decorators import login_required
 # Internal:
 from .models import Product, Category
 from .forms import ProductForm
+from reviews.models import Review
+from reviews.forms import ReviewForm
 
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -72,10 +74,14 @@ def store_products(request):
 
 def product_detail(request, product_id):
     product = get_object_or_404(Product, pk=product_id)
+    reviews = Review.objects.filter(product=product)
+    form = ReviewForm()
     template = 'products/product_details.html'
 
     context = {
         'product': product,
+        'form': form,
+        'reviews': reviews,
         'on_products_page': True
     }
 

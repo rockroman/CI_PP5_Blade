@@ -23,4 +23,4 @@ class Review(models.Model):
     time_posted = models.TimeField(auto_now_add=True)
 
     def __str__(self) -> str:
-        return f'Review by {self.author.username} for {self.product.name}'
+        return f'Review by {self.author.username} for {self.product.name}: {self.content}'

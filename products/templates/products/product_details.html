@@ -6,14 +6,14 @@
 
 <!-- <h2 class="text-center">Product details page</h2> -->
 
-<div class="container px-4 px-lg-5 my-3">
+<div class="container px-4 px-lg-5 my-1">
     <div class="row gx-4 gx-lg-5 align-items-start">
         <div class="col-md-6">
             <div class="detail-image-container">
                 {% if product.image %}
                 <a href="{{ product.image.url }}" target="_blank">
 
-                <img class="card-img-top mb-5 mb-md-0" src="{{ product.image.url }}" alt="{{ product.name }}"">
+                <img class="card-img-top mb-5 mb-md-0" src="{{ product.image.url }}" alt="{{ product.name }}">
                 </a>
                 {% else %}
                 <a href="{{ MEDIA_URL }}no_image.jpg" target="_blank">
@@ -121,13 +121,31 @@
                 <h3>reviews</h3>
             </div>
             <div class="coment-bottom bg-white p-2 px-4">
-                <div class="d-flex flex-row add-comment-section mt-4 mb-4">
-                    <input type="text" class="form-control mr-3 w-50" placeholder="Add comment"><button class="btn btn-primary" type="button">Comment</button></div>
-                <div class="commented-section mt-2">
-                    <div class="d-flex flex-row align-items-center commented-user">
-                        <h5 class="mr-2">Corey oates</h5><span class="dot mb-1"></span><span class="mb-1 ml-2">4 hours ago</span></div>
-                    <div class="comment-text-sm"><span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</span></div>
+                    <div class=" add-comment-section mt-4 mb-4">
+                        <form  class="review-form" data-create-review-url="{% url 'reviews:create_review' %}" method="POST">
+                            {% csrf_token %}
+                            <!-- ajax cal hidden inputs -->
+                            <input type="hidden" id="csrf" value="{{ csrf_token }}">
+                            <input type="hidden" class="product-id" value="{{ product.id}}">
+                            <input type="hidden" class="user" value="{{ request.user.username}}">
+                            {{ form|crispy }}
+                            <button class="btn btn-primary mt-0 add_review" type="submit">Comment</button>
+                        </form>
+                    </div>
 
+
+                <div class="commented-section mt-2 ">
+                    {% for review in reviews %}
+                    <div class="d-flex flex-row align-items-center commented-user mt-2">
+                        <h5 class="mr-2">{{ review.author }}</h5><span class="dot mb-1"></span><span class="mb-1 ml-2">{{ review.time_posted}}</span></div>
+                    <div class="comment-text-sm">
+                        <span class="review_content">{{ review.content }}</span>
+                        <div>
+                            <button class="btn btn-secondary">edit</button>
+                            <button class="btn btn-danger">delete</button>
+                        </div>
+                    </div>
+                    {% endfor %}
                 </div>
 
             </div>
@@ -144,6 +162,7 @@
 
 {% block postload_js%}
 {{ block.super }}
+<script src="{% static 'reviews/js/reviews.js' %}"></script>
 
 {% include 'partials/quantity_input_script.html' %}
 

@@ -1,17 +1,17 @@
 # Imports
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 # 3rd party:
-from django.contrib import admin
-from django.urls import path
+from django import forms
+
 
 # Internal:
-from . import views
+from .models import Review
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
-app_name = 'reviews'
-
-urlpatterns = [
-    path('create_review', views.create_review, name='create_review'),
-
-]
+class ReviewForm(forms.ModelForm):
+    """
+    """
+    class Meta:
+        model = Review
+        exclude = ['author', 'product']
