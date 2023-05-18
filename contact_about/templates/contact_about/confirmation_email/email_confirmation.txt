@@ -1,0 +1,19 @@
+Hello {{ name }}!
+
+Thank you for sending us a message. One of BLADE team member will be in touch with you shortly.
+
+This is a copy of your message
+
+-----------------
+
+{{ message }}
+
+-----------------
+
+Please be free to
+Check out our range of high quality custom knive at BLADE.com
+and reach to us if you have any queries of suggestions.
+
+Kind Regards
+
+BLADE team!

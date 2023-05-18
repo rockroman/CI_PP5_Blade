@@ -9,9 +9,10 @@
 <h1 class="text-center">About and contact</h1>
 <div class="container-fluid">
 
-    <form action="">
+    <form action="{% url 'contact_about:contact_about'%}" method="POST">
         {% csrf_token %}
         {{ form|crispy }}
+        <button type="submit" class="btn btn-success">Send message</button>
     </form>
 </div>
 

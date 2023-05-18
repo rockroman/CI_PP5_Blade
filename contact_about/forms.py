@@ -13,7 +13,6 @@ class ContactForm(forms.ModelForm):
     Contact model form
     """
 
-
     class Meta:
         model = Contact
         fields = '__all__'
