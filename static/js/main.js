@@ -125,7 +125,7 @@ $('#addToCartBtn').on('click', function(){
 $('.addToCartBtn').on('click', function(){
     var _addBtn = $(this);
     var _qty = 1;
-    var _productName = $(this).closest('.all_products').find('.product-name').val();
+    // var _productName = $(this).closest('.all_products').find('.product-name').val();
     var _productId = $(this).closest('.all_products').find('.product-id').val();
     var _productName = $(this).closest('.all_products').find('.product-name').val();
     var _productImage = $(this).closest('.all_products').find('.product-image').val();
@@ -167,7 +167,7 @@ $('.addToCartBtn').on('click', function(){
 
 
         }
-    });wishlist_products
+    });
 
 
 
@@ -177,7 +177,7 @@ $('.addToCartBtn').on('click', function(){
 $('.addToCartBtnWish').on('click', function(){
     var _addBtn = $(this);
     var _qty = 1;
-    var _productName = $(this).closest('.wishlist_products').find('.product-name').val();
+    // var _productName = $(this).closest('.wishlist_products').find('.product-name').val();
     var _productId = $(this).closest('.wishlist_products').find('.product-id').val();
     var _productName = $(this).closest('.wishlist_products').find('.product-name').val();
     var _productImage = $(this).closest('.wishlist_products').find('.product-image').val();
@@ -236,6 +236,14 @@ $(document).ready(function () {
 
 
 
+function modalFading(){
+    $('.success-modal').modal('show');
 
+    setTimeout(function(){
+        $('.success-modal').modal('hide');
+
+    }, 2000)
+
+}
 
 
