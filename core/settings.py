@@ -89,6 +89,7 @@ TEMPLATES = [
                 'django.template.context_processors.media',
                 'shopping_cart.context.cart_content',
                 'shopping_cart.context.my_cart',
+                'wishlist.context.wishlist_objects',
             ],
             'builtins': [
                 'crispy_forms.templatetags.crispy_forms_tags',
