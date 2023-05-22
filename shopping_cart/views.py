@@ -77,6 +77,7 @@ def get_cart_total(request):
             qty = item['qty']
             price = item['price']
             total_price += qty * price
+            total_price = format(total_price, '.2f')
 
         total_items = sum(item['qty'] for item in request.session['cart'].values())
         my_msg = str(f'item added to a cart')

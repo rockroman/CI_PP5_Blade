@@ -39,7 +39,14 @@ function updateCartTotal() {
         var totalItems = res.total_items;
         var total_price = res.total_price
         $('.cart-total').text(totalItems);
-        $('.price').text(total_price);
+        if(total_price == 0){
+            $('.price').text('€0.00');
+
+        }else{
+            $('.price').text(total_price);
+
+        }
+
       }
     });;
   }

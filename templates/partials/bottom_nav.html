@@ -1,0 +1,27 @@
+<nav class="navbar fixed-bottom navbar-light  d-xl-none bottom-nav">
+    <div class="container-fluid fix_bottom">
+        <div class="btn-group dropup">
+                <button type="button" id="dropdownProfile2" class="btn dropdown-toggle text-white" data-bs-toggle="dropdown" aria-expanded="false">
+                    <i class="bi bi-person" style="font-size:1.5rem; -webkit-text-stroke-width: 1px; color: white"></i>
+                </button>
+            <ul class="dropdown-menu " aria-labelledby="dropdownProfile2">
+                {% if request.user.is_authenticated %}
+                <li><a class="dropdown-item " href="{% url 'customer_profile:profile' %}">Profile</a></li>
+                {% endif %}
+                <li><a class="dropdown-item" href="{% url 'account_login' %}">Login</a></li>
+                <li><a class="dropdown-item" href="{% url 'account_signup' %}">Register</a></li>
+                {% if request.user.is_authenticated %}
+                <li><a class="dropdown-item" href="{% url 'account_logout' %}">Logout</a></li>
+                {% endif %}
+                {% if request.user.is_superuser %}
+                <li><a class="dropdown-item " href="{% url 'products:add_product' %}">Shop management</a></li>
+                {% endif %}
+
+            </ul>
+        </div>
+
+        <a href="{% url 'products:store_products' %}">
+            <i class="bi bi-shop-window" style="font-size:1.5rem; -webkit-text-stroke-width: 1px; color: white"></i>
+        </a>
+    </div>
+</nav>

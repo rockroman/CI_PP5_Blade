@@ -1,5 +1,5 @@
 <!-- main navigation -->
-<nav class="navbar navbar-expand-lg navbar-light py-0 ">
+<nav class="navbar navbar-expand-lg navbar-dark py-0 ">
     <div class="container-fluid">
         <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample-left">
             <span class="navbar-toggler-icon"></span>
@@ -9,18 +9,12 @@
         </a>
         <div class="d-flex d-lg-none align-items-center" >
 
-            <div>
-                <a href="{% url 'wishlist:wishlist' %}"  role="button" class="btn py-3">
-                    <i class="bi bi-suit-heart" style="font-size:1.2rem; -webkit-text-stroke-width: 1px;"></i>
-                </a>
-                <span class="heart-total">{{ wishlist_count}}</span>
 
-            </div>
 
             <div class="dropdown">
 
-                    <button type="button" id="dropdownProfile1" class="btn dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-                        <i class="bi bi-person" style="font-size:1.5rem; -webkit-text-stroke-width: 1px;"></i></button>
+                    <button type="button" id="dropdownProfile1" class="btn dropdown-toggle text-white" data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class="bi bi-person" style="font-size:1.5rem; -webkit-text-stroke-width: 1px; color: white;"></i></button>
 
                 <ul class="dropdown-menu " aria-labelledby="dropdownProfile1">
                     {% if request.user.is_authenticated %}
@@ -44,23 +38,31 @@
                     {% endif %}
                 </ul>
           </div>
-          <button class="btn"  type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample-right">
-            <i class="bi bi-search" style="font-size:1.2rem; -webkit-text-stroke-width: 1px;"></i>
-        </button>
+            <div>
+                <a href="{% url 'wishlist:wishlist' %}"  role="button" class="btn py-3">
+                    <i class="bi bi-suit-heart" style="font-size:1.5rem; -webkit-text-stroke-width: 1px; color: white"></i>
+                </a>
+                <span class="heart-total">{{ wishlist_count}}</span>
+            </div>
+
+            <button class="btn"  type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample-right">
+                <i class="bi bi-search" style="font-size:1.2rem; -webkit-text-stroke-width: 1px; color: white;"></i>
+            </button>
 
             <div class="">
 
                 <a class="btn py-3" role="button" href="{% url 'shopping_cart:cart' %}">
-                    <i class="bi bi-cart3"></i>
+                    <i class="bi bi-cart3" style="font-size:1.2rem; -webkit-text-stroke-width: 1px; color: white;"></i>
                 </a>
                 <span class="cart-total">
                     {% if all_items %}
                     {{ all_items }}
-                    {% else %}
+                    {% else %}s
                      0
                      {% endif %}
                 </span>
-                <div class="price text-success position-absolute fw-bold"></div>
+                <div class="price text-warning position-absolute">
+                </div>
             </div>
         </div>
 
@@ -105,17 +107,12 @@
             </ul>
             <div class="d-none d-lg-flex flex-row w-auto align-items-center" >
 
-                <div>
-                    <a href="{% url 'wishlist:wishlist' %}"  role="button" class="btn py-3">
-                        <i class="bi bi-suit-heart" style="font-size:1.2rem; -webkit-text-stroke-width: 1px;"></i>
-                    </a>
-                    <span class="heart-total">{{ wishlist_count}}</span>
-                </div>
 
-                    <div class="dropdown">
 
-                        <button type="button" id="dropdownProfile2" class="btn dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-                            <i class="bi bi-person" style="font-size:1.5rem; -webkit-text-stroke-width: 1px;"></i>
+                <div class="dropdown">
+
+                        <button type="button" id="dropdownProfile2" class="btn dropdown-toggle text-white" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="bi bi-person" style="font-size:1.5rem; -webkit-text-stroke-width: 1px; color: white"></i>
                         </button>
 
 
@@ -133,15 +130,24 @@
                         {% endif %}
 
                     </ul>
-              </div>
-                    <button class="btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample-right"><i class="bi bi-search" style="font-size:1rem; -webkit-text-stroke-width: 1px;"></i></button>
+                </div>
+                <div>
+                    <a href="{% url 'wishlist:wishlist' %}"  role="button" class="btn py-3">
+                        <i class="bi bi-suit-heart" style="font-size:1.3rem; -webkit-text-stroke-width: 1px; color: white"></i>
+                    </a>
+                    <span class="heart-total">{{ wishlist_count}}</span>
+                </div>
+                    <button class="btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample-right">
+                        <i class="bi bi-search" style="font-size:1.2rem; -webkit-text-stroke-width: 1px; color: white"></i></button>
 
                     <div>
 
                         <a class="btn py-3" role="button" href="{% url 'shopping_cart:cart' %}">
-                            <i class="bi bi-cart3"></i>
+                            <i class="bi bi-cart3" style="font-size:1.2rem; -webkit-text-stroke-width: 1px; color: white"></i>
                         </a>
                         <span class="cart-total">{{ all_items }}</span>
+                        <div class="price text-warning position-absolute">
+                        </div>
                     </div>
 
 
@@ -153,16 +159,16 @@
 <!-- main navigation -->
 
 <!-- right sidebar nav -->
-<div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasExample-right" aria-labelledby="right-offcanvasExampleLabel">
-    <div class="offcanvas-header">
-        <h5 class="offcanvas-title" id="right-offcanvasExampleLabel">Search the Store</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+<div class="offcanvas offcanvas-end bg-dark" tabindex="-1" id="offcanvasExample-right" aria-labelledby="right-offcanvasExampleLabel" >
+    <div class="offcanvas-header" >
+        <h5 class="offcanvas-title text-white" id="right-offcanvasExampleLabel">Search the Store</h5>
+        <button type="button" class="btn-close btn-close-white"  data-bs-dismiss="offcanvas" aria-label="Close"></button>
     </div>
-    <div class="offcanvas-body">
+    <div class="offcanvas-body" >
         <form class="d-flex " method="GET" action="{% url 'products:store_products' %}">
             <div class="input-group">
                 <input class="form-control" type="search" name="q" placeholder="Search" aria-label="Search">
-                <button class="btn" type="submit"><i class="bi bi-search"></i></button>
+                <button class="btn " type="submit"><i class="bi bi-search" style="font-size:1.2rem; color: white"></i></button>
 
             </div>
         </form>
@@ -173,18 +179,18 @@
 <!-- right sidebar nav -->
 
 <!-- left sidebar nav -->
-<div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample-left" aria-labelledby="left-offcanvasExampleLabel">
+<div class="offcanvas offcanvas-start bg-dark" tabindex="-1" id="offcanvasExample-left" aria-labelledby="left-offcanvasExampleLabel">
     <div class="offcanvas-header">
         <h5 class="offcanvas-title" id="left-offcanvasExampleLabel">Title left</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
     </div>
     <div class="offcanvas-body">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="{% url 'home:home' %}">Home</a>
+                <a class="nav-link active text-white" aria-current="page" href="{% url 'home:home' %}">Home</a>
             </li>
             <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                 All Knives
                 </a>
             <ul class="dropdown-menu">
@@ -196,21 +202,21 @@
             </ul>
             </li>
             <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                 Categories
                 </a>
             <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="{% url 'products:store_products'%}?category=Explorer">Explorer</a></li>
+                <li><a class="dropdown-item text-white" href="{% url 'products:store_products'%}?category=Explorer">Explorer</a></li>
                     <li><a class="dropdown-item" href="{% url 'products:store_products'%}?category=Craftsman">Craftsman</a></li>
                     <li><a class="dropdown-item" href="{% url 'products:store_products'%}?category=Gentleman">Gentleman</a></li>
                     <li><a class="dropdown-item" href="{% url 'products:store_products'%}?category=Explorer,Craftsman,Gentleman">All categories</a></li>
             </ul>
             </li>
-            <li class="nav-item">
-                <a class="nav-link active" href="{% url 'contact_about:contact_about' %}" aria-current="page">About</a>
+            <li class="nav-item ">
+                <a class="nav-link active text-white" href="{% url 'contact_about:contact_about' %}" aria-current="page">About</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link active" href="{% url 'contact_about:contact_about' %}">Contact</a>
+                <a class="nav-link active text-white" href="{% url 'contact_about:contact_about' %}">Contact</a>
             </li>
         </ul>
     </div>

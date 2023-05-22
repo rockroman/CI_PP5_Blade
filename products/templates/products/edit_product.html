@@ -30,7 +30,7 @@
                 loGo
             </div>
         </div>
-        <div class="col-12 col-md-6 mt-3">
+        <div class="col-12 col-md-6 mt-3 pb-3 pt-2">
             <form enctype="multipart/form-data" method="POST" action="{% url 'products:edit_product' product.id %}"
                 class="mb-2 product-form ">
                 {% csrf_token %}
@@ -98,4 +98,5 @@
 
 
 </div>
+{% include 'partials/footer.html' %}
 {% endblock %}

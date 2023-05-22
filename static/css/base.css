@@ -11,9 +11,14 @@ html {
 
 }
 
-.navbar {
-  background-color: #fef3f3c6 !important;
+.navbar,
+.fix_bottom {
+  background-color:rgb(30, 37, 38) !important;
 
+}
+
+.bottom-nav{
+  margin-top: 100px;
 }
 
 .cart-total {
@@ -22,13 +27,14 @@ html {
   width: 17px;
   height: 17px;
   border-radius: 50%;
-  background-color: rgb(28, 26, 26);
-  color: white;
+  background-color: rgb(255, 253, 253);
+  color: rgb(0, 0, 0);
   font-size: 8pt;
+  font-weight: 700;
   text-align: center;
   line-height: 17px;
   right: 12px;
-  top: 12px;
+  top: 13px;
   z-index: 50;
 
 }
@@ -39,21 +45,24 @@ html {
   width: 17px;
   height: 17px;
   border-radius: 50%;
-  background-color: rgb(19, 19, 19);
-  color: white;
+  background-color: rgb(255, 251, 251);
+  color: rgb(0, 0, 0);
   font-size: 8pt;
   text-align: center;
   line-height: 17px;
-  right: 160px;
+  font-weight: 700;
+  right: 102px;
   top: 12px;
   z-index: 50;
 
 }
 
 .price{
-  top:40px;
-  right:25px;
+  top:42px;
+  right:7px;
 }
+
+
 
 
 /* carousel */
@@ -176,7 +185,7 @@ html {
     background-repeat: no-repeat;
 
   }
-  }
+
 
   .bg-img-2 {
       background-image: url('');
@@ -605,12 +614,9 @@ img {
 
 /*  footer styling*/
 .footer-dark {
-  padding:50px 0;
-  /* color:#f0f9ff; */
-  /* background-color:#282d32; */
-  background-color:rgb(255, 252, 252);
-  color: black;
-  border: 1px solid black;
+  padding:30px 0;
+  color:#f0f9ff;
+   background-color:#282d32;
 }
 
 .footer-dark h3 {
@@ -679,10 +685,10 @@ img {
   display:inline-block;
   text-align:center;
   border-radius:50%;
-  /* box-shadow:0 0 0 1px rgba(255,255,255,0.4); */
-  box-shadow:0 0 0 1px rgba(74, 71, 71, 0.4);
+  box-shadow:0 0 0 1px rgba(255,255,255,0.4);
+
   margin:0 8px;
-  /* color:#fff; */
+  color:#fff;
   color:#1f1d1d;
   opacity:0.75;
 }
