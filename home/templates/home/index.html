@@ -22,37 +22,37 @@
         <div class="carousel-inner">
             <div class="carousel-item  bg-img-1  active">
 
-                <img src="{{ MEDIA_URL}}baby.jpg" class="d-block w-100 img-fluid image1" alt="...">
                 <div class="carousel-caption d-flex flex-column align-items-start mb-2">
-                    <!-- <h5 class="text-white">First slide label</h5> -->
-
+                       <p class="mb-0 fw-bold text-white">Handcrafted with pride</p>
                     <h1 class="text-white fw-bold hero mb-3">CUSTOM KNIVES</h1>
                     <button class="btn btn-lg btn-light px-5 mb-3 "><span class="h3">Shop Now</span></button>
                 </div>
             </div>
             <div class="carousel-item  bg-img-2 ">
-                <!-- <img src="images/knife-carous-2.jpeg" class="d-block w-100" alt="..."> -->
+
                 <div class="carousel-caption d-flex flex-column align-items-start mb-2">
-                    <!-- <h5 class="text-white">Second slide label</h5> -->
+
+                    <p class="mb-0 fw-bold text-white">Handcrafted with pride</p>
                     <h1 class="text-white fw-bold hero mb-3">CUSTOM KNIVES</h1>
                     <button class="btn btn-lg btn-light px-5 mb-3"><span class="h3">Shop Now</span></button>
                 </div>
             </div>
             <div class="carousel-item  bg-img-3 ">
-                <!-- <img src="images/" class="d-block w-100" alt="..."> -->
+
                 <div class="carousel-caption d-flex flex-column align-items-start mb-2">
-                    <!-- <h5 class="text-white">Third slide label</h5> -->
+
+                    <p class="mb-0 fw-bold text-white">Handcrafted with pride</p>
                     <h1 class="text-white fw-bold hero mb-3">CUSTOM KNIVES</h1>
                     <button class="btn btn-lg btn-light px-5 mb-3"><span class="h3">Shop Now</span></button>
                 </div>
             </div>
         </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+        <button class="carousel-control-prev  d-none d-md-flex" type="button" data-bs-target="#carouselExampleCaptions"
             data-bs-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
             <span class="visually-hidden">Previous</span>
         </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+        <button class="carousel-control-next d-none d-md-flex" type="button" data-bs-target="#carouselExampleCaptions"
             data-bs-slide="next">
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
             <span class="visually-hidden">Next</span>
@@ -61,19 +61,19 @@
 
 </div>
 <div class="container-fluid text-center bg-dark">
-    <!-- <h2 class="fw-bold text-white p-4">Best Sellers</h2> -->
+    <h2 class="fw-bold text-white p-4">Best Sellers</h2>
     <div class="row pt-5">
-        <div class="col">
+        <div class="col p-0 me-1">
         <img src="{{ MEDIA_URL }}seller1.jpg" alt="" class="img-fluid" >
         </div>
-        <div class="col">
+        <div class="col p-0 ms-1">
         <img src="{{ MEDIA_URL }}seller2.jpg" alt="" class="img-fluid">
         </div>
     </div>
-    <h2 class="fw-bold text-white p-4">Best Sellers</h2>
+
 </div>
 
-
+{% include 'partials/footer.html' %}
 <!-- carousel -->
 {% endblock %}
 

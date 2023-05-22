@@ -37,9 +37,11 @@ function updateCartTotal() {
       dataType: 'json',
       success: function(res) {
         var totalItems = res.total_items;
+        var total_price = res.total_price
         $('.cart-total').text(totalItems);
+        $('.price').text(total_price);
       }
-    });
+    });;
   }
 
 
@@ -232,7 +234,57 @@ $('.addToCartBtnWish').on('click', function(){
 
 $(document).ready(function () {
     updateCartTotal();
+    // updateWishlistCount();
+    // updateWishlistTotal();
 });
+
+// window.addEventListener('popstate', function(event){
+//     $.ajax({
+//         url: '/wishlist_total/',
+//         method: 'GET',
+//         dataType: 'json',
+//         success: function(res) {
+//           var wishlist_count = res.wishlist_count;
+//           console.log(wishlist_count);
+//           $('.heart-total').text('dassdasd');
+//         }
+//       });
+
+
+// })
+
+
+// function updateWishlistTotal(){
+
+//     $.ajax({
+//       url: '/wishlist_total/',
+//       method: 'GET',
+//       dataType: 'json',
+
+//       success: function(res) {
+//         var wishlist_count = res.wishlist_count;
+//         console.log(wishlist_count);
+//         $('.heart-total').text(wishlist_count);
+//       }
+//     });
+
+// }
+
+
+// function updateWishlistCount() {
+//     fetch('/wishlist_total/')
+//       .then(response => response.json())
+//       .then(data => {
+//         const wishlistCount = data.wishlist_count;
+//         console.log(wishlistCount);
+//         $('.heart-total').text(wishlistCount);
+
+
+//       })
+//       .catch(error => {
+//         console.error('Error fetching wishlist count:', error);
+//       });
+//   }
 
 
 
