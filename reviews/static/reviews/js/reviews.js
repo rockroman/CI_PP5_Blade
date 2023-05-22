@@ -76,20 +76,25 @@
 
 function appendReview(res){
     var csrfToken = $('[name="csrfmiddlewaretoken"]').val();
-    $('.commented-section').append(`
-    <div class="d-flex flex-row align-items-center commented-user mt-2" >
-        <h5 class="mr-2">${ res.author } </h5><span class="dot mb-1"></span><span class="mb-1 ml-2">${ res.time_posted }</span>
-    </div>
-    <div class="comment-text-sm review_content" data-id="${ res.id }" >
-        <span>${ res.content }</span>
-        <div class="d-flex">
-            <button class="btn btn-secondary edit_review">edit</button>
-            <form action="" method="POST" class="mx-2 delete-form">
-            <input type="hidden" name="csrfmiddlewaretoken" value="${csrfToken}">
-                <input type="hidden" name="review_id" value="${ res.id }">
-                <input type="hidden" name="delete-ur" value="{% url 'reviews:delete_review' %}">
-                <button class="btn btn-danger" type="submit" >delete</button>
-            </form>
+
+
+    $('.commented-section').prepend(`
+    <div class="user-comments mt-2">
+        <div class="d-flex flex-row align-items-center commented-user mt-2 mb-2" >
+            <h5 class="mr-2">${ res.author } </h5>
+            <span class="mb-1 ml-2 text-muted">${ res.time_posted }</span>
+        </div>
+        <div class="comment-text-sm review_content" data-id="${ res.id }" >
+            <span>${ res.content }</span>
+            <div class="d-flex">
+                <button class="btn btn-secondary py-0 edit_review">edit</button>
+                <form action="" method="POST" class="mx-2 delete-form">
+                <input type="hidden" name="csrfmiddlewaretoken" value="${csrfToken}">
+                    <input type="hidden" name="review_id" value="${ res.id }">
+                    <input type="hidden" name="delete-ur" value="{% url 'reviews:delete_review' %}">
+                    <button class="btn btn-danger py-0" type="submit" >delete</button>
+                </form>
+            </div>
         </div>
     </div>
 

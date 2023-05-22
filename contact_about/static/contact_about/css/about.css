@@ -1,11 +1,11 @@
 .top-section {
     background-color: black;
-    background-image: url('/media/316084530_1775035716186084_6384014191798620920_n_wHAGkre.jpg');
+    background-image: url('/media/about_hero_big.jpeg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 
-    height: 60vh;
+    height: 50vh;
   }
 
   .about-us-section {
@@ -47,7 +47,7 @@
 }
 
 .contact-img {
-    background-image: url('/media/carousel2.jpeg');
+    /* background-image: url('/media/carousel2.jpeg'); */
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;

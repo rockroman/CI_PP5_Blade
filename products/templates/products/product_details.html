@@ -118,11 +118,55 @@
     <div class="d-flex justify-content-center row">
         <div class="d-flex flex-column col-md-8">
             <div class=" text-center comment-top p-2 bg-light border-bottom px-4">
-                <h3>reviews</h3>
+                <h3>
+                    reviews
+                    <!-- <span class="translate-middle px-2 pb-1 bg-danger  rounded-circle">
+                        <span class="py-1 fw-light">R</span>
+                      </span> -->
+
+                </h3>
             </div>
-            <div class="coment-bottom bg-white p-2 px-4">
+
+            <div class="commented-section mt-2 ">
+                {% for review in reviews %}
+                    <div class="user-comments mt-2">
+
+                        <div class="d-flex flex-column align-items-start commented-user mt-2 mb-2" >
+                            <div class="d-flex gap-2">
+                                <span class=" px-2 pb-1 bg-black  rounded-circle">
+                                    <span class="py-1 fw-light text-white">{{ review.author|default:''|stringformat:'s'|slice:":1" }}</span>
+                                  </span>
+                                <h5 class="mr-2 mb-0 ml-1">{{ review.author }} </h5>
+                            </div>
+                            <!-- <span class="dot mb-1">
+
+                            </span> -->
+                            <span class="mb-1 ml-2 text-muted">{{ review.time_posted}}</span>
+                        </div>
+
+                        <div class="comment-text-sm review_content" data-id="{{ review.id }}">
+                            <span>{{ review.content }}</span>
+                            <div class="d-flex">
+
+
+                                <button class="btn btn-secondary py-0 edit_review" type="button">edit</button>
+                                <form action="" method="POST" class="mx-2 delete-form">
+                                    {% csrf_token %}
+                                    <input type="hidden" name="review_id" value="{{ review.id }}">
+                                    <input type="hidden" name="delete-ur" value="{% url 'reviews:delete_review' %}">
+                                    <button class="btn btn-danger py-0 " type="submit" >delete</button>
+                                </form>
+
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+
+            </div>
+
+            <div class="coment-bottom bg-white p-2 pe-4 ps-0">
                     <div class=" add-comment-section mt-4 mb-4">
-                        <form  class="review-form" data-create-review-url="{% url 'reviews:create_review' %}" method="POST">
+                        <form  class="review-form w-50" data-create-review-url="{% url 'reviews:create_review' %}" method="POST">
                             {% csrf_token %}
                             <!-- ajax cal hidden inputs -->
                             <input type="hidden" id="csrf" value="{{ csrf_token }}">
@@ -134,37 +178,13 @@
                             <input type="hidden" class="user" value="{{ request.user.username}}">
                             {{ form|crispy }}
 
-                            <button class="btn btn-primary mt-0 add_review" type="submit">Comment</button>
+                            <button class="btn btn-primary  mt-0 add_review" type="submit">Comment</button>
                         </form>
 
                     </div>
 
                 <input type="hidden" id="delete-url" value="{% url 'reviews:delete_review' %}">
-                <div class="commented-section mt-2 ">
-                    {% for review in reviews %}
-                    <div class="d-flex flex-row align-items-center commented-user mt-2" >
-                        <h5 class="mr-2">{{ review.author }} </h5><span class="dot mb-1"></span><span class="mb-1 ml-2">{{ review.time_posted}}</span>
-                    </div>
 
-                        <div class="comment-text-sm review_content" data-id="{{ review.id }}">
-                            <span>{{ review.content }}</span>
-                            <div class="d-flex">
-
-
-                                <button class="btn btn-secondary edit_review" type="button">edit</button>
-                                <form action="" method="POST" class="mx-2 delete-form">
-                                    {% csrf_token %}
-                                    <input type="hidden" name="review_id" value="{{ review.id }}">
-                                    <input type="hidden" name="delete-ur" value="{% url 'reviews:delete_review' %}">
-                                    <button class="btn btn-danger" type="submit" >delete</button>
-                                </form>
-
-                            </div>
-                        </div>
-
-
-                    {% endfor %}
-                </div>
 
             </div>
         </div>
