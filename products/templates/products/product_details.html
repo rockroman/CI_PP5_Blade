@@ -117,12 +117,9 @@
 <div class="container-fluid">
     <div class="d-flex justify-content-center row">
         <div class="d-flex flex-column col-md-8">
-            <div class=" text-center comment-top p-2 bg-light border-bottom px-4">
+            <div class=" text-center comment-top p-2 bg-light border-bottom px-4 mt-2">
                 <h3>
-                    reviews
-                    <!-- <span class="translate-middle px-2 pb-1 bg-danger  rounded-circle">
-                        <span class="py-1 fw-light">R</span>
-                      </span> -->
+                    Reviews
 
                 </h3>
             </div>
@@ -148,7 +145,7 @@
                             <span>{{ review.content }}</span>
                             <div class="d-flex">
 
-
+                                {% if request.user is review.author %}
                                 <button class="btn btn-secondary py-0 edit_review" type="button">edit</button>
                                 <form action="" method="POST" class="mx-2 delete-form">
                                     {% csrf_token %}
@@ -156,6 +153,8 @@
                                     <input type="hidden" name="delete-ur" value="{% url 'reviews:delete_review' %}">
                                     <button class="btn btn-danger py-0 " type="submit" >delete</button>
                                 </form>
+                                {% else %}
+                                {% endif %}
 
                             </div>
                         </div>
@@ -163,6 +162,7 @@
                 {% endfor %}
 
             </div>
+            {% if user.is_authenticated %}
 
             <div class="coment-bottom bg-white p-2 pe-4 ps-0">
                     <div class=" add-comment-section mt-4 mb-4">
@@ -188,7 +188,12 @@
 
             </div>
         </div>
- </div>
+        {% else %}
+        <div class="my-4 text-center fw-bold"> <a href="{% url 'account_login' %}" class="text-primary">To add a review you need to log in</a> </div>
+
+        {% endif %}
+        </div>
+    </div>
 </div>
 {% include 'partials/footer.html' %}
 
