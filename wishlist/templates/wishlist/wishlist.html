@@ -24,6 +24,7 @@
                     <div class="table-responsive px-md-4 px-2 pt-3">
                         <table class="table table-borderless">
                             <tbody>
+                                    {% if wishlist_items %}
                                 {% for item in wishlist_items %}
                                 <tr class="border-bottom mb-2">
                                     <td>
@@ -90,14 +91,22 @@
 
                                         </div>
                                     </td>
-
-
-
-
                                 </tr>
                                 <!-- try -->
 
                                 {% endfor %}
+
+                                {% else %}
+                                <div class="row py-4">
+                                    <div class="col-8 d-flex flex-column justify-content-center align-items-center mx-auto">
+                                        <p class="lead mb-5">Your wishlist is empty.</p>
+                                        <a href="{% url 'products:store_products' %}" class="btn btn-dark ">
+
+                                            <span class="text-uppercase">Keep Shopping</span>
+                                        </a>
+                                    </div>
+                                </div>
+                                {% endif %}
 
                             </tbody>
                         </table>
@@ -106,7 +115,12 @@
             </div>
         </div>
     </div>
+
+
+
 </div>
+
+{% include 'partials/footer.html' %}
 
 
 
