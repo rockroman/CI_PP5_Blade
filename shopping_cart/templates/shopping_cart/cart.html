@@ -78,12 +78,17 @@
                                         </div>
                                         <div class="col d-flex justify-content-end">
 
-                                            <a class="update-link" role="button" target="{{ product_id }}">
+                                            <button class="update-link btn  text-primary shadow-none" aria-label="update-product-button" name="{{ product_id }}" >
                                                 <i class="bi bi-pencil-square" style="font-size:1.2rem; -webkit-text-stroke-width: 1px;"></i>
-                                            </a>
-                                            <a class="remove-item text-danger mx-2" id="remove_{{ product_id }}">
+
+                                            </button>
+
+                                            <button class="btn mx-2 text-danger shadow-none" aria-label="delete-product-button" data-bs-toggle="modal" data-bs-target="#modal_{{product_id}}">
                                                 <i class="bi bi-trash" style="font-size:1.2rem; -webkit-text-stroke-width: 1px;"></i>
-                                            </a>
+
+                                            </button>
+                                            {% include 'partials/delete_modal.html' %}
+
                                         </div>
                                     </div>
 
@@ -93,7 +98,7 @@
 
                                     <div class="pt-5">
                                         <h6 class="mb-0">
-                                            <a href="{% url 'products:store_products'%}" type="button" class="btn btn-dark fw-bold"><i class="bi bi-backspace-fill"></i> Back to shop</a>
+                                            <a href="{% url 'products:store_products'%}" class="btn btn-dark fw-bold"><i class="bi bi-backspace-fill"></i> Back to shop</a>
 
                                         </h6>
 

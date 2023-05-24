@@ -1,4 +1,4 @@
-<div class="toast custom-toast rounded-0 border-success msg-success bg-light" data-autohide="false" >
+<div class="toast custom-toast rounded-0 border-top-0 bg-light" data-autohide="false">
     <div class="arrow-up arrow-success"></div>
     <div class="w-100 toast-capper bg-success"></div>
     <div class="toast-header bg-white text-dark d-flex justify-content-between">
@@ -6,50 +6,44 @@
         <button type="button" class="mx-2 mb-1 btn-close text-dark" data-bs-dismiss="toast" aria-label="Close">
         </button>
     </div>
-    <div class="toast-body bg-white msg">
-        {{ message }}
-        <hr class="mt-1 mb-3">
-    </div>
-    {% if total and on_products_page or on_cart_page %}
-    <p class="logo-font bg-white text-black py-1">Your Bag ({{ all_items }})</p>
-    <div class="notification-wrapper mx-auto">
-        {% for item in cart_items %}
-            <div class="row">
-                <div class="col-3 my-1">
-                    {% if item.product.image %}
-                    <img class="w-100" src="{{ item.product.image.url }}">
-                    {% else %}
-                    <h1>rrr</h1>
-                    {% endif %}
-                </div>
-                <div class="col-9">
-                    <p class="my-0"><strong>{{ item.product.name }}</strong></p>
+    <div class="toast-body bg-light">
+        <div class="row">
+            <div class="col">
+                {{ message }}
+                <hr class="mt-1 mb-3">
+            </div>
+        </div>
+        {% if total and on_products_page or on_cart_page %}
+            <p class="logo-font bg-white text-black py-1">Your Shopping cart ({{ all_items }})</p>
+            <div class="notification-wrapper">
+                {% for item in cart_items %}
+                    <div class="row">
+                        <div class="col-3 my-1">
+                            {% if item.product.image %}
+                            <img class="w-100" src="{{ item.product.image.url }}" alt="{{ item.product.name}}">
+                            {% else %}
+                            <img class="w-100" src="{{ MEDIA_URL }}no_image.jng" alt="{{ item.product.name}}">
 
-                    <p class="my-0 small text-muted">Qty: {{ item.quantity }}</p>
+                            {% endif %}
+                        </div>
+                        <div class="col-9">
+                            <p class="my-0"><strong>{{ item.product.name }}</strong></p>
+
+                            <p class="my-0 small text-muted">Qty: {{ item.quantity }}</p>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+            <div class="row">
+                <div class="col">
+                    <p class="mt-3 mb-1 text-black">
+                        Total:
+                        <span class="float-right fw-bold">${{ total|floatformat:2 }}</span>
+                    </p>
+                    <a href="{% url 'checkout:store_checkout' %}" class="btn btn-warning btn-block btn-lg fw-bold btn-outline-dark"
+                    data-mdb-ripple-color="dark"><i class="bi bi-shield-check px-1"></i> Go to Secure Checkout</a>
                 </div>
             </div>
-        {% endfor %}
-    </div>
-    <div class="row">
-        <div class="col">
-            <strong><p class="mt-3 mb-1 text-black">
-
-                <span class="float-right">${{ total|floatformat:2 }}</span>
-            </p></strong>
-            {% if free_delivery_delta > 0 %}
-                <p class="mb-0 p-2 bg-warning shadow-sm text-black text-center">
-                    Spend <strong>${{ free_delivery_delta }}</strong> more to get free next day delivery!
-                </p>
-            {% endif %}
-            <a href="{% url 'shopping_cart:cart' %}" class="btn btn-black btn-block rounded-0">
-                <span class="text-uppercase">Go To Secure Checkout</span>
-                <span class="icon">
-                    <i class="fas fa-lock"></i>
-                </span>
-            </a>
-        </div>
-    </div>
         {% endif %}
-
+    </div>
 </div>
-<!-- code taken from boutique ado walkthrough -->
