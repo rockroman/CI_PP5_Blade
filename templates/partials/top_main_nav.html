@@ -1,7 +1,7 @@
 <!-- main navigation -->
 <nav class="navbar navbar-expand-lg navbar-dark py-0 ">
     <div class="container-fluid">
-        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample-left">
+        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample-left" aria-label="icon button">
             <span class="navbar-toggler-icon"></span>
         </button>
         <a class="navbar-brand" href="">
@@ -13,7 +13,7 @@
 
             <div class="dropdown">
 
-                    <button type="button" id="dropdownProfile1" class="btn dropdown-toggle text-white" data-bs-toggle="dropdown" aria-expanded="false">
+                    <button type="button" id="dropdownProfile1" class="btn dropdown-toggle text-white" data-bs-toggle="dropdown" aria-expanded="false" aria-label="icon button">
                         <i class="bi bi-person" style="font-size:1.5rem; -webkit-text-stroke-width: 1px; color: white;"></i></button>
 
                 <ul class="dropdown-menu " aria-labelledby="dropdownProfile1">
@@ -45,7 +45,7 @@
                 <span class="heart-total">{{ wishlist_count}}</span>
             </div>
 
-            <button class="btn"  type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample-right">
+            <button class="btn"  type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample-right" aria-label="icon button">
                 <i class="bi bi-search" style="font-size:1.2rem; -webkit-text-stroke-width: 1px; color: white;"></i>
             </button>
 
@@ -187,10 +187,10 @@
     <div class="offcanvas-body">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
-                <a class="nav-link active text-white" aria-current="page" href="{% url 'home:home' %}">Home</a>
+                <a class="nav-link active text-white"  aria-current="page" href="{% url 'home:home' %}">Home</a>
             </li>
             <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <a class="nav-link dropdown-toggle text-white" href="" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                 All Knives
                 </a>
             <ul class="dropdown-menu">
@@ -206,7 +206,7 @@
                 Categories
                 </a>
             <ul class="dropdown-menu">
-                <li><a class="dropdown-item text-white" href="{% url 'products:store_products'%}?category=Explorer">Explorer</a></li>
+                <li><a class="dropdown-item " href="{% url 'products:store_products'%}?category=Explorer">Explorer</a></li>
                     <li><a class="dropdown-item" href="{% url 'products:store_products'%}?category=Craftsman">Craftsman</a></li>
                     <li><a class="dropdown-item" href="{% url 'products:store_products'%}?category=Gentleman">Gentleman</a></li>
                     <li><a class="dropdown-item" href="{% url 'products:store_products'%}?category=Explorer,Craftsman,Gentleman">All categories</a></li>

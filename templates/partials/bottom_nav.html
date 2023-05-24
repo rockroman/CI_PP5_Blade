@@ -1,10 +1,10 @@
 <nav class="navbar fixed-bottom navbar-light  d-xl-none bottom-nav">
     <div class="container-fluid fix_bottom">
         <div class="btn-group dropup">
-                <button type="button" id="dropdownProfileBottom" class="btn dropdown-toggle text-white" data-bs-toggle="dropdown" aria-expanded="false">
+                <button type="button" id="dropdownProfileBottom2" class="btn dropdown-toggle text-white" data-bs-toggle="dropdown" aria-expanded="false" aria-label="icon button">
                     <i class="bi bi-person" style="font-size:1.5rem; -webkit-text-stroke-width: 1px; color: white"></i>
                 </button>
-            <ul class="dropdown-menu " aria-labelledby="dropdownProfile2">
+            <ul class="dropdown-menu " aria-labelledby="dropdownProfileBottom2">
                 {% if request.user.is_authenticated %}
                 <li><a class="dropdown-item " href="{% url 'customer_profile:profile' %}">Profile</a></li>
                 {% endif %}

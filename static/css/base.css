@@ -123,32 +123,20 @@ body {
 
 /* new carousel */
 .bg-img-1 {
-  background-image: url("/media/newest_wide.jpg");
-  background-size: cover;
-  object-fit: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+  background: url("/media/newest_wide.jpg") center/cover no-repeat;
+
 }
 
 .bg-img-2 {
-  background-image: url('/media/new_caro.jpg');
-  background-size: cover;
-  object-fit: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+  background: url('/media/new_caro_wide.jpg') center/cover no-repeat;
+
 }
 
 .bg-img-3 {
-  background-image: url('/media/baby.jpg');
-  background-size: cover;
-  object-fit: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-}
-
-.carousel-item  {
+  background: url('/media/baby_wide.jpg') center/cover no-repeat;
 
 }
+
 
 
 
@@ -156,21 +144,21 @@ body {
 
   .bg-img-1 {
 
+    background: url("/media/newest_med.jpg") center/cover no-repeat;
 
-    background-image: url("/media/newest.jpg");
-    background-size: cover;
-   object-fit: cover;
-    background-position: center;
-    background-repeat: no-repeat;
 
   }
 
 
   .bg-img-2 {
+    background: url('/media/new_caro.jpg') center/cover no-repeat;
+
 
   }
 
   .bg-img-3 {
+    background: url('/media/baby_med.jpg') center/cover no-repeat;
+
 
   }
 
@@ -181,21 +169,19 @@ body {
 @media(max-width: 576px) {
 
   .bg-img-1 {
-    background-image: url("/media/newest2.jpg");
-    background-size: cover;
-   object-fit: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+    background: url("/media/newest2.jpg") center/cover no-repeat;
 
   }
 
 
   .bg-img-2 {
-      background-image: url('');
+    background: url('/media/new_caro_small.jpg') center/cover no-repeat;
+
   }
 
   .bg-img-3 {
-      background-image: url('');
+    background: url('/media/baby_small.jpg') center/cover no-repeat;
+
   }
 
 
