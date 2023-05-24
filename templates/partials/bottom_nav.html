@@ -1,4 +1,4 @@
-<nav class="navbar fixed-bottom navbar-light  d-xl-none bottom-nav">
+<nav class="navbar fixed-bottom navbar-light  d-xl-none bottom-nav p-0">
     <div class="container-fluid fix_bottom">
         <div class="btn-group dropup">
                 <button type="button" id="dropdownProfileBottom2" class="btn dropdown-toggle text-white" data-bs-toggle="dropdown" aria-expanded="false" aria-label="icon button">
@@ -19,9 +19,15 @@
 
             </ul>
         </div>
+        <a href="{% url 'wishlist:wishlist' %}"  role="button" class="btn py-3">
+            <i class="bi bi-suit-heart" style="font-size:1.3rem; -webkit-text-stroke-width: 1px; color: white"></i>
+        </a>
 
         <a href="{% url 'products:store_products' %}">
             <i class="bi bi-shop-window" style="font-size:1.5rem; -webkit-text-stroke-width: 1px; color: white"></i>
         </a>
+        <button class="btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample-right">
+            <i class="bi bi-search" style="font-size:1.2rem; -webkit-text-stroke-width: 1px; color: white"></i>
+        </button>
     </div>
 </nav>

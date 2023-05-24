@@ -182,14 +182,6 @@ $(document).ready(function(){
 
                     },
                     success:function(res){
-                        // console.log(res.status);
-                        // var author=res.author
-                        // var content=res.content
-                        // var message=res.message
-                        // console.log(message);
-                        // var deleteUrl = $('#delete-url').val()
-                        // $('.delete-form').attr('action',deleteUrl)
-
                         if(res.status==='created'){
 
                             appendReview(res);
@@ -221,17 +213,8 @@ $(document).ready(function(){
 
                         }
 
-                        // if($('.delete-form')){
-                        //     var deleteUrl = $('#delete-url').val()
-                        //     $('.delete-form').attr('action',deleteUrl)
-
-                        // }
-
-
-
                         _submitBtn.attr('disabled',false);
                         $('.review-form')[0].reset();
-
 
 
                     }
@@ -242,6 +225,7 @@ $(document).ready(function(){
 
 
     });
+
 
     $('.commented-section').on('click', '.review_content', function(){
 

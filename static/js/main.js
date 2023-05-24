@@ -186,7 +186,6 @@ $('.addToCartBtn').on('click', function(){
 $('.addToCartBtnWish').on('click', function(){
     var _addBtn = $(this);
     var _qty = 1;
-    // var _productName = $(this).closest('.wishlist_products').find('.product-name').val();
     var _productId = $(this).closest('.wishlist_products').find('.product-id').val();
     var _productName = $(this).closest('.wishlist_products').find('.product-name').val();
     var _productImage = $(this).closest('.wishlist_products').find('.product-image').val();

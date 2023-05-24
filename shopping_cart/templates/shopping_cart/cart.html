@@ -78,8 +78,12 @@
                                         </div>
                                         <div class="col d-flex justify-content-end">
 
-                                            <a class="update-link" role="button" target="{{ product_id }}">update</a>
-                                            <a class="remove-item text-danger mx-2" id="remove_{{ product_id }}" >remove</a>
+                                            <a class="update-link" role="button" target="{{ product_id }}">
+                                                <i class="bi bi-pencil-square" style="font-size:1.2rem; -webkit-text-stroke-width: 1px;"></i>
+                                            </a>
+                                            <a class="remove-item text-danger mx-2" id="remove_{{ product_id }}">
+                                                <i class="bi bi-trash" style="font-size:1.2rem; -webkit-text-stroke-width: 1px;"></i>
+                                            </a>
                                         </div>
                                     </div>
 
@@ -88,19 +92,22 @@
 
 
                                     <div class="pt-5">
-                                        <h6 class="mb-0"><a href="#!" class="text-body"><i
-                                                    class="fas fa-long-arrow-alt-left me-2"></i>Back to shop</a></h6>
+                                        <h6 class="mb-0">
+                                            <a href="{% url 'products:store_products'%}" type="button" class="btn btn-dark fw-bold"><i class="bi bi-backspace-fill"></i> Back to shop</a>
+
+                                        </h6>
+
                                     </div>
                                 </div>
                             </div>
                             <div class="col-lg-4 bg-grey">
-                                <div class="p-5">
+                                <div class="p-3">
                                     <h3 class="fw-bold mb-5 mt-2 pt-1" id="subtotal" >Summary</h3>
                                     <hr class="my-4">
 
                                     <div class="d-flex justify-content-between mb-4">
-                                        <h5 class="text-uppercase">€{{ total_items }} items</h5>
-                                        <h5>€ 132.00</h5>
+                                        <h5 class="text-uppercase"></h5>
+                                        <h5>€ </h5>
                                     </div>
 
 
@@ -113,8 +120,8 @@
                                     </div>
 
 
-                                    <a href="{% url 'checkout:store_checkout' %}" class="btn btn-dark btn-block btn-lg"
-                                        data-mdb-ripple-color="dark">Checkout</a>
+                                    <a href="{% url 'checkout:store_checkout' %}" class="btn btn-warning btn-block btn-lg fw-bold btn-outline-dark"
+                                        data-mdb-ripple-color="dark"><i class="bi bi-shield-check px-1"></i>Secure Checkout</a>
 
                                 </div>
                             </div>

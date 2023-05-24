@@ -35,6 +35,7 @@ def cart_content(request):
         'all_items': all_items,
 
 
+
     }
     return context
 

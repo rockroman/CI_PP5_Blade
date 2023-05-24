@@ -21,18 +21,19 @@
                     <li>
                         <a class="dropdown-item " href="{% url 'customer_profile:profile' %}">Profile</a>
                     </li>
-                    {% endif %}
+                    <li>
+                        <a class="dropdown-item" href="{% url 'account_logout' %}">Logout</a>
+                    </li>
+                    {% else %}
                     <li>
                         <a class="dropdown-item" href="{% url 'account_login' %}">Login</a>
                     </li>
                     <li>
                         <a class="dropdown-item" href="{% url 'account_signup' %}">Register</a>
                     </li>
-                    {% if request.user.is_authenticated %}
-                    <li>
-                        <a class="dropdown-item" href="{% url 'account_logout' %}">Logout</a>
-                    </li>
                     {% endif %}
+
+
                     {% if request.user.is_superuser %}
                     <li><a class="dropdown-item " href="{% url 'products:add_product' %}">Shop management</a></li>
                     {% endif %}
@@ -119,12 +120,17 @@
                     <ul class="dropdown-menu " aria-labelledby="dropdownProfile2">
                         {% if request.user.is_authenticated %}
                         <li><a class="dropdown-item " href="{% url 'customer_profile:profile' %}">Profile</a></li>
-                        {% endif %}
+                        <li><a class="dropdown-item" href="{% url 'account_logout' %}">Logout</a></li>
+
+                        {% else %}
+
                         <li><a class="dropdown-item" href="{% url 'account_login' %}">Login</a></li>
                         <li><a class="dropdown-item" href="{% url 'account_signup' %}">Register</a></li>
-                        {% if request.user.is_authenticated %}
-                        <li><a class="dropdown-item" href="{% url 'account_logout' %}">Logout</a></li>
-                        {% endif %}
+                         {% endif %}
+
+
+
+
                         {% if request.user.is_superuser %}
                         <li><a class="dropdown-item " href="{% url 'products:add_product' %}">Shop management</a></li>
                         {% endif %}

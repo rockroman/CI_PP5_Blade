@@ -77,15 +77,7 @@ def get_cart_total(request):
         for key, item in cart_item.items():
             qty = item['qty']
             price = item['price']
-            # print(type(qty))
-            # print(type(price))
-            # # total_price += qty * price
-            # total_price = int(total_price)
-            # total_price += qty * price
-            # total_price = float(total_price)
-            # total_price = f'{total_price:.2f}'
-            # total_price += qty * price
-            # total_price = format(total_price, '.2f')
+
             item_total = round(qty * price, 2)
             unformated_total_price += item_total
             total_price = f"{unformated_total_price:.2f}"
