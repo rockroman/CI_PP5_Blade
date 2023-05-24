@@ -25,7 +25,13 @@
 
             </div>
         <div class="col-md-6">
-            <a href="" class="btn btn-dark rounded-0 mt-3" id="wish">add to wishlist <i class="bi bi-suit-heart-fill"></i></a>
+            <form action="{% url 'wishlist:add_to_wishlist' %}" method="POST" enctype = "multipart/form-data" >
+                {% csrf_token %}
+                <input type="hidden" name="product-id" value="{{ product.id }}" >
+                <button class="btn btn-dark rounded-0 mt-3" id="wish">add to wishlist <i class="bi bi-suit-heart-fill"></i></button>
+                <input type="hidden" name="my_redirect_url" value="{{ request.path }}">
+            </form>
+
 
             {% if request.user.is_superuser %}
             <div>
@@ -189,10 +195,12 @@
             </div>
         </div>
         {% else %}
-        <div class="my-4 text-center fw-bold"> <a href="{% url 'account_login' %}" class="text-primary">To add a review you need to log in</a> </div>
+        <div class="my-4 text-center fw-bold">
+             <a href="{% url 'account_login' %}" class="text-primary">To add a review you need to log in</a>
+        </div>
 
         {% endif %}
-        </div>
+        <!-- </div> -->
     </div>
 </div>
 {% include 'partials/footer.html' %}
