@@ -1,0 +1,29 @@
+<div class="modal fade " tabindex="-1" id="modal_{{item.product.id}}">
+    <div class="modal-dialog custom-modal-dialog ">
+      <div class="modal-content">
+        <div class="modal-header p-2">
+          <p class="h4 modal-title fw-bold">You are Deleting</p>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p class="custom-content">{{ item.product.name }} from your Wishlist</p>
+        </div>
+        <div class="modal-footer">
+            <form  method="POST" action="{% url 'wishlist:remove_from_wishlist' %}" class="wishlist_products">
+                {% csrf_token %}
+            <!-- hidden inputs for ajax call -->
+            <input type="hidden" name="item-id" value="{{ item.id }}">
+            <input type="hidden" class="product-id" value="{{ item.product.id }}" >
+            <input type="hidden" class="product-price" value="{{ item.product.price }}">
+            <input type="hidden" class="product-name" value="{{ item.product.name }}">
+            <input type="hidden" class="csrf_token" value="{{ csrf_token }}">
+            <button  type="submit" class="btn btn-danger">Delete</button>
+        </form>
+
+          <button class="btn btn-primary" data-bs-dismiss="modal">Go back</button>
+
+
+        </div>
+      </div>
+    </div>
+</div>

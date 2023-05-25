@@ -46,42 +46,41 @@
                                                      <span class=" text-muted"></span> <span class=" fw-bold">{{ item.product.handlematerial }}</span>
                                                 </small>
                                             </div>
-                                            <!-- <div class="mx-auto">
-                                                <button>rtterte</button>
-                                                <button>sdffdfsdfsd</button>
-                                            </div> -->
 
                                         </div>
                                         <!-- <hr class="my-1"> -->
                                         <div class="w-75 d-flex">
                                             {{ item.product.description }}
-
-
-
                                         </div>
+                                        {% include 'partials/delete_modal_wishlist.html' %}
 
-
-                                            <form  method="POST" action="{% url 'wishlist:remove_from_wishlist' %}" class="wishlist_products">
-                                                {% csrf_token %}
-                                                <div class="w-100 ">
-                                                    {% if item.product.image %}
-                                                    <input type="hidden" class="product-image" value="{{ item.product.image.url }}" >
-                                                    {% else %}
-                                                    <input type="hidden" class="product-image" value="{{ MEDIA_URL }}no_image.jpg" >
-                                                    {% endif %}
-                                                    <button class="btn btn-danger mt-3" type="submit"><i class="bi bi-trash3"></i></button>
-                                                    <button type="button"   class="btn btn-success  text-uppercase mt-3 addToCartBtnWish">
-                                                        <i class="bi-cart-fill me-1"></i>
-                                                        Add to cart
+                                                <div class="w-100 d-flex">
+                                                    <button class="btn btn-danger mt-3 me-2 shadow-none" aria-label="delete-wishlist-button" data-bs-toggle="modal" data-bs-target="#modal_{{item.product.id}}">
+                                                        <i class="bi bi-trash3"></i>
                                                     </button>
-                                                    <!-- hidden inputs for ajax call -->
-                                                    <input type="hidden" name="item-id" value="{{ item.id }}">
-                                                    <input type="hidden" class="product-id" value="{{ item.product.id }}" >
-                                                    <input type="hidden" class="product-price" value="{{ item.product.price }}">
-                                                    <input type="hidden" class="product-name" value="{{ item.product.name }}">
-                                                    <input type="hidden" class="csrf_token" value="{{ csrf_token }}">
+                                                    <form  class="wishlist_products">
+                                                            {% csrf_token %}
+                                                        {% if item.product.image %}
+                                                        <input type="hidden" class="product-image" value="{{ item.product.image.url }}" >
+                                                        {% else %}
+                                                        <input type="hidden" class="product-image" value="{{ MEDIA_URL }}no_image.jpg" >
+                                                        {% endif %}
+
+
+                                                        <button type="button"   class="btn btn-success  text-uppercase mt-3 addToCartBtnWish">
+                                                            <i class="bi-cart-fill me-1"></i>
+                                                            Add to cart
+                                                        </button>
+                                                        <!-- hidden inputs for ajax call -->
+                                                        <input type="hidden" name="item-id" value="{{ item.id }}">
+                                                        <input type="hidden" class="product-id" value="{{ item.product.id }}" >
+                                                        <input type="hidden" class="product-price" value="{{ item.product.price }}">
+                                                        <input type="hidden" class="product-name" value="{{ item.product.name }}">
+                                                        <input type="hidden" class="csrf_token" value="{{ csrf_token }}">
+                                                    </form>
+
                                                 </div>
-                                        </form>
+
 
 
                                     </td>

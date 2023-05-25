@@ -1,4 +1,4 @@
-<div class="toast custom-toast rounded-0 border-top-0 bg-light" data-autohide="false">
+<div class="toast custom-toast rounded-0 border-top-0 bg-light " data-autohide="false">
     <div class="arrow-up arrow-success"></div>
     <div class="w-100 toast-capper bg-success"></div>
     <div class="toast-header bg-white text-dark d-flex justify-content-between">
@@ -34,14 +34,19 @@
                     </div>
                 {% endfor %}
             </div>
-            <div class="row">
+            <div class="row border ">
                 <div class="col">
                     <p class="mt-3 mb-1 text-black">
                         Total:
                         <span class="float-right fw-bold">${{ total|floatformat:2 }}</span>
                     </p>
-                    <a href="{% url 'checkout:store_checkout' %}" class="btn btn-warning btn-block btn-lg fw-bold btn-outline-dark"
-                    data-mdb-ripple-color="dark"><i class="bi bi-shield-check px-1"></i> Go to Secure Checkout</a>
+                    <div class=" w-100">
+                        <a href="{% url 'checkout:store_checkout' %}" class="btn btn-warning btn-block btn-lg fw-bold btn-outline-dark w-100"
+                        data-mdb-ripple-color="dark">
+                        <i class="bi bi-shield-check px-1"></i>
+                         Go to Secure Checkout
+                        </a>
+                    </div>
                 </div>
             </div>
         {% endif %}

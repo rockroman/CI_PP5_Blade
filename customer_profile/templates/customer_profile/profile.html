@@ -15,7 +15,7 @@
 <h1 class="text-center my-3">My Profile</h1>
 <div class="container-fluid">
     <div class="row mx-auto mb-4">
-        <div class="col-lg-6 col-md-10 mt-2">
+        <div class="col-lg-6 col-md-12 mt-2">
             <!-- accordion -->
             <!-- <div class="accordion" id="order-accordion">
                 <div class="accordion-item">
@@ -41,67 +41,66 @@
                       <strong>Order History </strong>({{ orders|length}})
                     </button>
                   </h2>
-
-                  <!-- <div id="collapseOne" class="accordion-collapse collapse " aria-labelledby="headingOne" data-bs-parent="#accordionExample">
-                        <div class="accordion-body">
-                        <div class="d-flex justify-content-between">
-                            <strong>
-                                order num.
-                            </strong>
-                            <strong>
-                                date
-                            </strong>
-                            <strong>
-                               items
-                            </strong>
-                        </div>
-
-                        </div>
-                  </div> -->
                 </div>
                 {% for order in orders %}
                 <div class="accordion-item">
                     <h2 class="accordion-header text-center" id="heading{{ order.order_number|truncatechars:6 }}">
                       <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#my_{{ order.order_number }}" aria-expanded="true" aria-controls="my_{{ order.order_number }}">
-                        <span class="text-success">{{ order.order_number }}</span>
+                        <span class="text-success">{{ order.order_number|truncatechars:10  }}</span>
                       </button>
                     </h2>
 
                     <div id="my_{{ order.order_number }}" class="accordion-collapse collapse " aria-labelledby="headingOne" data-bs-parent="#order-accordion">
                           <div class="accordion-body">
-                            {% for item in order.lineitems.all %}
+
                           <div class="">
 
                             <table class="table">
                                 <thead>
                                   <tr>
                                     <th scope="col">Order num.</th>
-                                    <th scope="col">Date</th>
+                                    <!-- <th scope="col">Date</th> -->
                                     <th scope="col">Items</th>
-                                    <th scope="col">Order total</th>
+                                    <th scope="col">Item price</th>
+
                                   </tr>
                                 </thead>
+
                                 <tbody>
+                                  {% for item in order.lineitems.all %}
                                   <tr>
                                     <th scope="row">
+
 
                                       <a href="{% url 'customer_profile:order_history' order.order_number %}">
                                         {{ order.order_number|truncatechars:6 }}
 
                                       </a>
                                     </th>
-                                    <td>{{ order.date }}</td>
+                                    <!-- <td></td> -->
                                     <td>{{ item.product.name }}({{ item.quantity }})</td>
-                                    <td>€{{ order.grand_total }}</td>
+                                    <td>€{{ item.product.price }}</td>
                                   </tr>
+
+                                  {% endfor %}
+
                                 </tbody>
+
+
                               </table>
-                          </div>
-                          {% endfor %}
 
                           </div>
+
+
+                          </div>
+
+                          <div class="d-flex justify-content-between px-3"> Order-total: <span class="mr-3 text-muted">{{ order.date }}</span></div>
+                          <div class="mt-2 px-3 fw-bold"> €{{ order.grand_total }}</div>
                     </div>
-                  </div>
+
+                </div>
+
+
                   {% endfor %}
 
             </div>
