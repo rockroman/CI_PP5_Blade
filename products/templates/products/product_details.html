@@ -3,7 +3,7 @@
 
 {% block content %}
 {% include 'partials/top_main_nav.html' %}
-{% include 'partials/delete_modal.html' %}
+{% include 'partials/delete_modal_product.html' %}
 
 <!-- <h2 class="text-center">Product details page</h2> -->
 
@@ -37,9 +37,14 @@
             {% if request.user.is_superuser %}
             <div>
                 <small class="ml-3">
-                    <a href="{% url 'products:delete_product' product.id %}" class="btn btn-danger mt-3"><i class="bi bi-trash3"></i></a>
 
                     <a class="btn btn-primary mt-3" href="{% url 'products:edit_product' product.id %}"><i class="bi bi-pencil-square"></i>Edit</a>
+
+                    <button class="btn btn-danger mt-3 shadow-none" aria-label="delete-product-button" data-bs-toggle="modal" data-bs-target="#modal_{{product_id}}">
+                        <i class="bi bi-trash3"></i>
+
+                    </button>
+
                 </small>
             </div>
             {% endif %}
@@ -74,7 +79,7 @@
                                 <div class="form-group w-50">
                                     <div class="input-group">
                                         <div class="input-group-prepend">
-                                            <button class="decrement-qty btn btn-danger rounded-0"
+                                            <button class="decrement-qty btn btn-danger rounded-0 shadow-none"
                                                 data-item_id="{{ product.id }}" id="decrement-qty_{{ product.id }}">
                                                 <span class="icon">
                                                     <i class="fas fa-minus"></i>
@@ -86,7 +91,7 @@
                                             data-item_id="{{ product.id }}"
                                             id="id_qty_{{ product.id }}">
                                         <div class="input-group-append">
-                                            <button class="increment-qty btn btn-success rounded-0"
+                                            <button class="increment-qty btn btn-success rounded-0 shadow-none"
                                                 data-item_id="{{ product.id }}" id="increment-qty_{{ product.id }}">
                                                 <span class="icon">
                                                     <i class="fas fa-plus"></i>
@@ -133,6 +138,9 @@
 
             <div class="commented-section mt-2 ">
                 {% for review in reviews %}
+                {% include 'partials/delete_modal_review.html' %}
+
+
                     <div class="user-comments mt-2">
 
                         <div class="d-flex flex-column align-items-start commented-user mt-2 mb-2" >
@@ -142,9 +150,7 @@
                                   </span>
                                 <h5 class="mr-2 mb-0 ml-1">{{ review.author }} </h5>
                             </div>
-                            <!-- <span class="dot mb-1">
 
-                            </span> -->
                             <span class="mb-1 ml-2 text-muted">{{ review.time_posted}}</span>
                         </div>
 
@@ -152,23 +158,25 @@
                             <span>{{ review.content }}</span>
                             <div class="d-flex">
 
-                                {% if request.user is review.author %}
+                                {% if request.user == review.author %}
                                 <button class="btn btn-secondary py-0 edit_review" type="button">edit</button>
-                                <form action="" method="POST" class="mx-2 delete-form">
-                                    {% csrf_token %}
-                                    <input type="hidden" name="review_id" value="{{ review.id }}">
-                                    <input type="hidden" name="delete-ur" value="{% url 'reviews:delete_review' %}">
-                                    <button class="btn btn-danger py-0 " type="submit" >delete</button>
-                                </form>
+
+                                <button class="btn btn-danger mt-3 shadow-none" aria-label="delete-product-button" data-bs-toggle="modal" data-bs-target="#modal_{{ review.id }}">
+                                    <i class="bi bi-trash3"></i>
+
+                                </button>
                                 {% else %}
                                 {% endif %}
+
 
                             </div>
                         </div>
                     </div>
-                {% endfor %}
+                    <!--  -->
 
+                    {% endfor %}
             </div>
+
             {% if user.is_authenticated %}
 
             <div class="coment-bottom bg-white p-2 pe-4 ps-0">
@@ -185,7 +193,7 @@
                             <input type="hidden" class="user" value="{{ request.user.username}}">
                             {{ form|crispy }}
 
-                            <button class="btn btn-primary  mt-0 add_review" type="submit">Comment</button>
+                            <button class="btn btn-primary  mt-0 add_review" type="submit">Add review</button>
                         </form>
 
                     </div>

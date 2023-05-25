@@ -1,0 +1,19 @@
+<div class="modal fade " tabindex="-1" id="modal_{{product_id}}">
+    <div class="modal-dialog custom-modal-dialog ">
+      <div class="modal-content">
+        <div class="modal-header p-2">
+          <p class="h4 modal-title fw-bold">You are Deleting</p>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p class="custom-content">{{ product.name}} from your Shop</p>
+        </div>
+        <div class="modal-footer">
+            <a href="{% url 'products:delete_product' product.id %}" class="btn btn-danger">Delete</a>
+          <button class="btn btn-primary" data-bs-dismiss="modal">Go back</button>
+
+
+        </div>
+      </div>
+    </div>
+</div>

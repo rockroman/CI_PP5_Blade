@@ -1,0 +1,24 @@
+<div class="modal fade review" tabindex="-1" id="modal_{{ review.id }}">
+    <div class="modal-dialog custom-modal-dialog ">
+      <div class="modal-content">
+        <div class="modal-header p-2">
+          <p class="h4 modal-title fw-bold">You are Deleting</p>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p class="del-review">Your review!!Are you sure?</p>
+        </div>
+        <div class="modal-footer">
+            <form action="" method="POST" class="mx-2 delete-form">
+                {% csrf_token %}
+                <input type="hidden" name="review_id" value="{{ review.id }}">
+                <input type="hidden" name="delete-ur" value="{% url 'reviews:delete_review' %}">
+                <button class="btn btn-danger" type="submit">delete</button>
+            </form>
+          <button class="btn btn-primary" data-bs-dismiss="modal">Go back</button>
+
+
+        </div>
+      </div>
+    </div>
+</div>
