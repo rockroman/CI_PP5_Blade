@@ -96,7 +96,8 @@ def delete_review(request):
 
         if request.user == review.author:
             review.delete()
-            messages.success(request, f'Review deleted')
+            messages.info(request, f' Your Review is deleted')
+
         else:
             messages.error(request,
                            'CANT DELETE!! TOU ARE NOT AUTHOR OF A REVIEW ')

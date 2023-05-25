@@ -9,7 +9,7 @@
           <p class="del-review">Your review!!Are you sure?</p>
         </div>
         <div class="modal-footer">
-            <form action="" method="POST" class="mx-2 delete-form">
+            <form  method="POST" class="mx-2 delete-form">
                 {% csrf_token %}
                 <input type="hidden" name="review_id" value="{{ review.id }}">
                 <input type="hidden" name="delete-ur" value="{% url 'reviews:delete_review' %}">

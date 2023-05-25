@@ -118,13 +118,13 @@ function appendReview(res){
         <div class="modal-body">
           <p class="del-review">Your review!!Are you sure?</p>
         </div>
-        <div class="modal-footer">s
+        <div class="modal-footer">
             <form action="" method="POST" class="mx-2 delete-form">
 
                 <input type="hidden" name="csrfmiddlewaretoken" value="${csrfToken}">
                 <input type="hidden" name="review_id" value="${res.id}">
                 <input type="hidden" name="delete-ur" value="{% url 'reviews:delete_review' %}">
-                <button class="btn btn-danger" type="submit" >delete</button>
+                <button class="btn btn-danger" type="submit">delete</button>
             </form>
           <button class="btn btn-primary" data-bs-dismiss="modal">Go back</button>
 
@@ -135,7 +135,7 @@ function appendReview(res){
 </div>
 
 
-    <div class="user-comments mt-2">
+    <div class="user-comments mt-2 pb-0">
 
 
         <div class="d-flex flex-row align-items-center commented-user mt-2 mb-2" >
@@ -145,13 +145,13 @@ function appendReview(res){
         <div class="comment-text-sm review_content" data-id="${ res.id }" >
             <span>${ res.content }</span>
             <div class="d-flex">
-                <button class="btn btn-secondary py-0 edit_review">edit</button>
-
-                <button class="btn btn-danger mt-3 shadow-none" aria-label="delete-product-button" data-bs-toggle="modal" data-bs-target="#modal_${res.id}">
-                <i class="bi bi-trash3"></i>
-
+                <button class="edit_review btn mt-3 text-primary shadow-none" aria-label="update-review-button"  >
+                <i class="bi bi-pencil-square" style="font-size:1.2rem; -webkit-text-stroke-width: 1px;"></i>
                 </button>
 
+                <button class="btn  mt-3 text-danger shadow-none" aria-label="delete-product-button" data-bs-toggle="modal" data-bs-target="#modal_${ res.id }">
+                <i class="bi bi-trash" style="font-size:1.2rem; -webkit-text-stroke-width: 1px;"></i>
+                </button>
             </div>
         </div>
     </div>

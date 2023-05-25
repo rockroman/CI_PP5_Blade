@@ -141,7 +141,7 @@
                 {% include 'partials/delete_modal_review.html' %}
 
 
-                    <div class="user-comments mt-2">
+                    <div class="user-comments mt-2 pb-0">
 
                         <div class="d-flex flex-column align-items-start commented-user mt-2 mb-2" >
                             <div class="d-flex gap-2">
@@ -159,15 +159,14 @@
                             <div class="d-flex">
 
                                 {% if request.user == review.author %}
-                                <button class="btn btn-secondary py-0 edit_review" type="button">edit</button>
-
-                                <button class="btn btn-danger mt-3 shadow-none" aria-label="delete-product-button" data-bs-toggle="modal" data-bs-target="#modal_{{ review.id }}">
-                                    <i class="bi bi-trash3"></i>
-
+                                <button class="edit_review btn mt-3  text-primary shadow-none" aria-label="update-review-button"  >
+                                    <i class="bi bi-pencil-square" style="font-size:1.2rem; -webkit-text-stroke-width: 1px;"></i>
+                                </button>
+                                <button class="btn  mt-3 text-danger shadow-none" aria-label="delete-product-button" data-bs-toggle="modal" data-bs-target="#modal_{{ review.id }}">
+                                    <i class="bi bi-trash" style="font-size:1.2rem; -webkit-text-stroke-width: 1px;"></i>
                                 </button>
                                 {% else %}
                                 {% endif %}
-
 
                             </div>
                         </div>
