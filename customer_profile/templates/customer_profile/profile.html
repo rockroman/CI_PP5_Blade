@@ -83,7 +83,13 @@
                                 </thead>
                                 <tbody>
                                   <tr>
-                                    <th scope="row">{{ order.order_number|truncatechars:6 }}</th>
+                                    <th scope="row">
+
+                                      <a href="{% url 'customer_profile:order_history' order.order_number %}">
+                                        {{ order.order_number|truncatechars:6 }}
+
+                                      </a>
+                                    </th>
                                     <td>{{ order.date }}</td>
                                     <td>{{ item.product.name }}({{ item.quantity }})</td>
                                     <td>€{{ order.grand_total }}</td>
