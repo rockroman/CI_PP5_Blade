@@ -44,9 +44,9 @@
                                         <div class="col-md-3 col-lg-3 col-xl-3 col-sm-6 d-flex justify-content-center">
                                             <form id="{{ product_id }}"  action="{% url 'shopping_cart:update_cart' product_id  %}" method="POST" class="w-100 update-form">
                                                 {% csrf_token %}
-                                                <div class="input-group ">
+                                                <div class="input-group p-0">
                                                     <div class="input-group-prepend">
-                                                        <button class="decrement-qty btn btn-danger rounded-0"
+                                                        <button class="decrement-qty btn btn-danger rounded-0 shadow-none"
                                                             data-item_id="{{ product_id }}" id="decrement-qty_{{ product_id }}">
                                                             <span class="icon">
                                                                 <i class="fas fa-minus"></i>
@@ -59,7 +59,7 @@
                                                         data-item_id="{{ product_id }}"
                                                         id="id_qty_{{ product_id }}">
                                                     <div class="input-group-append">
-                                                        <button class="increment-qty btn btn-success rounded-0"
+                                                        <button class="increment-qty btn btn-success rounded-0 shadow-none"
                                                             data-item_id="{{ product_id }}" id="increment-qty_{{ product_id }}">
                                                             <span class="icon">
                                                                 <i class="fas fa-plus"></i>
