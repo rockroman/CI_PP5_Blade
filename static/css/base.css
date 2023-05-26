@@ -39,8 +39,8 @@ body {
   font-weight: 700;
   text-align: center;
   line-height: 17px;
-  right: 12px;
-  top: 13px;
+  right: 13px;
+  top: 24px;
   z-index: 50;
 
 }
@@ -57,14 +57,14 @@ body {
   text-align: center;
   line-height: 17px;
   font-weight: 700;
-  right: 102px;
-  top: 12px;
+  right: 103px;
+  top: 23px;
   z-index: 50;
 
 }
 
 .price{
-  top:42px;
+  top:55px;
   right:7px;
 }
 
@@ -123,26 +123,33 @@ body {
 
 /* new carousel */
 .bg-img-1 {
-  background: url("/media/newest_wide.jpg") center/cover no-repeat;
+  background: url('/media/baby_wide.jpg') center/cover no-repeat;
 
 }
 
 .bg-img-2 {
-  background: url('/media/new_caro_wide.jpg') center/cover no-repeat;
+  background: url("/media/newest_wide.jpg") center/cover no-repeat;
 
 }
 
 .bg-img-3 {
-  background: url('/media/baby_wide.jpg') center/cover no-repeat;
+  background: url('/media/new_caro_wide.jpg') center/cover no-repeat;
 
 }
+
+
 
 
 
 
 @media(max-width: 767px) {
-
   .bg-img-1 {
+    background: url('/media/baby_med.jpg') center/cover no-repeat;
+
+
+  }
+
+  .bg-img-2 {
 
     background: url("/media/newest_med.jpg") center/cover no-repeat;
 
@@ -150,39 +157,36 @@ body {
   }
 
 
-  .bg-img-2 {
+  .bg-img-3 {
     background: url('/media/new_caro.jpg') center/cover no-repeat;
 
 
   }
 
-  .bg-img-3 {
-    background: url('/media/baby_med.jpg') center/cover no-repeat;
 
-
-  }
 
 
 }
 
 
 @media(max-width: 576px) {
-
   .bg-img-1 {
+    background: url('/media/baby_small.jpg') center/cover no-repeat;
+
+  }
+
+  .bg-img-2 {
     background: url("/media/newest2.jpg") center/cover no-repeat;
 
   }
 
 
-  .bg-img-2 {
+  .bg-img-3 {
     background: url('/media/new_caro_small.jpg') center/cover no-repeat;
 
   }
 
-  .bg-img-3 {
-    background: url('/media/baby_small.jpg') center/cover no-repeat;
 
-  }
 
 
 }
