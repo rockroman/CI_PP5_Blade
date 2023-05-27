@@ -1,20 +1,24 @@
 <!-- main navigation -->
-<nav class="navbar navbar-expand-lg navbar-dark py-0 ">
+<nav class="navbar top navbar-expand-lg navbar-dark py-0 ">
     <div class="container-fluid">
-        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample-left" aria-label="icon button">
+        <button class="navbar-toggler shadow-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample-left" aria-label="sidebar opening button">
             <span class="navbar-toggler-icon"></span>
         </button>
-        <a class="navbar-brand" href="">
-            <img src="{{ MEDIA_URL }}logo1.jpg" alt="" class="border border-dark img-fluid">
+        <a class="ms-0 " href="{% url 'home:home' %}">
+
+                <img src="{{ MEDIA_URL }}logo1.jpg" alt="Bradd-logo for bigger screen" class="border border-dark img-fluid d-none d-md-block">
+                <img src="{{ MEDIA_URL }}logo3.png" alt="Bradd-logo for smaller screens" class="border border-dark img-fluid d-md-none d-sm-block">
+
+
         </a>
         <div class="d-flex d-lg-none align-items-center" >
 
 
 
-            <div class="dropdown">
+            <div class="dropdown d-none d-xl-block d-lg-block">
 
-                    <button type="button" id="dropdownProfile1" class="btn dropdown-toggle text-white" data-bs-toggle="dropdown" aria-expanded="false" aria-label="icon button">
-                        <i class="bi bi-person" style="font-size:1.5rem; -webkit-text-stroke-width: 1px; color: white;"></i></button>
+                    <button type="button" id="dropdownProfile1" class="btn dropdown-toggle text-white shadow-none" data-bs-toggle="dropdown" aria-expanded="false" aria-label="user profile dropdown menu button">
+                        <i class="bi bi-person " style="font-size:1.5rem; -webkit-text-stroke-width: 1px; color: white;"></i></button>
 
                 <ul class="dropdown-menu " aria-labelledby="dropdownProfile1">
                     {% if request.user.is_authenticated %}
@@ -39,21 +43,24 @@
                     {% endif %}
                 </ul>
           </div>
-            <div>
-                <a href="{% url 'wishlist:wishlist' %}"  role="button" class="btn py-3">
+
+            <div class="position-relative d-none d-xl-block d-lg-block">
+                <a href="{% url 'wishlist:wishlist' %}"  role="button" class="btn py-3 shadow-none"  aria-label="wishlist button ">
                     <i class="bi bi-suit-heart" style="font-size:1.5rem; -webkit-text-stroke-width: 1px; color: white"></i>
                 </a>
                 <span class="heart-total">{{ wishlist_count}}</span>
             </div>
 
-            <button class="btn"  type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample-right" aria-label="icon button">
+            <button class="btn  d-md-block shadow-none"  type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample-right" aria-label="icon button">
                 <i class="bi bi-search" style="font-size:1.2rem; -webkit-text-stroke-width: 1px; color: white;"></i>
             </button>
 
+
+
             <div class="">
 
-                <a class="btn py-3" role="button" href="{% url 'shopping_cart:cart' %}">
-                    <i class="bi bi-cart3" style="font-size:1.2rem; -webkit-text-stroke-width: 1px; color: white;"></i>
+                <a class="btn py-3 shadow-none" role="button" href="{% url 'shopping_cart:cart' %}">
+                    <i class="bi bi-cart3" style="font-size:1.5rem; -webkit-text-stroke-width: 1px; color: white;"></i>
                 </a>
                 <span class="cart-total">
                     {% if all_items %}
@@ -65,6 +72,7 @@
                 <div class="price text-warning position-absolute fw-light">
                 </div>
             </div>
+
         </div>
 
 
@@ -73,9 +81,7 @@
                 <li class="nav-item">
                     <a class="nav-link active" aria-current="page" href="{% url 'home:home' %}">Home</a>
                 </li>
-                <!-- <li class="nav-item">
-                    <a class="nav-link" href="{% url 'products:store_products' %}">products</a>
-                </li> -->
+
                 <li class="nav-item dropdown">
                     <a class="nav-link active dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                        All Knives
@@ -112,7 +118,7 @@
 
                 <div class="dropdown">
 
-                        <button type="button" id="dropdownProfile2" class="btn dropdown-toggle text-white" data-bs-toggle="dropdown" aria-expanded="false">
+                        <button type="button" id="dropdownProfile2" class="btn dropdown-toggle text-white shadow-none" data-bs-toggle="dropdown" aria-expanded="false" aria-label="user profile dropdown menu button">
                             <i class="bi bi-person" style="font-size:1.5rem; -webkit-text-stroke-width: 1px; color: white"></i>
                         </button>
 
@@ -137,18 +143,18 @@
 
                     </ul>
                 </div>
-                <div>
-                    <a href="{% url 'wishlist:wishlist' %}"  role="button" class="btn py-3">
+                <div class="position-relative">
+                    <a href="{% url 'wishlist:wishlist' %}"  role="button" class="btn py-3 shadow-none"  aria-label="wishlist button ">
                         <i class="bi bi-suit-heart" style="font-size:1.3rem; -webkit-text-stroke-width: 1px; color: white"></i>
                     </a>
                     <span class="heart-total">{{ wishlist_count}}</span>
                 </div>
-                    <button class="btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample-right">
+                    <button class="btn shadow-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample-right">
                         <i class="bi bi-search" style="font-size:1.2rem; -webkit-text-stroke-width: 1px; color: white"></i></button>
 
                     <div>
 
-                        <a class="btn py-3" role="button" href="{% url 'shopping_cart:cart' %}">
+                        <a class="btn py-3 shadow-none" role="button" href="{% url 'shopping_cart:cart' %}">
                             <i class="bi bi-cart3" style="font-size:1.2rem; -webkit-text-stroke-width: 1px; color: white"></i>
                         </a>
                         <span class="cart-total">{{ all_items }}</span>
@@ -174,7 +180,7 @@
         <form class="d-flex " method="GET" action="{% url 'products:store_products' %}">
             <div class="input-group">
                 <input class="form-control" type="search" name="q" placeholder="Search" aria-label="Search">
-                <button class="btn " type="submit"><i class="bi bi-search" style="font-size:1.2rem; color: white"></i></button>
+                <button class="btn shadow-none" type="submit"><i class="bi bi-search" style="font-size:1.2rem; color: white"></i></button>
 
             </div>
         </form>

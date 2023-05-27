@@ -16,6 +16,9 @@ body {
   height: 50px;
 
 }
+.navbar > .top{
+  min-height: 80px;
+}
 
 .navbar,
 .fix_bottom {
@@ -28,7 +31,6 @@ body {
 }
 
 .cart-total {
-
   position: absolute;
   width: 17px;
   height: 17px;
@@ -40,10 +42,11 @@ body {
   text-align: center;
   line-height: 17px;
   right: 13px;
-  top: 24px;
+  top: 20px;
   z-index: 50;
 
 }
+
 
 .heart-total {
 
@@ -57,16 +60,69 @@ body {
   text-align: center;
   line-height: 17px;
   font-weight: 700;
-  right: 103px;
-  top: 23px;
+  right: 0px;
+  top: 14px;
   z-index: 50;
 
 }
 
+
+
 .price{
-  top:55px;
+  top:48px;
   right:7px;
 }
+
+/* bottom navbar */
+
+.bottom-nav{
+  margin-top: 100px;
+}
+
+.heart-total-bottom{
+  position: absolute;
+  width: 17px;
+  height: 17px;
+  border-radius: 50%;
+  background-color: rgb(255, 251, 251);
+  color: rgb(0, 0, 0);
+  font-size: 8pt;
+  text-align: center;
+  line-height: 17px;
+  font-weight: 700;
+  right: -1px;
+  bottom: 35px;
+  z-index: 50;
+
+}
+
+.cart-total-bottom {
+  position: absolute;
+  width: 17px;
+  height: 17px;
+  border-radius: 50%;
+  background-color: rgb(255, 253, 253);
+  color: rgb(0, 0, 0);
+  font-size: 8pt;
+  font-weight: 700;
+  text-align: center;
+  line-height: 17px;
+  right: 0px;
+  bottom: 35px;
+  z-index: 50;
+
+}
+
+.shop{
+  color: white;
+  bottom: -12px;
+  right: -7px;
+  font-weight: 200;
+  font-size: smaller;
+}
+
+
+/*  */
 
 
 
@@ -78,10 +134,7 @@ body {
 }
 
 .carousel-item {
-
   height: 65vh;
-
-
 }
 
 .carousel-item>img {
@@ -91,11 +144,9 @@ body {
   min-width: 100%;
   height: 65vh;
 
-
-
 }
 
-  .carousel-control-prev ,
+.carousel-control-prev ,
 .carousel-control-next  {
   margin-top: 250px;
   background-color: rgb(255, 255, 255);
@@ -111,8 +162,6 @@ body {
   line-height: 40px;
   text-align: center;
 }
-
-
 
 .carousel-indicators [data-bs-target] {
   width: 8px;
@@ -136,10 +185,6 @@ body {
   background: url('/media/new_caro_wide.jpg') center/cover no-repeat;
 
 }
-
-
-
-
 
 
 @media(max-width: 767px) {
@@ -191,19 +236,24 @@ body {
 
 }
 
-
-
-
-
-
 /* end new carousel */
+
+/* mailchimp sign up */
+
+#mc_embed_signup{
+  background:#ccc8c8;
+  clear:left;
+  font:14px Helvetica,Arial,sans-serif;
+}
+
+/*       */
 
 
 
 /* products page */
 .card {
-
   border-radius: 10px
+
 }
 
 .percent {
@@ -243,8 +293,6 @@ body {
   position: absolute;
 
 
-
-
 }
 
 .img-container img {
@@ -255,9 +303,8 @@ body {
 
 .product-detail-container {
   padding: 10px;
-  /* new added */
   height: 150px;
-  /* adjust the height as needed */
+
   padding: 1rem;
 }
 
@@ -272,11 +319,7 @@ body {
 /* back to top button */
 
 .btt-button {
-  height: 42px;
-  width: 42px;
-  position: fixed;
-  bottom: 10px;
-  right: 10px;
+
 
 }
 

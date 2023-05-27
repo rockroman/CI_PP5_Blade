@@ -35,7 +35,7 @@
 
                     <p class="mb-0 fw-bold text-white">Handcrafted with pride</p>
                     <h1 class="text-white fw-bold hero mb-3">CUSTOM KNIVES</h1>
-                    <button class="btn btn-lg btn-light px-5 mb-3"><span class="h3">Shop Now</span></button>
+                    <a href="{% url 'products:store_products' %}" class="btn btn-lg btn-light px-5 mb-3 "><span class="h3">Shop Now</span></a>
                 </div>
             </div>
             <div class="carousel-item  bg-img-3 ">
@@ -44,7 +44,7 @@
 
                     <p class="mb-0 fw-bold text-white">Handcrafted with pride</p>
                     <h1 class="text-white fw-bold hero mb-3">CUSTOM KNIVES</h1>
-                    <button class="btn btn-lg btn-light px-5 mb-3"><span class="h3">Shop Now</span></button>
+                    <a href="{% url 'products:store_products' %}" class="btn btn-lg btn-light px-5 mb-3 "><span class="h3">Shop Now</span></a>
                 </div>
             </div>
         </div>
@@ -83,19 +83,14 @@
     <div class="row py-3 d-flex justify-content-center">
              <div class="col-xl-4 col-md-6 col-12 ">
                  <!-- Begin Mailchimp Signup Form -->
-                 <link href="//cdn-images.mailchimp.com/embedcode/classic-071822.css" rel="stylesheet" type="text/css">
-                 <style type="text/css">
-                     #mc_embed_signup{background:#ccc8c8; clear:left; font:14px Helvetica,Arial,sans-serif;  }
-                     /* Add your own Mailchimp form style overrides in your site stylesheet or in this style block.
-                     We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
-                 </style>
+
                  <div id="mc_embed_signup" class="my-2 p-1">
                      <form action="https://herokuapp.us8.list-manage.com/subscribe/post?u=0abdc68d85b31f525a90ef965&amp;id=a79e18ae82&amp;f_id=000c0ee0f0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
                          <div id="mc_embed_signup_scroll">
                          <h2 class="text-center">Subscribe to our newsletter</h2>
 
                  <div class="mc-field-group">
-                     <label for="mce-EMAIL" >Email Address  <span class="asterisk">*</span><span class="text-muted">(required)</span>
+                     <label for="mce-EMAIL" class="fw-bold">Email Address  <span class="asterisk text-dark fw-bold">*</span>
                  </label>
                      <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" required>
                      <span id="mce-EMAIL-HELPERTEXT" class="helper_text"></span>
@@ -108,18 +103,23 @@
                          <div class="optionalParent ">
                              <div class="clear foot ">
                                  <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button bg-dark">
-                                 <p class="brandingLogo"><a href="http://eepurl.com/ir6eGc" title="Mailchimp - email marketing made easy and fun"><img src="https://eep.io/mc-cdn-images/template_images/branding_logo_text_dark_dtp.svg"></a></p>
+                                 <p class="brandingLogo">
+                                    <a href="http://eepurl.com/ir6eGc" title="Mailchimp - email marketing made easy and fun">
+                                        <img src="https://eep.io/mc-cdn-images/template_images/branding_logo_text_dark_dtp.svg" alt="Mailchimp logo image">
+                                    </a>
+                                </p>
                              </div>
                          </div>
                      </div>
                  </form>
                  </div>
-                 <script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script><script type='text/javascript'>(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';fnames[3]='ADDRESS';ftypes[3]='address';fnames[4]='PHONE';ftypes[4]='phone';fnames[5]='BIRTHDAY';ftypes[5]='birthday';}(jQuery));var $mcj = jQuery.noConflict(true);</script>
+                 <script src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script>
+                 <script>(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';fnames[3]='ADDRESS';ftypes[3]='address';fnames[4]='PHONE';ftypes[4]='phone';fnames[5]='BIRTHDAY';ftypes[5]='birthday';}(jQuery));var $mcj = jQuery.noConflict(true);</script>
                  <!--End mc_embed_signup-->
              </div>
              <div class="col-lg-6 col-md-6 col-12 d-flex justify-content-center">
                 <div class="my-auto border border-dark w-75 h-75">
-                    <h3 class=" h3 text-center text-white"><span class="h6 mx-2">༻✦༺ </span>Follow us<span class="h6 mx-2"> ༻✦༺</span></h3>
+                    <h3 class=" h3 text-center text-white"><span class="h6 mx-3">༺</span>Follow us<span class="h6 mx-3">༻</span></h3>
                     <h3 class="h4 text-center text-white my-3">On </h3>
                     <h3 class="h4 text-center text-white my-3"><span class="h6 mx-2">✦ </span>@Nblade<span class="h6 mx-2"> ✦</span></h3>
 

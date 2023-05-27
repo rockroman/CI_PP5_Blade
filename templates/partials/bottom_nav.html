@@ -1,32 +1,50 @@
 <nav class="navbar fixed-bottom navbar-light  d-xl-none bottom-nav p-0">
-    <div class="container-fluid fix_bottom">
+    <div class="container-fluid fix_bottom d-flex justify-content-between">
         <div class="btn-group dropup">
-                <button type="button" id="dropdownProfileBottom2" class="btn dropdown-toggle text-white" data-bs-toggle="dropdown" aria-expanded="false" aria-label="icon button">
-                    <i class="bi bi-person" style="font-size:1.5rem; -webkit-text-stroke-width: 1px; color: white"></i>
+                <button type="button" id="dropdownProfileBottom2" class="btn  text-white shadow-none" data-bs-toggle="dropdown" aria-expanded="false" aria-label="icon button">
+                    <i class="bi bi-person" style="font-size:1.5rem; -webkit-text-stroke-width: .2px; color: white"></i>
                 </button>
             <ul class="dropdown-menu " aria-labelledby="dropdownProfileBottom2">
                 {% if request.user.is_authenticated %}
                 <li><a class="dropdown-item " href="{% url 'customer_profile:profile' %}">Profile</a></li>
-                {% endif %}
+                <li><a class="dropdown-item" href="{% url 'account_logout' %}">Logout</a></li>
+                {% else %}
                 <li><a class="dropdown-item" href="{% url 'account_login' %}">Login</a></li>
                 <li><a class="dropdown-item" href="{% url 'account_signup' %}">Register</a></li>
-                {% if request.user.is_authenticated %}
-                <li><a class="dropdown-item" href="{% url 'account_logout' %}">Logout</a></li>
                 {% endif %}
+
                 {% if request.user.is_superuser %}
                 <li><a class="dropdown-item " href="{% url 'products:add_product' %}">Shop management</a></li>
                 {% endif %}
 
             </ul>
         </div>
-        <a href="{% url 'wishlist:wishlist' %}"  role="button" class="btn py-3">
+        <a href="{% url 'wishlist:wishlist' %}"  role="button" class="btn py-3 position-relative shadow-none">
             <i class="bi bi-suit-heart" style="font-size:1.3rem; -webkit-text-stroke-width: 1px; color: white"></i>
+            <span class="heart-total-bottom">{{ wishlist_count}}</span>
         </a>
 
-        <a href="{% url 'products:store_products' %}">
-            <i class="bi bi-shop-window" style="font-size:1.5rem; -webkit-text-stroke-width: 1px; color: white"></i>
+
+
+        <div class="position-relative">
+
+            <a class="btn py-3 shadow-none" role="button" href="{% url 'shopping_cart:cart' %}">
+                <i class="bi bi-cart3" style="font-size:1.2rem; -webkit-text-stroke-width: 1px; color: white;"></i>
+            </a>
+            <span class="cart-total-bottom">
+                {% if all_items %}
+                {{ all_items }}
+                {% else %}s
+                 0
+                 {% endif %}
+            </span>
+
+        </div>
+        <a href="{% url 'products:store_products' %}" class="position-relative mb-2">
+            <i class="bi bi-shop-window" style="font-size:1.2rem; -webkit-text-stroke-width: 1px; color: white"></i>
+            <span class="position-absolute shop">shop</span>
         </a>
-        <button class="btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample-right">
+        <button class="btn shadow-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample-right">
             <i class="bi bi-search" style="font-size:1.2rem; -webkit-text-stroke-width: 1px; color: white"></i>
         </button>
     </div>
