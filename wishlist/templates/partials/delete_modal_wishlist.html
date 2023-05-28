@@ -6,7 +6,7 @@
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
-          <p class="custom-content">{{ item.product.name }} from your Wishlist</p>
+          <p class="content">{{ item.product.name }} from your Wishlist</p>
         </div>
         <div class="modal-footer">
             <form  method="POST" action="{% url 'wishlist:remove_from_wishlist' %}" class="wishlist_products">
