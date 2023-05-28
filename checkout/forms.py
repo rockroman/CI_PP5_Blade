@@ -1,8 +1,17 @@
+# Imports
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# 3rd party:
 from django import forms
+
+# Internal:
 from .models import Order
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
 class OrderForm(forms.ModelForm):
+    """
+    form to create an order
+    """
     class Meta:
         model = Order
         fields = ('full_name', 'email', 'phone_number',

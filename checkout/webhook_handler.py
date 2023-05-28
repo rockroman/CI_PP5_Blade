@@ -1,4 +1,3 @@
-
 # Imports
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 # 3rd party:
@@ -14,8 +13,6 @@ import stripe
 from .models import Order, OrderLineItem
 from products.models import Product
 from customer_profile.models import CustomerProfile
-
-
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 

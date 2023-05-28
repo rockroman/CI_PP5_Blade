@@ -4,7 +4,6 @@
 from django.contrib import admin
 from django.urls import path
 
-
 # Internal:
 from . import views
 from .webhooks import webhook

@@ -5,20 +5,16 @@
             <span class="navbar-toggler-icon"></span>
         </button>
         <a class="ms-0 " href="{% url 'home:home' %}">
-
-                <img src="{{ MEDIA_URL }}logo1.jpg" alt="Bradd-logo for bigger screen" class="border border-dark img-fluid d-none d-md-block">
-                <img src="{{ MEDIA_URL }}logo3.png" alt="Bradd-logo for smaller screens" class="border border-dark img-fluid d-md-none d-sm-block">
-
-
+            <img src="{{ MEDIA_URL }}logo1.jpg" alt="Bradd-logo for bigger screen" class="border border-dark img-fluid d-none d-md-block">
+            <img src="{{ MEDIA_URL }}logo3.png" alt="Bradd-logo for smaller screens" class="border border-dark img-fluid d-md-none d-sm-block">
         </a>
         <div class="d-flex d-lg-none align-items-center" >
-
-
 
             <div class="dropdown d-none d-xl-block d-lg-block">
 
                     <button type="button" id="dropdownProfile1" class="btn dropdown-toggle text-white shadow-none" data-bs-toggle="dropdown" aria-expanded="false" aria-label="user profile dropdown menu button">
-                        <i class="bi bi-person " style="font-size:1.5rem; -webkit-text-stroke-width: 1px; color: white;"></i></button>
+                        <i class="bi bi-person " style="font-size:1.5rem; -webkit-text-stroke-width: 1px; color: white;"></i>
+                    </button>
 
                 <ul class="dropdown-menu " aria-labelledby="dropdownProfile1">
                     {% if request.user.is_authenticated %}
@@ -37,7 +33,6 @@
                     </li>
                     {% endif %}
 
-
                     {% if request.user.is_superuser %}
                     <li><a class="dropdown-item " href="{% url 'products:add_product' %}">Shop management</a></li>
                     {% endif %}
@@ -55,10 +50,7 @@
                 <i class="bi bi-search" style="font-size:1.2rem; -webkit-text-stroke-width: 1px; color: white;"></i>
             </button>
 
-
-
-            <div class="">
-
+            <div>
                 <a class="btn py-3 shadow-none" role="button" href="{% url 'shopping_cart:cart' %}">
                     <i class="bi bi-cart3" style="font-size:1.5rem; -webkit-text-stroke-width: 1px; color: white;"></i>
                 </a>
@@ -75,13 +67,11 @@
 
         </div>
 
-
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0 ">
                 <li class="nav-item">
                     <a class="nav-link active" aria-current="page" href="{% url 'home:home' %}">Home</a>
                 </li>
-
                 <li class="nav-item dropdown">
                     <a class="nav-link active dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                        All Knives
@@ -102,7 +92,6 @@
                     <li><a class="dropdown-item" href="{% url 'products:store_products'%}?category=Craftsman">Craftsman</a></li>
                     <li><a class="dropdown-item" href="{% url 'products:store_products'%}?category=Gentleman">Gentleman</a></li>
                     <li><a class="dropdown-item" href="{% url 'products:store_products'%}?category=Explorer,Craftsman,Gentleman">All categories</a></li>
-
                 </ul>
                 </li>
                 <li class="nav-item">
@@ -114,15 +103,10 @@
             </ul>
             <div class="d-none d-lg-flex flex-row w-auto align-items-center" >
 
-
-
                 <div class="dropdown">
-
                         <button type="button" id="dropdownProfile2" class="btn dropdown-toggle text-white shadow-none" data-bs-toggle="dropdown" aria-expanded="false" aria-label="user profile dropdown menu button">
                             <i class="bi bi-person" style="font-size:1.5rem; -webkit-text-stroke-width: 1px; color: white"></i>
                         </button>
-
-
                     <ul class="dropdown-menu " aria-labelledby="dropdownProfile2">
                         {% if request.user.is_authenticated %}
                         <li><a class="dropdown-item " href="{% url 'customer_profile:profile' %}">Profile</a></li>
@@ -134,13 +118,9 @@
                         <li><a class="dropdown-item" href="{% url 'account_signup' %}">Register</a></li>
                          {% endif %}
 
-
-
-
                         {% if request.user.is_superuser %}
                         <li><a class="dropdown-item " href="{% url 'products:add_product' %}">Shop management</a></li>
                         {% endif %}
-
                     </ul>
                 </div>
                 <div class="position-relative">
@@ -150,10 +130,10 @@
                     <span class="heart-total">{{ wishlist_count}}</span>
                 </div>
                     <button class="btn shadow-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample-right">
-                        <i class="bi bi-search" style="font-size:1.2rem; -webkit-text-stroke-width: 1px; color: white"></i></button>
+                        <i class="bi bi-search" style="font-size:1.2rem; -webkit-text-stroke-width: 1px; color: white"></i>
+                    </button>
 
                     <div>
-
                         <a class="btn py-3 shadow-none" role="button" href="{% url 'shopping_cart:cart' %}">
                             <i class="bi bi-cart3" style="font-size:1.2rem; -webkit-text-stroke-width: 1px; color: white"></i>
                         </a>
@@ -161,15 +141,11 @@
                         <div class="price text-warning position-absolute fw-light">
                         </div>
                     </div>
-
-
-                <!-- </div> -->
             </div>
         </div>
    </div>
 </nav>
 <!-- main navigation -->
-
 <!-- right sidebar nav -->
 <div class="offcanvas offcanvas-end bg-dark" tabindex="-1" id="offcanvasExample-right" aria-labelledby="right-offcanvasExampleLabel" >
     <div class="offcanvas-header" >
@@ -184,12 +160,9 @@
 
             </div>
         </form>
-
     </div>
 </div>
-
 <!-- right sidebar nav -->
-
 <!-- left sidebar nav -->
 <div class="offcanvas offcanvas-start bg-dark" tabindex="-1" id="offcanvasExample-left" aria-labelledby="left-offcanvasExampleLabel">
     <div class="offcanvas-header">
@@ -234,23 +207,3 @@
     </div>
 </div>
 <!-- left sidebar nav -->
-
-
-
-
-<!-- right sidebar nav  profile-->
-<!-- <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasExample-right2" aria-labelledby="right-offcanvasExampleLabel">
-    <div class="offcanvas-header">
-
-        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-    </div>
-    <div class="offcanvas-body">
-        <div class="user-profile">
-
-        </div>
-
-
-    </div>
-</div> -->
-
-<!-- right sidebar nav -->
