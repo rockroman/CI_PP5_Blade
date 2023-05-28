@@ -23,16 +23,17 @@
     <div class="row d-flex justify-content-center">
         <div class=" col-xl-5 col-md-12 about-us-section">
             <h2 class="p-3 w-50 mx-auto">About Us</h2>
-            <p class="p-3 w-50 mx-auto">Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis debitis dicta
-                nulla eaque doloremque!
-                Commodi id aperiam ab illum quaerat delectus mollitia repellendus neque amet voluptatum, eaque voluptate
-                esse quam corrupti repudiandae fuga optio dolorum quod enim nulla. Ab nam facere exercitationem harum
-                veniam saepe cupiditate eveniet, tenetur incidunt repellat illo voluptate id eum quam inventore soluta
-                consectetur eaque sed? Voluptates magni voluptatem cumque ullam odit! Fugiat dolores consequuntur
-                beatae!</p>
+            <p class="p-3  mx-auto">Welcome to N-Blade, your premier destination for high-quality folding custom
+                knives. Founded by J. Nemeth, a master knife maker hailing from Hungary and currently residing in the
+                picturesque south of Ireland. With a passion for knives that spans over six years, J.Nemeth has
+                established a reputation for delivering exceptional craftsmanship and attention to detail in every blade
+                he creates. Serving the Hungarian and European market, N-Blade is committed to providing knife
+                enthusiasts with finely crafted, bespoke folding knives that embody the perfect blend of functionality
+                and artistry. Explore our collection and experience the unparalleled quality and dedication that goes
+                into each N-Blade creation.</p>
         </div>
 
-        <div class="col-xl-7 col-md-7 col-12 m-auto p-4">
+        <div class="col-xl-7 col-md-7 col-12 m-auto p-4 d-flex justify-content-center">
             <img src="{{ MEDIA_URL }}forge_oven.jpeg" alt="" class="img-fluid">
         </div>
 
@@ -42,7 +43,7 @@
     <div class="row orange-row py-4 bg-warning">
 
 
-        <div class="col-md-4 col-sm-4 col-xs-8">
+        <div class="col-md-4 col-sm-4 col-xs-8 my-2">
             <div class="card p-3 mb-2 bg-warning h-100">
                 <div class="d-flex justify-content-center">
                     <div class="d-flex flex-row align-items-center">
@@ -54,18 +55,21 @@
                     </div>
 
                 </div>
-                <div class="mt-5">
-                    <h3 class="heading text-center">Premium Quality<br> <hr>Superior Functionality</h3>
+                <div class="mt-5 pb-2 d-flex flex-column justify-content-between h-100">
+                    <h3 class="heading text-center">Premium Quality<br>
+                        <hr>Superior Functionality
+                    </h3>
                     <div class="mt-5">
                         <div class="progress">
-                            <div class="progress-bar" role="progressbar" style="width: 90%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                            <div class="progress-bar" role="progressbar" style="width: 90%" aria-valuenow="50"
+                                aria-valuemin="0" aria-valuemax="100"></div>
                         </div>
 
                     </div>
                 </div>
             </div>
         </div>
-        <div class="col-md-4 col-sm-4 col-xs-8">
+        <div class="col-md-4 col-sm-4 col-xs-8 my-2">
             <div class="card p-3 mb-2 bg-warning h-100">
                 <div class="d-flex justify-content-center">
                     <div class="d-flex flex-row align-items-center">
@@ -77,18 +81,21 @@
                     </div>
 
                 </div>
-                <div class="mt-5">
-                    <h3 class="heading text-center">Handcrafted<br> <hr>Unique Designs</h3>
+                <div class="mt-5 pb-2 d-flex flex-column justify-content-between h-100">
+                    <h3 class="heading text-center">Handcrafted<br>
+                        <hr>Unique Designs
+                    </h3>
                     <div class="mt-5">
                         <div class="progress">
-                            <div class="progress-bar" role="progressbar" style="width: 95%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                            <div class="progress-bar" role="progressbar" style="width: 95%" aria-valuenow="50"
+                                aria-valuemin="0" aria-valuemax="100"></div>
                         </div>
 
                     </div>
                 </div>
             </div>
         </div>
-        <div class="col-md-4 col-sm-4 col-xs-8">
+        <div class="col-md-4 col-sm-4 col-xs-8 my-2">
             <div class="card p-3 mb-2 bg-warning h-100">
                 <div class="d-flex justify-content-center">
                     <div class="d-flex flex-row align-items-center">
@@ -100,11 +107,14 @@
                     </div>
 
                 </div>
-                <div class="mt-5">
-                    <h3 class="heading text-center"> Performance<br> <hr>Artistic Mastery</h3>
+                <div class="mt-5 pb-2 d-flex flex-column justify-content-between h-100">
+                    <h3 class="heading text-center"> Performance<br>
+                        <hr>Artistic Mastery
+                    </h3>
                     <div class="mt-5">
                         <div class="progress">
-                            <div class="progress-bar" role="progressbar" style="width: 95%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                            <div class="progress-bar" role="progressbar" style="width: 95%" aria-valuenow="50"
+                                aria-valuemin="0" aria-valuemax="100"></div>
                         </div>
 
                     </div>
@@ -115,9 +125,9 @@
     </div>
 
     <!-- Contact and Image Section -->
-    <div class="row contact-row pt-2">
-        <h4 class="text-center fw-bold p-3">Contact Us</h4>
-        <div class="col-md-6 contact-column">
+    <div class="row contact-row pt-2" id="contact">
+        <h4 class=" text-center fw-bold p-3">Contact Us</h4>
+        <div class="col-md-6 contact-column pb-4" >
             <!-- Contact Form will be inserted here -->
             <form action="{% url 'contact_about:contact_about'%}" method="POST">
                 {% csrf_token %}
@@ -126,14 +136,13 @@
             </form>
         </div>
         <div class="col-md-6 image-column pt-0">
-            <div class="card ">
-                <img src="{{ MEDIA_URL}}contact_bottom.jpeg" alt="" class="card-img-top img-fluid">
+            <div class="d-flex justify-content-center">
+                <img src="{{ MEDIA_URL}}contact_bottom.jpeg" alt="" class="about-img img-fluid card-img-top">
 
             </div>
 
         </div>
     </div>
-
 
 </div>
 {% include 'partials/footer.html' %}

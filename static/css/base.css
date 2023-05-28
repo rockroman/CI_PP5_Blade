@@ -338,14 +338,7 @@ body {
 
 /* ------------------------------- bootstrap toasts */
 
-/* .message-container,
-.my-message {
-    position: fixed;
-    top: 72px;
-    transform: translateX(50%);
 
-    z-index: 99999999999;
-} */
 
 .message-container {
 
@@ -368,6 +361,7 @@ body {
 
 .custom-toast {
   overflow: visible;
+  max-width:318px;
 }
 
 .toast-capper {

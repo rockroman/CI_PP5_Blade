@@ -4,7 +4,6 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-
     height: 50vh;
   }
 
@@ -22,13 +21,13 @@
     position: relative;
   }
 
-  .overlap-container {
+  /* .overlap-container { */
     /* height: 400px; */
 
 
-  }
+  /* } */
 
-  .overlap-image1 {
+  /* .overlap-image1 {
 
     margin-top: 20px;
   }
@@ -36,7 +35,7 @@
   .overlap-image2 {
     margin-left: -25px;
 
-  }
+  } */
 
 .orange-row {
     background-color: orange;
@@ -54,4 +53,10 @@
     background-color: white;
     border: 1px solid #ccc;
     padding: 20px;
+
+}
+.about-img{
+  max-height: 750px;
+  max-width: 650px;
+
 }
