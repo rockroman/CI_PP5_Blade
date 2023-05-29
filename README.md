@@ -10,11 +10,14 @@
 0. [About](#about)
 1. [Project Goals](#project-goals)
     1. [User Goals](#user-goals)
+2. [Business Model](#business-model)
+    1. [SEO](#seo)
+    2. [Marketing](#marketing)
+    3. [Target Audience](#target-audience)
 2. [User Experience](#user-experience)
-    1. [Target Audience](#target-audience)
-    2. [User Requirements and Expectations](#user-requirements-and-expectations)
-    3. [User Stories](#user-stories)
-    4. [Site Owner Stories](#site-owner-stories)
+    1. [User Requirements and Expectations](#user-requirements-and-expectations)
+    2. [User Stories](#user-stories)
+    3. [Site Owner Stories](#site-owner-stories)
 3. [Design](#design)
     1. [Colours](#colours)
     2. [Fonts](#fonts)
@@ -42,6 +45,7 @@
 
 10. [Deployment](#deployment)
     1. [Heroku](#heroku)
+    2. [AWS][#aws]
     2. [Forking GitHub Repo](#forking-the-github-repository)
     3. [Clone a GitHub Repo](#clone-a-github-repository)
 12. [Credits](#credits)
@@ -79,9 +83,69 @@ Enjoy the Blaade experince.
 
 ### User Goals
 
-## User Experience
+- View and search for products.
+- Filter products based on criteria.
+- Register and log into/out of an account.
+- View and edit account profile.
+- Add products to the shopping bag and make purchases.
+- View order history.
+- Write product reviews.
+- Create and manage a wishlist.
+- Contact the site owner or customer support.
+- Sign up for a newsletter.
+
+## Business Model
+
+
+
+Blade project was developed out of want to help and make small business owner custom knives workhsop and its craft
+widely avaliable to broder range of audience.By appreciating the skill, dedication, and exceptional quality of these custom pieces of art.Blade curated collection of high-quality custom folding knives showcases the craftsmanship and connects passionate collectors with talented artisans. Discover and celebrate the art of custom knives with Blade, as we make these remarkable pieces accessible to a broader community of knife enthusiasts.
+
+- Value Proposition:
+    - Offer a curated selection of high-quality custom folding knives crafted by small business owner in his workshop.
+    - Provide unique and artistic pieces of functional art to knife collectors and enthusiasts.
+    - Make custom knives more accessible to a broader range of customers who appreciate the skill, dedication, and quality of the products.
+
+- Target market:
+    - Knife collectors and enthusiasts who value the craftsmanship and uniqueness of custom folding knives.
+    - Individuals seeking high-quality and aesthetically pleasing knives for personal use or gifts.
+
+- Customer Relationships:
+    - Engage with customers through social media, email newsletters, and personalized communications to foster brand loyalty.
+    -  Encourage customer feedback and reviews to continuously improve the product selection and overall shopping experience.
+
+- Communication channels:
+    - E-commerce website: Provide a user-friendly online platform where customers can browse, select, and purchase custom folding knives.
+    - Social media platforms: Utilize platforms like Instagram, Facebook, and YouTube to showcase the craftsmanship, engage with the audience, and drive traffic to the webshop.
+
+### SEO
+
+
+### Marketing
+
+
+### Target audience
+
+- Knife collectors and enthusiasts who value the craftsmanship and uniqueness of custom folding knives.
+- Individuals seeking high-quality and aesthetically pleasing knives for personal use or gifts.
+- Adventurist, fisherman and hunter enthusiasts with an eye for a uniqe piece of art
+
 
 ##### Back to [top](#table-of-contents)
+## User Experience
+
+### User Requirements and Expectations
+
+- Intuitive and user-friendly website interface.
+- Clear and detailed product descriptions.
+- High-quality product images.
+- Easy search and filtering options.
+- Secure and seamless checkout process.
+- Convenient account registration and login.
+- Ability for customers to leave product reviews and ratings.
+- Option to create and manage a personal wishlist of desired items.
+
+
 
 ### User stories
 
@@ -157,12 +221,23 @@ Price ,rating, and alphabet ||
 ## Database
 ***
 
+<details><summary>(ERD)Physical database model</summary>
+<img src="docs/ERD/Blade_ERD.png">
+</details>
 
 ### Data Models
+
+#### User model
+
+- User model as part of the Django allauth library contains basic information about authenticated user and contains folowing fields:
+username, password,email
 
 
 
 ####  Product
+
+- Product model made to represent webshop product containing all relevant fields giving user/customer information they need to make a desired purchase
+
 | Name          | Database Key  | Field Type    | Validation |
 | ------------- | ------------- | ------------- | ---------- |
 |category       | category      | ForeignKey| 'Category', null=True, blank=True, on_delete=models.SET_NULL|
@@ -177,6 +252,10 @@ Price ,rating, and alphabet ||
 
 
 ####  Category
+
+- Model made to clearly separate usage and desing of various webshop products
+containing bellow stated fields
+
 | Name          | Database Key  | Field Type    | Validation |
 | ------------- | ------------- | ------------- | ---------- |
 |name      | name   | CharField|  max_length=254|
@@ -185,7 +264,11 @@ Price ,rating, and alphabet ||
 |friendly_name      | friendly_name     | CharField|  max_length=254, null=True, blank=True|
 
 
-####   CustomerProfile
+####  CustomerProfile
+
+- Model representing an account of a registered user containing
+following fields:
+
 | Name          | Database Key  | Field Type    | Validation |
 | ------------- | ------------- | ------------- | ---------- |
 |user       | user     | OneToOneField|  User, on_delete=models.CASCADE|
@@ -199,7 +282,9 @@ Price ,rating, and alphabet ||
 
 
 
-####  Contact
+#### Contact
+
+- Model made with purpose of storing contact info between user and business with bellow stated fields:
 
   INQUIRY_CHOICES = [
         ('', 'Purpose of Inquiry'),
@@ -222,17 +307,31 @@ Price ,rating, and alphabet ||
 
 
 
-####  model
+#### Order
+
+- Model storing iforation relevant to customer webshop order ,containing
+fields:
+
 | Name          | Database Key  | Field Type    | Validation |
 | ------------- | ------------- | ------------- | ---------- |
-|user       | user     | OneToOneField|  User|
-|user       | user     | OneToOneField|  User|
-|user       | user     | OneToOneField|  User|
-|user       | user     | OneToOneField|  User|
-|user       | user     | OneToOneField|  User|
-|user       | user     | OneToOneField|  User|
-|user       | user     | OneToOneField|  User|
-|user       | user     | OneToOneField|  User|
+|order_number       | order_number     | CharField|  max_length=32, null=False, editable=False|
+|user_profile        |user_profile       | ForeignKey|  CustomerProfile,
+                                     on_delete=models.SET_NULL, null=True,
+                                     blank=True, related_name='orders'|
+|full_name        | full_name    | CharField|  max_length=50, null=False, blank=False|
+| email     | email    | EmailField| max_length=254, null=False, blank=False|
+|phone_number       | phone_number     | CharField|  max_length=20, null=False, blank=False|
+| country       | country      | CountryField|  blank_label='Country *', null=False, blank=False|
+| postcode      | postcode     | CharField|  max_length=20, null=True, blank=True|
+| town_or_city      |  town_or_city    | CharField|  max_length=40, null=False, blank=False|
+|street_address1       | street_address1     | CharField|  max_length=80, null=False, blank=False|
+|street_address2       | street_address2     | CharField|  max_length=80, null=False, blank=False|
+|county        | county      | CharField|  max_length=80, null=True, blank=True|
+|date       | date     | DateTimeField|  auto_now_add=True|
+|order_total       | order_total     | DecimalField|  max_digits=10, decimal_places=2, null=False, default=0|
+|grand_total       | grand_total     | DecimalField|  max_digits=10, decimal_places=2, null=False, default=0|
+|original_cart       | original_cart     | TextField|  null=False, blank=False, default=''|
+|stripe_pid       | stripe_pid     | CharField|  max_length=254, null=False, blank=False, default=''|
 
 
 ####  model
