@@ -14,7 +14,6 @@ from products.models import Product
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
-
 @login_required
 def wishlist(request):
     """
@@ -71,9 +70,11 @@ def wishlist_total(request):
 
     if request.user.is_authenticated:
         wishlist_count = Wishlist.objects.filter(user=request.user).count()
+        request.session['wishlist_count'] = wishlist_count
 
     else:
         wishlist_count = 0
+        request.session['wishlist_count'] = wishlist_count
 
     return JsonResponse({
         'wishlist_count': wishlist_count,

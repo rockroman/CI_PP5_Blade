@@ -2,35 +2,28 @@
 $('#sort-selector').change(function() {
     var selector = $(this);
     var currentUrl = new URL(window.location);
-
     var selectedVal = selector.val();
+
     if(selectedVal != "reset"){
         var sort = selectedVal.split("_")[0];
         var direction = selectedVal.split("_")[1];
-
         currentUrl.searchParams.set("sort", sort);
         currentUrl.searchParams.set("direction", direction);
-
         window.location.replace(currentUrl);
     } else {
         currentUrl.searchParams.delete("sort");
         currentUrl.searchParams.delete("direction");
-
         window.location.replace(currentUrl);
     }
-})
-
+});
 
 
 $('.back-to-top').click(function(e) {
     window.scrollTo(0,0)
-})
+});
 
 
-
-
-
-
+// updating price and item counter in navbar
 function updateCartTotal() {
     $.ajax({
       url: '/get_cart_total/',
@@ -39,6 +32,7 @@ function updateCartTotal() {
         var totalItems = res.total_items;
         var total_price = res.total_price
         $('.cart-total').text(totalItems);
+        $('.cart-total-bottom').text(totalItems);
         if(total_price == 0){
             $('.price').text('€0.00');
 
@@ -48,16 +42,10 @@ function updateCartTotal() {
         }
 
       }
-    });;
+    });
   }
 
-
-
-
-// new try
-
-
-
+// ajax call from product details page
 $('#addToCartBtn').on('click', function(){
     var _addBtn = $(this);
     var _qty = $('.product-qty').val();
@@ -66,24 +54,17 @@ $('#addToCartBtn').on('click', function(){
     var _productImage = $('.product-image').val();
     var _productPrice = $('.product-price').val();
 
-    // console.log(_productPrice);
-
     if (_qty > 10 || _qty <= 0) {
         // code taken from https://djangocentral.com/django-ajax-with-jquery/
-        // $('#addToCartBtn').addClass('active')
         _addBtn.removeClass('active').blur();
         $('.product-qty').removeClass('is-valid').addClass('is-invalid');
         $('.product-qty').blur();
         $('#Error').remove()
         $('.error-qty').before('<div class="invalid-feedback d-block" id="Error">quantity must be range 1 -10!</div>');
-
         return
-
 
     }
 
-
-    // Ajax
     $.ajax({
         url:'/add_to_cart/',
         type : 'POST',
@@ -100,53 +81,33 @@ $('#addToCartBtn').on('click', function(){
 
         dataType:'json',
         beforeSend:function(){
-
             _addBtn.attr('disabled',true);
         },
         success:function(res){
             var message = _productName + ' quantity: ' + _qty + ' added to cart';
             updateCartTotal()
-            // console.log(res.my_message);
-
             $('.success-modal').modal('show');
             $('.custom-content').text(message)
-
-
-
-
-            console.log(res.data);
             $('.product-qty').removeClass('is-invalid')
             $('#Error').remove()
             $('.product-qty').val(1)
-
             _addBtn.attr('disabled',false);
-
-
-
-
 
         }
 
-
     });
-
 
 })
 
 
-
+// ajax call for adding product to shopping cart from all products page
 $('.addToCartBtn').on('click', function(){
     var _addBtn = $(this);
     var _qty = 1;
-    // var _productName = $(this).closest('.all_products').find('.product-name').val();
     var _productId = $(this).closest('.all_products').find('.product-id').val();
     var _productName = $(this).closest('.all_products').find('.product-name').val();
     var _productImage = $(this).closest('.all_products').find('.product-image').val();
     var _productPrice = $(this).closest('.all_products').find('.product-price').val();
-
-    console.log(_productId);
-    console.log(_productName);
-    console.log(_productPrice);
 
     $.ajax({
         url:'/add_to_cart/',
@@ -164,22 +125,15 @@ $('.addToCartBtn').on('click', function(){
 
         dataType:'json',
         beforeSend:function(){
-
             _addBtn.attr('disabled',true);
         },
         success:function(res){
             var message = _productName + ' quantity: ' + _qty + ' added to cart';
-
             updateCartTotal()
             $('.success-modal').modal('show');
             $('.custom-content').text(message)
             _addBtn.attr('disabled',false);
             console.log(res.data);
-
-
-
-
-
 
         }
     });
@@ -188,7 +142,8 @@ $('.addToCartBtn').on('click', function(){
 
 })
 
-// new try image fromwishlist to cart nor rendering
+
+// ajax call for adding product to shopping cart from wishlist page
 $('.addToCartBtnWish').on('click', function(){
     var _addBtn = $(this);
     var _qty = 1;
@@ -196,11 +151,6 @@ $('.addToCartBtnWish').on('click', function(){
     var _productName = $(this).closest('.wishlist_products').find('.product-name').val();
     var _productImage = $(this).closest('.wishlist_products').find('.product-image').val();
     var _productPrice = $(this).closest('.wishlist_products').find('.product-price').val();
-
-    console.log(_productId);
-    console.log(_productName);
-    console.log(_productPrice);
-    console.log(_productImage);
 
     $.ajax({
         url:'/add_to_cart/',
@@ -218,93 +168,53 @@ $('.addToCartBtnWish').on('click', function(){
 
         dataType:'json',
         beforeSend:function(){
-
             _addBtn.attr('disabled',true);
         },
         success:function(res){
             var message = _productName + ' quantity: ' + _qty + ' added to cart';
             $('.custom-content').text(message)
-
             updateCartTotal()
             $('.success-modal').modal('show');
             _addBtn.attr('disabled',false);
-            console.log(res.data);
-
-
-
-
-
 
         }
     });
 
 
 
-})
-
-
-
-//
-
-$(document).ready(function () {
-    updateCartTotal();
-    // updateWishlistCount();
-    // updateWishlistTotal();
 });
 
-// window.addEventListener('popstate', function(event){
-//     $.ajax({
-//         url: '/wishlist_total/',
-//         method: 'GET',
-//         dataType: 'json',
-//         success: function(res) {
-//           var wishlist_count = res.wishlist_count;
-//           console.log(wishlist_count);
-//           $('.heart-total').text('dassdasd');
-//         }
-//       });
+// updating wishlist counters in top and bottom nav bar
+function updateWishlistTotal(){
+
+    $.ajax({
+      url: '/wishlist/wishlist_total/',
+      dataType: 'json',
+      headers: {
+        'X-CSRFToken': $('input[name="csrfmiddlewaretoken"]').val()
+      },
+
+      success: function(res) {
+        var wishlist_count = res.wishlist_count;
+        console.log(wishlist_count);
+        $('.heart-total').text(wishlist_count);
+        $('.heart-total-bottom').text(wishlist_count);
+      }
+    });
+
+}
 
 
-// })
+//updating counters and price(even if page is served from the cache)
+$(document).ready(function () {
+    updateCartTotal();
+    updateWishlistTotal()
 
+});
 
-// function updateWishlistTotal(){
-
-//     $.ajax({
-//       url: '/wishlist_total/',
-//       method: 'GET',
-//       dataType: 'json',
-
-//       success: function(res) {
-//         var wishlist_count = res.wishlist_count;
-//         console.log(wishlist_count);
-//         $('.heart-total').text(wishlist_count);
-//       }
-//     });
-
-// }
-
-
-// function updateWishlistCount() {
-//     fetch('/wishlist_total/')
-//       .then(response => response.json())
-//       .then(data => {
-//         const wishlistCount = data.wishlist_count;
-//         console.log(wishlistCount);
-//         $('.heart-total').text(wishlistCount);
-
-
-//       })
-//       .catch(error => {
-//         console.error('Error fetching wishlist count:', error);
-//       });
-//   }
-
-
-
+// modal fade after 2 sec
 function modalFading(){
     $('.success-modal').modal('show');
-
     setTimeout(function(){
         $('.success-modal').modal('hide');
 
