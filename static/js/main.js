@@ -199,7 +199,14 @@ function updateWishlistTotal(){
         console.log(wishlist_count);
         $('.heart-total').text(wishlist_count);
         $('.heart-total-bottom').text(wishlist_count);
+      },
+      error:function(xhr, textStatus, errorThrown){
+        var errorMessage = "An error occured" + errorThrown
+        $('#errorModal .error-content').text(errorMessage);
+        $('#errorModal').modal('show');
+
       }
+
     });
 
 }

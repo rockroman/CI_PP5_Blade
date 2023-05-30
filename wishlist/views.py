@@ -1,7 +1,10 @@
 # Imports
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 # 3rd party:
-from django.shortcuts import render, get_object_or_404, HttpResponseRedirect, redirect, reverse
+from django.shortcuts import (render, get_object_or_404,
+                              HttpResponseRedirect, redirect,
+                              reverse)
+from django.http import HttpResponseServerError
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from django.views.decorators.cache import never_cache
@@ -80,3 +83,4 @@ def wishlist_total(request):
         'wishlist_count': wishlist_count,
 
     })
+

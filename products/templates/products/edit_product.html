@@ -1,8 +1,6 @@
 {% extends "base.html" %}
 {% load static %}
 
-
-
 {% block content %}
 
 {% include 'partials/top_main_nav.html' %}
@@ -53,7 +51,6 @@
                     <div class="col-12">
                         {{ form.description|as_crispy_field }}
                     </div>
-
                 </div>
                 <div class="row">
                     <div class="col-md-6">
@@ -67,26 +64,17 @@
                     <div class="col-12">
                         {{ form.handlematerial|as_crispy_field }}
                     </div>
-
                 </div>
                 <div class="row">
                     <div class="col-12">
                         {{ form.image_url|as_crispy_field }}
                     </div>
-
                 </div>
                 <div class="row">
                     <div class="col-12">
                         {{ form.image|as_crispy_field }}
                     </div>
-
-
                 </div>
-
-
-
-
-
                 <div class="text-right">
                     <a class="btn btn-danger rounded-0" href="">Cancel</a>
                     <button class="btn btn-success rounded-0" type="submit">Edit Product</button>
@@ -94,7 +82,6 @@
             </form>
         </div>
     </div>
-
 
 </div>
 {% include 'partials/footer.html' %}
