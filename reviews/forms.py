@@ -2,6 +2,7 @@
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 # 3rd party:
 from django import forms
+from django.forms import Textarea
 
 
 # Internal:
@@ -14,5 +15,7 @@ class ReviewForm(forms.ModelForm):
     """
     class Meta:
         model = Review
-        # exclude = ['author', 'product']
         fields = ['id', 'content']
+        widgets = {
+            'content': forms.Textarea(attrs={"rows": 4})
+        }
