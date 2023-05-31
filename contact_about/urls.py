@@ -13,6 +13,4 @@ app_name = 'contact_about'
 
 urlpatterns = [
      path('', views.contact_about, name='contact_about'),
-
-
 ]

@@ -18,6 +18,8 @@ from .forms import ContactForm
 
 def contact_about(request):
     """
+    view rendering contact form and
+    send mail functionality
     """
     form = ContactForm()
     if request.method == 'POST':

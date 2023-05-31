@@ -149,6 +149,8 @@ widely avaliable to broder range of audience.By appreciating the skill, dedicati
 
 ### User stories
 
+- From User/customer perspective
+
 1. As an unauthenticated user/customer, I would like website navigation to be fast and easy
 2. As an unauthenticated user/customer, I would like the ability to browse through all the products available on the site.
 3. As an unauthenticated user/customer, I would like to search the website to see what kind of product are offered to purchase
@@ -164,28 +166,28 @@ Price ,rating, and alphabet
 12. As an authenticated user/customer, I would like functionality to delete an account(profile) if I find no use in using the website anymore
 13. As an authenticated user/customer I would like functionality to add my details(shipping and billing) to a secure checkout form so that they could be saved along with my order to easier keep track of my past purchases
 14. As user/customer, I would like functionality to put in my card details so that I can make a purchase
-15. As an authenticated user/customer I would like functionality to leave a product review on a product detail   page so that other customers deciding on purchase of the item will have an insight from somebody who already bought the product
-16. As a authenticated user/customer I would Like functinality to edit or delete my product review so that information given in review are up to date and can help other users /customers
-17.
-17.
-18.
-19.
-20.
+15. As an unauthenticated user/customer, I would like to be able to view and read reviews of products to make informed purchasing decisions.
+16. As an authenticated user/customer I would like functionality to leave a product review on a product detail   page so that other customers deciding on purchase of the item will have an insight from somebody who already bought the product
+17. As a authenticated user/customer I would Like functinality to edit or delete my product review so that information given in review are up to date and can help other users /customers
+<!-- new ones -->
+18. As an authenticated user/customer, I want to have the option to add products to my wishlist for future reference and easy access.
+19. As an authenticated user/customer, I want to be able to remove items from my wishlist, so that I can manage my saved products effectively and remove those that I am no longer interested in
+20. As an authenticated user/customer, I want to receive email notifications for order confirmations, shipping updates, and special promotions.
 
-22.
-23.
-24.
-25.
-26.
-27.
-28.
-29.
-30.
-31.
-32.
-33.
-34.
-35.
+
+21. As an unauthenticated user/customer, I would like to be able to view and read reviews of products to make informed purchasing decisions.
+22. As an authenticated user/customer, I would like to have the option to contact team or the site owner for any inquiries or assistance related to products or orders.
+23. As an unauthenticated user/customer, I want to see links to the business's social media profiles on the website to stay connected and follow updates on different platforms.
+24. As an unauthenticated user/customer, I want to have the option to contact the business through social media channels (such as Facebook, Instagram, or Twitter) for inquiries or support.
+25. As an unauthenticated user/customer, if I encounter a page not found error, I want to be redirected to a relevant page or provided with suggestions to navigate back to valid areas of the site.
+
+- From site owner perspective:
+26. As a site owner, I want to provide secure payment options for customers, such as integrating with secure payment gateways (e.g. Stripe)
+27. As a site owner, I want to be able to add new products to the webshop, including details like product name, description, price, and images.
+28. As a site owner, I want to be able to delete existing products from the webshop that are no longer available or relevant.
+29. As a site owner, I want to be able to update product information, such as descriptions, details, prices, and images, to keep the webshop content accurate and up to date.
+30. As a site owner, I want to integrate a newsletter signup form  to capture user information and allow customers to subscribe for updates and promotions.
+31. As a site owner, I want to ensure that error pages allow users to easily return to valid areas of the site without relying on browser controls.
 
 
 | id  |  content | Github issue Numb

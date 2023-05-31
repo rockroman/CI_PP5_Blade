@@ -20,7 +20,6 @@ from checkout.models import Order
 def profile(request):
     """
     view handling user profile
-
     """
     customer_profile = get_object_or_404(CustomerProfile, user=request.user)
     if request.method == 'POST':
@@ -29,7 +28,9 @@ def profile(request):
             form.save()
             messages.success(request, "Your profile is updated")
         else:
-            messages.error(request, 'Failed to update profile please check your form for errors')
+            messages.error(
+                  request,
+                  'Failed to update profile please check your form for errors')
     else:
         form = CustomerProfileForm(instance=customer_profile)
     orders = customer_profile.orders.all()
@@ -48,7 +49,6 @@ def profile(request):
 def order_history(request, order_number):
 
     order = get_object_or_404(Order, order_number=order_number)
-
     messages.info(request, (
         f'This is a past confirmation for order number {order_number}. '
         'A confirmation email was sent on the order date.'

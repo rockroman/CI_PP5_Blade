@@ -36,8 +36,3 @@ class Contact(models.Model):
 
     def __str__(self) -> str:
         return f'Contact {self.name} and message created'
-
-
-
-
-

@@ -13,5 +13,5 @@ def home(request):
     view to render the landing page
     """
     template = 'home/index.html'
-    # context = {}
+
     return render(request, template)
