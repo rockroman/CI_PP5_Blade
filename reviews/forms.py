@@ -12,6 +12,7 @@ from .models import Review
 
 class ReviewForm(forms.ModelForm):
     """
+    simple form to render product reviews
     """
     class Meta:
         model = Review

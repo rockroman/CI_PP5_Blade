@@ -169,12 +169,9 @@ Price ,rating, and alphabet
 15. As an unauthenticated user/customer, I would like to be able to view and read reviews of products to make informed purchasing decisions.
 16. As an authenticated user/customer I would like functionality to leave a product review on a product detail   page so that other customers deciding on purchase of the item will have an insight from somebody who already bought the product
 17. As a authenticated user/customer I would Like functinality to edit or delete my product review so that information given in review are up to date and can help other users /customers
-<!-- new ones -->
 18. As an authenticated user/customer, I want to have the option to add products to my wishlist for future reference and easy access.
 19. As an authenticated user/customer, I want to be able to remove items from my wishlist, so that I can manage my saved products effectively and remove those that I am no longer interested in
 20. As an authenticated user/customer, I want to receive email notifications for order confirmations, shipping updates, and special promotions.
-
-
 21. As an unauthenticated user/customer, I would like to be able to view and read reviews of products to make informed purchasing decisions.
 22. As an authenticated user/customer, I would like to have the option to contact team or the site owner for any inquiries or assistance related to products or orders.
 23. As an unauthenticated user/customer, I want to see links to the business's social media profiles on the website to stay connected and follow updates on different platforms.
@@ -216,6 +213,32 @@ Price ,rating, and alphabet ||
 ### Fonts
 
 ## Project Structure
+
+### Structure of Code
+
+- This e-commerce project is structured using Django framework
+and it is organized in app structure with apps clearly defining its purpose
+and apps are as follows:
+    - Home - App contains landing page about webshop with a
+    call to action redirecting user to an all product pages, simple and intuitive top
+    and bottom navigation , footer with social media links and newsletter section
+
+    - Products - app containing all product page with list of all products
+    ,search and filter functionality and also add to cart and wishlist option buttons. Products are displayed within cards with 2 links(click on product image or an eye button) to a product detail page.
+    Product detail page with adding,updating product quantity to shopping cart, Reviews section where authenticated user can add product reviews.
+    site owner CRUD functionality is part of this app also with included add and edit templates and delete button with confirmation modal for site owner.
+
+    - Shopping cart - App contains a cart template and functionality to view , update quantity remove and add to wishlist products inside shopping cart
+
+    - Checkout - the app is constructed to handle a payment form, list of products to be purchased and total amount of users order.
+
+    - Customer profile - app containing user account/profile data that can be updated and prefilled to make checkout experience smoother
+
+    - Reviews - app responsible for handling product reviews functionality
+    with review form, and full CRUD functionality
+
+    - Wishlist -app containing list of products that authenticated user can save to purchase or have as an products to review for later
+
 
 
 ##### Back to [top](#table-of-contents)
@@ -278,7 +301,7 @@ following fields:
 |default_country       |default_country    | CountryField|  blank_label='Country *', null=True, blank=True|
 |default_postcode       | default_postcode     | CharField| max_length=20, null=True, blank=True|
 |default_town_or_city       | default_town_or_city     | CharField| max_length=20, null=True, blank=True|
-|default_stereet_address1       | default_stereet_address1     | CharField| max_length=20, null=True, blank=True|
+|default_street_address1       | default_street_address1     | CharField| max_length=20, null=True, blank=True|
 |default_street_address2       | default_street_address2     | CharField| max_length=20, null=True, blank=True|
 |default_county       | default_county     | CharField| max_length=20, null=True, blank=True|
 
@@ -290,7 +313,7 @@ following fields:
 
   INQUIRY_CHOICES = [
         ('', 'Purpose of Inquiry'),
-        ('PRODUCT', 'Poduct Inquiry'),
+        ('PRODUCT', 'Product Inquiry'),
         ('ORDER', 'Order Inquiry'),
         ('SUGGESTIONS', 'Suggestions'),
         ('OTHER', 'Other'),
@@ -311,15 +334,13 @@ following fields:
 
 #### Order
 
-- Model storing iforation relevant to customer webshop order ,containing
+- Model storing information relevant to customer webshop order ,containing
 fields:
 
 | Name          | Database Key  | Field Type    | Validation |
 | ------------- | ------------- | ------------- | ---------- |
 |order_number       | order_number     | CharField|  max_length=32, null=False, editable=False|
-|user_profile        |user_profile       | ForeignKey|  CustomerProfile,
-                                     on_delete=models.SET_NULL, null=True,
-                                     blank=True, related_name='orders'|
+|user_profile        |user_profile       | ForeignKey|  CustomerProfile,on_delete=models.SET_NULL, null=True,blank=True, related_name='orders'|
 |full_name        | full_name    | CharField|  max_length=50, null=False, blank=False|
 | email     | email    | EmailField| max_length=254, null=False, blank=False|
 |phone_number       | phone_number     | CharField|  max_length=20, null=False, blank=False|
@@ -336,30 +357,26 @@ fields:
 |stripe_pid       | stripe_pid     | CharField|  max_length=254, null=False, blank=False, default=''|
 
 
-####  model
+####  OrderLineItem
+
+- model representing single product in a user order
+
 | Name          | Database Key  | Field Type    | Validation |
 | ------------- | ------------- | ------------- | ---------- |
-|user       | user     | OneToOneField|  User|
-|user       | user     | OneToOneField|  User|
-|user       | user     | OneToOneField|  User|
-|user       | user     | OneToOneField|  User|
-|user       | user     | OneToOneField|  User|
-|user       | user     | OneToOneField|  User|
-|user       | user     | OneToOneField|  User|
-|user       | user     | OneToOneField|  User|
+| order      | order     | ForeignKey|  Order, null=False, blank=False, on_delete=models.CASCADE, related_name='lineitems'|
+|product       | product    | ForeignKey|  Product, null=False,blank=False, on_delete=models.CASCADE|
+|quantity       | quantity     | IntegerField|  null=False, blank=False, default=0|
+|lineitem_total      | lineitem_total    | DecimalField|  max_digits=6,decimal_places=2, null=False blank=False, editable=False|
 
 
-####  model
+
+####  Review
 | Name          | Database Key  | Field Type    | Validation |
 | ------------- | ------------- | ------------- | ---------- |
-|user       | user     | OneToOneField|  User|
-|user       | user     | OneToOneField|  User|
-|user       | user     | OneToOneField|  User|
-|user       | user     | OneToOneField|  User|
-|user       | user     | OneToOneField|  User|
-|user       | user     | OneToOneField|  User|
-|user       | user     | OneToOneField|  User|
-|user       | user     | OneToOneField|  User|
+| author     | author    | ForeignKey|  User,on_delete=models.SET_NULL,null=True, blank=True|
+|product      | product     |ForeignKey|  Product, on_delete=models.CASCADE|
+|content       | content      | CharField|  max_length=1024|
+|time_posted        | time_posted     | TimeField|  auto_now_add=True|
 
 
 ### Wireframes
@@ -370,3 +387,45 @@ fields:
   <img src="docs/wireframes/home-desk-wireframe.png" >
 
 </details>
+</details>
+
+
+
+
+
+
+
+
+
+## Agile Design
+
+### Overview
+
+- For this project Agile principles and design was implemented from a start since this was the 2nd time in my development career that im implementing agile. While process was familiar, plan was set from beginning and it was adjusted along the way. Drawing from my previous experience, I knew that Agile would empower me to embrace change and prioritize tasks efficiently, ensuring that I consistently delivered incremental value to my project.I leveraged techniques such as user stories,kanban boards an milestones to maintain a clear project vision.This time kanban board are constructed by iterations(sprints)This iterative development cycle gave mae a regular chance to review and try to refine my work.Overall, learning and implementing Agile as a solo developer working on my e-commerce project has been a highly rewarding experience.By implementing Agile principles and design, I was confident in delivering a high-quality and user-focused e-commerce solution.
+
+
+### Epics(Milestones)
+- By effectively leveraging GitHub's 'Milestones' feature and thoughtfully connecting user stories to their corresponding tasks, I created a well-defined set of 4 epics for this project.
+
+<details><summary>See epics</summary>
+<img src="docs/agile/epics.png">
+</details>
+
+### User stories
+
+- I started by creating a user story template using GitHub issues. As the project progressed, these initial rough sketches evolved and were refined into complete user stories.
+
+<details><summary> Template for User story </summary>
+<img src="docs/agile/u_story_template.png">
+</details>
+<details><summary> User story ticket</summary>
+<img src="">
+</details>
+<details><summary> User story finished</summary>
+<img src="">
+</details>
+
+
+
+
+

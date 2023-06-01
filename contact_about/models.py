@@ -17,7 +17,7 @@ class Contact(models.Model):
 
     INQUIRY_CHOICES = [
         ('', 'Purpose of Inquiry'),
-        ('PRODUCT', 'Poduct Inquiry'),
+        ('PRODUCT', 'Product Inquiry'),
         ('ORDER', 'Order Inquiry'),
         ('SUGGESTIONS', 'Suggestions'),
         ('OTHER', 'Other'),
