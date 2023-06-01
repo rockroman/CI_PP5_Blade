@@ -419,12 +419,72 @@ fields:
 <img src="docs/agile/u_story_template.png">
 </details>
 <details><summary> User story ticket</summary>
-<img src="">
+<img src="docs/agile/story_ticket.png">
 </details>
 <details><summary> User story finished</summary>
-<img src="">
+<img src="docs/agile/story_finished.png">
+</details>
+<details><summary>Bug template</summary>
+<img src="docs/agile/bug_template.png">
 </details>
 
+### Moscow prioritization
+    - This prioritization technique was used to to efficiently sort and handle project requirements based on their  significance and immediate importance.
+    While my implementation may not have been flawless, it proved valuable in ensuring that the most critical requirements received prompt attention and were addressed as a priority
+
+    <details><summary> Moscow </summary>
+    <img src="docs/agile/moscow.png">
+    </details>
+
+### Iterations(Sprints)
+
+- As a solo developer in my project, sprints  provided structured and manageable periods of work. I was able to plan and execute tasks within these iterations, ensuring focused progress. At the end of each sprint, I tried tov review the completed work and adapt my plan based on feedback and changing priorities.
+
+#### 1st sprint
+
+
+- In my first sprint, I focused on the initial epic of setting up the development environment and adding a basic skeleton structure to the home and shop templates. This allowed me to establish a solid foundation for the project and lay the groundwork for future development tasks.
+[Link to 1st Sprint Kanban board.](https://github.com/users/rockroman/projects/6)
+
+
+
+
+<details><summary>See 1st sprint progress</summary>
+<img src="docs/agile/sprint1.png">
+</details>
+
+#### 2nd sprint
+
+
+- During my second sprint, my primary focus was on implementing shopping cart functionality and completing a portion of the checkout process with payment. This involved integrating the necessary features to allow users to add items to their cart, update quantities, and initiate the checkout process. By dedicating attention to these specific areas, I made significant progress in enhancing the overall user experience and moving closer to the completion of the Checkout with Payment epic.
+
+[Link to 2nd Sprint Kanban board.](https://github.com/users/rockroman/projects/7)
+
+<details><summary>See 2nd sprint progress</summary>
+<img src="docs/agile/sprint2.png">
+</details>
+
+
+#### 3nd sprint
+
+
+- In the third sprint, my main objective was to finalize the Payment epic, ensuring a smooth and secure payment process for users. I dedicated my efforts to testing  the payment functionality by following Stripe documentation and implementing webhooks functionality to guarantee its reliability.
+
+Additionally, I began working on the last epic, which included implementing various other features such as customer reviews, wishlist functionality, contact forms, and user profiles. By starting and finalizing these features, I aimed to enhance user engagement, enable personalized experiences, and provide a seamless way for users to connect with the platform.
+
+By focusing on these specific areas during the third sprint, I made substantial progress in delivering a comprehensive and user-friendly e-commerce solution.
+
+[Link to 3rd Sprint Kanban board.](https://github.com/users/rockroman/projects/8)
+
+<details><summary>See 2nd sprint progress</summary>
+<img src="docs/agile/sprint3.png">
+</details>
+
+
+- Closing words on Agile
+
+
+Using Agile methodologies in the three sprints of my solo e-commerce project, I made steady progress by breaking tasks into smaller parts. This approach allowed me to prioritize and deliver important features step by step. With continuous feedback and adjustments, I improved the development environment, implemented crucial functionalities, and built a user-friendly e-commerce platform. Agile proved to be a valuable framework, helping me navigate complexities, achieve tangible results, and prioritize user satisfaction.
 
 
 
