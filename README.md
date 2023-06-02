@@ -239,6 +239,13 @@ and apps are as follows:
 
     - Wishlist -app containing list of products that authenticated user can save to purchase or have as an products to review for later
 
+### Code structure beside created apps
+
+- settings.py: This file contains configuration settings for your Django project, such as database settings, installed apps, and middleware.
+- Procfile: This file defines the commands executed during deployment of your Django app on a hosting platform.
+- Templates: The project includes a base-level folder containing fundamental templates that are extended throughout other templates such as base.html, navigation, toast messages files and footer.html. It also includes templates for user authentication. Additionally, each app within the project has its own templates folder with HTML files that support the specific functionality and promote reusability within the app.
+- Static: The project includes a "static" directory that contains the base CSS and JavaScript files. This directory serves as a central location for storing and organizing the static assets used throughout the project. In addition to the base-level files, each app within the project may have its own static directory to house CSS and JavaScript files specific to that app's functionality.
+
 
 
 ##### Back to [top](#table-of-contents)
@@ -256,6 +263,7 @@ and apps are as follows:
 
 - User model as part of the Django allauth library contains basic information about authenticated user and contains folowing fields:
 username, password,email
+
 
 
 
@@ -487,5 +495,100 @@ By focusing on these specific areas during the third sprint, I made substantial 
 Using Agile methodologies in the three sprints of my solo e-commerce project, I made steady progress by breaking tasks into smaller parts. This approach allowed me to prioritize and deliver important features step by step. With continuous feedback and adjustments, I improved the development environment, implemented crucial functionalities, and built a user-friendly e-commerce platform. Agile proved to be a valuable framework, helping me navigate complexities, achieve tangible results, and prioritize user satisfaction.
 
 
+## Technologies Used
 
+### Languages & Frameworks
+
+- HTML5
+- CSS3
+- JavaScript
+    - ajax
+- jQuery
+- Python 3.10.2
+- Django 3.2
+
+
+### Libraries & Tools
+
+
+
+- [Bootstrap 5.1](https://getbootstrap.com/). This project uses the Bootstrap library for UI components (Buttons, Card, Footer, Modal, Navbar)
+- [AWS (Amazon Web Services)](https://aws.amazon.com/)
+- [Stripe](https://stripe.com/)
+- [Balsamiq](https://balsamiq.com/) to create the projects wireframes
+- [Am I Responsive](http://ami.responsivedesign.is/) was used for creating the multi-device mock-up at the top of this README.md file
+- [dbdiagram.io](https://dbdiagram.io/home) for creating Entity relationship diagrams(ERD) of my project database
+- [Favicon.io](https://favicon.io) for making the site favicon
+- [Chrome dev tools](https://developers.google.com/web/tools/chrome-devtools/) was used for debugging of the code and checking site for responsiveness
+- [Boostrap icons](https://fontawesome.com/) - Icons from Bootstrap icons  were used throughout the site
+- [Git](https://git-scm.com/) was used for version control within VSCode to push the code to GitHub
+- [GitHub](https://github.com/) was used as a remote repository to store project code
+- [Google Fonts](https://fonts.google.com/) - for typography in project
+- [Looka](https://looka.com/)- for making the custom website logo
+
+
+## Features
+
+### Nav-bars and Logo
+- The navbar, an integral component of the e-commerce store website, is implemented consistently throughout the entire project. It serves as a navigational element that allows users to easily access different sections and pages of the website. The top and bottom navbar remains present and accessible on every page, ensuring a seamless browsing experience for users as they navigate through the various sections and features of the e-commerce store.And giving users accurate info about state of the shopping cart(number of items in and total price of all items in a shopping cart), and number of products saved in a wishlist.
+- User Story covered with this feature:
+
+<details><summary>See Nav-bars and Logo</summary>
+
+
+![Logo and navbar](docs/features/navbar_desk.png)
+
+![Logo and navbar](docs/features/navbar_top_mob_1.png)
+
+![Logo and navbar](docs/features/navbar_bottom.png)
+
+![Logo and navbar](docs/features/navbar_top_open_mob.png)
+
+</details>
+
+
+
+### Footer
+- The footer feature is included in most of the project templates, except for the user authentication templates. This decision was made because including the footer in those templates could disrupt the flow and divert the user's attention from the specific purpose of the user authentication process.
+
+
+<details><summary>See Footer</summary>
+
+![Footer](docs/features/footer.png)
+![Footer](docs/features/footer_mob.png)
+
+
+</details>
+
+
+
+- Features included in projects pages
+
+1. Landing Page Carousel:
+
+- A captivating slideshow on the landing page that serves as a call to action, enticing users to explore the product offerings. It provides visually appealing images and compelling slogan, leading users to click and navigate to all products page for more details and to make purchases.
+
+<details><summary>See Landing Page Carousel </summary>
+
+![Landing Page Carousel](docs/features/carousel.png)
+
+![Landing Page Carousel](docs/features/carousel_mob.png)
+
+
+</details>
+
+
+
+2. Search sidebar :
+
+- A user-friendly sidebar feature for quick and efficient product searches within the e-commerce store. Users can enter keywords or product names to find desired items or categories easily. Enhancing navigation and the overall shopping experience, the search sidebar simplifies the process of finding specific products.
+
+<details><summary>See Search sidebar </summary>
+
+![Search sidebar](docs/features/carousel.png)
+
+![Search sidebar](docs/features/carousel_mob.png)
+
+
+</details>
 

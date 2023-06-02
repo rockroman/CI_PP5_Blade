@@ -8,19 +8,14 @@
 <div class="container-fluid mt-3 mb-1 ">
 
     <h1 class="text-center">
-
-
-
          KNIVES
-
-
     </h1>
     <div class="row">
             <!-- sorting option -->
             <div class="row mt-1 d-flex justify-content-around mx-auto">
                 <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4 my-auto  d-flex justify-content-center ">
                     <div class="sort-select-wrapper">
-
+                        <label for="sort-selector">Sort By:</label>
                         <select id="sort-selector" class="custom-select p-1 custom-select-sm rounded-2 border border-{% if sorting != 'None_None' %}info{% else %}black{% endif %}">
                             <option value="reset" {% if sorting == 'None_None' %}selected{% endif %}>Filter</option>
                             <option value="price_asc" {% if sorting == 'price_asc' %}selected{% endif %}>Price (low to high)</option>
@@ -71,17 +66,17 @@
                         <form action="{% url 'wishlist:add_to_wishlist' %}" method="POST" enctype = "multipart/form-data" >
                             {% csrf_token %}
                             <input type="hidden" name="product-id" value="{{ product.id }}" >
-                            <button type="submit" class="btn heart"><i class="product-card__heart bi bi-suit-heart" style="font-size: 2rem;-webkit-text-stroke-width: 1px;"></i></button>
+                            <button type="submit" class="btn heart shadow-none" aria-label="Add to wishlist button"><i class="product-card__heart bi bi-suit-heart" style="font-size: 2rem;-webkit-text-stroke-width: 1px;"></i></button>
                             <input type="hidden" name="my_redirect_url" value="{{ request.path }}">
                         </form>
                     </div>
-
-                    <a href="{% url 'products:product_detail' product.id %}" class="btn product-card__btn">See more</a>
+                    {% url 'products:product_detail' product.id as product_details_url %}
+                    <button class="btn product-card__btn " aria-label="{{ product.name }} detail page hover button" onclick="window.location='{{ product_details_url  }}'">See more</button>
                 </div>
 
                 <div class="product-card__info">
                     <div class="d-flex justify-content-between align-items-center flex-wrap ">
-                        <h6 class="mb-0 fw-bold">{{ product.name }}</h6><span class="text-muted bg-white">Blade:{{ product.bladelength }} cm</span>
+                        <h2 class="h6 mb-0 fw-bold">{{ product.name }}</h2><span class="text-muted bg-white">Blade:{{ product.bladelength }} cm</span>
                     </div>
                     <div class="text-start">
                         <span class="text-success fw-bolder bg-white">{{ product.price }} €</span>
@@ -96,7 +91,7 @@
                         <form method="POST">
                             {% csrf_token %}
                             <div class="all_products">
-                                <a class="btn addToCartBtn" href="#"><i class="bi bi-cart-check" style="-webkit-text-stroke-width: 1.5px; font-size: 1.5rem; color: rgb(8, 143, 14);"></i></a>
+                                <a class="btn addToCartBtn shadow-none" href="#" aria-label="Add to cart button"><i class="bi bi-cart-check" style="-webkit-text-stroke-width: 1.5px; font-size: 1.5rem; color: rgb(8, 143, 14);"></i></a>
                                 <!-- hidden inputs for ajax call -->
                                 <input type="hidden" class="product-id" value="{{ product.id }}" >
                                 {% if product.image %}
@@ -108,7 +103,7 @@
                                 <input type="hidden" class="product-name" value="{{ product.name }}">
                                 <input type="hidden" class="csrf_token" value="{{ csrf_token }}">
 
-                                <a class="btn shadow-none" href="{% url 'products:product_detail' product.id %}" ><i class="bi bi-eye-fill" style=" font-size: 1.5rem;"></i> </a>
+                                <!-- <a class="btn shadow-none" href="{% url 'products:product_detail' product.id %}" aria-label="product detail page 2nd button"><i class="bi bi-eye-fill" style=" font-size: 1.5rem;"></i> </a> -->
                             </div>
                         </form>
 
