@@ -585,9 +585,9 @@ Using Agile methodologies in the three sprints of my solo e-commerce project, I 
 
 <details><summary>See Search sidebar </summary>
 
-![Search sidebar](docs/features/carousel.png)
+![Search sidebar](docs/features/sidebar.png)
 
-![Search sidebar](docs/features/carousel_mob.png)
+![Search sidebar](docs/features/sidebar_mob.png)
 
 
 </details>
