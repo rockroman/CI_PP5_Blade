@@ -6,17 +6,15 @@
 {% include 'partials/top_main_nav.html' %}
 {% include 'partials/bottom_nav.html' %}
 
-<section class="h-100 h-custom" >
-
+<section class="h-100 h-custom">
     <div class="container py-5 h-100">
-
 
         <div class="row d-flex justify-content-center align-items-center h-100 ">
             <div class="col-12">
                 <div class="card card-registration card-registration-2" style="border-radius: 15px;">
                     <div class="card-body p-0">
                         <div class="row g-0">
-                            <div class="col-lg-8">
+                            <div class="col-lg-7">
                                 <div class="p-5">
                                     <div class="d-flex justify-content-between align-items-center mb-5">
                                         <h1 class="fw-bold mb-0 text-black">Shopping Cart</h1>
@@ -24,31 +22,29 @@
                                     </div>
                                     <hr class="my-4">
                                     {% if cart_items %}
-
-
-
                                     {% for product_id,product in cart_data.items %}
                                     <div class="row mb-4 d-flex justify-content-between align-items-center">
                                         <div class="col-md-2 col-lg-3 col-xl-3">
-                                            <div class="col text-muted">€ {{ product.price|floatformat:2  }}</div>
-
-                                            <img src="{{ product.image }}" class="img-fluid rounded-3" alt="{{ product.name }}">
-
+                                            <div class="col text-muted">€ {{ product.price|floatformat:2 }}</div>
+                                            <img src="{{ product.image }}" class="img-fluid rounded-3"
+                                                alt="{{ product.name }}">
                                         </div>
                                         <div class="col-md-2 col-lg-2 col-xl-2">
-
                                             <small class="text-black"></small>
-
                                             <h6 class="text-black mb-0">{{ product.name }} </h6>
                                         </div>
 
-                                        <div class="col-md-3 col-lg-3 col-xl-3 col-sm-6 d-flex justify-content-center">
-                                            <form id="{{ product_id }}"  action="{% url 'shopping_cart:update_cart' product_id  %}" method="POST" class="w-100 update-form">
+                                        <div class="col-md-3 col-lg-3 col-xl-3 col-sm-6 d-flex justify-content-center px-0">
+                                            <form id="{{ product_id }}"
+                                                action="{% url 'shopping_cart:update_cart' product_id  %}" method="POST"
+                                                class="w-100 update-form">
                                                 {% csrf_token %}
                                                 <div class="input-group p-0">
                                                     <div class="input-group-prepend">
-                                                        <button class="decrement-qty btn btn-danger rounded-0 shadow-none"
-                                                            data-item_id="{{ product_id }}" id="decrement-qty_{{ product_id }}">
+                                                        <button
+                                                            class="decrement-qty btn btn-danger rounded-0 shadow-none"
+                                                            data-item_id="{{ product_id }}"
+                                                            id="decrement-qty_{{ product_id }}">
                                                             <span class="icon">
                                                                 <i class="fas fa-minus"></i>
                                                             </span>
@@ -57,11 +53,12 @@
                                                     <div class="error-qty"></div>
                                                     <input class="form-control qty_input cart_form pe-0" type="number"
                                                         name="quantity" value="{{product.qty}}" min="1" max="5"
-                                                        data-item_id="{{ product_id }}"
-                                                        id="id_qty_{{ product_id }}">
+                                                        data-item_id="{{ product_id }}" id="id_qty_{{ product_id }}">
                                                     <div class="input-group-append">
-                                                        <button class="increment-qty btn btn-success rounded-0 shadow-none"
-                                                            data-item_id="{{ product_id }}" id="increment-qty_{{ product_id }}">
+                                                        <button
+                                                            class="increment-qty btn btn-success rounded-0 shadow-none"
+                                                            data-item_id="{{ product_id }}"
+                                                            id="increment-qty_{{ product_id }}">
                                                             <span class="icon">
                                                                 <i class="fas fa-plus"></i>
                                                             </span>
@@ -69,74 +66,74 @@
                                                     </div>
                                                 </div>
                                             </form>
-
-
                                         </div>
-
-                                        <div class="col-md-3 col-lg-2 col-xl-2 d-flex justify-content-center align-items-center p-0">
-                                            <h6 class="mb-0">€ {{ product.price|floatformat:2  }}</h6>
-
+                                        <div
+                                            class="col-md-3 col-lg-2 col-xl-2 d-flex justify-content-center align-items-center p-0">
+                                            <h6 class="mb-0">€ {{ product.price|floatformat:2 }}</h6>
                                         </div>
                                         <div class="col d-flex justify-content-end">
-
-                                            <button class="update-link btn  text-primary shadow-none" aria-label="update-product-button" name="{{ product_id }}" >
-                                                <i class="bi bi-pencil-square" style="font-size:1.2rem; -webkit-text-stroke-width: 1px;"></i>
-
+                                            <button class="update-link btn  text-primary shadow-none"
+                                                aria-label="update-product-button" name="{{ product_id }}">
+                                                <i class="bi bi-pencil-square"
+                                                    style="font-size:1.2rem; -webkit-text-stroke-width: 1px;">
+                                                </i>
                                             </button>
 
-                                            <button class="btn mx-2 text-danger shadow-none" aria-label="delete-product-button" data-bs-toggle="modal" data-bs-target="#modal_{{product_id}}">
-                                                <i class="bi bi-trash" style="font-size:1.2rem; -webkit-text-stroke-width: 1px;"></i>
+                                            <button class="btn mx-2 text-danger shadow-none"
+                                                aria-label="delete-product-button" data-bs-toggle="modal"
+                                                data-bs-target="#modal_{{product_id}}">
+                                                <i class="bi bi-trash"
+                                                    style="font-size:1.2rem; -webkit-text-stroke-width: 1px;"></i>
 
                                             </button>
                                             {% include 'partials/delete_modal_cart.html' %}
 
                                         </div>
                                     </div>
-
                                     <hr class="my-4">
                                     {% endfor %}
-
-
                                     <div class="pt-5">
                                         <h6 class="mb-0">
-                                            <a href="{% url 'products:store_products'%}" class="btn btn-dark fw-bold"><i class="bi bi-backspace-fill"></i> Back to shop</a>
+                                            <a href="{% url 'products:store_products'%}" class="btn btn-dark fw-bold"><i
+                                                    class="bi bi-backspace-fill"></i> Back to shop</a>
 
                                         </h6>
 
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-lg-4 bg-grey">
-                                <div class="p-3">
-                                    <h3 class="fw-bold mb-5 mt-2 pt-1" id="subtotal" >Summary</h3>
+                            <div class="col-lg-5 bg-grey">
+                                <div class="p-5">
+                                    <h3 class="fw-bold mb-5 mt-2 pt-1" id="subtotal">Summary</h3>
                                     <hr class="my-4">
+                                    <!-- start -->
+                                    <table class="table">
+                                        <tbody>
+                                            {% for product_id,product in cart_data.items %}
+                                            <tr>
 
-                                    {% for product_id,product in cart_data.items %}
-                                    <div class="d-flex justify-content-between mb-4">
-                                        <div>{{product.name}}</div>
-                                        <div>quantity: {{product.qty}}</div>
-
-                                        {% with qty=quantity %}
-                                        <p>€ {{ product.price | calc_subtotal:product.qty }}</p>
-                                        {% endwith %}
-                                    </div>
-
-
-                                    {% endfor%}
-
-
+                                                <td>{{product.name}}</td>
+                                                <td>Qty: {{product.qty}}</td>
+                                                <td>{% with qty=quantity %}
+                                                    <p class="d-flex justify-content-end">€ {{ product.price | calc_subtotal:product.qty |floatformat:2  }}</p>
+                                                    {% endwith %}</td>
+                                            </tr>
+                                            {% endfor%}
+                                        </tbody>
+                                    </table>
+                                    <!-- end -->
                                     <hr class="my-4">
-
                                     <div class="d-flex justify-content-between mb-5">
                                         <h5 class="text-uppercase">Total price</h5>
 
-                                        <h6 class="h5" >€ {{ total|floatformat:2 }}</h6>
+                                        <h6 class="h5">€ {{ total|floatformat:2 }}</h6>
                                     </div>
 
-
-                                    <a href="{% url 'checkout:store_checkout' %}" class="btn btn-warning btn-block btn-lg fw-bold btn-outline-dark"
-                                        data-mdb-ripple-color="dark"><i class="bi bi-shield-check px-1"></i>Secure Checkout</a>
-
+                                    <a href="{% url 'checkout:store_checkout' %}"
+                                        class="btn btn-warning btn-block btn-lg fw-bold btn-outline-dark"
+                                        data-mdb-ripple-color="dark"><i class="bi bi-shield-check px-1"></i>Secure
+                                        Checkout
+                                    </a>
                                 </div>
                             </div>
                         </div>
@@ -145,32 +142,21 @@
             </div>
         </div>
     </div>
-        {% else %}
-        <div class="row py-4">
-            <div class="col-8 d-flex flex-column justify-content-center align-items-center mx-auto">
-                <p class="lead mb-5">Your Shopping Cart is empty.</p>
-                <a href="{% url 'products:store_products' %}" class="btn btn-dark ">
+    {% else %}
+    <div class="row py-4">
+        <div class="col-8 d-flex flex-column justify-content-center align-items-center mx-auto">
+            <p class="lead mb-5">Your Shopping Cart is empty.</p>
+            <a href="{% url 'products:store_products' %}" class="btn btn-dark ">
 
-                    <span class="text-uppercase">Keep Shopping</span>
-                </a>
-            </div>
+                <span class="text-uppercase">Keep Shopping</span>
+            </a>
         </div>
-
+    </div>
     {% endif %}
-
-
 </section>
 {% include 'partials/footer.html' %}
-
-
-
-
-
-
-
-
-
 {% endblock %}
+
 {% block postload_js%}
 {{ block.super }}
 

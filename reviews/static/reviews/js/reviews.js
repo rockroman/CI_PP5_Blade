@@ -1,6 +1,9 @@
 
 function appendReview(res){
     var csrfToken = $('[name="csrfmiddlewaretoken"]').val();
+    var now = new Date();
+    var currentDate = now.toDateString();
+    const currentTime = now.getHours() + ':' + now.getMinutes().toString().padStart(2, '0')
 
 
 
@@ -33,14 +36,20 @@ function appendReview(res){
 </div>
 
 
-    <div class="user-comments mt-2 pb-0">
+        <div class="user-comments mt-2 pb-0">
 
 
-        <div class="d-flex flex-row align-items-center commented-user mt-2 mb-2" >
-            <h5 class="mr-2">${ res.author } </h5>
-            <span class="mb-1 ml-2 text-muted">${ res.time_posted }</span>
+            <div class="d-flex flex-column align-items-start commented-user mt-2 mb-2" >
+            <div class="d-flex gap-2">
+                <span class=" px-2 pb-1 bg-black  rounded-circle">
+                    <span class="py-1 fw-light text-white"></span>
+                </span>
+                <h5 class="mr-2 mb-0 ml-1">${ res.author }</h5>
+            </div>
+            <span class="mb-1 ml-2 text-muted">${currentDate} <span class="date">${currentTime}</span></span>
+
         </div>
-        <div class="comment-text-sm review_content" data-id="${ res.id }" >
+                <div class="comment-text-sm review_content" data-id="${ res.id }" >
             <span>${ res.content }</span>
             <div class="d-flex">
                 <button class="edit_review btn mt-3 text-primary shadow-none" aria-label="update-review-button"  >
@@ -80,7 +89,7 @@ $(document).ready(function(){
     $('.review-form').submit(function(event){
         event.preventDefault();
         var _submitBtn = $('.add_review');
-        // setting default value since im using product id to pass revie id in a view
+        // setting default value since im using product id to pass review id in a view
         var _default_product_id = $('.default-product-id').val();
 
         var _productId = $('.product-id').val();
@@ -89,11 +98,17 @@ $(document).ready(function(){
         var _content = $('textarea[name="content"]').val();
         var createReviewUrl = $(this).data('create-review-url');
         var editReviewUrl=$('#edit-url').val();
-        console.log(editReviewUrl);
+        // console.log(editReviewUrl);
 
-        var currentTime = new Date().toDateString();
-        $('.current-time').val(currentTime);
-        console.log(currentTime);
+        // var currentTime = new Date().toDateString();
+        // var currentTime = new Date().toLocaleString('en-US', {
+        //     hour: 'numeric', minute: 'numeric', hour12: true
+        // });
+        var now = new Date();
+        const currentTime = now.getHours() + ':' + now.getMinutes()
+
+        $('.current-time').text('yes');
+        // console.log(currentTime);
 
         var url;
 
@@ -138,7 +153,6 @@ $(document).ready(function(){
                     },
                     success:function(res){
                         if(res.status==='created'){
-
                             appendReview(res);
                             addDeleteUrl();
                             $('.success-modal').modal('show');
@@ -157,6 +171,7 @@ $(document).ready(function(){
                             $('.product-id').val(_default_product_id);
 
                         }
+
 
                         _submitBtn.attr('disabled',false);
                         $('.review-form')[0].reset();

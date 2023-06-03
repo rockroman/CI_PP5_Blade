@@ -563,6 +563,7 @@ Using Agile methodologies in the three sprints of my solo e-commerce project, I 
 
 
 - Features included in projects pages
+### Landing page
 
 1. Landing Page Carousel:
 
@@ -588,6 +589,46 @@ Using Agile methodologies in the three sprints of my solo e-commerce project, I 
 ![Search sidebar](docs/features/sidebar.png)
 
 ![Search sidebar](docs/features/sidebar_mob.png)
+
+
+</details>
+
+3. Best sellers section:
+- Section dedicated of showing a 3 products from a store with Intention of presenting them
+as the best selling webshop products.
+
+<details><summary>See Best sellers section</summary>
+
+![Best sellers](docs/features/best_seller.png)
+
+![Best sellers](docs/features/best_seller_mob.png)
+
+
+</details>
+
+4. Media marketing section:
+-  Includes a newsletter Sign-up form and a link to the Instagram page. This section facilitates user engagement and promotes the e-commerce store through effective email marketing and social media presence.
+
+<details><summary>See Media marketing section</summary>
+
+![Best sellers](docs/features/media.png)
+
+![Best sellers](docs/features/media_mob.png)
+
+
+</details>
+
+### All products page
+
+1. Filter section:
+
+- Allows users to refine product searches on the "All Products" page. Users can easily narrow down their search by selecting various criteria such as price,category, name. Enhancing usability, the filter section helps users quickly find the desired products within the webshop.
+
+<details><summary>See Filter section</summary>
+
+![Best sellers](docs/features/filter.png)
+
+![Best sellers](docs/features/filter_open.png)
 
 
 </details>

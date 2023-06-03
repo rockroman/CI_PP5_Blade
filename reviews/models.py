@@ -20,7 +20,7 @@ class Review(models.Model):
                                null=True, blank=True)
     product = models.ForeignKey(Product, on_delete=models.CASCADE)
     content = models.CharField(max_length=1024)
-    time_posted = models.TimeField(auto_now_add=True)
+    time_posted = models.DateTimeField(auto_now_add=True)
 
     def __str__(self) -> str:
         return f'Review by {self.author.username} for {self.product.name}: {self.content}'

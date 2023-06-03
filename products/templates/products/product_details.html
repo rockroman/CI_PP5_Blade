@@ -1,6 +1,7 @@
 {% extends 'base.html' %}
 {% load static %}
 
+
 {% block content %}
 {% include 'partials/top_main_nav.html' %}
 {% include 'partials/bottom_nav.html' %}
@@ -125,14 +126,13 @@
         </div>
     </div>
 </div>
-<!-- </section> -->
 <!-- reviews -->
 <div class="container-fluid">
     <div class="d-flex justify-content-center row">
         <div class="d-flex flex-column col-md-8">
             <div class=" text-center comment-top p-2 bg-light border-bottom px-4 mt-2">
                 <h3>
-                    Reviews
+                    Product Reviews
 
                 </h3>
             </div>
@@ -141,9 +141,7 @@
                 {% for review in reviews %}
                 {% include 'partials/delete_modal_review.html' %}
 
-
                     <div class="user-comments mt-2 pb-0">
-
                         <div class="d-flex flex-column align-items-start commented-user mt-2 mb-2" >
                             <div class="d-flex gap-2">
                                 <span class=" px-2 pb-1 bg-black  rounded-circle">
@@ -151,14 +149,12 @@
                                   </span>
                                 <h5 class="mr-2 mb-0 ml-1">{{ review.author }} </h5>
                             </div>
+                            <span class="mb-1 ml-2 text-muted">{{ review.time_posted}} </span>
 
-                            <span class="mb-1 ml-2 text-muted">{{ review.time_posted}}</span>
                         </div>
-
                         <div class="comment-text-sm review_content" data-id="{{ review.id }}">
                             <span>{{ review.content }}</span>
                             <div class="d-flex">
-
                                 {% if request.user == review.author %}
                                 <button class="edit_review btn mt-3  text-primary shadow-none" aria-label="update-review-button"  >
                                     <i class="bi bi-pencil-square" style="font-size:1.2rem; -webkit-text-stroke-width: 1px;"></i>
@@ -168,14 +164,12 @@
                                 </button>
                                 {% else %}
                                 {% endif %}
-
                             </div>
                         </div>
                     </div>
-                    <!--  -->
-
                     {% endfor %}
             </div>
+
 
             {% if user.is_authenticated %}
 
@@ -192,38 +186,28 @@
                             <input type="hidden" class="default-product-id" value="{{ product.id}}">
                             <input type="hidden" class="user" value="{{ request.user.username}}">
                             {{ form|crispy }}
-
                             <button class="btn btn-primary  mt-0 add_review" type="submit">Add review</button>
                         </form>
-
                     </div>
-
                 <input type="hidden" id="delete-url" value="{% url 'reviews:delete_review' %}">
-
-
             </div>
         </div>
         {% else %}
         <div class="my-4 text-center fw-bold">
              <a href="{% url 'account_login' %}" class="text-primary">To add a review you need to log in</a>
         </div>
-
         {% endif %}
-        <!-- </div> -->
     </div>
 </div>
+
 {% include 'partials/footer.html' %}
-
-
-
-
-
 
 {% endblock %}
 
 {% block postload_js%}
 {{ block.super }}
 <script src="{% static 'reviews/js/reviews.js' %}"></script>
+
 
 {% include 'partials/quantity_input_script.html' %}
 
