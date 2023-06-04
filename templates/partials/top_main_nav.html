@@ -5,8 +5,9 @@
             <span class="navbar-toggler-icon"></span>
         </button>
         <a class="ms-0 " href="{% url 'home:home' %}">
-            <img src="{{ MEDIA_URL }}logo1.jpg" alt="Bradd-logo for bigger screen" class="border border-dark img-fluid d-none d-md-block">
-            <img src="{{ MEDIA_URL }}logo3.png" alt="Bradd-logo for smaller screens" class="border border-dark img-fluid d-md-none d-sm-block">
+            <img src="{{ MEDIA_URL }}logo1.jpg" alt="Brand-logo for bigger screen" class="border border-dark img-fluid d-none d-md-block">
+            <img src="{{ MEDIA_URL }}logo3.png" alt="Brand-logo for smaller screens" class="border border-dark img-fluid d-md-none d-sm-block">
+
         </a>
         <div class="d-flex d-lg-none align-items-center" >
 
@@ -49,7 +50,6 @@
             <button class="btn  d-md-block shadow-none"  type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample-right" aria-label="right sidebar opening button">
                 <i class="bi bi-search" style="font-size:1.2rem; -webkit-text-stroke-width: 1px; color: white;"></i>
             </button>
-
             <div>
                 <a class="btn py-3 shadow-none" role="button" href="{% url 'shopping_cart:cart' %}" aria-label="View Cart icon">
                     <i class="bi bi-cart3" style="font-size:1.5rem; -webkit-text-stroke-width: 1px; color: white;"></i>
@@ -64,9 +64,7 @@
                 <div class="price text-warning position-absolute fw-light">
                 </div>
             </div>
-
         </div>
-
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0 ">
                 <li class="nav-item">

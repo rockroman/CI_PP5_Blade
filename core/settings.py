@@ -34,7 +34,6 @@ else:
 
 ALLOWED_HOSTS = ['pp5-blade.herokuapp.com', '*']
 
-
 # Application definition
 
 INSTALLED_APPS = [
