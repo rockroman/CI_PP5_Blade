@@ -54,7 +54,7 @@
             <div class="small mb-1 mt-1">Item No: {{product.item_no}}</div>
             <h1 class="display-5 fw-bolder product-name">{{ product.name }}</h1>
             <div class="fs-5 mb-3">
-                <span class="text-success fw-bold">€ {{product.price}}</span>
+                <span class="text-success fw-bolder">€ {{product.price}}</span>
 
             </div>
 
@@ -82,19 +82,20 @@
                                     <div class="input-group">
                                         <div class="input-group-prepend">
                                             <button class="decrement-qty btn btn-danger rounded-0 shadow-none"
-                                                data-item_id="{{ product.id }}" id="decrement-qty_{{ product.id }}">
+                                                data-item_id="{{ product.id }}" id="decrement-qty_{{ product.id }}" aria-label="Decrement quantity of product button">
                                                 <span class="icon">
                                                     <i class="fas fa-minus"></i>
                                                 </span>
                                             </button>
                                         </div>
+                                        <label for="id_qty_{{ product.id}}" class="d-none">Quantity:</label>
                                         <input class="form-control qty_input product-qty" type="number"
                                             name="quantity" value="1" min="1" max="10"
                                             data-item_id="{{ product.id }}"
                                             id="id_qty_{{ product.id }}">
                                         <div class="input-group-append">
                                             <button class="increment-qty btn btn-success rounded-0 shadow-none"
-                                                data-item_id="{{ product.id }}" id="increment-qty_{{ product.id }}">
+                                                data-item_id="{{ product.id }}" id="increment-qty_{{ product.id }}" aria-label="increment quantity of product button">
                                                 <span class="icon">
                                                     <i class="fas fa-plus"></i>
                                                 </span>
