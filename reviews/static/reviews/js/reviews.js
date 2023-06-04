@@ -2,12 +2,12 @@
 function appendReview(res){
     var csrfToken = $('[name="csrfmiddlewaretoken"]').val();
     var now = new Date();
-    var currentDate = now.toDateString();
+    // var currentDate = now.toDateString();
     const currentTime = now.getHours() + ':' + now.getMinutes().toString().padStart(2, '0')
 
 
 
-    $('.commented-section').prepend(`
+    $('.commented-section').append(`
 
     <div class="modal fade review" tabindex="-1" id="modal_${res.id}">
     <div class="modal-dialog custom-modal-dialog ">
@@ -36,20 +36,20 @@ function appendReview(res){
 </div>
 
 
-        <div class="user-comments mt-2 pb-0">
+        <div class="user-comments mt-2 pb-0 border">
 
 
 
         <div class="d-flex flex-column align-items-start commented-user mt-2 mb-2" >
             <div class="d-flex gap-2 ">
                 <h5 class="mr-2 mb-0 ml-1 fw-bold text-capitalize">${ res.author } </h5>
-                <small class="text-muted text-decoration-underline bg-white">${currentDate}</small>
+                <small class="text-muted text-decoration-underline bg-white">${currentTime}</small>
             </div>
             ⭐️⭐️⭐️⭐️⭐️
 
         </div>
-                <div class="comment-text-sm review_content" data-id="${ res.id }" >
-            <span>${ res.content }</span>
+            <div class="comment-text-sm review_content" data-id="${ res.id }" >
+            <p class="my-2">${ res.content }</p>
             <div class="d-flex justify-content-end">
                 <button class="edit_review btn mt-3 text-primary shadow-none" aria-label="update-review-button"  >
                 <i class="bi bi-pencil-square" style="font-size:1.2rem; -webkit-text-stroke-width: 1px;"></i>
@@ -206,8 +206,9 @@ $(document).ready(function(){
 
 
 function updateTimestamp(){
-    var newStamp='{{ review.time_posted|timesince:review.time_posted }}'
-    $('.timestamp').text(newStamp)
+
+    // $('.done').val('yesss')
+    console.log('updaaaating');
 
 
 }

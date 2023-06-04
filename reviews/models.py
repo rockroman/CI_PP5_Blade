@@ -22,5 +22,8 @@ class Review(models.Model):
     content = models.CharField(max_length=1024)
     time_posted = models.DateTimeField(auto_now_add=True)
 
+    class Meta:
+        ordering = ['-time_posted']
+
     def __str__(self) -> str:
         return f'Review by {self.author.username} for {self.product.name}: {self.content}'
