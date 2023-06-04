@@ -142,19 +142,19 @@
                 {% include 'partials/delete_modal_review.html' %}
 
                     <div class="user-comments mt-2 pb-0">
+
                         <div class="d-flex flex-column align-items-start commented-user mt-2 mb-2" >
-                            <div class="d-flex gap-2">
-                                <span class=" px-2 pb-1 bg-black  rounded-circle">
-                                    <span class="py-1 fw-light text-white">{{ review.author|default:''|stringformat:'s'|slice:":1" }}</span>
-                                  </span>
-                                <h5 class="mr-2 mb-0 ml-1">{{ review.author }} </h5>
+                            <div class="d-flex gap-2 ">
+                                <h5 class="mr-2 mb-0 ml-1 fw-bold text-capitalize">{{ review.author }} </h5>
+                                <small class="timestamp text-muted text-decoration-underline bg-white">{{ review.time_posted|timesince }} ago</small>
                             </div>
-                            <span class="mb-1 ml-2 text-muted">{{ review.time_posted}} </span>
+                            ⭐️⭐️⭐️⭐️⭐️
 
                         </div>
-                        <div class="comment-text-sm review_content" data-id="{{ review.id }}">
-                            <span>{{ review.content }}</span>
-                            <div class="d-flex">
+                        <div class="comment-text-sm review_content py-2" data-id="{{ review.id }}">
+                            <p class="my-2">{{ review.content }}</p>
+
+                            <div class="d-flex justify-content-end">
                                 {% if request.user == review.author %}
                                 <button class="edit_review btn mt-3  text-primary shadow-none" aria-label="update-review-button"  >
                                     <i class="bi bi-pencil-square" style="font-size:1.2rem; -webkit-text-stroke-width: 1px;"></i>
@@ -168,7 +168,7 @@
                         </div>
                     </div>
                     {% endfor %}
-            </div>
+                </div>
 
 
             {% if user.is_authenticated %}

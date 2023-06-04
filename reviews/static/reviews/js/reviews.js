@@ -39,19 +39,18 @@ function appendReview(res){
         <div class="user-comments mt-2 pb-0">
 
 
-            <div class="d-flex flex-column align-items-start commented-user mt-2 mb-2" >
-            <div class="d-flex gap-2">
-                <span class=" px-2 pb-1 bg-black  rounded-circle">
-                    <span class="py-1 fw-light text-white"></span>
-                </span>
-                <h5 class="mr-2 mb-0 ml-1">${ res.author }</h5>
+
+        <div class="d-flex flex-column align-items-start commented-user mt-2 mb-2" >
+            <div class="d-flex gap-2 ">
+                <h5 class="mr-2 mb-0 ml-1 fw-bold text-capitalize">${ res.author } </h5>
+                <small class="text-muted text-decoration-underline bg-white">${currentDate}</small>
             </div>
-            <span class="mb-1 ml-2 text-muted">${currentDate} <span class="date">${currentTime}</span></span>
+            ⭐️⭐️⭐️⭐️⭐️
 
         </div>
                 <div class="comment-text-sm review_content" data-id="${ res.id }" >
             <span>${ res.content }</span>
-            <div class="d-flex">
+            <div class="d-flex justify-content-end">
                 <button class="edit_review btn mt-3 text-primary shadow-none" aria-label="update-review-button"  >
                 <i class="bi bi-pencil-square" style="font-size:1.2rem; -webkit-text-stroke-width: 1px;"></i>
                 </button>
@@ -94,20 +93,20 @@ $(document).ready(function(){
 
         var _productId = $('.product-id').val();
         var _user = $('.user').val();
-        // var _content = $('input[name="content"]').val();
+
         var _content = $('textarea[name="content"]').val();
         var createReviewUrl = $(this).data('create-review-url');
         var editReviewUrl=$('#edit-url').val();
-        // console.log(editReviewUrl);
+
 
         // var currentTime = new Date().toDateString();
-        // var currentTime = new Date().toLocaleString('en-US', {
-        //     hour: 'numeric', minute: 'numeric', hour12: true
-        // });
-        var now = new Date();
-        const currentTime = now.getHours() + ':' + now.getMinutes()
+        var currentTime = new Date().toLocaleString('en-US', {
+            hour: 'numeric', minute: 'numeric', hour12: true
+        });
+        // var now = new Date();
+        // const currentTime = now.getHours() + ':' + now.getMinutes()
 
-        $('.current-time').text('yes');
+        // $('.current-time').text('yes');
         // console.log(currentTime);
 
         var url;
@@ -163,6 +162,7 @@ $(document).ready(function(){
                             console.log(res.content);
                             edit_container.text(res.content);
                             $('.add_review').text('Comment');
+
                             editing_content=null;
                             modalFading();
                             $('.custom-content').text(res.message);
@@ -204,6 +204,13 @@ $(document).ready(function(){
 
 });
 
+
+function updateTimestamp(){
+    var newStamp='{{ review.time_posted|timesince:review.time_posted }}'
+    $('.timestamp').text(newStamp)
+
+
+}
 
 
 
