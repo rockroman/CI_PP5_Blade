@@ -17,12 +17,6 @@ $('#sort-selector').change(function() {
     }
 });
 
-
-$('.back-to-top').click(function(e) {
-    window.scrollTo(0,0)
-});
-
-
 // updating price and item counter in navbar
 function updateCartTotal() {
     $.ajax({
@@ -62,7 +56,6 @@ $('#addToCartBtn').on('click', function(){
         $('#Error').remove()
         $('.error-qty').before('<div class="invalid-feedback d-block" id="Error">quantity must be range 1 -10!</div>');
         return
-
     }
 
     $.ajax({
@@ -92,13 +85,9 @@ $('#addToCartBtn').on('click', function(){
             $('#Error').remove()
             $('.product-qty').val(1)
             _addBtn.attr('disabled',false);
-
         }
-
     });
-
 })
-
 
 // ajax call for adding product to shopping cart from all products page
 $('.addToCartBtn').on('click', function(){
@@ -134,14 +123,9 @@ $('.addToCartBtn').on('click', function(){
             $('.custom-content').text(message)
             _addBtn.attr('disabled',false);
             console.log(res.data);
-
         }
     });
-
-
-
 })
-
 
 // ajax call for adding product to shopping cart from wishlist page
 $('.addToCartBtnWish').on('click', function(){
@@ -176,12 +160,8 @@ $('.addToCartBtnWish').on('click', function(){
             updateCartTotal()
             $('.success-modal').modal('show');
             _addBtn.attr('disabled',false);
-
         }
     });
-
-
-
 });
 
 // updating wishlist counters in top and bottom nav bar
@@ -208,22 +188,13 @@ function updateWishlistTotal(){
       }
 
     });
-
 }
-
 
 //updating counters and price(even if page is served from the cache)
 $(document).ready(function () {
     updateCartTotal();
     updateWishlistTotal()
-
 });
-
-$(window).on('popstate', function() {
-      updateCartTotal();
-      updateWishlistTotal();
-
-  });
 
 // modal fade after 2 sec
 function modalFading(){
@@ -232,7 +203,6 @@ function modalFading(){
         $('.success-modal').modal('hide');
 
     }, 2000)
-
 }
 
 

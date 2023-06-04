@@ -84,31 +84,39 @@
             <tbody>
               <tr>
                 <th scope="row">Name:</th>
-                <td>{{ customer_profile.user.username }}</td>
+                <td class="fw-bold text-capitalize">{{ customer_profile.user.username }}</td>
               </tr>
               <tr>
                 <th scope="row">Address 1:</th>
-                <th>{{ form.default_street_address1|as_crispy_field }}</th>
+                <label for="id_default_street_address1">default_street_address1</label>
+                <th> <span class="d-none"> form address</span>{{ form.default_street_address1|as_crispy_field }}</th>
               </tr>
               <tr>
                 <th scope="row">Address 2:</th>
-                <th>{{ form.default_street_address2|as_crispy_field }}</th>
+                <label for="id_default_street_address2">default_street_address2</label>
+                <th><span class="d-none"> form address</span>{{ form.default_street_address2|as_crispy_field }}</th>
               </tr>
               <tr>
                 <th scope="row">Phone number:</th>
-                <th>{{ form.default_phone_number|as_crispy_field }}</th>
+                <label for="id_default_phone_number">default_phone_number</label>
+                <th><span class="d-none"> form phone number</span>{{ form.default_phone_number|as_crispy_field }}</th>
               </tr>
               <tr>
                 <th scope="row">Town or City:</th>
-                <th>{{ form.default_town_or_city|as_crispy_field }}</th>
+                <label for="id_default_town_or_city">default_town_or_city</label>
+                <th><span class="d-none"> form town_or_city</span>{{ form.default_town_or_city|as_crispy_field }}</th>
               </tr>
               <tr>
                 <th scope="row">County | Post code</th>
-                <th>{{ form.default_county|as_crispy_field }}
+                <th><span class="d-none"> form county and postcode</span>
+                  <label for="id_default_county">default_county</label>
+                  {{ form.default_county|as_crispy_field }}
+                  <label for="id_default_postcode">default_postcode</label>
                   {{ form.default_postcode|as_crispy_field }}</th>
               </tr>
               <tr>
                 <th scope="row">Country</th>
+                <label for="id_default_country">default_country</label>
                 <th>{{ form.default_country|as_crispy_field }}</th>
 
               </tr>

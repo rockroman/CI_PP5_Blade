@@ -136,7 +136,7 @@ def edit_product(request, product_id):
             messages.error(request, f'Failed Edit {product.name} product please check your form for errors')
     else:
         form = ProductForm(instance=product)
-        messages.info(request, f'You are editig {product.name}')
+        messages.info(request, f'You are editing {product.name}')
 
     template = 'products/edit_product.html'
     context = {
