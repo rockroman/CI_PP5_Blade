@@ -98,16 +98,9 @@ $(document).ready(function(){
         var createReviewUrl = $(this).data('create-review-url');
         var editReviewUrl=$('#edit-url').val();
 
-
-        // var currentTime = new Date().toDateString();
         var currentTime = new Date().toLocaleString('en-US', {
             hour: 'numeric', minute: 'numeric', hour12: true
         });
-        // var now = new Date();
-        // const currentTime = now.getHours() + ':' + now.getMinutes()
-
-        // $('.current-time').text('yes');
-        // console.log(currentTime);
 
         var url;
 
