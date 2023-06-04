@@ -8,7 +8,6 @@
 
 <section class="h-100 h-custom">
     <div class="container py-5 h-100">
-
         <div class="row d-flex justify-content-center align-items-center h-100 ">
             <div class="col-12">
                 <div class="card card-registration card-registration-2" style="border-radius: 15px;">
@@ -44,13 +43,14 @@
                                                         <button
                                                             class="decrement-qty btn btn-danger rounded-0 shadow-none"
                                                             data-item_id="{{ product_id }}"
-                                                            id="decrement-qty_{{ product_id }}">
+                                                            id="decrement-qty_{{ product_id }}" aria-label="Decrement quantity of product button">
                                                             <span class="icon">
                                                                 <i class="fas fa-minus"></i>
                                                             </span>
                                                         </button>
                                                     </div>
                                                     <div class="error-qty"></div>
+                                                    <label for="id_qty_{{ product_id}}">Quantity:</label>
                                                     <input class="form-control qty_input cart_form pe-0" type="number"
                                                         name="quantity" value="{{product.qty}}" min="1" max="5"
                                                         data-item_id="{{ product_id }}" id="id_qty_{{ product_id }}">
@@ -58,7 +58,7 @@
                                                         <button
                                                             class="increment-qty btn btn-success rounded-0 shadow-none"
                                                             data-item_id="{{ product_id }}"
-                                                            id="increment-qty_{{ product_id }}">
+                                                            id="increment-qty_{{ product_id }}" aria-label="increment quantity of product button">
                                                             <span class="icon">
                                                                 <i class="fas fa-plus"></i>
                                                             </span>
@@ -84,7 +84,6 @@
                                                 data-bs-target="#modal_{{product_id}}">
                                                 <i class="bi bi-trash"
                                                     style="font-size:1.2rem; -webkit-text-stroke-width: 1px;"></i>
-
                                             </button>
                                             {% include 'partials/delete_modal_cart.html' %}
 
@@ -94,11 +93,10 @@
                                     {% endfor %}
                                     <div class="pt-5">
                                         <h6 class="mb-0">
-                                            <a href="{% url 'products:store_products'%}" class="btn btn-dark fw-bold"><i
-                                                    class="bi bi-backspace-fill"></i> Back to shop</a>
-
+                                            <a href="{% url 'products:store_products'%}" class="btn btn-dark fw-bold">
+                                                <i class="bi bi-backspace-fill"></i> Back to shop
+                                            </a>
                                         </h6>
-
                                     </div>
                                 </div>
                             </div>
