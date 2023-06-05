@@ -32,7 +32,8 @@ if 'DEVELOPMENT' in os.environ:
 else:
     DEBUG = True
 
-ALLOWED_HOSTS = ['pp5-blade.herokuapp.com', '*']
+
+ALLOWED_HOSTS = ['pp5-blade.herokuapp.com', '127.0.0.1']
 
 # Application definition
 
