@@ -842,7 +842,7 @@ The Payment Feature Section ensures a smooth and secure payment experience for c
 
 The Checkout Order Summary Section ensures transparency and allows customers to review their order details at a glance. By providing product images, quantities, and the total order price, customers can verify their selection before proceeding with the checkout process.
 
-<details><summary> Checkout order summary  feature section</summary>
+<details><summary>See Checkout order summary  feature section</summary>
 
 ![Checkout Order summary](docs/features/checkout_summary.png)
 ![Checkout Order summary](docs/features/checkout_sum_mob.png)
@@ -867,7 +867,7 @@ The Checkout Order Summary Section ensures transparency and allows customers to 
 The Order Confirmation Thank You Form Feature serves as a confirmation and acknowledgment of the customer's order. By providing the order number, date, delivery information, and billing details, customers can have peace of mind knowing that their order has been successfully placed and that the provided information is accurate.
 
 
-<details><summary> Order confirmation thank you form  feature section</summary>
+<details><summary>See  Order confirmation thank you form  feature section</summary>
 
 ![Order confirmation thank you form ](docs/features/order_thank-you.png)
 ![Order confirmation thank you form ](docs/features/order_thank_mob.png)
@@ -878,9 +878,128 @@ The Order Confirmation Thank You Form Feature serves as a confirmation and ackno
 
 - section provides two buttons. back to hop and return to profile button , making navigation even easier.
 
-<details><summary>Buttons feature section</summary>
+<details><summary>See Buttons feature section</summary>
 
 ![Buttons feature section](docs/features/button.png)
 
 
 </details>
+
+
+### Profile page
+
+1. Profile form feature:
+
+- The Profile Form Feature allows users to provide and update their basic information and delivery details within their profile. It includes the following components:
+
+    - Basic Info Fields: Users can fill out basic information fields such as their name, contact details (phone number, email address), and other relevant personal information. These fields provide a means for users to provide accurate and up-to-date information for their profile.
+
+    - update profile button: users can confirm update of a profile form
+
+<details><summary>See Profile form feature section</summary>
+
+![Profile form](docs/features/profile_form.png)
+![Profile form](docs/features/profile_form_mob.png)
+
+
+</details>
+
+2. Order history accordion feature:
+
+- The Order History Accordion Feature provides users with a convenient way to access and view their order history. It includes the following components:
+
+    - Order Info: The order history accordion displays essential order information, such as the order number, order total, and the date and time the order was placed. This summary allows users to quickly identify and locate specific orders.
+
+    - Clickable Order Number: Each order within the accordion is presented with a clickable order number. Clicking on the order number leads the user to a thank you page or a detailed order confirmation page, providing a more comprehensive view of the order and its associated details.
+
+    - Order Details: The expanded view within the accordion reveals the order details, including product names, quantities, and any other relevant information pertaining to the order. This gives users a comprehensive breakdown of the items included in each order.
+
+    - Product Quantity: The order history accordion specifies the quantity of each product ordered, providing users with a clear understanding of the quantities associated with each item.
+
+    - Order Total and Date/Time: The total cost of the order is displayed, giving users a quick reference to the overall price of each order. Additionally, the date and time of the order are provided, enabling users to track and review their purchase history over time.
+
+<details><summary>See Order history accordion feature section</summary>
+
+![Order history accordion](docs/features/accord.png)
+![Order history accordion](docs/features/accrd_mob.png)
+![Order history accordion](docs/features/accord_open.png)
+
+</details>
+
+### Add product page
+
+1. Add product form feature section:
+
+- The Add Product Form Feature allows users to create a new product by filling out a form with the following fields: name, image upload, description, price, blade length, handle material, and blade material. It also includes buttons to add the product and cancel the process. This feature simplifies the process of adding new products by providing a straightforward and intuitive form for users to enter all the necessary details.
+
+<details><summary>See Add product form  feature section</summary>
+
+![Add product form ](docs/features/add_form.png)
+![Add product form ](docs/features/add_form_mob.png)
+
+
+</details>
+
+2. Logo feature section:
+
+- Simple visually appealing section where web-shop logo is displayed:
+
+<details><summary>See Logo feature section</summary>
+
+![Logo](docs/features/log.png)
+![Logo](docs/features/log_mob.png)
+
+
+</details>
+
+### About us page
+
+1. Hero with supporting history paragraph feature:
+
+- The Hero with Supporting History Paragraph Feature presents a striking hero image accompanied by a concise paragraph introducing the webshop and its site owner. This feature creates an impactful first impression, conveying the essence of the webshop and establishing a connection with visitors.
+
+<details><summary>See Hero with supporting history paragraph feature section</summary>
+
+![Hero with supporting history paragraph](docs/features/about_hero.png)
+![Hero with supporting history paragraph](docs/features/about_hero_mob.png)
+
+
+</details>
+
+2. Quality Presentation cards feature section:
+
+- The Quality Presentation Cards Feature Section elevates product presentation through visually appealing cards, enriched with engaging text and supporting icons. These cards effectively communicate important information about the products, captivating users and highlighting their key features
+
+<details><summary>See Quality Presentation cards feature section</summary>
+
+![Quality Presentation card](docs/features/cards.png)
+![Quality Presentation card](docs/features/cards_mob.png)
+
+
+</details>
+
+3. Contact form feature section:
+
+- The Contact Form Feature Section incorporates a user-friendly contact form that facilitates seamless communication between the website and its visitors. This feature includes a selection of inquiry purposes, such as order-related inquiries, product queries, suggestions, and other custom options. The contact form empowers users to express their specific needs and enables the website to provide prompt and tailored responses to their inquiries.
+
+
+<details><summary>See Contact form feature section</summary>
+
+![Contact form ](docs/features/contact.png)
+![Contact form ](docs/features/contact_mob.png)
+
+
+</details>
+
+## Future features
+
+- For future releases of this web, there are plans to implement new features and enhance existing ones to further improve the user experience. These updates will focus on incorporating innovative functionalities and refining the existing features based on user feedback and market trends. The goal is to continuously evolve the web and ensure that it remains up-to-date, user-friendly, and aligned with the changing needs and expectations of our valued users.
+
+    1. Gift cards (physical gif-cards in various amounts with web-shop logo)
+    2. Add AI powered chatbot function to enhance customer experience and support
+    3. Add more types of payment options(paypal, gift-cards,crypto currencies)
+
+
+
+
+
