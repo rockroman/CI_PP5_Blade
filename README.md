@@ -56,8 +56,8 @@
 
 ## Overview
 
-Blade Webstore is a Django full-stack e-commerce app designed to assist a colleague in transitioning their custom folding knife making business to an online shop. With its smooth user experience, dynamic content updates, and integration with the Stripe API, the webstore offers a reliable platform for customers to explore and purchase high-quality knives.With the convenience of an e-commerce platform, the colleague can reach a broader audience and tap into new customer segments. By transitioning from a physical store to an online shop, the business can overcome limitations and maximize its growth potential.Webstore focuses on providing an effortless and logical interface. Through the use of AJAX calls,parts of the website content is updated dynamically, eliminating the need for page reloads and ensuring a seamless browsing experience. Users can explore various knife options, view detailed product descriptions, and add items to their shopping cart without interruptions.The underlying technology stack  includes the Django Full Stack Web Framework, which provides a solid foundation for developing scalable and robust web applications. Additionally, Bootstrap is utilized for front-end styling, resulting in a visually appealing and responsive design that adapts to different screen sizes.
-To experience the  Blade Webstore, you can visit the deployed project using the provided link.
+Blade Web-store is a Django full-stack e-commerce app designed to assist a colleague in transitioning their custom folding knife making business to an online shop. With its smooth user experience, dynamic content updates, and integration with the Stripe API, the web-store offers a reliable platform for customers to explore and purchase high-quality knives.With the convenience of an e-commerce platform, the colleague can reach a broader audience and tap into new customer segments. By transitioning from a physical store to an online shop, the business can overcome limitations and maximize its growth potential.Web-store focuses on providing an effortless and logical interface. Through the use of AJAX calls,parts of the website content is updated dynamically, eliminating the need for page reloads and ensuring a seamless browsing experience. Users can explore various knife options, view detailed product descriptions, and add items to their shopping cart without interruptions.The underlying technology stack  includes the Django Full Stack Web Framework, which provides a solid foundation for developing scalable and robust web applications. Additionally, Bootstrap is utilized for front-end styling, resulting in a visually appealing and responsive design that adapts to different screen sizes.
+To experience the  Blade Web-store, you can visit the deployed project using the provided link.
 If you wish to test the purchase functionality, you can use the following mock payment details:
 
 - Card Number: 4242424242424242
@@ -65,20 +65,20 @@ If you wish to test the purchase functionality, you can use the following mock p
 - CVN: Any 3-digit number
 - Postcode: Any 5-digit numeral
 
-Please note that any payments made using actual payment cards will fail, and no charges will be incurred. The webstore is designed for demonstration purposes, and no orders made will be fulfilled.
-Enjoy the Blaade experince.
+Please note that any payments made using actual payment cards will fail, and no charges will be incurred. The web-store is designed for demonstration purposes, and no orders made will be fulfilled.
+Enjoy the Blade experience.
 
 
 
 ***
 ## Project (Site owner) Goals
 
-- To offer users purchase of products listed on a webstore
-- To give users a great user experience while visiting a webstore
+- To offer users purchase of products listed on a web-store
+- To give users a great user experience while visiting a web-store
 - To give users option for buying as a guest or a registered user
 - To allow user creating or updating an account
 - To give users option to check the order history
-- To give users option to leave a poduct review
+- To give users option to leave a product review
 - To give users option to save products on a wishlist
 
 ### User Goals
@@ -98,8 +98,8 @@ Enjoy the Blaade experince.
 
 
 
-Blade project was developed out of want to help and make small business owner custom knives workhsop and its craft
-widely avaliable to broder range of audience.By appreciating the skill, dedication, and exceptional quality of these custom pieces of art.Blade curated collection of high-quality custom folding knives showcases the craftsmanship and connects passionate collectors with talented artisans. Discover and celebrate the art of custom knives with Blade, as we make these remarkable pieces accessible to a broader community of knife enthusiasts.
+Blade project was developed out of want to help and make small business owner custom knives workshop and its craft
+widely available to broader range of audience.By appreciating the skill, dedication, and exceptional quality of these custom pieces of art.Blade curated collection of high-quality custom folding knives showcases the craftsmanship and connects passionate collectors with talented artisans. Discover and celebrate the art of custom knives with Blade, as we make these remarkable pieces accessible to a broader community of knife enthusiasts.
 
 - Value Proposition:
     - Offer a curated selection of high-quality custom folding knives crafted by small business owner in his workshop.
@@ -181,7 +181,7 @@ Price ,rating, and alphabet
 14. As user/customer, I would like functionality to put in my card details so that I can make a purchase
 15. As an unauthenticated user/customer, I would like to be able to view and read reviews of products to make informed purchasing decisions.
 16. As an authenticated user/customer I would like functionality to leave a product review on a product detail   page so that other customers deciding on purchase of the item will have an insight from somebody who already bought the product
-17. As a authenticated user/customer I would Like functinality to edit or delete my product review so that information given in review are up to date and can help other users /customers
+17. As a authenticated user/customer I would Like functionality to edit or delete my product review so that information given in review are up to date and can help other users /customers
 18. As an authenticated user/customer, I want to have the option to add products to my wishlist for future reference and easy access.
 19. As an authenticated user/customer, I want to be able to remove items from my wishlist, so that I can manage my saved products effectively and remove those that I am no longer interested in
 20. As an authenticated user/customer, I want to receive email notifications for order confirmations, shipping updates, and special promotions.
@@ -193,10 +193,10 @@ Price ,rating, and alphabet
 
 - From site owner perspective:
 26. As a site owner, I want to provide secure payment options for customers, such as integrating with secure payment gateways (e.g. Stripe)
-27. As a site owner, I want to be able to add new products to the webshop, including details like product name, description, price, and images.
-28. As a site owner, I want to be able to delete existing products from the webshop that are no longer available or relevant.
-29. As a site owner, I want to be able to update product information, such as descriptions, details, prices, and images, to keep the webshop content accurate and up to date.
-30. As a site owner, I want to integrate a newsletter signup form  to capture user information and allow customers to subscribe for updates and promotions.
+27. As a site owner, I want to be able to add new products to the web-shop, including details like product name, description, price, and images.
+28. As a site owner, I want to be able to delete existing products from the web-shop that are no longer available or relevant.
+29. As a site owner, I want to be able to update product information, such as descriptions, details, prices, and images, to keep the web-shop content accurate and up to date.
+30. As a site owner, I want to integrate a newsletter sign-up form  to capture user information and allow customers to subscribe for updates and promotions.
 31. As a site owner, I want to ensure that error pages allow users to easily return to valid areas of the site without relying on browser controls.
 
 
@@ -232,7 +232,7 @@ Price ,rating, and alphabet ||
 - This e-commerce project is structured using Django framework
 and it is organized in app structure with apps clearly defining its purpose
 and apps are as follows:
-    - Home - App contains landing page about webshop with a
+    - Home - App contains landing page about web-shop with a
     call to action redirecting user to an all product pages, simple and intuitive top
     and bottom navigation , footer with social media links and newsletter section
 
@@ -639,10 +639,24 @@ as the best selling webshop products.
 
 <details><summary>See Filter section</summary>
 
-![Best sellers](docs/features/filter.png)
+![Filter section](docs/features/filter.png)
 
-![Best sellers](docs/features/filter_open.png)
+![Filter section](docs/features/filter_open.png)
 
 
 </details>
+
+2. Product card:
+
+- The Product Card feature enhances the user experience by displaying a visually appealing image of the product along with essential information such as price, knife attributes (name, price, blade length, category), and interactive button  add to wishlist and button add shopping cart(via AJAX). It provides users with a convenient way to browse, evaluate, and add products to their shopping experience.
+
+<details><summary>See Product card</summary>
+
+![Filter section](docs/features/filter.png)
+
+![Filter section](docs/features/filter_open.png)
+
+
+</details>
+
 

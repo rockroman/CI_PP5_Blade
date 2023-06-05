@@ -7,7 +7,7 @@
 {% block innercontent %}
 <h1 class="h2 fw-bold">{% trans "Sign Up" %}</h1>
 
-<p>{% blocktrans %}Already have an account? Then please <a href="{{ login_url }}" class="fw-bold">sign in</a>.{% endblocktrans %}</p>
+<p>{% blocktrans %}If you have an account,please <a href="{{ login_url }}" class="fw-bold">sign in</a>.{% endblocktrans %}</p>
 
 <form class="signup bg-gray" id="signup_form" method="post" action="{% url 'account_signup' %}">
   {% csrf_token %}
