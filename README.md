@@ -593,7 +593,7 @@ Using Agile methodologies in the three sprints of my solo e-commerce project, I 
 
 
 
-2. Search sidebar :
+2. Search sidebar feature section:
 
 - A user-friendly sidebar feature for quick and efficient product searches within the e-commerce store. Users can enter keywords or product names to find desired items or categories easily. Enhancing navigation and the overall shopping experience, the search sidebar simplifies the process of finding specific products.
 
@@ -606,7 +606,7 @@ Using Agile methodologies in the three sprints of my solo e-commerce project, I 
 
 </details>
 
-3. Best sellers section:
+3. Best sellers feature section:
 - Section dedicated of showing a 3 products from a store with Intention of presenting them
 as the best selling webshop products.
 
@@ -619,7 +619,7 @@ as the best selling webshop products.
 
 </details>
 
-4. Media marketing section:
+4. Media marketing feature section:
 -  Includes a newsletter Sign-up form and a link to the Instagram page. This section facilitates user engagement and promotes the e-commerce store through effective email marketing and social media presence.
 
 <details><summary>See Media marketing section</summary>
@@ -633,7 +633,7 @@ as the best selling webshop products.
 
 ### All products page
 
-1. Filter section:
+1. Filter feature section:
 
 - Allows users to refine product searches on the "All Products" page. Users can easily narrow down their search by selecting various criteria such as price,category, name. Enhancing usability, the filter section helps users quickly find the desired products within the webshop.
 
@@ -652,11 +652,81 @@ as the best selling webshop products.
 
 <details><summary>See Product card</summary>
 
-![Filter section](docs/features/filter.png)
+![Product card](docs/features/product_card.png)
 
-![Filter section](docs/features/filter_open.png)
+![Product card](docs/features/product_card_mob.png)
 
 
 </details>
 
+### Product detail page
 
+1. Product detail feature section:
+
+- The Product Detail Section feature offers comprehensive information about a product, catering to both regular users and site owners. Key elements of this feature include:
+
+    - product Image ,by clicking on it it opens image in separate tab
+
+    - Add to Wishlist Button: Users can easily add the product to their wishlist for future reference or purchase.
+
+    - Edit and Delete Product Buttons (for site owners): Site owners have exclusive access to buttons that allow them to edit or remove the product from the inventory.
+
+    - Product Description: A detailed description of the product is provided, offering users valuable insights and information about its features, specifications, or any other relevant details.
+
+    - Product Unique Number: Each product is assigned a unique identification number, allowing for easy tracking and identification.
+
+    - Handle Material and Blade Length Info: Users can find specific details about the product, such as the handle material and blade length, which are crucial in understanding its design and functionality.
+
+    The Product Detail Section feature enables users to make informed decisions and provides site owners with the necessary tools to manage and customize their product offerings.
+
+
+<details><summary>See Product detail feature section</summary>
+
+![Product detail](docs/features/product_det_admin.png)
+
+![Product detail](docs/features/product_detail.png)
+
+![Product detail](docs/features/product_det_mob.png)
+
+
+</details>
+
+2. Add to shopping cart feature section:
+
+-  The Add to Shopping Cart Section feature provides a seamless and user-friendly experience for adding products to the shopping cart. It includes the following components:
+The Quantity Input Buttons: Users can easily adjust the quantity of the product they wish to add to the shopping cart. The input buttons allow them to increase or decrease the quantity as desired.
+The Confirm Button: Once users have selected their desired quantity, they can click the confirm button to add the product to their shopping cart. This ensures a clear and straightforward process for users.
+The Shop Button: After adding the product to the shopping cart, users can click the shop button to return to the all products page. This button allows users to continue browsing and exploring other products available on the website.
+
+The Add to Shopping Cart Section feature streamlines the process of adding products to the shopping cart, giving users control over the quantity and simplifying the overall shopping experience. design and layout remains the same for all screen sizes
+
+<details><summary>See Add to shopping cart  feature section</summary>
+
+![Add to shopping cart ](docs/features/add_to_cart.png)
+
+</details>
+
+3. Product reviews feature section:
+
+- The Product Reviews Feature Section enables users to provide feedback and share their experiences with a particular product. It consists of the following components:
+
+    - Review Input Form: Users can input their reviews by filling out a form. This form  includes  only text field.
+
+    - Submit Review Button: After composing their review, users can click the submit button to submit their feedback. This action adds their review to the product's review section.
+
+    - Edit and Delete Review Buttons: For users who have previously submitted reviews, the feature provides edit and delete buttons. This allows reviewers to make changes or remove their review if necessary.
+
+    - Reviewer's Name and Time Elapsed: Each review is accompanied by the name of the reviewer, providing transparency and credibility. Additionally, the time elapsed since the review was created or last updated is displayed, indicating the freshness of the review.
+
+    The Product Reviews Feature Section encourages user engagement and empowers customers to contribute their thoughts and opinions. It facilitates an open and interactive environment where users can share, edit, and delete their reviews, allowing for an authentic and dynamic feedback system.
+
+<details><summary>Product reviews feature section</summary>
+
+![Product reviews](docs/features/review_blank.png)
+
+![Product reviews](docs/features/review_full.png)
+
+![Product reviews](docs/features/review_mob.png)
+
+
+</details>
