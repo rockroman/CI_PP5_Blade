@@ -804,6 +804,7 @@ Save delivery info part of form where customer can make his next shopping experi
 <details><summary>Checkout Order form feature section</summary>
 
 ![Checkout Order form](docs/features/form.png)
+
 ![Checkout Order form](docs/features/form_mob.png)
 
 </details>
@@ -826,6 +827,7 @@ The Payment Feature Section ensures a smooth and secure payment experience for c
 <details><summary> See payment feature section</summary>
 
 ![payment feature ](docs/features/payment.png)
+
 ![payment feature ](docs/features/payment_mob.png)
 
 </details>
@@ -845,6 +847,7 @@ The Checkout Order Summary Section ensures transparency and allows customers to 
 <details><summary>See Checkout order summary  feature section</summary>
 
 ![Checkout Order summary](docs/features/checkout_summary.png)
+
 ![Checkout Order summary](docs/features/checkout_sum_mob.png)
 
 </details>
