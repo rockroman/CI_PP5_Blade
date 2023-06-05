@@ -77,11 +77,6 @@ def store_checkout(request):
                             quantity=cart_item['qty'],
                         )
                         order_line_item.save()
-                        # if order_line_item.quantity < 10:
-                        #     order_line_item.save()
-                        # else:
-                        #     messages.error(request,
-                        #                    "Max. quantity can't exceed 10")
 
                 except Product.DoesNotExist:
                     messages.error(request, (

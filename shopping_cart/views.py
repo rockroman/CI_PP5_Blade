@@ -40,7 +40,8 @@ def add_to_cart(request):
     if 'cart' in request.session:
         if str(request.POST['id']) in request.session['cart']:
             cart_data = request.session['cart']
-            cart_data[str(request.POST['id'])]['qty'] += int(request.POST['qty'])
+            cart_data[str(
+                request.POST['id'])]['qty'] += int(request.POST['qty'])
             cart_data.update(cart_data)
             request.session['cart'] = cart_data
             my_message = f'{cart_item[str(request.POST["id"])]["name"]} added to cart'
@@ -70,7 +71,6 @@ def get_cart_total(request):
     unformated_total_price = 0
     if 'cart' in request.session:
         cart_item = request.session['cart']
-        # new code
         for key, item in cart_item.items():
             qty = item['qty']
             price = item['price']
@@ -96,19 +96,21 @@ def get_cart_total(request):
 
 def update_cart(request, product_id):
     """
-    update quantty of tems in a bag to desired value
+    update quantity of items in a bag to desired value
     """
     product = get_object_or_404(Product, pk=product_id)
-    quantity = int(request.POST.get('quantity'))
+    quantity = int(request.POST.get('quantity') or 0)
     cart_data = request.session.get('cart', {})
 
     if quantity > 0:
         cart_data[product_id]['qty'] = quantity
-        messages.success(request, f'Updated {product.name} quantity to {cart_data[product_id]["qty"]}')
+        messages.success(request,
+                         f'Updated {product.name} quantity to {cart_data[product_id]["qty"]}')
 
     else:
         cart_data.pop(product_id)
-        messages.success(request, f'Removed {product.name} from your Shopping cart')
+        messages.success(request,
+                         f'Removed {product.name} from your Shopping cart')
 
     request.session['cart'] = cart_data
 
@@ -117,13 +119,14 @@ def update_cart(request, product_id):
 
 def remove_from_cart(request, product_id):
     """
-    update quantty of tems in a bag to desired value
+    update quantity of items in a bag to desired value
     """
     product = get_object_or_404(Product, pk=product_id)
     cart_data = request.session.get('cart', {})
     try:
         cart_data.pop(product_id)
-        messages.success(request, f'Removed {product.name} from your Shopping cart')
+        messages.success(request,
+                         f'Removed {product.name} from your Shopping cart')
 
         request.session['cart'] = cart_data
 
