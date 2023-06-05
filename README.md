@@ -720,13 +720,167 @@ The Add to Shopping Cart Section feature streamlines the process of adding produ
 
     The Product Reviews Feature Section encourages user engagement and empowers customers to contribute their thoughts and opinions. It facilitates an open and interactive environment where users can share, edit, and delete their reviews, allowing for an authentic and dynamic feedback system.
 
-<details><summary>Product reviews feature section</summary>
+<details><summary>See Product reviews feature section</summary>
 
 ![Product reviews](docs/features/review_blank.png)
 
 ![Product reviews](docs/features/review_full.png)
 
 ![Product reviews](docs/features/review_mob.png)
+
+
+</details>
+
+### Shopping cart page
+
+1. Shopping cart table feature section:
+
+- The Shopping Cart Table Feature Section provides a clear and organized representation of the items added to the shopping cart. It includes the following components for each product:
+
+    - Small Product Image: A visually appealing small image of the product is displayed in the shopping cart table, allowing users to easily identify the item.
+
+    - Price: The price of the product is prominently shown in the table, providing users with a quick reference to the cost.
+
+    - Quantity Input Buttons: Input buttons are provided to allow users to adjust the quantity of the product within the shopping cart. This enables easy modification of the desired quantity.
+
+    - Edit and Delete Buttons: The feature includes edit and delete buttons for each product, giving users the ability to make changes or remove items from their shopping cart as needed.
+
+    The Shopping Cart Table Feature Section enhances the shopping experience by presenting a concise overview of the products in the cart. Users can effortlessly manage the quantity, edit product details, or remove items, ensuring a seamless and personalized shopping journey.
+
+details><summary> See Shopping cart table  feature section</summary>
+
+![Shopping cart table ](docs/features/cart_table.png)
+
+![Shopping cart table ](docs/features/cart_table_mob.png)
+
+</details>
+
+
+2. Summary table feature section:
+
+- The Summary Table Feature Section enables users to quickly review the selected products, their quantities, and prices before proceeding to checkout. It provides a clear and concise summary of the order, allowing users to make informed decisions and proceed to the secure checkout process with ease.
+It includes the following components:
+
+  - Product Name: The names of the products are displayed in the summary table, allowing users to easily identify the items they have selected.
+
+  - Product Quantity: The quantity of each product is listed, providing a clear representation of the quantity chosen by the user for each item.
+
+  - Product Price: The price of each product is displayed alongside the corresponding quantity, giving users a clear understanding of the individual costs.
+
+  - Total Price Calculation: The feature automatically calculates the total price by summing up the prices of all the selected products based on their quantities. This provides users with an instant overview of the overall cost.
+
+  - Secure Checkout Button: A button is provided in the summary table, allowing users to proceed to the secure checkout process. Clicking this button initiates the checkout process, where users can enter their payment and shipping details.
+
+
+<details><summary>See Summary table feature section</summary>
+
+![Summary table ](docs/features/summary.png)
+
+![Summary table](docs/features/summary_mob.png)
+
+</details>
+
+3. Back to shop button:
+
+- Simple feature helping users navigate back to all products page
+
+<details><summary>See Back to shop button</summary>
+
+![Back to shop button](docs/features/back_to_shop.png)
+
+</details>
+
+
+### Checkout page
+
+1.  Checkout Order form:
+
+- The checkout Order Form Feature Section facilitates the process of placing an order by providing a user-friendly form where customers can enter their relevant information. It includes the following components:
+
+Personal Information: The order form includes fields for customers to enter their personal details  name, shipping address, email address,county, postcode, country and contact number. This information is necessary for the accurate delivery of the order and communication with the customer.
+
+Save delivery info part of form where customer can make his next shopping experience even faster with checking the box to save form information to his profile for next purchase.
+
+<details><summary>Checkout Order form feature section</summary>
+
+![Checkout Order form](docs/features/form.png)
+![Checkout Order form](docs/features/form_mob.png)
+
+</details>
+
+
+2. payment feature section:
+
+- The Payment Feature Section enables customers to securely complete their purchase by providing a streamlined payment process. It includes the following components:
+
+    - Payment Field for Card Details: Customers can enter their payment information, typically including the card number, expiration date, CVV code, and cardholder name, into the designated payment field. This ensures the secure transmission of sensitive payment data.
+
+    - Confirm Payment Button: A confirm payment button is available for customers to authorize and finalize the payment transaction. Clicking this button initiates the payment process, securely charging the provided payment method.
+
+    - Button to Go Back and Adjust Shopping Cart: A button is provided to allow customers to easily navigate back to the shopping cart section. By clicking this button, customers can review and adjust the contents of their shopping cart before proceeding with the payment.
+
+    - Red font prompt with a total amount that customer card will be charged
+
+The Payment Feature Section ensures a smooth and secure payment experience for customers. By providing a dedicated field for card details and a confirm payment button, customers can swiftly and confidently complete their purchase. Additionally, the inclusion of a button to go back and adjust the shopping cart allows customers to make any necessary modifications before finalizing their payment.
+
+<details><summary> See payment feature section</summary>
+
+![payment feature ](docs/features/payment.png)
+![payment feature ](docs/features/payment_mob.png)
+
+</details>
+
+
+2. Checkout order summary section:
+
+- The Checkout Order Summary Section provides customers with a clear and concise overview of their order details before finalizing the checkout process. It includes the following components:
+
+    - Product Image: A visual representation of the product, typically an  image,  is displayed in the order summary section. This allows customers to visually identify the items they are about to purchase.
+    - Product Quantity: The quantity of each product selected by the customer is shown in the order summary. This provides a quick reference to the number of items included in the order.
+
+    - Total Order Price: The total price of the entire order is prominently displayed in the checkout order summary section. This includes the cumulative cost of all selected products, considering their respective quantities and any applicable taxes or discounts.
+
+The Checkout Order Summary Section ensures transparency and allows customers to review their order details at a glance. By providing product images, quantities, and the total order price, customers can verify their selection before proceeding with the checkout process.
+
+<details><summary> Checkout order summary  feature section</summary>
+
+![Checkout Order summary](docs/features/checkout_summary.png)
+![Checkout Order summary](docs/features/checkout_sum_mob.png)
+
+</details>
+
+
+### Checkout success page
+
+1. Order confirmation thank you form feature:
+
+- The Order Confirmation Thank You Form Feature provides customers with a confirmation of their order and essential information related to the transaction. It includes the following components:
+
+    - Order Number: A unique order number is displayed in the order confirmation form, serving as a reference for customers to track their order or address any inquiries related to it.
+
+    - Date: The date of the order placement is shown, providing customers with a timestamp of their purchase for their records.
+
+    - Delivery Information: The order confirmation form includes relevant details about the delivery, such as the  address , name town phone number
+
+    - Billing Information: The form displays the billing information associated with the order, which typically includes the billing address and payment method used. Customers can review this information to ensure it matches their expectations and records.
+
+The Order Confirmation Thank You Form Feature serves as a confirmation and acknowledgment of the customer's order. By providing the order number, date, delivery information, and billing details, customers can have peace of mind knowing that their order has been successfully placed and that the provided information is accurate.
+
+
+<details><summary> Order confirmation thank you form  feature section</summary>
+
+![Order confirmation thank you form ](docs/features/order_thank-you.png)
+![Order confirmation thank you form ](docs/features/order_thank_mob.png)
+
+</details>
+
+2. Buttons feature section:
+
+- section provides two buttons. back to hop and return to profile button , making navigation even easier.
+
+<details><summary>Buttons feature section</summary>
+
+![Buttons feature section](docs/features/button.png)
 
 
 </details>
