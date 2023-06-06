@@ -7,8 +7,6 @@
 {% include 'partials/bottom_nav.html' %}
 {% include 'partials/delete_modal_product.html' %}
 
-<!-- <h2 class="text-center">Product details page</h2> -->
-
 <div class="container px-4 px-lg-5 my-1">
     <div class="row gx-4 gx-lg-5 align-items-start">
         <div class="col-md-6">
@@ -123,83 +121,81 @@
                     </form>
 
                 </div>
+            </div>
 
         </div>
-    </div>
+
 </div>
 <!-- reviews -->
 <div class="container-fluid">
-    <div class="d-flex justify-content-center row">
-        <div class="d-flex flex-column col-md-8">
-            <div class=" text-center comment-top p-2 bg-light border-bottom px-4 mt-2">
-                <h3>
-                    Product Reviews
+        <div class="d-flex justify-content-center row">
+            <div class="d-flex flex-column col-md-8">
+                <div class=" text-center comment-top p-2 bg-light border-bottom px-4 mt-2">
+                    <h3>
+                        Product Reviews
 
-                </h3>
-            </div>
+                    </h3>
+                </div>
 
-            <div class="commented-section mt-2 ">
-                {% for review in reviews %}
-                {% include 'partials/delete_modal_review.html' %}
+                <div class="commented-section mt-2 ">
+                    {% for review in reviews %}
+                    {% include 'partials/delete_modal_review.html' %}
 
-                    <div class="user-comments mt-2 pb-0 border">
+                        <div class="user-comments mt-2 pb-0 border">
+                            <div class="d-flex flex-column align-items-start commented-user mt-2 mb-2" >
+                                <div class="d-flex gap-2 ">
+                                    <h5 class="mr-2 mb-0 ml-1 fw-bold text-capitalize">{{ review.author }} </h5>
+                                    <small class="timestamp text-muted text-decoration-underline bg-white">{{ review.time_posted|timesince }} ago</small>
+                                </div>
+                                ⭐️⭐️⭐️⭐️⭐️
 
-                        <div class="d-flex flex-column align-items-start commented-user mt-2 mb-2" >
-                            <div class="d-flex gap-2 ">
-                                <h5 class="mr-2 mb-0 ml-1 fw-bold text-capitalize">{{ review.author }} </h5>
-                                <small class="timestamp text-muted text-decoration-underline bg-white">{{ review.time_posted|timesince }} ago</small>
                             </div>
-                            ⭐️⭐️⭐️⭐️⭐️
+                            <div class="comment-text-sm review_content py-2" data-id="{{ review.id }}">
+                                <p class="my-2">{{ review.content }}</p>
 
-                        </div>
-                        <div class="comment-text-sm review_content py-2" data-id="{{ review.id }}">
-                            <p class="my-2">{{ review.content }}</p>
-
-                            <div class="d-flex justify-content-end">
-                                {% if request.user == review.author %}
-                                <button class="edit_review btn mt-3  text-primary shadow-none" aria-label="update-review-button"  >
-                                    <i class="bi bi-pencil-square" style="font-size:1.2rem; -webkit-text-stroke-width: 1px;"></i>
-                                </button>
-                                <button class="btn  mt-3 text-danger shadow-none" aria-label="delete-product-button" data-bs-toggle="modal" data-bs-target="#modal_{{ review.id }}">
-                                    <i class="bi bi-trash" style="font-size:1.2rem; -webkit-text-stroke-width: 1px;"></i>
-                                </button>
-                                {% else %}
-                                {% endif %}
+                                <div class="d-flex justify-content-end">
+                                    {% if request.user == review.author %}
+                                    <button class="edit_review btn mt-3  text-primary shadow-none" aria-label="update-review-button"  >
+                                        <i class="bi bi-pencil-square" style="font-size:1.2rem; -webkit-text-stroke-width: 1px;"></i>
+                                    </button>
+                                    <button class="btn  mt-3 text-danger shadow-none" aria-label="delete-product-button" data-bs-toggle="modal" data-bs-target="#modal_{{ review.id }}">
+                                        <i class="bi bi-trash" style="font-size:1.2rem; -webkit-text-stroke-width: 1px;"></i>
+                                    </button>
+                                    {% else %}
+                                    {% endif %}
+                                </div>
                             </div>
                         </div>
-                    </div>
                     {% endfor %}
                 </div>
 
-
-            {% if user.is_authenticated %}
-
-            <div class="coment-bottom bg-white p-2 pe-4 ps-0">
-                    <div class=" add-comment-section mt-4 mb-4">
-                        <form  class="review-form w-50" data-create-review-url="{% url 'reviews:create_review' %}" method="POST">
-                            {% csrf_token %}
-                            <!-- ajax cal hidden inputs -->
-                            <input type="hidden" id="csrf" value="{{ csrf_token }}">
-                            <input type="hidden" id="edit-url" value="{% url 'reviews:update_review' %}">
-                            <input type="hidden" name="review-id" id="review-id" value="{{ review.id }}">
-                            <!-- <input type="hidden" id="current-time" value="{{ csrf_token }}"> -->
-                            <input type="hidden" name="current_time" value="{{ review.time_posted }}">
-                            <input type="hidden" class="product-id" value="{{ product.id}}">
-                            <input type="hidden" class="default-product-id" value="{{ product.id}}">
-                            <input type="hidden" class="user" value="{{ request.user.username}}">
-                            {{ form|crispy }}
-                            <button class="btn btn-primary  mt-0 add_review" type="submit">Add review</button>
-                        </form>
-                    </div>
-                <input type="hidden" id="delete-url" value="{% url 'reviews:delete_review' %}">
+                {% if user.is_authenticated %}
+                <div class="coment-bottom bg-white p-2 pe-4 ps-0">
+                        <div class=" add-comment-section mt-4 mb-4">
+                            <form  class="review-form w-50" data-create-review-url="{% url 'reviews:create_review' %}" method="POST">
+                                {% csrf_token %}
+                                <!-- ajax cal hidden inputs -->
+                                <input type="hidden" id="csrf" value="{{ csrf_token }}">
+                                <input type="hidden" id="edit-url" value="{% url 'reviews:update_review' %}">
+                                <input type="hidden" name="review-id" id="review-id" value="{{ review.id }}">
+                                <!-- <input type="hidden" id="current-time" value="{{ csrf_token }}"> -->
+                                <input type="hidden" name="current_time" value="{{ review.time_posted }}">
+                                <input type="hidden" class="product-id" value="{{ product.id}}">
+                                <input type="hidden" class="default-product-id" value="{{ product.id}}">
+                                <input type="hidden" class="user" value="{{ request.user.username}}">
+                                {{ form|crispy }}
+                                <button class="btn btn-primary  mt-0 add_review" type="submit">Add review</button>
+                            </form>
+                        </div>
+                        <input type="hidden" id="delete-url" value="{% url 'reviews:delete_review' %}">
+                </div>
+                {% else %}
+                <div class="my-4 text-center fw-bold">
+                    <a href="{% url 'account_login' %}" class="text-primary">To add a review you need to log in</a>
+                </div>
+                {% endif %}
             </div>
         </div>
-        {% else %}
-        <div class="my-4 text-center fw-bold">
-             <a href="{% url 'account_login' %}" class="text-primary">To add a review you need to log in</a>
-        </div>
-        {% endif %}
-    </div>
 </div>
 
 {% include 'partials/footer.html' %}

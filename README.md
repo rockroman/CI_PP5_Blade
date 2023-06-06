@@ -95,8 +95,7 @@ Enjoy the Blade experience.
 - Sign up for a newsletter.
 
 ## Business Model
-
-
+***
 
 Blade project was developed out of want to help and make small business owner custom knives workshop and its craft
 widely available to broader range of audience.By appreciating the skill, dedication, and exceptional quality of these custom pieces of art.Blade curated collection of high-quality custom folding knives showcases the craftsmanship and connects passionate collectors with talented artisans. Discover and celebrate the art of custom knives with Blade, as we make these remarkable pieces accessible to a broader community of knife enthusiasts.
@@ -146,6 +145,7 @@ widely available to broader range of audience.By appreciating the skill, dedicat
 
 ##### Back to [top](#table-of-contents)
 ## User Experience
+***
 
 ### User Requirements and Expectations
 
@@ -164,66 +164,95 @@ widely available to broader range of audience.By appreciating the skill, dedicat
 
 - From User/customer perspective
 
-1. As an unauthenticated user/customer, I would like website navigation to be fast and easy
-2. As an unauthenticated user/customer, I would like the ability to browse through all the products available on the site.
-3. As an unauthenticated user/customer, I would like to search the website to see what kind of product are offered to purchase
-4. As an unauthenticated user/customer, I would like to see a details of a products on a website such as(description, price)
-5. As an unauthenticated user/customer, I would like functionality to refine my search of products on a website by
+[#0](https://github.com/rockroman/CI_PP5_Blade/issues/3) As an unauthenticated user/customer I would Like be able to view a website homepage that provides an overview of the site's offerings
+
+[#1](https://github.com/rockroman/CI_PP5_Blade/issues/4) As an unauthenticated user/customer, I would like website navigation to be fast and easy
+
+[#2](https://github.com/rockroman/CI_PP5_Blade/issues/6) As an unauthenticated user/customer, I would like the ability to browse through all the products available on the site.
+
+[#3](https://github.com/rockroman/CI_PP5_Blade/issues/4) As an unauthenticated user/customer, I would like to search the website to see what kind of product are offered to purchase
+
+[#4](https://github.com/rockroman/CI_PP5_Blade/issues/7) As an unauthenticated user/customer, I would like to see a details of a products on a website such as(description, price)
+
+[#5](https://github.com/rockroman/CI_PP5_Blade/issues/8) As an unauthenticated user/customer, I would like functionality to refine my search of products on a website by
 Price ,rating, and alphabet
-6. As an unauthenticated user/customer, I would like functionality to select product and add it to my shopping basket
-7. As an unauthenticated user/customer, I would like functionality to select multiple product and add it to my shopping basket
-8. As an unauthenticated user/customer, I would like functionality to increase or decrease quantity of products in my shopping basket
-9. As an unauthenticated user/customer, I would like functionality to register for an account  to a website
-10. As an authenticated user/customer, I would like functionality to save and  edit my account information
-11. As an authenticated user/customer, I would like functionality to see relevant info and my order history on my account page
-12. As an authenticated user/customer, I would like functionality to delete an account(profile) if I find no use in using the website anymore
-13. As an authenticated user/customer I would like functionality to add my details(shipping and billing) to a secure checkout form so that they could be saved along with my order to easier keep track of my past purchases
-14. As user/customer, I would like functionality to put in my card details so that I can make a purchase
-15. As an unauthenticated user/customer, I would like to be able to view and read reviews of products to make informed purchasing decisions.
-16. As an authenticated user/customer I would like functionality to leave a product review on a product detail   page so that other customers deciding on purchase of the item will have an insight from somebody who already bought the product
-17. As a authenticated user/customer I would Like functionality to edit or delete my product review so that information given in review are up to date and can help other users /customers
-18. As an authenticated user/customer, I want to have the option to add products to my wishlist for future reference and easy access.
-19. As an authenticated user/customer, I want to be able to remove items from my wishlist, so that I can manage my saved products effectively and remove those that I am no longer interested in
-20. As an authenticated user/customer, I want to receive email notifications for order confirmations, shipping updates, and special promotions.
-21. As an unauthenticated user/customer, I would like to be able to view and read reviews of products to make informed purchasing decisions.
-22. As an authenticated user/customer, I would like to have the option to contact team or the site owner for any inquiries or assistance related to products or orders.
-23. As an unauthenticated user/customer, I want to see links to the business's social media profiles on the website to stay connected and follow updates on different platforms.
-24. As an unauthenticated user/customer, I want to have the option to contact the business through social media channels (such as Facebook, Instagram, or Twitter) for inquiries or support.
-25. As an unauthenticated user/customer, if I encounter a page not found error, I want to be redirected to a relevant page or provided with suggestions to navigate back to valid areas of the site.
+
+[#6](https://github.com/rockroman/CI_PP5_Blade/issues/10) As an unauthenticated user/customer, I would like functionality to select product and add it to my shopping basket
+
+[#7](https://github.com/rockroman/CI_PP5_Blade/issues/11) As an unauthenticated user/customer, I would like functionality to select multiple product and add it to my shopping basket
+
+[#8](https://github.com/rockroman/CI_PP5_Blade/issues/12) As an unauthenticated user/customer, I would like functionality to increase or decrease quantity of products in my shopping basket
+
+[#9](https://github.com/rockroman/CI_PP5_Blade/issues/16) As an unauthenticated user/customer, I would like functionality to register for an account  to a website
+
+[#10](https://github.com/rockroman/CI_PP5_Blade/issues/41) As an authenticated user/customer, I would like functionality to edit and save changes of my account information
+
+[#11](https://github.com/rockroman/CI_PP5_Blade/issues/42) As an authenticated user/customer, I would like functionality to see relevant info and my order history on my profile/account page
+
+[#12](https://github.com/rockroman/CI_PP5_Blade/issues/24) As an authenticated user/customer, I would like functionality to delete an account(profile) if I find no use in using the website anymore
+
+[#13](https://github.com/rockroman/CI_PP5_Blade/issues/22) As an authenticated user/customer I would like functionality to add my details(shipping and billing) to a secure checkout form so that they could be saved along with my order to easier keep track of my past purchases
+
+[#14](https://github.com/rockroman/CI_PP5_Blade/issues/23) As user/customer, I would like functionality to put in my card details so that I can make a purchase
+
+[#15](https://github.com/rockroman/CI_PP5_Blade/issues/31) As an unauthenticated user/customer, I would like to be able to view and read reviews of products to make informed purchasing decisions.
+
+[#16](https://github.com/rockroman/CI_PP5_Blade/issues/25) As an authenticated user/customer I would like functionality to leave a product review on a product detail   page so that other customers deciding on purchase of the item will have an insight from somebody who already bought the product
+
+[#17](https://github.com/rockroman/CI_PP5_Blade/issues/26) As a authenticated user/customer I would Like functionality to edit or delete my product review so that information given in review are up to date and can help other users /customers
+
+[#18](https://github.com/rockroman/CI_PP5_Blade/issues/28) As an authenticated user/customer, I want to have the option to add products to my wishlist for future reference and easy access.
+
+[#19](https://github.com/rockroman/CI_PP5_Blade/issues/29) As an authenticated user/customer, I want to be able to remove items from my wishlist, so that I can manage my saved products effectively and remove those that I am no longer interested in
+
+[#20](https://github.com/rockroman/CI_PP5_Blade/issues/30) As an authenticated user/customer, I want to receive email notifications for order confirmations, shipping updates, and special promotions.
+
+
+[#21](https://github.com/rockroman/CI_PP5_Blade/issues/32) As an authenticated user/customer, I would like to have the option to contact team or the site owner for any inquiries or assistance related to products or orders.
+
+[#22](https://github.com/rockroman/CI_PP5_Blade/issues/33) As an unauthenticated user/customer, I want to see links to the business's social media profiles on the website to stay connected and follow updates on different platforms.
+
+[#23](https://github.com/rockroman/CI_PP5_Blade/issues/34) As an unauthenticated user/customer, I want to have the option to contact the business through social media channels (such as Facebook, Instagram, or Twitter) for inquiries or support.
+
+[#24](https://github.com/rockroman/CI_PP5_Blade/issues/43) As an unauthenticated user/customer, if I encounter a page not found error, I want to be redirected to a relevant page or provided with suggestions to navigate back to valid areas of the site.
 
 - From site owner perspective:
-26. As a site owner, I want to provide secure payment options for customers, such as integrating with secure payment gateways (e.g. Stripe)
-27. As a site owner, I want to be able to add new products to the web-shop, including details like product name, description, price, and images.
-28. As a site owner, I want to be able to delete existing products from the web-shop that are no longer available or relevant.
-29. As a site owner, I want to be able to update product information, such as descriptions, details, prices, and images, to keep the web-shop content accurate and up to date.
-30. As a site owner, I want to integrate a newsletter sign-up form  to capture user information and allow customers to subscribe for updates and promotions.
-31. As a site owner, I want to ensure that error pages allow users to easily return to valid areas of the site without relying on browser controls.
 
+[#25](https://github.com/rockroman/CI_PP5_Blade/issues/35) As a site owner, I want to provide secure payment options for customers, such as integrating with secure payment gateways (e.g. Stripe)
 
-| id  |  content | Github issue Numb
-| ------ | ------ | ------ |
-|  [#0](https://github.com/rockroman/CI_PP5_Blade/issues/3) | As an unauthenticated user/customer I would Like be able to view a website homepage that provides an overview of the site's offerings|  |
-|  [#1](https://github.com/rockroman/CI_PP5_Blade/issues/4) | As an unauthenticated user/customer I would Like website navigation to be easy and intuitive so it allows me to find products and information I'm looking for|  |
-|  [#2](https://github.com/JoGorska/bonsai-shop/issues/2) | As an unauthenticated user/customer, I would like to be able to see a list of featured products on the homepage, which will highlight some of the most popular or interesting items available for purchase.|  |
-|  [#3](https://github.com/JoGorska/bonsai-shop/issues/3) | As an unauthenticated user/customer, I would like to search the website to see what kind of product are offered to purchase|  |
-|  [#4](https://github.com/JoGorska/bonsai-shop/issues/4) | As an unauthenticated user/customer, I would like to see a details of a products on a website such as(description, price)|  |
-|  [#5](https://github.com/JoGorska/bonsai-shop/issues/6) | As an unauthenticated user/customer, I would like functionality to refine my search of products on a website by
-Price ,rating, and alphabet ||
-|  [#6](https://github.com/JoGorska/bonsai-shop/issues/7) | As an unauthenticated user/customer, I would like functionality to select product and add it to my shopping basket| trol |
-|  [#7](https://github.com/JoGorska/bonsai-shop/issues/8) | As an unauthenticated user/customer, I would like functionality to select multiple product and add it to my shopping basket |  trol|
-|  [#8](https://github.com/JoGorska/bonsai-shop/issues/9) |  As an unauthenticated user/customer, I would like functionality to increase or decrease quantity of products in my shopping basket| |
-|  [#9](https://github.com/JoGorska/bonsai-shop/issues/10) | As an unauthenticated user/customer, I would like functionality to register for an account  to a website |  |
-|  [#10](https://github.com/JoGorska/bonsai-shop/issues/11) | As an authenticated user/customer, I would like functionality to save and  edit my account information |  |
-|  [#11](https://github.com/JoGorska/bonsai-shop/issues/12) | As an authenticated user/customer, I would like functionality to see relevant info and my order history on my account page |  |
-|  [#12](https://github.com/JoGorska/bonsai-shop/issues/12) | As user/customer, I would like functionality to put in my card details so that I can make a purchase |  |
+[#26](https://github.com/rockroman/CI_PP5_Blade/issues/36) As a site owner, I want to be able to add new products to the web-shop, including details like product name, description, price, and images.
 
+[#27](https://github.com/rockroman/CI_PP5_Blade/issues/37) As a site owner, I want to be able to delete existing products from the web-shop that are no longer available or relevant.
+
+[#28](https://github.com/rockroman/CI_PP5_Blade/issues/38) As a site owner, I want to be able to update product information, such as descriptions, details, prices, and images, to keep the web-shop content accurate and up to date.
+
+[#29](https://github.com/rockroman/CI_PP5_Blade/issues/39) As a site owner, I want to integrate a newsletter sign-up form  to capture user information and allow customers to subscribe for updates and promotions.
+
+[#30](https://github.com/rockroman/CI_PP5_Blade/issues/40) As a site owner, I want to ensure that error pages allow users to easily return to valid areas of the site without relying on browser controls.
 
 
 ## Design
 ***
-### Colours
+### Colors
+
+- In this project a carefully curated color palette has been implemented to create a visually appealing and user-friendly experience. The use of dark colors in the navigation and footer sections adds sophistication and draws attention to important elements, while a light background enhances readability and creates a pleasant browsing experience. The contrast between dark and light elements strikes a perfect balance between aesthetics and usability, showcasing the products effectively and providing an enjoyable browsing experience.
+
+<details><summary>See color palette</summary>
+<img src="docs/col_palette.png">
+</details>
+
+
 
 ### Fonts
+
+- For this Project "Rubik" font was used
+    - The use of Rubik fonts brings numerous benefits. The font family offers a range of weights that allow for clear and legible text, enhancing readability throughout the website. The modern and versatile design of Rubik fonts adds a touch of professionalism and sophistication to the overall aesthetic. With its balanced proportions and clean lines, Rubik fonts create a harmonious visual experience, ensuring that the content is easily digestible and
+    visually appealing to users
+
+<details><summary>See Rubik font</summary>
+<img src="docs/rubik1.png">
+<img src="docs/rubik2.png">
+</details>
 
 ## Project Structure
 
@@ -274,7 +303,7 @@ and apps are as follows:
 
 #### User model
 
-- User model as part of the Django allauth library contains basic information about authenticated user and contains folowing fields:
+- User model as part of the Django allauth library contains basic information about authenticated user and contains following fields:
 username, password,email
 
 
@@ -450,12 +479,13 @@ fields:
 </details>
 
 ### Moscow prioritization
-    - This prioritization technique was used to to efficiently sort and handle project requirements based on their  significance and immediate importance.
-    While my implementation may not have been flawless, it proved valuable in ensuring that the most critical requirements received prompt attention and were addressed as a priority
 
-    <details><summary> Moscow </summary>
+- This prioritization technique was used to to efficiently sort and handle project requirements based on their  significance and immediate importance.
+While my implementation may not have been flawless, it proved valuable in ensuring that the most critical requirements received prompt attention and were addressed as a priority
+
+<details><summary> Moscow </summary>
     <img src="docs/agile/moscow.png">
-    </details>
+</details>
 
 ### Iterations(Sprints)
 
@@ -465,6 +495,7 @@ fields:
 
 
 - In my first sprint, I focused on the initial epic of setting up the development environment and adding a basic skeleton structure to the home and shop templates. This allowed me to establish a solid foundation for the project and lay the groundwork for future development tasks.
+
 [Link to 1st Sprint Kanban board.](https://github.com/users/rockroman/projects/6)
 
 
@@ -1001,6 +1032,26 @@ The Order Confirmation Thank You Form Feature serves as a confirmation and ackno
     1. Gift cards (physical gif-cards in various amounts with web-shop logo)
     2. Add AI powered chatbot function to enhance customer experience and support
     3. Add more types of payment options(paypal, gift-cards,crypto currencies)
+
+
+## Validation
+***
+
+### CSS
+- [Jigsaw W3 Validator](https://jigsaw.w3.org/css-validator/)was used  to validate the css in the project
+    - web app passed validator with no errors.
+    <details><summary>base.css</summary>
+    <img src="docs/validation/css_validator/base_css.png" width="800">
+    </details>
+       <details><summary>about.css</summary>
+    <img src="docs/validation/css_validator/about_css.png" width="800">
+    </details>
+       <details><summary>checkout.css</summary>
+    <img src="docs/validation/css_validator/checkout_css.png" width="800">
+    </details>
+       <details><summary>profile.css</summary>
+    <img src="docs/validation/css_validator/profile_css.png" width="800">
+    </details>
 
 
 

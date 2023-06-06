@@ -1,6 +1,14 @@
+/* Colors pallet */
+:root {
+    --white: #fff;
+    --black: #000000;
+    --dark:#332D2D;
+    --hover-active:#007bff;
+  }
+
 .accordion-button:not(.collapsed) {
-    color: #000000;
-    background-color: #ffffff;
+    color: var(--black);
+    background-color: var(--white);
     border: none;
 }
 

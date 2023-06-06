@@ -1,62 +1,60 @@
+/* Colors pallet */
+:root {
+  --white: #fff;
+  --black: #000000;
+  --dark:#332D2D;
+  --hover-active:#007bff;
+}
+
 .top-section {
-    background-color: black;
-    background-image: url('/media/about_hero_big.jpeg');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+    background: url('/media/about_hero_big.jpeg') center/cover no-repeat;
     height: 50vh;
-  }
+}
 
-  .about-us-section {
-    background-color: white;
-    /* border: 1px solid #ccc; */
-    padding: 20px;
-  }
+.about-us-section {
+  background-color:var(--white);
+  padding: 20px;
+}
 
-  .image-column {
-    background-color: white;
-
-    /* border: 1px solid #ccc; */
-    padding: 20px;
-    position: relative;
-  }
-
-  /* .overlap-container { */
-    /* height: 400px; */
-
-
-  /* } */
-
-  /* .overlap-image1 {
-
-    margin-top: 20px;
-  }
-
-  .overlap-image2 {
-    margin-left: -25px;
-
-  } */
+.image-column {
+  background-color:var(--white);
+  padding: 20px;
+  position: relative;
+}
 
 .orange-row {
-    background-color: orange;
+  background-color: orange;
 }
 
 .contact-row {
-    background-color: white;
+  background-color: var(--white);
 }
 
 .contact-img {
-    /* background-image: url('/media/carousel2.jpeg'); */
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    background-color: white;
+    background-color: var(--white);
     border: 1px solid #ccc;
     padding: 20px;
-
 }
+
 .about-img{
   max-height: 750px;
   max-width: 650px;
+}
 
+/* media queries */
+@media (max-width: 767px){
+  .top-section{
+    background: url('/media/about_hero_small.jpeg') center/cover no-repeat;
+    height: 50vh;
+  }
+}
+
+@media(max-width: 576px){
+  .top-section{
+    background: url('/media/about_hero_small.jpeg') center/cover no-repeat;
+    height: 50vh;
+  }
 }

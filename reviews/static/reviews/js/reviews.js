@@ -10,36 +10,28 @@ function appendReview(res){
     $('.commented-section').append(`
 
     <div class="modal fade review" tabindex="-1" id="modal_${res.id}">
-    <div class="modal-dialog custom-modal-dialog ">
-      <div class="modal-content">
-        <div class="modal-header p-2">
-          <p class="h4 modal-title fw-bold">You are Deleting</p>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        <div class="modal-dialog custom-modal-dialog ">
+            <div class="modal-content">
+                <div class="modal-header p-2">
+                    <p class="h4 modal-title fw-bold">You are Deleting</p>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p class="del-review">Your review!!Are you sure?</p>
+                </div>
+                <div class="modal-footer">
+                    <form action="" method="POST" class="mx-2 delete-form">
+                        <input type="hidden" name="csrfmiddlewaretoken" value="${csrfToken}">
+                        <input type="hidden" name="review_id" value="${res.id}">
+                        <input type="hidden" name="delete-ur" value="{% url 'reviews:delete_review' %}">
+                        <button class="btn btn-danger" type="submit">delete</button>
+                    </form>
+                    <button class="btn btn-primary" data-bs-dismiss="modal">Go back</button>
+                </div>
+            </div>
         </div>
-        <div class="modal-body">
-          <p class="del-review">Your review!!Are you sure?</p>
-        </div>
-        <div class="modal-footer">
-            <form action="" method="POST" class="mx-2 delete-form">
-
-                <input type="hidden" name="csrfmiddlewaretoken" value="${csrfToken}">
-                <input type="hidden" name="review_id" value="${res.id}">
-                <input type="hidden" name="delete-ur" value="{% url 'reviews:delete_review' %}">
-                <button class="btn btn-danger" type="submit">delete</button>
-            </form>
-          <button class="btn btn-primary" data-bs-dismiss="modal">Go back</button>
-
-
-        </div>
-      </div>
     </div>
-</div>
-
-
-        <div class="user-comments mt-2 pb-0 border">
-
-
-
+    <div class="user-comments mt-2 pb-0 border">
         <div class="d-flex flex-column align-items-start commented-user mt-2 mb-2" >
             <div class="d-flex gap-2 ">
                 <h5 class="mr-2 mb-0 ml-1 fw-bold text-capitalize">${ res.author } </h5>
@@ -48,13 +40,12 @@ function appendReview(res){
             ⭐️⭐️⭐️⭐️⭐️
 
         </div>
-            <div class="comment-text-sm review_content" data-id="${ res.id }" >
+        <div class="comment-text-sm review_content" data-id="${ res.id }" >
             <p class="my-2">${ res.content }</p>
             <div class="d-flex justify-content-end">
                 <button class="edit_review btn mt-3 text-primary shadow-none" aria-label="update-review-button"  >
                 <i class="bi bi-pencil-square" style="font-size:1.2rem; -webkit-text-stroke-width: 1px;"></i>
                 </button>
-
                 <button class="btn  mt-3 text-danger shadow-none" aria-label="delete-product-button" data-bs-toggle="modal" data-bs-target="#modal_${ res.id }">
                 <i class="bi bi-trash" style="font-size:1.2rem; -webkit-text-stroke-width: 1px;"></i>
                 </button>

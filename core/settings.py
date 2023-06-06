@@ -32,11 +32,11 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 # else:
 #     DEBUG = True
 
-DEBUG = False
-# DEBUG = True
+# DEBUG = False
+DEBUG = True
 
 
-ALLOWED_HOSTS = ['pp5-blade.herokuapp.com', '127.0.0.1']
+ALLOWED_HOSTS = ['pp5-blade.herokuapp.com', '127.0.0.1', 'localhost']
 
 # Application definition
 
