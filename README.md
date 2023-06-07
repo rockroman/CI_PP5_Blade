@@ -576,6 +576,8 @@ Using Agile methodologies in the three sprints of my solo e-commerce project, I 
 ### Nav-bars and Logo
 - The navbar, an integral component of the e-commerce store website, is implemented consistently throughout the entire project. It serves as a navigational element that allows users to easily access different sections and pages of the website. The top and bottom navbar remains present and accessible on every page, ensuring a seamless browsing experience for users as they navigate through the various sections and features of the e-commerce store.And giving users accurate info about state of the shopping cart(number of items in and total price of all items in a shopping cart), and number of products saved in a wishlist.
 - User Story covered with this feature:
+[#1](https://github.com/rockroman/CI_PP5_Blade/issues/4)
+[#9](https://github.com/rockroman/CI_PP5_Blade/issues/16)
 
 <details><summary>See Nav-bars and Logo</summary>
 
@@ -595,11 +597,23 @@ Using Agile methodologies in the three sprints of my solo e-commerce project, I 
 ### Footer
 - The footer feature is included in most of the project templates, except for the user authentication templates. This decision was made because including the footer in those templates could disrupt the flow and divert the user's attention from the specific purpose of the user authentication process.
 - User Story covered with this feature:
+[#1](https://github.com/rockroman/CI_PP5_Blade/issues/4)
 
 <details><summary>See Footer</summary>
 
 ![Footer](docs/features/footer.png)
 ![Footer](docs/features/footer_mob.png)
+
+
+</details>
+
+### Error page(s)
+ - this feature prioritize clear error messages, relevant navigation links, and helpful suggestions to guide users. This approach ensures a seamless user experience and maintains a professional image for the project.
+
+<details><summary>See Error page</summary>
+
+![Error page](docs/features/footer.png)
+
 
 
 </details>
@@ -613,6 +627,7 @@ Using Agile methodologies in the three sprints of my solo e-commerce project, I 
 
 - A captivating slideshow on the landing page that serves as a call to action, enticing users to explore the product offerings. It provides visually appealing images and compelling slogan, leading users to click and navigate to all products page for more details and to make purchases.
 - User Story covered with this feature:
+[#0](https://github.com/rockroman/CI_PP5_Blade/issues/3)
 
 <details><summary>See Landing Page Carousel </summary>
 
@@ -629,6 +644,7 @@ Using Agile methodologies in the three sprints of my solo e-commerce project, I 
 
 - A user-friendly sidebar feature for quick and efficient product searches within the e-commerce store. Users can enter keywords or product names to find desired items or categories easily. Enhancing navigation and the overall shopping experience, the search sidebar simplifies the process of finding specific products.
 - User Story covered with this feature:
+[#3](https://github.com/rockroman/CI_PP5_Blade/issues/4)
 
 
 <details><summary>See Search sidebar </summary>
@@ -644,6 +660,7 @@ Using Agile methodologies in the three sprints of my solo e-commerce project, I 
 - Section dedicated of showing a 3 products from a store with Intention of presenting them
 as the best selling web-shop products.
 - User Story covered with this feature:
+[#2](https://github.com/rockroman/CI_PP5_Blade/issues/6)
 
 <details><summary>See Best sellers section</summary>
 
@@ -657,6 +674,8 @@ as the best selling web-shop products.
 4. Media marketing feature section:
 -  Includes a newsletter Sign-up form and a link to the Instagram page. This section facilitates user engagement and promotes the e-commerce store through effective email marketing and social media presence.
 - User Story covered with this feature:
+[#29](https://github.com/rockroman/CI_PP5_Blade/issues/39)
+[#22](https://github.com/rockroman/CI_PP5_Blade/issues/33)
 
 <details><summary>See Media marketing section</summary>
 
@@ -673,6 +692,8 @@ as the best selling web-shop products.
 
 - Allows users to refine product searches on the "All Products" page. Users can easily narrow down their search by selecting various criteria such as price,category, name. Enhancing usability, the filter section helps users quickly find the desired products within the web-shop.
 - User Story covered with this feature:
+[#2](https://github.com/rockroman/CI_PP5_Blade/issues/6)
+[#5](https://github.com/rockroman/CI_PP5_Blade/issues/8)
 
 <details><summary>See Filter section</summary>
 
@@ -687,6 +708,8 @@ as the best selling web-shop products.
 
 - The Product Card feature enhances the user experience by displaying a visually appealing image of the product along with essential information such as price, knife attributes (name, price, blade length, category), and interactive button  add to wishlist and button add shopping cart(via AJAX). It provides users with a convenient way to browse, evaluate, and add products to their shopping experience.
 - User Story covered with this feature:
+[#2](https://github.com/rockroman/CI_PP5_Blade/issues/6)
+[#7](https://github.com/rockroman/CI_PP5_Blade/issues/11)
 
 <details><summary>See Product card</summary>
 
@@ -717,6 +740,7 @@ as the best selling web-shop products.
 
     The Product Detail Section feature enables users to make informed decisions and provides site owners with the necessary tools to manage and customize their product offerings.
     - User Story covered with this feature:
+    [#4](https://github.com/rockroman/CI_PP5_Blade/issues/7)
 
 
 <details><summary>See Product detail feature section</summary>
@@ -739,6 +763,9 @@ The Shop Button: After adding the product to the shopping cart, users can click 
 
 The Add to Shopping Cart Section feature streamlines the process of adding products to the shopping cart, giving users control over the quantity and simplifying the overall shopping experience. design and layout remains the same for all screen sizes
 - User Story covered with this feature:
+[#6](https://github.com/rockroman/CI_PP5_Blade/issues/10)
+[#8](https://github.com/rockroman/CI_PP5_Blade/issues/12)
+
 
 <details><summary>See Add to shopping cart  feature section</summary>
 
@@ -760,6 +787,9 @@ The Add to Shopping Cart Section feature streamlines the process of adding produ
 
     The Product Reviews Feature Section encourages user engagement and empowers customers to contribute their thoughts and opinions. It facilitates an open and interactive environment where users can share, edit, and delete their reviews, allowing for an authentic and dynamic feedback system.
     - User Story covered with this feature:
+    [#15](https://github.com/rockroman/CI_PP5_Blade/issues/31)
+    [#16](https://github.com/rockroman/CI_PP5_Blade/issues/25)
+    [#17](https://github.com/rockroman/CI_PP5_Blade/issues/26)
 
 <details><summary>See Product reviews feature section</summary>
 
@@ -788,8 +818,11 @@ The Add to Shopping Cart Section feature streamlines the process of adding produ
 
     The Shopping Cart Table Feature Section enhances the shopping experience by presenting a concise overview of the products in the cart. Users can effortlessly manage the quantity, edit product details, or remove items, ensuring a seamless and personalized shopping journey.
     - User Story covered with this feature:
+    [#6](https://github.com/rockroman/CI_PP5_Blade/issues/10)
+    [#8](https://github.com/rockroman/CI_PP5_Blade/issues/12)
+    [#27](https://github.com/rockroman/CI_PP5_Blade/issues/37)
 
-details><summary> See Shopping cart table  feature section</summary>
+<details><summary> See Shopping cart table  feature section</summary>
 
 ![Shopping cart table ](docs/features/cart_table.png)
 
@@ -813,6 +846,7 @@ It includes the following components:
 
   - Secure Checkout Button: A button is provided in the summary table, allowing users to proceed to the secure checkout process. Clicking this button initiates the checkout process, where users can enter their payment and shipping details.
   - User Story covered with this feature:
+  [#6](https://github.com/rockroman/CI_PP5_Blade/issues/10)
 
 
 <details><summary>See Summary table feature section</summary>
@@ -827,6 +861,7 @@ It includes the following components:
 
 - Simple feature helping users navigate back to all products page
 - User Story covered with this feature:
+[#1](https://github.com/rockroman/CI_PP5_Blade/issues/4)
 
 <details><summary>See Back to shop button</summary>
 
@@ -845,6 +880,7 @@ Personal Information: The order form includes fields for customers to enter thei
 
 Save delivery info part of form where customer can make his next shopping experience even faster with checking the box to save form information to his profile for next purchase.
 - User Story covered with this feature:
+[#13](https://github.com/rockroman/CI_PP5_Blade/issues/22)
 
 <details><summary>Checkout Order form feature section</summary>
 
@@ -869,6 +905,7 @@ Save delivery info part of form where customer can make his next shopping experi
 
 The Payment Feature Section ensures a smooth and secure payment experience for customers. By providing a dedicated field for card details and a confirm payment button, customers can swiftly and confidently complete their purchase. Additionally, the inclusion of a button to go back and adjust the shopping cart allows customers to make any necessary modifications before finalizing their payment.
 - User Story covered with this feature:
+[#14](https://github.com/rockroman/CI_PP5_Blade/issues/23)
 
 <details><summary> See payment feature section</summary>
 
@@ -890,6 +927,7 @@ The Payment Feature Section ensures a smooth and secure payment experience for c
 
 The Checkout Order Summary Section ensures transparency and allows customers to review their order details at a glance. By providing product images, quantities, and the total order price, customers can verify their selection before proceeding with the checkout process.
 - User Story covered with this feature:
+[#6](https://github.com/rockroman/CI_PP5_Blade/issues/10)
 
 <details><summary>See Checkout order summary  feature section</summary>
 
@@ -916,6 +954,7 @@ The Checkout Order Summary Section ensures transparency and allows customers to 
 
 The Order Confirmation Thank You Form Feature serves as a confirmation and acknowledgment of the customer's order. By providing the order number, date, delivery information, and billing details, customers can have peace of mind knowing that their order has been successfully placed and that the provided information is accurate.
 - User Story covered with this feature:
+[#11](https://github.com/rockroman/CI_PP5_Blade/issues/42)
 
 
 <details><summary>See  Order confirmation thank you form  feature section</summary>
@@ -927,8 +966,10 @@ The Order Confirmation Thank You Form Feature serves as a confirmation and ackno
 
 2. Buttons feature section:
 
-- section provides two buttons. back to hop and return to profile button , making navigation even easier.
+- section provides two buttons. back to home and return to profile button , making navigation even easier.
 - User Story covered with this feature:
+[#0](https://github.com/rockroman/CI_PP5_Blade/issues/3)
+[#11](https://github.com/rockroman/CI_PP5_Blade/issues/42)
 
 <details><summary>See Buttons feature section</summary>
 
@@ -948,6 +989,7 @@ The Order Confirmation Thank You Form Feature serves as a confirmation and ackno
 
     - update profile button: users can confirm update of a profile form
 - User Story covered with this feature:
+[#10](https://github.com/rockroman/CI_PP5_Blade/issues/41)
 
 <details><summary>See Profile form feature section</summary>
 
@@ -971,6 +1013,7 @@ The Order Confirmation Thank You Form Feature serves as a confirmation and ackno
 
     - Order Total and Date/Time: The total cost of the order is displayed, giving users a quick reference to the overall price of each order. Additionally, the date and time of the order are provided, enabling users to track and review their purchase history over time.
     - User Story covered with this feature:
+    [#11](https://github.com/rockroman/CI_PP5_Blade/issues/42)
 
 <details><summary>See Order history accordion feature section</summary>
 
@@ -986,6 +1029,7 @@ The Order Confirmation Thank You Form Feature serves as a confirmation and ackno
 
 - The Add Product Form Feature allows users to create a new product by filling out a form with the following fields: name, image upload, description, price, blade length, handle material, and blade material. It also includes buttons to add the product and cancel the process. This feature simplifies the process of adding new products by providing a straightforward and intuitive form for users to enter all the necessary details.
 - User Story covered with this feature:
+[#26](https://github.com/rockroman/CI_PP5_Blade/issues/36)
 
 <details><summary>See Add product form  feature section</summary>
 
@@ -999,6 +1043,7 @@ The Order Confirmation Thank You Form Feature serves as a confirmation and ackno
 
 - Simple visually appealing section where web-shop logo is displayed:
 - User Story covered with this feature:
+[#0](https://github.com/rockroman/CI_PP5_Blade/issues/3)
 
 <details><summary>See Logo feature section</summary>
 
@@ -1014,6 +1059,7 @@ The Order Confirmation Thank You Form Feature serves as a confirmation and ackno
 
 - The Hero with Supporting History Paragraph Feature presents a striking hero image accompanied by a concise paragraph introducing the webshop and its site owner. This feature creates an impactful first impression, conveying the essence of the web-shop and establishing a connection with visitors.
 - User Story covered with this feature:
+[#0](https://github.com/rockroman/CI_PP5_Blade/issues/3)
 
 <details><summary>See Hero with supporting history paragraph feature section</summary>
 
@@ -1026,6 +1072,8 @@ The Order Confirmation Thank You Form Feature serves as a confirmation and ackno
 2. Quality Presentation cards feature section:
 
 - The Quality Presentation Cards Feature Section elevates product presentation through visually appealing cards, enriched with engaging text and supporting icons. These cards effectively communicate important information about the products, captivating users and highlighting their key features
+- User Story covered with this feature:
+[#2](https://github.com/rockroman/CI_PP5_Blade/issues/6)
 
 <details><summary>See Quality Presentation cards feature section</summary>
 
@@ -1039,6 +1087,7 @@ The Order Confirmation Thank You Form Feature serves as a confirmation and ackno
 
 - The Contact Form Feature Section incorporates a user-friendly contact form that facilitates seamless communication between the website and its visitors. This feature includes a selection of inquiry purposes, such as order-related inquiries, product queries, suggestions, and other custom options. The contact form empowers users to express their specific needs and enables the website to provide prompt and tailored responses to their inquiries.
 - User Story covered with this feature:
+[#21](https://github.com/rockroman/CI_PP5_Blade/issues/32)
 
 
 <details><summary>See Contact form feature section</summary>
@@ -1048,6 +1097,8 @@ The Order Confirmation Thank You Form Feature serves as a confirmation and ackno
 
 
 </details>
+
+
 
 ## Future features
 
@@ -1079,70 +1130,128 @@ The Order Confirmation Thank You Form Feature serves as a confirmation and ackno
 
 ### Html
 
--  [WC3 Validator](https://validator.w3.org/) was used for the validation of projects html code
+-  [WC3 Validator](https://validator.w3.org/) was used for the validation of projects html code.
+    - Html code is validated and there were no errors or warnings found
 
-<details><summary>Home</summary>
-<img src="docs/validation/wave_validator/home_vawe.png" width="800" >
-</details>
+    <details><summary>Home</summary>
+    <img src="docs/validation/html_validator/home_html.png" width="800">
+    </details>
+
+    <details><summary>All products</summary>
+    <img src="docs/validation/html_validator/all_products_html.png" width="800" >
+    </details>
+
+    <details><summary>Product detail</summary>
+    <img src="docs/validation/html_validator/product_det_html.png" width="800" >
+    </details>
+
+    <details><summary>Shopping cart</summary>
+    <img src="docs/validation/html_validator/shop_cart_html.png" width="800" >
+    </details>
+
+    <details><summary>Checkout</summary>
+    <img src="docs/validation/html_validator/ceckout_html.png" width="800" >
+    </details>
+
+    <details><summary>Checkout success</summary>
+    <img src="docs/validation/html_validator/success_check_html.png" width="800" >
+    </details>
+
+    <details><summary>Profile</summary>
+    <img src="docs/validation/html_validator/profile_html.png" width="800"  >
+    </details>
+
+    <details><summary>Wishlist</summary>
+    <img src="docs/validation/html_validator/wishlist_html.png" width="800" >
+    </details>
+
+    <details><summary>About</summary>
+    <img src="docs/validation/html_validator/about_html.png" width="800" >
+    </details>
+
+    <details><summary>Add product</summary>
+    <img src="CI_PP5_Blade/docs/validation/html_validator/add_product_html.png" width="800">
+    </details>
+
+    <details><summary>Login</summary>
+    <img src="docs/validation/html_validator/login_html.png" width="800" >
+    </details>
+
+    <details><summary>Logout</summary>
+    <img src="docs/validation/html_validator/logout_html.png" width="800" >
+    </details>
+
+    <details><summary>Register</summary>
+    <img src="docs/validation/html_validator/register_html.png" width="800" >
+    </details>
+
+    <details><summary>404 error</summary>
+    <img src="docs/validation/html_validator/404_html.png" width="800" >
+    </details>
+
+    <details><summary>500 error</summary>
+    <img src="docs/validation/html_validator/500_html.png" width="800" >
+    </details>
+
 
 
 
 ### Wave
- [Wave Validator](https://wave.webaim.org/) to evaluate accessibility
+- [Wave Validator](https://wave.webaim.org/) to evaluate accessibility
 
-- All pages are passing accessibility validation with no errors
+    - All pages are passing accessibility validation with no errors
 
-<details><summary>Home</summary>
-<img src="docs/validation/wave_validator/home_vawe.png" width="800">
-</details>
+    <details><summary>Home</summary>
+    <img src="docs/validation/wave_validator/home_vawe.png" width="800">
+    </details>
 
-<details><summary>All products</summary>
-<img src="docs/validation/wave_validator/all_products_wave.png" width="800" >
-</details>
+    <details><summary>All products</summary>
+    <img src="docs/validation/wave_validator/all_products_wave.png" width="800" >
+    </details>
 
-<details><summary>Product detail</summary>
-<img src="docs/validation/wave_validator/product_detail_wave.png" width="800" >
-</details>
+    <details><summary>Product detail</summary>
+    <img src="docs/validation/wave_validator/product_detail_wave.png" width="800" >
+    </details>
 
-<details><summary>Shopping cart</summary>
-<img src="docs/validation/wave_validator/shop_cart_wave.png" width="800" >
-</details>
+    <details><summary>Shopping cart</summary>
+    <img src="docs/validation/wave_validator/shop_cart_wave.png" width="800" >
+    </details>
 
-<details><summary>Checkout</summary>
-<img src="docs/validation/wave_validator/checkout_wave.png" width="800" >
-</details>
+    <details><summary>Checkout</summary>
+    <img src="docs/validation/wave_validator/checkout_wave.png" width="800" >
+    </details>
 
-<details><summary>Checkout success</summary>
-<img src="docs/validation/wave_validator/success_check_wave.png" width="800" >
-</details>
+    <details><summary>Checkout success</summary>
+    <img src="docs/validation/wave_validator/success_check_wave.png" width="800" >
+    </details>
 
-<details><summary>Profile</summary>
-<img src="docs/validation/wave_validator/profile_wave.png" width="800"  >
-</details>
+    <details><summary>Profile</summary>
+    <img src="docs/validation/wave_validator/profile_wave.png" width="800"  >
+    </details>
 
-<details><summary>Wishlist</summary>
-<img src="docs/validation/wave_validator/wishlist-wave.png" width="800" >
-</details>
+    <details><summary>Wishlist</summary>
+    <img src="docs/validation/wave_validator/wishlist-wave.png" width="800" >
+    </details>
 
-<details><summary>About</summary>
-<img src="docs/validation/wave_validator/about_wave.png" width="800" >
-</details>
+    <details><summary>About</summary>
+    <img src="docs/validation/wave_validator/about_wave.png" width="800" >
+    </details>
 
-<details><summary>Add product</summary>
-<img src="docs/validation/wave_validator/add_product_wave.png" width="800">
-</details>
+    <details><summary>Add product</summary>
+    <img src="docs/validation/wave_validator/add_product_wave.png" width="800">
+    </details>
 
-<details><summary>Login</summary>
-<img src="docs/validation/wave_validator/login_wave.png" width="800" >
-</details>
+    <details><summary>Login</summary>
+    <img src="docs/validation/wave_validator/login_wave.png" width="800" >
+    </details>
 
-<details><summary>Logout</summary>
-<img src="docs/validation/wave_validator/logout_wave.png" width="800" >
-</details>
+    <details><summary>Logout</summary>
+    <img src="docs/validation/wave_validator/logout_wave.png" width="800" >
+    </details>
 
-<details><summary>Register</summary>
-<img src="docs/validation/wave_validator/register_wave.png" width="800" >
-</details>
+    <details><summary>Register</summary>
+    <img src="docs/validation/wave_validator/register_wave.png" width="800" >
+    </details>
 
 
 
