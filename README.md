@@ -1144,17 +1144,6 @@ The Order Confirmation Thank You Form Feature serves as a confirmation and ackno
 <img src="docs/validation/wave_validator/register_wave.png" width="800" >
 </details>
 
-<details><summary>Blog detail</summary>
-<img src="docs/validation/wave/blog-detail.png" width="800" >
-</details>
-
-<details><summary>Blog edit</summary>
-<img src="docs/validation/wave/blog-edit.png" width="800">
-</details>
-
-<details><summary>Category</summary>
-<img src="docs/validation/wave/category-pg.png" width="800" >
-</details>
 
 
 
