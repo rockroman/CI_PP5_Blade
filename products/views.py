@@ -20,7 +20,6 @@ from reviews.forms import ReviewForm
 def store_products(request):
 
     products = Product.objects.all()
-
     template = 'products/store_products.html'
     query = None
     categories = None
@@ -82,7 +81,8 @@ def product_detail(request, product_id):
         'product': product,
         'form': form,
         'reviews': reviews,
-        'on_products_page': True
+        'on_products_page': True,
+
     }
 
     return render(request, template, context)

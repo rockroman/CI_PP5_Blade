@@ -7,8 +7,19 @@
 
 <div class="container-fluid mt-3 mb-1 ">
 
-    <h1 class="text-center">
-         KNIVES
+    <h1 class="text-center text-uppercase">
+        {% if current_categories %}
+            {% if current_categories|length == 1%}
+            {% for category in current_categories %}
+            {{category}} KNIVES
+            {% endfor %}
+            {% else %}
+            ALL KNIVES
+            {% endif %}
+        {% else %}
+        All KNIVES
+        {% endif %}
+
     </h1>
     <div class="row">
             <!-- sorting option -->
