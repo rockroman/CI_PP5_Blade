@@ -30,7 +30,6 @@
     <link rel="stylesheet" href="{% static 'css/base.css' %}">
     <!-- favicon -->
     <link rel="shortcut icon" type="image/png" href="https://pp5-blade.s3.eu-west-1.amazonaws.com/media/favicon.ico">
-
     {% endblock %}
 
     {% block extra_css  %}
@@ -50,11 +49,9 @@
 
     {% block extra_js %}
     {% endblock %}
-
 </head>
 
 <body>
-
     <div class="my_div">
         {% include 'partials/toast_msg/toast_custom.html' %}
         {% include 'partials/error_modal_ajax.html' %}

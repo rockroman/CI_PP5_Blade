@@ -598,6 +598,7 @@ Using Agile methodologies in the three sprints of my solo e-commerce project, I 
 - The footer feature is included in most of the project templates, except for the user authentication templates. This decision was made because including the footer in those templates could disrupt the flow and divert the user's attention from the specific purpose of the user authentication process.
 - User Story covered with this feature:
 [#1](https://github.com/rockroman/CI_PP5_Blade/issues/4)
+[#22](https://github.com/rockroman/CI_PP5_Blade/issues/33)
 
 <details><summary>See Footer</summary>
 
@@ -609,10 +610,14 @@ Using Agile methodologies in the three sprints of my solo e-commerce project, I 
 
 ### Error page(s)
  - this feature prioritize clear error messages, relevant navigation links, and helpful suggestions to guide users. This approach ensures a seamless user experience and maintains a professional image for the project.
+ - User Story covered with this feature:
+ [#24](https://github.com/rockroman/CI_PP5_Blade/issues/43)
+ [#30](https://github.com/rockroman/CI_PP5_Blade/issues/40)
 
 <details><summary>See Error page</summary>
 
-![Error page](docs/features/footer.png)
+![Error page](docs/features/404_feat.png)
+![Error page](docs/features/404_mob.png)
 
 
 
@@ -741,6 +746,7 @@ as the best selling web-shop products.
     The Product Detail Section feature enables users to make informed decisions and provides site owners with the necessary tools to manage and customize their product offerings.
     - User Story covered with this feature:
     [#4](https://github.com/rockroman/CI_PP5_Blade/issues/7)
+    [#27](https://github.com/rockroman/CI_PP5_Blade/issues/37)
 
 
 <details><summary>See Product detail feature section</summary>

@@ -3,14 +3,11 @@
 
 {% block content %}
 
-
-
 {% include 'partials/top_main_nav.html' %}
 {% include 'partials/bottom_nav.html' %}
 
 <!-- carousel -->
 <div class="container-fluid bg-dark p-0">
-
     <div id="carouselExampleCaptions" class="carousel slide carousel-dark  carousel-fade" data-bs-ride="carousel">
         <div class="carousel-indicators">
             <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
@@ -59,12 +56,10 @@
             <span class="visually-hidden">Next</span>
         </button>
     </div>
-
 </div>
+<!-- carousel -->
 <div class="container-fluid text-center bg-dark">
     <h2 class="fw-bold text-white p-4">Best Sellers</h2>
-
-    <!-- <div class="container-fluid"> -->
         <div class="row ">
             <div class="col-sm-4 my-2">
                 <img src="{{ MEDIA_URL }}seller1.jpg" alt="" class="img-fluid " >
@@ -79,15 +74,13 @@
 
             </div>
         </div>
-    <!-- </div> -->
     <div class="row py-3 d-flex justify-content-center">
              <div class="col-xl-4 col-md-6 col-12 ">
-                 <!-- Begin Mailchimp Signup Form -->
+                 <!--  Mailchimp Signup Form -->
                  <div id="mc_embed_signup" class="my-2 p-1">
                      <form action="https://herokuapp.us8.list-manage.com/subscribe/post?u=0abdc68d85b31f525a90ef965&amp;id=a79e18ae82&amp;f_id=000c0ee0f0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
                          <div id="mc_embed_signup_scroll">
                          <h2 class="text-center">Subscribe to our newsletter</h2>
-
                  <div class="mc-field-group">
                      <label for="mce-EMAIL" class="fw-bold">Email Address  <span class="asterisk text-dark fw-bold">*</span></label>
 
@@ -114,7 +107,6 @@
                      </div>
                  </form>
                  </div>
-
                  <!--End mc_embed_signup-->
              </div>
              <div class="col-lg-6 col-md-6 col-12 d-flex justify-content-center">
@@ -126,20 +118,13 @@
                         <a href="https://www.instagram.com/newblade79/" aria-label="Instagram profile link" target="_blank" class="text-white text-decoration-none">@newblade79</a>
                         <span class="h6 mx-2"> ✦</span>
                     </h3>
-
                 </div>
-
              </div>
-
-
-    </div>
-
+        </div>
 </div>
-
 <script  src='https://s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script>
 <script >(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';fnames[3]='ADDRESS';ftypes[3]='address';fnames[4]='PHONE';ftypes[4]='phone';fnames[5]='BIRTHDAY';ftypes[5]='birthday';}(jQuery));var $mcj = jQuery.noConflict(true);</script>
 
-
 {% include 'partials/footer.html' %}
-<!-- carousel -->
+
 {% endblock %}

@@ -6,7 +6,6 @@
 {% include 'partials/bottom_nav.html' %}
 
 <div class="container-fluid mt-3 mb-1 ">
-
     <h1 class="text-center text-uppercase">
         {% if current_categories %}
             {% if current_categories|length == 1%}
@@ -19,7 +18,6 @@
         {% else %}
         All KNIVES
         {% endif %}
-
     </h1>
     <div class="row">
             <!-- sorting option -->
@@ -55,9 +53,7 @@
             {% for product in products %}
             <div class="product-card bg-light">
                 <div class="product-card__images">
-
                     <div class="product-card__img">
-
                         {% if product.image %}
                         <a href="{% url 'products:product_detail' product.id %}">
                             <img class="card-img-top img-fluid" src="{{ product.image.url }}" alt="{{ product.name }}">
@@ -67,7 +63,6 @@
                             <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}no_image.jpg" alt="{{ product.name }}">
                         </a>
                         {% endif %}
-
                     </div>
                     <div class="product-card__like">
                         <form action="{% url 'wishlist:add_to_wishlist' %}" method="POST" enctype = "multipart/form-data" >
@@ -108,20 +103,13 @@
                                 <input type="hidden" class="csrf_token" value="{{ csrf_token }}">
                             </div>
                         </form>
-
                     </div>
-
                 </div>
             </div>
             {% endfor %}
-
-
         </div>
-
-
     </div>
 </div>
 {% include 'partials/footer.html' %}
-
 {% endblock %}
 

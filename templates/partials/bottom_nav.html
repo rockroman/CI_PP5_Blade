@@ -16,18 +16,13 @@
                 {% if request.user.is_superuser %}
                 <li><a class="dropdown-item " href="{% url 'products:add_product' %}">Shop management</a></li>
                 {% endif %}
-
             </ul>
         </div>
         <a href="{% url 'wishlist:wishlist' %}"  role="button" class="btn py-3 position-relative shadow-none">
             <i class="bi bi-suit-heart" style="font-size:1.3rem; -webkit-text-stroke-width: 1px; color: white"></i>
             <span class="heart-total-bottom">{{ wishlist_count}}</span>
         </a>
-
-
-
         <div class="position-relative">
-
             <a class="btn py-3 shadow-none" role="button" href="{% url 'shopping_cart:cart' %}" aria-label="View Cart Icon">
                 <i class="bi bi-cart3" style="font-size:1.2rem; -webkit-text-stroke-width: 1px; color: white;"></i>
             </a>
@@ -38,7 +33,6 @@
                  0
                  {% endif %}
             </span>
-
         </div>
         <a href="{% url 'products:store_products' %}" class="position-relative mb-2">
             <i class="bi bi-shop-window" style="font-size:1.2rem; -webkit-text-stroke-width: 1px; color: white"></i>

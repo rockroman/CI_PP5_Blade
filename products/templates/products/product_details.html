@@ -10,20 +10,17 @@
 <div class="container px-4 px-lg-5 my-1">
     <div class="row gx-4 gx-lg-5 align-items-start">
         <div class="col-md-6">
-            <div class="detail-image-container">
-                {% if product.image %}
-                <a href="{{ product.image.url }}" target="_blank">
-
-                <img class="card-img-top mb-5 mb-md-0" src="{{ product.image.url }}" alt="{{ product.name }}">
-                </a>
-                {% else %}
-                <a href="{{ MEDIA_URL }}no_image.jpg" target="_blank">
-                    <img class="card-img-top mb-5 mb-md-0" src="{{ MEDIA_URL }}no_image.jpg" alt="{{ product.name }}">
-                </a>
-                {% endif %}
-
-            </div>
-
+                <div class="detail-image-container">
+                    {% if product.image %}
+                    <a href="{{ product.image.url }}" target="_blank">
+                    <img class="card-img-top mb-5 mb-md-0" src="{{ product.image.url }}" alt="{{ product.name }}">
+                    </a>
+                    {% else %}
+                    <a href="{{ MEDIA_URL }}no_image.jpg" target="_blank">
+                        <img class="card-img-top mb-5 mb-md-0" src="{{ MEDIA_URL }}no_image.jpg" alt="{{ product.name }}">
+                    </a>
+                    {% endif %}
+                </div>
             </div>
         <div class="col-md-6">
             <form action="{% url 'wishlist:add_to_wishlist' %}" method="POST" enctype = "multipart/form-data" >
@@ -32,30 +29,23 @@
                 <button class="btn btn-dark rounded-0 mt-3" id="wish">add to wishlist <i class="bi bi-suit-heart-fill"></i></button>
                 <input type="hidden" name="my_redirect_url" value="{{ request.path }}">
             </form>
-
-
             {% if request.user.is_superuser %}
             <div>
                 <small class="ml-3">
-
-                    <a class="btn btn-primary mt-3" href="{% url 'products:edit_product' product.id %}"><i class="bi bi-pencil-square"></i>Edit</a>
-
+                    <a class="btn btn-primary mt-3" href="{% url 'products:edit_product' product.id %}"><i class="bi bi-pencil-square"></i>
+                        Edit
+                    </a>
                     <button class="btn btn-danger mt-3 shadow-none" aria-label="delete-product-button" data-bs-toggle="modal" data-bs-target="#modal_{{product_id}}">
                         <i class="bi bi-trash3"></i>
-
                     </button>
-
                 </small>
             </div>
             {% endif %}
-
             <div class="small mb-1 mt-1">Item No: {{product.item_no}}</div>
             <h1 class="display-5 fw-bolder product-name">{{ product.name }}</h1>
             <div class="fs-5 mb-3">
                 <span class="text-success fw-bolder">€ {{product.price}}</span>
-
             </div>
-
             <p class="lead">{{ product.description }}</p>
                 <div class="handle">handle material: <strong>{{ product.handlematerial }}</strong></div>
                 <div class="blade">blade length:<strong>{{ product.bladelength }} cm</strong></div>
@@ -102,29 +92,24 @@
                                     </div>
                                 </div>
                             </div>
-
                             <div class="col{% if s %}-12 mt-2{% endif %}">
-
                                 <a href="{% url 'products:store_products'%}" class="btn btn-secondary rounded-0 mt-3">
                                     <span class="icon">
                                         <i class="fas fa-chevron-left"></i>
                                     </span>
                                     <span class="text-uppercase"> Shop</span>
                                 </a>
-
                                 <button type="button" id="addToCartBtn"  class="btn btn-success flex-shrink-0 text-uppercase mt-3">
                                     <i class="bi-cart-fill me-1"></i>
-                                    Add to cart</button>
+                                    Add to cart
+                                </button>
                             </div>
                             <input type="hidden" name="redirect_url" value="{{ request.path }}">
                         </div>
                     </form>
-
                 </div>
             </div>
-
         </div>
-
 </div>
 <!-- reviews -->
 <div class="container-fluid">
@@ -133,10 +118,8 @@
                 <div class=" text-center comment-top p-2 bg-light border-bottom px-4 mt-2">
                     <h3>
                         Product Reviews
-
                     </h3>
                 </div>
-
                 <div class="commented-section mt-2 ">
                     {% for review in reviews %}
                     {% include 'partials/delete_modal_review.html' %}
@@ -148,11 +131,9 @@
                                     <small class="timestamp text-muted text-decoration-underline bg-white">{{ review.time_posted|timesince }} ago</small>
                                 </div>
                                 ⭐️⭐️⭐️⭐️⭐️
-
                             </div>
                             <div class="comment-text-sm review_content py-2" data-id="{{ review.id }}">
                                 <p class="my-2">{{ review.content }}</p>
-
                                 <div class="d-flex justify-content-end">
                                     {% if request.user == review.author %}
                                     <button class="edit_review btn mt-3  text-primary shadow-none" aria-label="update-review-button"  >
@@ -178,7 +159,6 @@
                                 <input type="hidden" id="csrf" value="{{ csrf_token }}">
                                 <input type="hidden" id="edit-url" value="{% url 'reviews:update_review' %}">
                                 <input type="hidden" name="review-id" id="review-id" value="{{ review.id }}">
-                                <!-- <input type="hidden" id="current-time" value="{{ csrf_token }}"> -->
                                 <input type="hidden" name="current_time" value="{{ review.time_posted }}">
                                 <input type="hidden" class="product-id" value="{{ product.id}}">
                                 <input type="hidden" class="default-product-id" value="{{ product.id}}">
@@ -197,7 +177,6 @@
             </div>
         </div>
 </div>
-
 {% include 'partials/footer.html' %}
 
 {% endblock %}
@@ -205,8 +184,6 @@
 {% block postload_js%}
 {{ block.super }}
 <script src="{% static 'reviews/js/reviews.js' %}"></script>
-
-
 {% include 'partials/quantity_input_script.html' %}
 
 {% endblock %}

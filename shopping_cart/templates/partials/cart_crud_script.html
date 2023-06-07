@@ -1,12 +1,9 @@
 <script>
     // Update quantity on click
     $('.update-link').click(function(e) {
-
         var targetedId = $(this).attr('name');
         var form = $('#'+targetedId);
-
         form.submit();
-
     })
 
     // Remove item and reload on click

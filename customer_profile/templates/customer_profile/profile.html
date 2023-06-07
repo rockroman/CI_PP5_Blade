@@ -7,8 +7,6 @@
 <link rel="stylesheet" href="{% static 'customer_profile/css/profile.css' %}">
 {% endblock %}
 
-
-
 {% include 'partials/top_main_nav.html' %}
 {% include 'partials/bottom_nav.html' %}
 
@@ -27,37 +25,36 @@
         </div>
         {% for order in orders %}
         <div class="accordion-item">
-          <h2 class="accordion-header text-center" id="heading{{ order.order_number|truncatechars:6 }}">
-            <button class="accordion-button" type="button" data-bs-toggle="collapse"
-              data-bs-target="#my_{{ order.order_number }}" aria-expanded="true"
-              aria-controls="my_{{ order.order_number }}">
-              <span class="text-success">{{ order.order_number|truncatechars:10 }}</span>
-            </button>
-          </h2>
-
+            <h2 class="accordion-header text-center" id="heading{{ order.order_number|truncatechars:6 }}">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#my_{{ order.order_number }}" aria-expanded="true"
+                  aria-controls="my_{{ order.order_number }}">
+                  <span class="text-success">{{ order.order_number|truncatechars:10 }}</span>
+                </button>
+            </h2>
           <div id="my_{{ order.order_number }}" class="accordion-collapse collapse " aria-labelledby="headingOne"
             data-bs-parent="#order-accordion">
             <div class="accordion-body">
               <div class="wrapper">
                 <table class="table">
-                  <thead>
-                    <tr>
-                      <th scope="col">Order num.</th>
-                      <th scope="col">Items</th>
-                      <th scope="col">Item price</th>
-                    </tr>
-                  </thead>
+                    <thead>
+                        <tr>
+                          <th scope="col">Order num.</th>
+                          <th scope="col">Items</th>
+                          <th scope="col">Item price</th>
+                        </tr>
+                    </thead>
                   <tbody>
                     {% for item in order.lineitems.all %}
-                    <tr>
-                      <th scope="row">
-                        <a href="{% url 'customer_profile:order_history' order.order_number %}">
-                          {{ order.order_number|truncatechars:6 }}
-                        </a>
-                      </th>
-                      <td>{{ item.product.name }}({{ item.quantity }})</td>
-                      <td>€{{ item.product.price }}</td>
-                    </tr>
+                      <tr>
+                          <th scope="row">
+                            <a href="{% url 'customer_profile:order_history' order.order_number %}">
+                              {{ order.order_number|truncatechars:6 }}
+                            </a>
+                          </th>
+                          <td>{{ item.product.name }}({{ item.quantity }})</td>
+                          <td>€{{ item.product.price }}</td>
+                      </tr>
                     {% endfor %}
                   </tbody>
                 </table>
