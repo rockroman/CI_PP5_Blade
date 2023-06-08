@@ -24,7 +24,6 @@ def wishlist(request):
     """
     wishlist_items = Wishlist.objects.filter(user=request.user)
     template = 'wishlist/wishlist.html'
-
     context = {
         'wishlist_items': wishlist_items,
     }
@@ -33,11 +32,13 @@ def wishlist(request):
 
 @login_required
 def add_to_wishlist(request):
+    """
+    adding new product to wishlist
+    """
     if request.method == 'POST':
         product_id = request.POST.get('product-id')
         product = get_object_or_404(Product, id=product_id)
         redirect_url = request.POST.get('my_redirect_url')
-
         try:
             wish_item = Wishlist.objects.get(user=request.user, product=product)
             if wish_item:
@@ -53,17 +54,15 @@ def add_to_wishlist(request):
 
 @login_required
 def remove_from_wishlist(request):
-
+    """
+    removing product from wishlist
+    """
     if request.method == 'POST':
         item_id = request.POST.get('item-id')
         print(item_id)
         wish_item = get_object_or_404(Wishlist, pk=item_id)
         wish_item.delete()
         messages.success(request, f'{wish_item.product.name} deleted from wishlist')
-
-        # Update the wishlist count in session
-        # wishlist_count = Wishlist.objects.filter(user=request.user).count()
-        # request.session['wishlist_count'] = wishlist_count
     return HttpResponseRedirect(reverse('wishlist:wishlist'))
 
 
@@ -76,13 +75,10 @@ def wishlist_total(request):
     if request.user.is_authenticated:
         wishlist_count = Wishlist.objects.filter(user=request.user).count()
         request.session['wishlist_count'] = wishlist_count
-
     else:
         wishlist_count = 0
         request.session['wishlist_count'] = wishlist_count
 
     return JsonResponse({
         'wishlist_count': wishlist_count,
-
     })
-

@@ -9,6 +9,10 @@ from .models import Product, Category
 
 
 class ProductForm(forms.ModelForm):
+    """
+    form for adding and editing products in
+    webshop
+    """
 
     class Meta:
         model = Product

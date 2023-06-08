@@ -18,5 +18,4 @@ urlpatterns = [
     path('remove/<product_id>/', views.remove_from_cart, name='remove_from_cart'),
     path('get_cart_total/', views.get_cart_total, name='get_cart_total'),
 
-
 ]

@@ -34,19 +34,23 @@ class Category(models.Model):
 def random_generated_string():
     not_unique = True
     while not_unique:
-        key = random.choice(string.ascii_uppercase) + str(random.randrange(100,999))
+        key = random.choice(string.ascii_uppercase) + str(random.randrange(100, 999))
         if not Product.objects.filter(item_no=key):
             not_unique = False
     return str(key)
 
 
 class Product(models.Model):
-    category = models.ForeignKey('Category', null=True, blank=True, on_delete=models.SET_NULL)
-    item_no = models.CharField(max_length=254, default=random_generated_string,unique=True )
+    category = models.ForeignKey('Category',
+                                 null=True, blank=True,
+                                 on_delete=models.SET_NULL)
+    item_no = models.CharField(max_length=254,
+                               default=random_generated_string,
+                               unique=True)
     name = models.CharField(max_length=254)
     description = models.TextField()
     price = models.DecimalField(max_digits=6, decimal_places=2)
-    bladelength = models.DecimalField(max_digits=5, decimal_places=2 )
+    bladelength = models.DecimalField(max_digits=5, decimal_places=2)
     handlematerial = models.CharField(max_length=254)
     blade = models.CharField(max_length=254)
     image_url = models.URLField(max_length=1024, null=True, blank=True)
@@ -54,6 +58,3 @@ class Product(models.Model):
 
     def __str__(self):
         return self.name
-
-
-

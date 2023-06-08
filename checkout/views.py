@@ -41,6 +41,9 @@ def cache_checkout_data(request):
 
 
 def store_checkout(request):
+    """
+    handling checkout view
+    """
 
     stripe_public_key = settings.STRIPE_PUBLIC_KEY
     stripe_secret_key = settings.STRIPE_SECRET_KEY
@@ -135,9 +138,7 @@ def store_checkout(request):
         'order_form': order_form,
         'stripe_public_key': stripe_public_key,
         'client_secret': intent.client_secret,
-
     }
-    # print(intent.client_secret)
 
     return render(request, 'checkout/checkout.html', context)
 

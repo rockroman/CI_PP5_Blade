@@ -52,6 +52,9 @@ def create_review(request):
 
 @login_required
 def update_review(request):
+    """
+    updating a review
+    """
     if request.method == 'POST':
         content = request.POST['content']
         id = int(request.POST['product_id'])

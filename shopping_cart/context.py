@@ -5,7 +5,11 @@ from products.models import Product
 
 
 def cart_content(request):
-
+    """
+    context processor view that
+    makes content of a cart available throughout
+    entire project
+    """
     cart_items = []
     total = 0
     all_items = 0
@@ -20,7 +24,6 @@ def cart_content(request):
                 'item_id': product_id,
                 'product': product,
                 'quantity': cart_item['qty'],
-
             })
 
     all_items = sum(cart_item['qty'] for cart_item in cart_data.values())
@@ -33,9 +36,6 @@ def cart_content(request):
         'cart_items': cart_items,
         'my_product': product,
         'all_items': all_items,
-
-
-
     }
     return context
 
@@ -43,4 +43,3 @@ def cart_content(request):
 def my_cart(request):
     current_cart = request.session.get('cart', {})
     return {'current_cart': current_cart}
-

@@ -17,7 +17,6 @@ def cart(request):
     view to render the shopping cart
     """
     template = 'shopping_cart/cart.html'
-
     context = {
         'on_cart_page': True,
     }
@@ -50,13 +49,8 @@ def add_to_cart(request):
             cart_data = request.session['cart']
             cart_data.update(cart_item)
             request.session['cart'] = cart_data
-            print(cart_data)
-
     else:
         request.session['cart'] = cart_item
-
-    print(request.session['cart'])
-
     response_data = {'data': request.session['cart'],
                      'total_items': len(request.session['cart']),
                      'my_message': my_message,
@@ -101,12 +95,10 @@ def update_cart(request, product_id):
     product = get_object_or_404(Product, pk=product_id)
     quantity = int(request.POST.get('quantity') or 0)
     cart_data = request.session.get('cart', {})
-
     if quantity > 0:
         cart_data[product_id]['qty'] = quantity
         messages.success(request,
                          f'Updated {product.name} quantity to {cart_data[product_id]["qty"]}')
-
     else:
         cart_data.pop(product_id)
         messages.success(request,

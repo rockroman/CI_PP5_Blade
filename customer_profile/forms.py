@@ -11,7 +11,6 @@ from .models import CustomerProfile
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 class CustomerProfileForm(forms.ModelForm):
-    # email = forms.EmailField(max_length=50)
 
     class Meta:
         model = CustomerProfile
