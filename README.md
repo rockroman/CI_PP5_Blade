@@ -431,13 +431,157 @@ fields:
 
 ### Wireframes
 
-<details><summary>images</summary>
+
+<details><summary>Big screens - laptop & desktop</summary>
 
 <details><summary>Home page</summary>
-  <img src="docs/wireframes/home-desk-wireframe.png" >
+<img src="docs/wireframes/home_page.png" >
 
 </details>
+
+<details><summary>All products</summary>
+<img src="docs/wireframes/all products_desk.png">
 </details>
+
+<details><summary>Product detail</summary>
+<img src="docs/wireframes/product_detail.png">
+</details>
+
+<details><summary>Shopping cart</summary>
+<img src="docs/wireframes/cart_desk.png">
+</details>
+
+<details><summary>Checkout</summary>
+<img src="docs/wireframes/checkout.png">
+</details>
+
+<details><summary>Profile</summary>
+<img src="docs/wireframes/blog-page.png">
+</details>
+
+<details><summary>Add product</summary>
+<img src="docs/wireframes/blog-page.png">
+</details>
+
+<details><summary>Authentication pages</summary>
+<img src="docs/wireframes/blog-page.png">
+</details>
+
+
+
+<details><summary>Wishlist</summary>
+<img src="docs/wireframes/wishlist.png">
+</details>
+
+<details><summary>Contact & about</summary>
+<img src="docs/wireframes/about.png">
+</details>
+
+</details>
+
+***
+
+<details><summary>Medium screens</summary>
+
+<details><summary>Home page</summary>
+<img src="docs/wireframes/home_tablet.png" >
+
+</details>
+
+<details><summary>All products</summary>
+<img src="docs/wireframes/all_prod_tablet.png">
+</details>
+
+<details><summary>Product detail</summary>
+<img src="docs/wireframes/prod_detail_tablet.png">
+</details>
+
+<details><summary>Shopping cart</summary>
+<img src="docs/wireframes/cart_tablet.png">
+</details>
+
+<details><summary>Checkout</summary>
+<img src="docs/wireframes/checkout_tablet.png">
+</details>
+
+<details><summary>Profile</summary>
+<img src="docs/wireframes/blog-page.png">
+</details>
+
+<details><summary>Add product</summary>
+<img src="docs/wireframes/blog-page.png">
+</details>
+
+<details><summary>Authentication pages</summary>
+<img src="docs/wireframes/blog-page.png">
+</details>
+
+
+
+<details><summary>Wishlist</summary>
+<img src="docs/wireframes/wishlist_tablet.png">
+</details>
+
+<details><summary>Contact & about</summary>
+<img src="docs/wireframes/about_tablet.png">
+</details>
+
+
+</details>
+
+***
+
+<details><summary>Small screens</summary>
+
+<details><summary>Home page</summary>
+<img src="docs/wireframes/home_mobile.png" >
+
+</details>
+
+<details><summary>All products</summary>
+<img src="docs/wireframes/all products_mobile.png">
+</details>
+
+<details><summary>Product detail</summary>
+<img src="docs/wireframes/product_detail_mobile.png">
+</details>
+
+<details><summary>Shopping cart</summary>
+<img src="docs/wireframes/cart_mobile.png">
+</details>
+
+<details><summary>Checkout</summary>
+<img src="docs/wireframes/checkout_mobile.png">
+</details>
+
+<details><summary>Profile</summary>
+<img src="docs/wireframes/blog-page.png">
+</details>
+
+<details><summary>Add product</summary>
+<img src="docs/wireframes/blog-page.png">
+</details>
+
+<details><summary>Authentication pages</summary>
+<img src="docs/wireframes/blog-page.png">
+</details>
+
+
+
+<details><summary>Wishlist</summary>
+<img src="docs/wireframes/wishlist_mobile.png">
+</details>
+
+<details><summary>Contact & about</summary>
+<img src="docs/wireframes/About_mobile.png">
+</details>
+
+
+</details>
+
+***
+
+
 
 
 
@@ -1198,6 +1342,191 @@ The Order Confirmation Thank You Form Feature serves as a confirmation and ackno
     <details><summary>500 error</summary>
     <img src="docs/validation/html_validator/500_html.png" width="800" >
     </details>
+
+
+### Python
+- [CI Python Linter](https://pep8ci.herokuapp.com/) to check  Python code for validity and conventions
+
+    <details><summary>home app</summary>
+
+    <details><summary>views.py</summary>
+    <img src="docs/validation/python/home/home_views.png" width="800" >
+    </details>
+
+
+    <details><summary>urls.py</summary>
+    <img src="docs/validation/python/home/home_urls.png" width="800" >
+    </details>
+
+
+    </details>
+
+    ***
+
+    <details><summary>checkout app</summary>
+
+    <details><summary>views.py</summary>
+    <img src="docs/validation/python/checkout/chck_views.png" width="800" >
+    </details>
+
+    <details><summary>models.py</summary>
+    <img src="docs/validation/python/checkout/chck_models.png" width="800" >
+    </details>
+
+    <details><summary>urls.py</summary>
+    <img src="docs/validation/python/checkout/chck_urls.png" width="800" >
+    </details>
+
+    <details><summary>signals.py</summary>
+    <img src="docs/validation/python/checkout/chck_signals.png" width="800" >
+    </details>
+
+    <details><summary>webhooks.py</summary>
+    <img src="docs/validation/python/checkout/chck_webhooks.png" width="800" >
+    </details>
+
+    <details><summary>webhook_handler.py</summary>
+    <img src="docs/validation/python/checkout/chck_webhook_hand.png" width="800" >
+    </details>
+
+    </details>
+
+    ***
+
+
+    <details><summary>contact_about app</summary>
+
+    <details><summary>views.py</summary>
+    <img src="docs/validation/python/contact/contact_views.png" width="800" >
+    </details>
+
+    <details><summary>models.py</summary>
+    <img src="docs/validation/python/contact/contact_models.png" width="800" >
+    </details>
+
+    <details><summary>urls.py</summary>
+    <img src="docs/validation/python/contact/contact_url.png" width="800" >
+    </details>
+
+    <details><summary>forms.py</summary>
+    <img src="docs/validation/python/contact/contact_form.png" width="800" >
+    </details>
+
+    </details>
+
+    ***
+
+
+
+    <details><summary>cust_profile app</summary>
+
+    <details><summary>views.py</summary>
+    <img src="docs/validation/python/cust_profile/profile_views.png" width="800" >
+    </details>
+
+    <details><summary>models.py</summary>
+    <img src="docs/validation/python/cust_profile/profile_models.png" width="800" >
+    </details>
+
+    <details><summary>urls.py</summary>
+    <img src="docs/validation/python/cust_profile/profile_url.png" width="800" >
+    </details>
+
+    <details><summary>forms.py</summary>
+    <img src="docs/validation/python/cust_profile/profile_form.png" width="800" >
+    </details>
+
+
+    </details>
+
+    ***
+
+
+
+    <details><summary>products app</summary>
+
+    <details><summary>views.py</summary>
+    <img src="docs/validation/python/products/prod_views.png" width="800" >
+    </details>
+
+    <details><summary>models.py</summary>
+    <img src="docs/validation/python/products/prod_models.png" width="800" >
+    </details>
+
+    <details><summary>urls.py</summary>
+    <img src="docs/validation/python/products/prod_urls.png" width="800" >
+    </details>
+
+    <details><summary>forms.py</summary>
+    <img src="docs/validation/python/products/prod_form.png" width="800" >
+    </details>
+
+    </details>
+
+    ***
+
+    <details><summary>shop_cart app</summary>
+
+    <details><summary>views.py</summary>
+    <img src="docs/validation/python/shop_cart/cart_views.png" width="800" >
+    </details>
+
+    <details><summary>urls.py</summary>
+    <img src="docs/validation/python/shop_cart/cart_urls.png" width="800" >
+    </details>
+
+    <details><summary>context.py</summary>
+    <img src="docs/validation/python/shop_cart/cart_context.png" width="800" >
+    </details>
+
+    </details>
+
+    ***
+
+    <details><summary>reviews app</summary>
+
+    <details><summary>views.py</summary>
+    <img src="docs/validation/python/reviews/rew_views.png" width="800" >
+    </details>
+
+    <details><summary>models.py</summary>
+    <img src="docs/validation/python/reviews/rew_models.png" width="800" >
+    </details>
+
+    <details><summary>urls.py</summary>
+    <img src="docs/validation/python/reviews/rew_urls.png" width="800" >
+    </details>
+
+    <details><summary>forms.py</summary>
+    <img src="docs/validation/python/reviews/rew_forms.png" width="800" >
+    </details>
+
+    </details>
+
+    ***
+
+    <details><summary>wishlist app</summary>
+
+    <details><summary>views.py</summary>
+    <img src="docs/validation/python/wishlst/wish_views.png" width="800" >
+    </details>
+
+    <details><summary>models.py</summary>
+    <img src="docs/validation/python/wishlst/wish_models.png" width="800" >
+    </details>
+
+    <details><summary>urls.py</summary>
+    <img src="docs/validation/python/wishlst/wish_urls.png" width="800" >
+    </details>
+
+    <details><summary>context.py</summary>
+    <img src="docs/validation/python/wishlst/wish_context.png" width="800" >
+    </details>
+
+
+    </details>
+
+    ***
 
 
 
