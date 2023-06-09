@@ -2,11 +2,7 @@
 function appendReview(res){
     var csrfToken = $('[name="csrfmiddlewaretoken"]').val();
     var now = new Date();
-    // var currentDate = now.toDateString();
-    const currentTime = now.getHours() + ':' + now.getMinutes().toString().padStart(2, '0')
-
-
-
+    const currentTime = now.getHours() + ':' + now.getMinutes().toString().padStart(2, '0');
     $('.commented-section').append(`
 
     <div class="modal fade review" tabindex="-1" id="modal_${res.id}">
@@ -57,24 +53,18 @@ function appendReview(res){
 }
 
 function addDeleteUrl(){
-
     if($('.delete-form')){
         var deleteUrl = $('#delete-url').val();
         $('.delete-form').attr('action',deleteUrl);
-
     }
-
 }
-
 
 //
 $(document).ready(function(){
-
     addDeleteUrl();
     var editing_content = null;
     var review_id = null;
     var edit_container = null;
-
 
     $('.review-form').submit(function(event){
         event.preventDefault();
@@ -95,8 +85,6 @@ $(document).ready(function(){
 
         var url;
 
-
-        // try
         if (editing_content === null){
                 url=createReviewUrl;
 
@@ -104,64 +92,57 @@ $(document).ready(function(){
             url = editReviewUrl;
             data = {
 
-                'user': _user,
-                'product_id': _productId,
-                'content': _content,
-                'current_time': currentTime,
-                'review-id': review_id,
-
+            'user': _user,
+            'product_id': _productId,
+            'content': _content,
+            'current_time': currentTime,
+            'review-id': review_id,
             };
-
         }
 
-            $.ajax({
-                    url: url,
-                    type: 'POST',
-                    cache: false,
-                    headers: {
-                        'X-CSRFToken': $('#csrf').val()
-                    },
-                    data: {
+        $.ajax({
+                url: url,
+                type: 'POST',
+                cache: false,
+                headers: {
+                    'X-CSRFToken': $('#csrf').val()
+                },
+                data: {
 
-                        'user':_user,
-                        'product_id': _productId,
-                        'content': _content,
-                        'current_time': currentTime
+                    'user':_user,
+                    'product_id': _productId,
+                    'content': _content,
+                    'current_time': currentTime
+                },
+                dataType:'json',
+                beforeSend:function(){
+                    _submitBtn.attr('disabled',true);
 
-                    },
-                    dataType:'json',
-                    beforeSend:function(){
-                        _submitBtn.attr('disabled',true);
-
-                    },
-                    success:function(res){
-                        if(res.status==='created'){
-                            appendReview(res);
-                            addDeleteUrl();
-                            $('.success-modal').modal('show');
-                            $('.custom-content').text(res.message);
-
-                        }
-                        else if(res.status==='edited'){
-                            console.log(res.content);
-                            edit_container.text(res.content);
-                            $('.add_review').text('Comment');
-
-                            editing_content=null;
-                            modalFading();
-                            $('.custom-content').text(res.message);
-                            $('.modal-header').css('border-top','3px solid green');
-                            $('.review-form')[0].reset();
-                            $('.product-id').val(_default_product_id);
-
-                        }
-
-
-                        _submitBtn.attr('disabled',false);
-                        $('.review-form')[0].reset();
+                },
+                success:function(res){
+                    if(res.status==='created'){
+                        appendReview(res);
+                        addDeleteUrl();
+                        $('.success-modal').modal('show');
+                        $('.custom-content').text(res.message);
 
                     }
-            });
+                    else if(res.status==='edited'){
+                        console.log(res.content);
+                        edit_container.text(res.content);
+                        $('.add_review').text('Comment');
+
+                        editing_content=null;
+                        modalFading();
+                        $('.custom-content').text(res.message);
+                        $('.modal-header').css('border-top','3px solid green');
+                        $('.review-form')[0].reset();
+                        $('.product-id').val(_default_product_id);
+                    }
+                    _submitBtn.attr('disabled',false);
+                    $('.review-form')[0].reset();
+                }
+        });
 
     });
 
@@ -183,19 +164,8 @@ $(document).ready(function(){
         $('#id_content').focus();
         $('.add_review').text('Update review');
     });
-
-
-
 });
 
-
-function updateTimestamp(){
-
-    // $('.done').val('yesss')
-    console.log('updaaaating');
-
-
-}
 
 
 

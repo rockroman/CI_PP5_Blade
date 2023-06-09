@@ -35,7 +35,23 @@ function updateCartTotal() {
 
         }
 
+      },
+      error: function() {
+        if (xhr.status === 403) {
+          $('#errorModal .error-content').text("Access denied. Please log in to perform this action.");
+          $('#errorModal').modal('show');
+        } else if (xhr.status === 404) {
+          $('#errorModal .error-content').text("The requested resource was not found.");
+          $('#errorModal').modal('show');
+        } else if (xhr.status === 500) {
+          $('#errorModal .error-content').text("An internal server error occurred. Please try again later.");
+          $('#errorModal').modal('show');
+        } else {
+          $('#errorModal .error-content').text("An unexpected error occurred. Please try again later or contact support for assistance.");
+          $('#errorModal').modal('show');
+        }
       }
+
     });
   }
 
@@ -85,7 +101,22 @@ $('#addToCartBtn').on('click', function(){
             $('#Error').remove()
             $('.product-qty').val(1)
             _addBtn.attr('disabled',false);
-        }
+        },
+        error: function(xhr) {
+            if (xhr.status === 403) {
+              $('#errorModal .error-content').text("Access denied. Please log in to perform this action.");
+              $('#errorModal').modal('show');
+            } else if (xhr.status === 404) {
+              $('#errorModal .error-content').text("The requested resource was not found.");
+              $('#errorModal').modal('show');
+            } else if (xhr.status === 500) {
+              $('#errorModal .error-content').text("An internal server error occurred. Please try again later.");
+              $('#errorModal').modal('show');
+            } else {
+              $('#errorModal .error-content').text("An unexpected error occurred. Please try again later or contact support for assistance.");
+              $('#errorModal').modal('show');
+            }
+          }
     });
 })
 
@@ -123,7 +154,22 @@ $('.addToCartBtn').on('click', function(){
             $('.custom-content').text(message)
             _addBtn.attr('disabled',false);
             console.log(res.data);
-        }
+        },
+        error: function(xhr) {
+            if (xhr.status === 403) {
+              $('#errorModal .error-content').text("Access denied. Please log in to perform this action.");
+              $('#errorModal').modal('show');
+            } else if (xhr.status === 404) {
+              $('#errorModal .error-content').text("The requested resource was not found.");
+              $('#errorModal').modal('show');
+            } else if (xhr.status === 500) {
+              $('#errorModal .error-content').text("An internal server error occurred. Please try again later.");
+              $('#errorModal').modal('show');
+            } else {
+              $('#errorModal .error-content').text("An unexpected error occurred. Please try again later or contact support for assistance.");
+              $('#errorModal').modal('show');
+            }
+          }
     });
 })
 
@@ -160,7 +206,22 @@ $('.addToCartBtnWish').on('click', function(){
             updateCartTotal()
             $('.success-modal').modal('show');
             _addBtn.attr('disabled',false);
-        }
+        },
+        error: function(xhr) {
+            if (xhr.status === 403) {
+              $('#errorModal .error-content').text("Access denied. Please log in to perform this action.");
+              $('#errorModal').modal('show');
+            } else if (xhr.status === 404) {
+              $('#errorModal .error-content').text("The requested resource was not found.");
+              $('#errorModal').modal('show');
+            } else if (xhr.status === 500) {
+              $('#errorModal .error-content').text("An internal server error occurred. Please try again later.");
+              $('#errorModal').modal('show');
+            } else {
+              $('#errorModal .error-content').text("An unexpected error occurred. Please try again later or contact support for assistance.");
+              $('#errorModal').modal('show');
+            }
+          }
     });
 });
 
@@ -180,11 +241,20 @@ function updateWishlistTotal(){
         $('.heart-total').text(wishlist_count);
         $('.heart-total-bottom').text(wishlist_count);
       },
-      error:function(xhr, textStatus, errorThrown){
-        var errorMessage = "An error occured" + errorThrown
-        $('#errorModal .error-content').text(errorMessage);
-        $('#errorModal').modal('show');
-
+      error: function(xhr) {
+        if (xhr.status === 403) {
+          $('#errorModal .error-content').text("Access denied. Please log in to perform this action.");
+          $('#errorModal').modal('show');
+        } else if (xhr.status === 404) {
+          $('#errorModal .error-content').text("The requested resource was not found.");
+          $('#errorModal').modal('show');
+        } else if (xhr.status === 500) {
+          $('#errorModal .error-content').text("An internal server error occurred. Please try again later.");
+          $('#errorModal').modal('show');
+        } else {
+          $('#errorModal .error-content').text("An unexpected error occurred. Please try again later or contact support for assistance.");
+          $('#errorModal').modal('show');
+        }
       }
 
     });
@@ -195,6 +265,15 @@ $(document).ready(function () {
     updateCartTotal();
     updateWishlistTotal()
 });
+
+window.addEventListener('pageshow', function(event) {
+    // Check if the event persisted property is false, indicating a back/forward navigation
+    if (event.persisted) {
+      // Reload the page
+      updateCartTotal();
+      updateWishlistTotal()
+    }
+  });
 
 // modal fade after 2 sec
 function modalFading(){

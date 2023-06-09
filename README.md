@@ -1,7 +1,7 @@
-# PP5 UNDER DEVELOPMENT
+# Blade
 (Developer: Roman Rakic)
 
-![Mockup image](docs/features/first-one.png)
+![Mockup image](docs/Im_I_responsive.png)
 
 
 [View live website](https://knowledge-flow.herokuapp.com/)
