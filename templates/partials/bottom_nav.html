@@ -1,12 +1,15 @@
 <nav class="navbar fixed-bottom navbar-light  d-xl-none bottom-nav p-0">
     <div class="container-fluid fix_bottom d-flex justify-content-between">
         <div class="btn-group dropup">
-                <button type="button" id="dropdownProfileBottom2" class="btn  text-white shadow-none" data-bs-toggle="dropdown" aria-expanded="false" aria-label="icon button">
-                    <i class="bi bi-person" style="font-size:1.5rem; -webkit-text-stroke-width: .2px; color: white"></i>
+                <button type="button" id="dropdownProfileBottom2" class="btn  text-white shadow-none position-relative" data-bs-toggle="dropdown" aria-expanded="false" aria-label="icon button">
+                    <i class="bi bi-person" style="font-size:1.5rem; -webkit-text-stroke-width: .7px; color: white"></i>
+                    <span class="text-white user-name">{{ request.user.username|truncatechars:12 }}</span>
                 </button>
             <ul class="dropdown-menu " aria-labelledby="dropdownProfileBottom2">
                 {% if request.user.is_authenticated %}
-                <li><a class="dropdown-item " href="{% url 'customer_profile:profile' %}">Profile</a></li>
+                <li><a class="dropdown-item " href="{% url 'customer_profile:profile' %}">Profile</a>
+                    <span class="text-warning"></span>
+                </li>
                 <li><a class="dropdown-item" href="{% url 'account_logout' %}">Logout</a></li>
                 {% else %}
                 <li><a class="dropdown-item" href="{% url 'account_login' %}">Login</a></li>

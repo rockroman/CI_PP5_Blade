@@ -15,6 +15,7 @@
 
                     <button type="button" id="dropdownProfile1" class="btn dropdown-toggle text-white shadow-none" data-bs-toggle="dropdown" aria-expanded="false" aria-label="user profile dropdown menu button">
                         <i class="bi bi-person " style="font-size:1.5rem; -webkit-text-stroke-width: 1px; color: white;"></i>
+
                     </button>
 
                 <ul class="dropdown-menu " aria-labelledby="dropdownProfile1">
@@ -102,8 +103,9 @@
             <div class="d-none d-lg-flex flex-row w-auto align-items-center" >
 
                 <div class="dropdown">
-                        <button type="button" id="dropdownProfile2" class="btn dropdown-toggle text-white shadow-none" data-bs-toggle="dropdown" aria-expanded="false" aria-label="user profile dropdown menu button">
-                            <i class="bi bi-person" style="font-size:1.5rem; -webkit-text-stroke-width: 1px; color: white"></i>
+                        <button type="button" id="dropdownProfile2" class="btn dropdown-toggle text-white shadow-none position-relative" data-bs-toggle="dropdown" aria-expanded="false" aria-label="user profile dropdown menu button">
+                            <i class="bi bi-person" style="font-size:1.5rem; -webkit-text-stroke-width: .7px; color: white"></i>
+                            <span class="text-white user-name">{{ request.user.username|truncatechars:12 }}</span>
                         </button>
                     <ul class="dropdown-menu " aria-labelledby="dropdownProfile2">
                         {% if request.user.is_authenticated %}
