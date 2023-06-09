@@ -59,7 +59,7 @@ function addDeleteUrl(){
     }
 }
 
-//
+
 $(document).ready(function(){
     addDeleteUrl();
     var editing_content = null;

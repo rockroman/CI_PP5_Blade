@@ -4,7 +4,7 @@
 ![Mockup image](docs/Im_I_responsive.png)
 
 
-[View live website](https://knowledge-flow.herokuapp.com/)
+[View live website](https://pp5-blade.herokuapp.com/)
 
 ## Table of Contents
 0. [About](#about)
@@ -1343,6 +1343,23 @@ The Order Confirmation Thank You Form Feature serves as a confirmation and ackno
     <img src="docs/validation/html_validator/500_html.png" width="800" >
     </details>
 
+
+### Javascript
+- [JShint](https://jshint.com/) was used to validate custom script file
+- JS files are passing validator without errors
+
+   <details><summary>Js files</summary>
+
+    <details><summary>main.js</summary>
+    <img src="docs/validation/javascript/main_js.png" width="800" >
+    </details>
+
+    <details><summary>reviews.js</summary>
+    <img src="docs/validation/javascript/reviews_js.png" width="800" >
+    </details>
+
+
+    </details>
 
 ### Python
 - [CI Python Linter](https://pep8ci.herokuapp.com/) to check  Python code for validity and conventions
