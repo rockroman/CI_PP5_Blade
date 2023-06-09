@@ -16,7 +16,7 @@
 ***
 WAS = Works as expected
 
-user story:
+### user story:
 [#0](https://github.com/rockroman/CI_PP5_Blade/issues/3) As an unauthenticated user/customer I would Like be able to view a website homepage that provides an overview of the site's offerings
 
 
