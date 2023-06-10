@@ -1548,6 +1548,143 @@ The Order Confirmation Thank You Form Feature serves as a confirmation and ackno
 
 
 
+### Lighthouse
+
+- [Lighthouse](https://developers.google.com/web/tools/lighthouse/) for performance, accessibility, progressive web apps, SEO analysis of the project code here are the results:
+
+- note: Project Lighthouse performance results are not optimal due to decision  not to
+upload poor-quality images in our e-commerce app. This choice prioritizes visual quality but may result in larger image file sizes and longer loading times, impacting performance metrics, since the only source for images was the actual business owner.
+
+
+<details><summary>Home Desktop-screen</summary>
+<img src="docs/validation/lighthouse/home.png" >
+
+</details>
+<details><summary>Home Mobile-screen</summary>
+<img src="docs/validation/lighthouse/light_home_mob.png" >
+</details>
+
+
+
+<details><summary>All products Desktop-screen</summary>
+<img src="docs/validation/lighthouse/add_product.png" >
+
+</details>
+<details><summary>All products Mobile-screen</summary>
+<img src="docs/validation/lighthouse/add_product_mob.png" >
+</details>
+
+
+<details><summary>Product detail Desktop-screen</summary>
+<img src="docs/validation/lighthouse/home-desk.png" >
+
+</details>
+<details><summary>Product detail Mobile-screen</summary>
+<img src="docs/validation/lighthouse/prod_detail_mob.png" >
+</details>
+
+
+<details><summary>Shopping cart Desktop-screen</summary>
+<img src="docs/validation/lighthouse/shop_cart.png" >
+
+</details>
+<details><summary>Shopping cart Mobile-screen</summary>
+<img src="docs/validation/lighthouse/shop_cart_mob.png" >
+</details>
+
+<details><summary>Checkout Desktop-screen</summary>
+<img src="docs/validation/lighthouse/checkout.png" >
+
+</details>
+<details><summary>Checkout Mobile-screen</summary>
+<img src="docs/validation/lighthouse/checkout_mob.png" >
+</details>
+
+
+<details><summary>Checkout success Desktop-screen</summary>
+<img src="docs/validation/lighthouse/check_success.png" >
+</details>
+
+<details><summary>Checkout success Mobile-screen</summary>
+<img src="docs/validation/lighthouse/checkout_success_mob.png" >
+</details>
+
+
+<details><summary>Wishlist  Desktop-screen</summary>
+<img src="docs/validation/lighthouse/wishlist.png" >
+</details>
+
+<details><summary>Wishlist  Mobile-screen</summary>
+<img src="docs/validation/lighthouse/wishlist_mob.png" >
+</details>
+
+
+<details><summary>Profile  Desktop-screen</summary>
+<img src="docs/validation/lighthouse/profile.png" >
+</details>
+
+<details><summary>Profile  Mobile-screen</summary>
+<img src="docs/validation/lighthouse/profile_mob.png" >
+</details>
+
+
+<details><summary>Add product  Desktop-screen</summary>
+<img src="docs/validation/lighthouse/add_product.png" >
+</details>
+
+<details><summary>Add product  Mobile-screen</summary>
+<img src="docs/validation/lighthouse/add_product_mob.png" >
+</details>
+
+
+<details><summary>Login  Desktop-screen</summary>
+<img src="docs/validation/lighthouse/login.png" >
+</details>
+
+<details><summary>Login  Mobile-screen</summary>
+<img src="docs/validation/lighthouse/login_mob.png" >
+</details>
+
+
+<details><summary>Logout  Desktop-screen</summary>
+<img src="docs/validation/lighthouse/logout.png" >
+</details>
+
+<details><summary>Logout  Mobile-screen</summary>
+<img src="docs/validation/lighthouse/logout_mob.png" >
+</details>
+
+
+<details><summary>Register  Desktop-screen</summary>
+<img src="docs/validation/lighthouse/register.png" >
+</details>
+
+<details><summary>Register  Mobile-screen</summary>
+<img src="docs/validation/lighthouse/register_mob.png" >
+</details>
+
+
+<details><summary>Error pages  Desktop-screen</summary>
+<img src="docs/validation/lighthouse/home-desk.png" >
+</details>
+
+<details><summary>Error pages  Mobile-screen</summary>
+<img src="docs/validation/lighthouse/Home-mob.png" >
+</details>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ### Wave
 - [Wave Validator](https://wave.webaim.org/) to evaluate accessibility
