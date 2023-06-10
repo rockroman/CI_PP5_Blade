@@ -200,8 +200,45 @@ clicking complete order button  |validation of credit card details is implemente
 
 
 ### user story:
+[#16](https://github.com/rockroman/CI_PP5_Blade/issues/25) As an authenticated user/customer I would like functionality to leave a product review on a product detail   page so that other customers deciding on purchase of the item will have an insight from somebody who already bought the product
+
+**Step** | **Expected Result** | **Actual Result**
+------------ | ------------ | ------------ |
+When on products detail page logged in user can input product review text in a form that is clearly visible in product review section | product review text is visible to user    | WAS       |
+Clicking "add review" button | product review is posted with a success prompt to user    | WAS       |
+
+Negative  or boundary test case:
+**Step** | **Expected Result** | **Actual Result**
+------------ | ------------ | ------------ |
+user didn't put any text in a form and trying to post a review | django validates a fom and gives user an info text to 'fill the textfield of a review form" | WAS |
+
 ### user story:
+[#17](https://github.com/rockroman/CI_PP5_Blade/issues/26) As a authenticated user/customer I would Like functionality to edit or delete my product review so that information given in review are up to date and can help other users /customers
+
+**Step** | **Expected Result** | **Actual Result**
+------------ | ------------ | ------------ |
+When on products detail page user who is the author of review is clicking the blue "edit" button| reviews text(content) is loaded in review form   | WAS       |
+User is changing the review content in a review form and clicking a "update review" button  |product review is updated with  a success prompt to user    | WAS       |
+When on products detail page user who is the author of review is clicking the red "delete" button  | delete review modal pops up and asking for confirmation to delete review   | WAS       |
+user clicks "delete" button of delete review modal| reviews is deleted with a info prompt to a user  | WAS       |
+
+Negative  or boundary test case:
+**Step** | **Expected Result** | **Actual Result**
+------------ | ------------ | ------------ |
+user is trying to delete review and changes his mind so in delete modal he is clicking "go back" button | delete modal closes and review is unchanged | WAS |
+user is trying to edit  review and changes his mind so leaves the page| review stays unchanged | WAS |
+user is trying to edit  review and leaves reviews content unchanged| review stays unchanged but time since of posting a review resets  | WAS |
+
 ### user story:
+[#18](https://github.com/rockroman/CI_PP5_Blade/issues/28) As an authenticated user/customer, I want to have the option to add products to my wishlist for future reference and easy access.
+
+
+
+
+
+
+
+
 ### user story:
 ### user story:
 ### user story:

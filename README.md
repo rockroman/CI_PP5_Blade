@@ -1664,23 +1664,6 @@ upload poor-quality images in our e-commerce app. This choice prioritizes visual
 </details>
 
 
-<details><summary>Error pages  Desktop-screen</summary>
-<img src="docs/validation/lighthouse/home-desk.png" >
-</details>
-
-<details><summary>Error pages  Mobile-screen</summary>
-<img src="docs/validation/lighthouse/Home-mob.png" >
-</details>
-
-
-
-
-
-
-
-
-
-
 
 
 
