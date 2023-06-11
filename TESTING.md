@@ -150,6 +150,17 @@ navigating to any link from "All knives" or "Categories" submenu in navigation |
 
 
 
+<details><summary>Screenshot</summary>
+<img src="docs/user_story_test/story_5.png" >
+<img src="docs/user_story_test/story_5a.png" >
+<img src="docs/user_story_test/story_5b.png" >
+
+
+</details>
+
+***
+
+
 
 ### user story:
 [#6](https://github.com/rockroman/CI_PP5_Blade/issues/10) As an unauthenticated user/customer, I would like functionality to select product and add it to my shopping basket
@@ -161,6 +172,19 @@ when on product detail page user clicks "add to cart button" | product is added 
 when on wishlist page user clicks "add to cart button" | product is added to shopping cart with descriptive pop up message     | WAS       |
 
 
+<details><summary>Screenshot</summary>
+<img src="docs/user_story_test/story_6.png" >
+<img src="docs/user_story_test/story_6a.png" >
+<img src="docs/user_story_test/story_6c.png" >
+<img src="docs/user_story_test/story_6e.png" >
+<img src="docs/user_story_test/story_6f.png" >
+<img src="docs/user_story_test/story_6g.png" >
+
+
+</details>
+
+***
+
 
 ### user story:
 [#7](https://github.com/rockroman/CI_PP5_Blade/issues/11) As an unauthenticated user/customer, I would like functionality to select multiple product and add it to my shopping basket
@@ -171,6 +195,17 @@ When on All products page user clicks a green cart button on each product card |
 when on wishlist page user clicks "add to cart button" under each product on a wishlist |each product is added to shopping cart with descriptive pop up message     | WAS       |
 
 
+<details><summary>Screenshot</summary>
+<img src="docs/user_story_test/story_7.png" >
+<img src="docs/user_story_test/story_7a.png" >
+<img src="docs/user_story_test/story_7b.png" >
+<img src="docs/user_story_test/story_7c.png" >
+
+
+</details>
+
+***
+
 ### user story:
 [#8](https://github.com/rockroman/CI_PP5_Blade/issues/12) As an unauthenticated user/customer, I would like functionality to increase or decrease quantity of products in my shopping basket
 
@@ -179,10 +214,28 @@ when on wishlist page user clicks "add to cart button" under each product on a w
 Navigating to product shopping cart page | shopping cart page loads    | WAS       |
 Adjusting quantity value with quantity input buttons (increasing or decreasing quantity of each product) and clicking blue edit button |quantity of product in a shopping cart is updated with descriptive message     | WAS       |
 
+<details><summary>Screenshot</summary>
+<img src="docs/user_story_test/story_8.png" >
+<img src="docs/user_story_test/story_8a.png" >
+
+
+</details>
+
+
+
 Negative  or boundary test case:
 **Step** | **Expected Result** | **Actual Result**
 ------------ | ------------ | ------------ |
 user is not entering any quantity value in quantity input field     |  program is interpreting value as 0 and product is deleted from shopping cart since value must be deleted with manually and with intention      | WAS |
+
+<details><summary>Screenshot</summary>
+<img src="docs/user_story_test/story_8c.png" >
+<img src="docs/user_story_test/story_8d.png" >
+
+
+</details>
+
+***
 
 
 ### user story:
