@@ -233,28 +233,187 @@ user is trying to edit  review and leaves reviews content unchanged| review stay
 [#18](https://github.com/rockroman/CI_PP5_Blade/issues/28) As an authenticated user/customer, I want to have the option to add products to my wishlist for future reference and easy access.
 
 
+**Step** | **Expected Result** | **Actual Result**
+------------ | ------------ | ------------ |
+When on all products  page logged in user clicks on "heart" icon in products card element  | product is added to wishlist with success message| WAS       |
+Logged in user clicks on "heart" shaped icon in navigation  |wishlist page loads displaying all  products added to wishlist | WAS       |
+
+
+Negative  or boundary test case:
+**Step** | **Expected Result** | **Actual Result**
+------------ | ------------ | ------------ |
+Unauthenticated user clicks on ""heart" shaped icon on product card element or in navigation  | login page loads since only authenticated logged in users have functionality to add product to wishlist and view the wishlist | WAS |
+Logged in user clicks on "heart" shaped icon on product card of a product that is already on a wishlist| info message pops up informing a user that product is already on a wishlist | WAS |
+
+### user story:
+[#19](https://github.com/rockroman/CI_PP5_Blade/issues/29) As an authenticated user/customer, I want to be able to remove items from my wishlist, so that I can manage my saved products effectively and remove those that I am no longer interested in
+
+**Step** | **Expected Result** | **Actual Result**
+------------ | ------------ | ------------ |
+When on wishlist page logged in user clicks on "delete" button under the product he wants to remove from wishlist   | delete from wishlist modal pops up asking for user confirmation to delete product from wishlist| WAS       |
+Logged in user clicks on delete button of delete from wishlist modal  |product is deleted from wishlist and success message pops up to inform user about successful  deletion operation  | WAS  |
+
+### user story:
+[#20](https://github.com/rockroman/CI_PP5_Blade/issues/30) As an authenticated user/customer, I want to receive email notifications for order confirmations, shipping updates, and special promotions.
+
+**Step** | **Expected Result** | **Actual Result**
+------------ | ------------ | ------------ |
+When on secure checkout page  user clicks on "complete order" button | after processing order checkout success page loads and confirmation email is sent to an email address indicated on a checkout form| WAS       |
+
+
+### user story:
+[#21](https://github.com/rockroman/CI_PP5_Blade/issues/32) As an authenticated user/customer, I would like to have the option to contact team or the site owner for any inquiries or assistance related to products or orders.
+
+
+**Step** | **Expected Result** | **Actual Result**
+------------ | ------------ | ------------ |
+User navigates to a  about link in the navigation| about us page loads| WAS       |
+User navigates to a contact link in the navigation| about us page loads and cursor focuses on a "contact us form"| WAS       |
+User is filling out a form by choosing "purpose of inquiry", inputs his, name, email address and message while phone number field is optional then user is clicking send message button | message is sent and success message is presented to user| WAS     |
 
 
 
+Negative  or boundary test case:
+**Step** | **Expected Result** | **Actual Result**
+------------ | ------------ | ------------ |
+user didn't put any text in a form and trying to send message | django validates a form and gives user an info text to 'fill the missing field " of a form | WAS |
+user forgets to put  text in any form field except "phone number field" and trying to send message | django validates a form and gives user an info text to 'fill the missing field " of a form | WAS |
+
+
+### user story:
+[#22](https://github.com/rockroman/CI_PP5_Blade/issues/33) As an unauthenticated user/customer, I want to see links to the business's social media profiles on the website to stay connected and follow updates on different platforms.
+
+
+**Step** | **Expected Result** | **Actual Result**
+------------ | ------------ | ------------ |
+When navigating throughout the project| project footer is present at the bottom of a page| WAS       |
+User navigates to a media marketing feature of a home page | instagram business page link is presented to a user| WAS       |
 
 
 
 ### user story:
+[#23](https://github.com/rockroman/CI_PP5_Blade/issues/34) As an unauthenticated user/customer, I want to have the option to contact the business through social media channels (such as Facebook, Instagram, or Twitter) for inquiries or support.
+
+**Step** | **Expected Result** | **Actual Result**
+------------ | ------------ | ------------ |
+When navigating throughout the project| project footer is present at the bottom of a page| WAS       |
+User navigates to a facebook link in a footer and clicks on it  | facebook  business page loads in a separate window| WAS       |
+User navigates to a instagram link in a footer and clicks on it  | instagram  business page loads in a separate window| WAS       |
+
+
 ### user story:
+[#24](https://github.com/rockroman/CI_PP5_Blade/issues/43) As an unauthenticated user/customer, if I encounter a page not found error, I want to be redirected to a relevant page or provided with suggestions to navigate back to valid areas of the site.
+
+
+**Step** | **Expected Result** | **Actual Result**
+------------ | ------------ | ------------ |
+User types nonexisting page of project or url in a url bar | 404 error page loads | WAS |
+User navigates to a  "back home"  button on error page clicks on it  | project home page loads | WAS  |
+
+
+Negative  or boundary test case:
+**Step** | **Expected Result** | **Actual Result**
+------------ | ------------ | ------------ |
+User clicks on a footer facebook link (and page is under maintenance at the moment) | 404 error page loads | WAS |
+User types partially correct page address of project | 404 error page loads  | WAS |
+
+
 ### user story:
+[#25](https://github.com/rockroman/CI_PP5_Blade/issues/35) As a site owner, I want to provide secure payment options for customers, such as integrating with secure payment gateways (e.g. Stripe)
+
+
+**Step** | **Expected Result** | **Actual Result**
+------------ | ------------ | ------------ |
+Select a product and proceed to the secure checkout | The checkout page loads successfully| WAS  |
+Scroll to the payment section of checkout page  | The payment section is displayed| WAS  |
+Enter valid payment details (e.g., card number, expiration date, CVV)| payment animation is displayed ,payment information is accepted and checkout success page loads   | WAS    |
+
+
+
+Negative  or boundary test case:
+**Step** | **Expected Result** | **Actual Result**
+------------ | ------------ | ------------ |
+User inputs invalid card details | Stripe validates card information and returns error message to user| WAS |
+User inputs  card details and there is insufficient funds on the card | Stripe validates card information and "Your card has been declined"| WAS |
+
+
+
 ### user story:
+[#26](https://github.com/rockroman/CI_PP5_Blade/issues/36) As a site owner, I want to be able to add new products to the web-shop, including details like product name, description, price, and images.
+
+
+**Step** | **Expected Result** | **Actual Result**
+------------ | ------------ | ------------ |
+Site owner navigates to " Shop management link" under user submenu | Product management or add product page is loaded| WAS       |
+Site owner fills in all details of a new product in a product form and clicks "add product" button | new product is added to a web-shop and success message pops up| WAS |
+
+
+
+Negative  or boundary test case:
+**Step** | **Expected Result** | **Actual Result**
+------------ | ------------ | ------------ |
+Not site owner user types in a 'add product' page address in url bar | error message pops up notifying that only "site owner has access" to that address| WAS |
+Site owner fills in add product forms but forgets any field except image field |django validates the form informing site owner to fill the missing field| WAS |
+Site owner fills in add product forms but not uploading image for product | product is added to a web-shop and default image for products without images is used to represent the product| WAS |
+
 ### user story:
+[#27](https://github.com/rockroman/CI_PP5_Blade/issues/37) As a site owner, I want to be able to delete existing products from the web-shop that are no longer available or relevant.
+
+
+
+**Step** | **Expected Result** | **Actual Result**
+------------ | ------------ | ------------ |
+Site owner navigates to product detail page  |  product detail  page is loaded| WAS       |
+Site owner clicks "delete" button of a product he wants to delete | delete product modal pops up asking to confirm deletion of product| WAS |
+Site owner clicks "delete" button on delete product modal | product is deleted from web-shop with pop up message informing user about deletion| WAS |
+
+
+
 ### user story:
+[#28](https://github.com/rockroman/CI_PP5_Blade/issues/38) As a site owner, I want to be able to update product information, such as descriptions, details, prices, and images, to keep the web-shop content accurate and up to date.
+
+**Step** | **Expected Result** | **Actual Result**
+------------ | ------------ | ------------ |
+Site owner navigates to product detail page  |  product detail  page is loaded| WAS       |
+Site owner clicks "edit" button of a product he wants to edit | edit product page is loaded with info pop up " you are editing product"| WAS |
+Site owner edits the information of a product and clicks edit product  | product is updated and success message pops up | WAS |
+
+
+
 ### user story:
+[#29](https://github.com/rockroman/CI_PP5_Blade/issues/39) As a site owner, I want to integrate a newsletter sign-up form  to capture user information and allow customers to subscribe for updates and promotions.
+
+
+**Step** | **Expected Result** | **Actual Result**
+------------ | ------------ | ------------ |
+User navigates to media marketing section of home page | media marketing section with newsletter form and instagram link is presented to user | WAS       |
+User types in his email address and clicks "subscribe" | success message "thank you for subscribing" is presented within newsletter sign up form | WAS |
+
+
+
+Negative  or boundary test case:
+**Step** | **Expected Result** | **Actual Result**
+------------ | ------------ | ------------ |
+User types in invalid form of email address and presses "subscribe"| "mailchimp" validates the form and outputs the error message to user to put in valid email address| WAS |
+User types no text in newsletter sign up form  and presses "subscribe"| "mailchimp" validates the form and outputs the error message to user that field in a form is required| WAS |
+
+
+
 ### user story:
-### user story:
-### user story:
-### user story:
-### user story:
-### user story:
-### user story:
-### user story:
-### user story:
-### user story:
-### user story:
+[#30](https://github.com/rockroman/CI_PP5_Blade/issues/40) As a site owner, I want to ensure that error pages allow users to easily return to valid areas of the site without relying on browser controls.
+
+
+**Step** | **Expected Result** | **Actual Result**
+------------ | ------------ | ------------ |
+User types nonexisting page of project or url in a url bar | 404 error page loads | WAS |
+User navigates to a  "back home"  button on error page clicks on it  | project home page loads | WAS  |
+
+
+Negative  or boundary test case:
+**Step** | **Expected Result** | **Actual Result**
+------------ | ------------ | ------------ |
+User clicks on a footer facebook link (and page is under maintenance at the moment) | 404 error page loads | WAS |
+User types partially correct page address of project | 404 error page loads  | WAS |
+
+
 

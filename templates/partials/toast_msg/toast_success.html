@@ -38,7 +38,7 @@
                 <div class="col">
                     <p class="mt-3 mb-1 text-black">
                         Total:
-                        <span class="float-right fw-bold">${{ total|floatformat:2 }}</span>
+                        <span class="float-right fw-bold">€{{ total|floatformat:2 }}</span>
                     </p>
                     <div class=" w-100">
                         <a href="{% url 'checkout:store_checkout' %}" class="btn btn-warning btn-block btn-lg fw-bold btn-outline-dark w-100"
