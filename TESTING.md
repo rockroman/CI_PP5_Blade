@@ -21,14 +21,22 @@ WAS = Works as expected
 
 
 
-
-
 **Step** | **Expected Result** | **Actual Result**
 ------------ | ------------ | ------------ |
   navigating to https://pp5-blade.herokuapp.com/   | Home page loads      | WAS       |
   Click on Shop now button  | all products  page loads      | WAS       |
   scrolling dow the home page   | home page content is presented to the user      | WAS       |
 
+<details><summary>Screenshot</summary>
+<img src="docs/user_story_test/story_0.png" >
+<img src="docs/user_story_test/story_0a.png" >
+<img src="docs/user_story_test/story_0_mob.png" >
+<img src="docs/user_story_test/story_0a_mob.png" >
+
+
+</details>
+
+***
 
 ### user story:
 [#1](https://github.com/rockroman/CI_PP5_Blade/issues/4) As an unauthenticated user/customer, I would like website navigation to be fast and easy
@@ -39,6 +47,17 @@ navigating to https://pp5-blade.herokuapp.com/     | The navigation menu is easi
 click on navigation link  | desired location load quickly and accurately     | WAS       |
 click on hamburger menu  |  menu is expanded containing all related links   | WAS       |
 
+<details><summary>Screenshot</summary>
+<img src="docs/user_story_test/story_1.png" >
+<img src="docs/user_story_test/story1a.png" >
+<img src="docs/user_story_test/story_1_mob.png" >
+<img src="docs/user_story_test/story_1a.png" >
+<img src="docs/user_story_test/story1b_mob.png" >
+
+
+</details>
+
+***
 
 ### user story:
 [#2](https://github.com/rockroman/CI_PP5_Blade/issues/6) As an unauthenticated user/customer, I would like the ability to browse through all the products available on the site.
@@ -50,6 +69,19 @@ Clicking on "Shop" button in bottom navigation  | all products  page loads      
 Clicking on All knives or All categories link in a navigation  |  all products page containing all available products is loaded   | WAS       |
 
 
+<details><summary>Screenshot</summary>
+<img src="docs/user_story_test/story_2.png" >
+<img src="docs/user_story_test/story_2a.png" >
+<img src="docs/user_story_test/story_2_mob.png" >
+<img src="docs/user_story_test/story_2b.png" >
+<img src="docs/user_story_test/story_2c_mob.png" >
+
+
+</details>
+
+***
+
+
 ### user story:
 [#3](https://github.com/rockroman/CI_PP5_Blade/issues/4) As an unauthenticated user/customer, I would like to search the website to see what kind of product are offered to purchase
 
@@ -59,10 +91,30 @@ navigating to https://pp5-blade.herokuapp.com/   | search icon is present throug
 clicking on search icon  | search sidebar with input field is presented     | WAS       |
 entering search term in search input field  |  page containing items with related search term is loaded   | WAS       |
 
+<details><summary>Screenshot</summary>
+<img src="docs/user_story_test/story_3.png" >
+<img src="docs/user_story_test/story_3f.png" >
+<img src="docs/user_story_test/story_3g.png" >
+
+
+
+
+</details>
+
 Negative  or boundary test case:
 **Step** | **Expected Result** | **Actual Result**
 ------------ | ------------ | ------------ |
 user enters search term that don't exists     |  template with no products is loaded with message "0 Products found for (search term)"      | WAS |
+
+<details><summary>Screenshot</summary>
+<img src="docs/user_story_test/story_3a.png" >
+<img src="docs/user_story_test/story_3b.png" >
+<img src="docs/user_story_test/story_3d_mob.png" >
+<img src="docs/user_story_test/story_3e_mob.png" >
+
+</details>
+
+***
 
 
 
@@ -73,6 +125,17 @@ user enters search term that don't exists     |  template with no products is lo
 **Step** | **Expected Result** | **Actual Result**
 ------------ | ------------ | ------------ |
 Clicking on product related buttons "See more" or product image on a all products page | products detail page is loaded containing  all information about product   | WAS       |
+
+
+<details><summary>Screenshot</summary>
+<img src="docs/user_story_test/story_4.png" >
+<img src="docs/user_story_test/story_4a.png" >
+<img src="docs/user_story_test/story_4b.png" >
+
+
+</details>
+
+***
 
 
 ### user story:

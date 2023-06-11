@@ -9,6 +9,7 @@ from products.models import Product, Category
 from django.contrib.auth.models import User
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+
 class TestWishlisttModel(TestCase):
 
     @classmethod
