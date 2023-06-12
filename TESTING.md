@@ -247,6 +247,17 @@ user is not entering any quantity value in quantity input field     |  program i
 navigating to https://pp5-blade.herokuapp.com/ and browsing throughout project | navigation with user icon is present  | WAS       |
 clicking the user icon in navigation| option to register  for  account is available in navigation menu for  unauthenticated users     | WAS       |
 
+<details><summary>Screenshot</summary>
+<img src="docs/user_story_test/story_9.png" >
+<img src="docs/user_story_test/story_9a.png" >
+<img src="docs/user_story_test/story_9e.png" >
+<img src="docs/user_story_test/story_9f.png" >
+
+
+</details>
+
+***
+
 ### user story:
 [#10](https://github.com/rockroman/CI_PP5_Blade/issues/41) As an authenticated user/customer, I would like functionality to edit and save changes of my account information
 
@@ -258,10 +269,31 @@ clicking the user icon in navigation| option to view profile  is available in na
 navigating to profile link | profile page loads | WAS|
 updating profile field with new information | profile page reloads with updated information and pop up message to a user  | WAS|
 
+<details><summary>Screenshot</summary>
+<img src="docs/user_story_test/story_10.png" >
+<img src="docs/user_story_test/story_10a.png" >
+<img src="docs/user_story_test/story_10b.png" >
+<img src="docs/user_story_test/story_10c.png" >
+<img src="docs/user_story_test/story_10d.png" >
+
+
+</details>
+
+
+
 Negative  or boundary test case:
 **Step** | **Expected Result** | **Actual Result**
 ------------ | ------------ | ------------ |
 user laves one or more fields of user profile form empty    |  profile is updated with empty fields accepted as blank by default. profile fields are not mandatory cause It only helps user save time going through checkout process (by prefilling order form)    | WAS |
+
+<details><summary>Screenshot</summary>
+<img src="docs/user_story_test/story_10f.png" >
+
+
+
+</details>
+
+***
 
 
 ### user story:
@@ -274,10 +306,28 @@ clicking the user icon in navigation| option to view profile  is available in na
 clicking profile link in navigation menu| profile page loads with order history accordion on visible to a user    | WAS       |
 clicking the "order history accordion" for specific order number  | order history table for that order is revealed with order relevant data| WAS|
 
+<details><summary>Screenshot</summary>
+<img src="docs/user_story_test/story_11.png" >
+<img src="docs/user_story_test/story_11a.png" >
+<img src="docs/user_story_test/story_11b.png" >
+
+
+
+</details>
+
 Negative  or boundary test case:
 **Step** | **Expected Result** | **Actual Result**
 ------------ | ------------ | ------------ |
 user navigates to profile page but has no order completed   |  order history accordion is empty since there is no order history to display| WAS |
+
+<details><summary>Screenshot</summary>
+<img src="docs/user_story_test/story_11g.png" >
+
+
+
+</details>
+
+***
 
 
 ### user story:
@@ -288,6 +338,21 @@ user navigates to profile page but has no order completed   |  order history acc
 navigating to secure checkout page with button from shopping cart page or pop up toast| secure checkout page loads   | WAS       |
 filling out secure checkout form and ticking the checkbox " Save this delivery information to my profile"| user details (shipping and billing) are saved to his profile/account    | WAS       |
 navigating to user profile | shipping and billing data is saved and displayed in user profile form| WAS|
+
+
+<details><summary>Screenshot</summary>
+<img src="docs/user_story_test/story_13.png" >
+<img src="docs/user_story_test/story_13a.png" >
+<img src="docs/user_story_test/story_13c.png" >
+<img src="docs/user_story_test/story_13e.png" >
+<img src="docs/user_story_test/story_13f.png" >
+<img src="docs/user_story_test/story_11g.png" >
+
+
+
+</details>
+
+***
 
 ### user story:
 [#14](https://github.com/rockroman/CI_PP5_Blade/issues/23) As user/customer, I would like functionality to put in my card details so that I can make a purchase
