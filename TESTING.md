@@ -364,20 +364,46 @@ scrolling to bottom of checkout form| payment section is presented to a user    
 entering the credit card details |details are displayed in payment form| WAS|
 clicking complete order button  |validation of credit card details is implemented by stripe and payment is made| WAS|
 
+<details><summary>Screenshot</summary>
+<img src="docs/user_story_test/story_14.png" >
+<img src="docs/user_story_test/story_14a.png" >
+<img src="docs/user_story_test/story_14b.png" >
+<img src="docs/user_story_test/story_14c.png" >
+
+
+</details>
+
+
 Negative  or boundary test case:
 **Step** | **Expected Result** | **Actual Result**
 ------------ | ------------ | ------------ |
 user doesn't fill payment form or fills it incorrectly   | stripe validation is implemented  error is presented to user and payment wont be completed until error i resolved| WAS |
+
+
+<details><summary>Screenshot</summary>
+<img src="docs/user_story_test/story_14d.png" >
+
+</details>
+
+***
+
 
 ### user story:
 [#15](https://github.com/rockroman/CI_PP5_Blade/issues/31) As an unauthenticated user/customer, I would like to be able to view and read reviews of products to make informed purchasing decisions.
 
 **Step** | **Expected Result** | **Actual Result**
 ------------ | ------------ | ------------ |
-navigating to secure checkout page with  button from shopping cart page or pop up toast| secure checkout page loads   | WAS       |
-scrolling to bottom of checkout form| payment section is presented to a user    | WAS       |
-entering the credit card details |details are displayed in payment form| WAS|
-clicking complete order button  |validation of credit card details is implemented by stripe and payment is made| WAS|
+navigating to product detail  page with  band scrolling to a product review section| product review section is presented to a user  | WAS       |
+User reads a reviews if there is any |user can read reviews and make better informed decision about purchase   | WAS       |
+
+<details><summary>Screenshot</summary>
+<img src="CI_PP5_Blade/docs/user_story_test/story_15.png" >
+<img src="CI_PP5_Blade/docs/user_story_test/story_15a.png" >
+
+</details>
+
+***
+
 
 
 ### user story:
