@@ -11,6 +11,29 @@
 
 
 
+***
+## Device testing
+***
+
+- The project was thoroughly tested on multiple devices both during the development phase and after its completion.
+
+### Mobile devices
+
+
+#### Samsung A52
+- Results are here:
+
+    <details><summary>Screenshot</summary>
+      <img src="./device-testing/samsung1.jpg" >
+      <img src="./device-testing/samsung2.jpg" >
+      <img src="./device-testing/samsung3.jpg" >
+      <img src="./device-testing/samsung4.jpg" >
+      <img src="./device-testing/samsung5.jpg" >
+      <img src="./device-testing/samsung6.jpg" >
+      <img src="./device-testing/samsung7.jpg" >
+
+    </details>
+
 
 ## Manual testing of user stories
 ***

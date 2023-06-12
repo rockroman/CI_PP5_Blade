@@ -457,15 +457,15 @@ fields:
 </details>
 
 <details><summary>Profile</summary>
-<img src="docs/wireframes/blog-page.png">
+<img src="docs/wireframes/Profile.png">
 </details>
 
 <details><summary>Add product</summary>
-<img src="docs/wireframes/blog-page.png">
+<img src="docs/wireframes/Add product.png">
 </details>
 
 <details><summary>Authentication pages</summary>
-<img src="docs/wireframes/blog-page.png">
+<img src="docs/wireframes/Authentication.png">
 </details>
 
 
@@ -506,15 +506,15 @@ fields:
 </details>
 
 <details><summary>Profile</summary>
-<img src="docs/wireframes/blog-page.png">
+<img src="docs/wireframes/Profile_tablet.png">
 </details>
 
 <details><summary>Add product</summary>
-<img src="docs/wireframes/blog-page.png">
+<img src="docs/wireframes/add_product_tablet.png">
 </details>
 
 <details><summary>Authentication pages</summary>
-<img src="docs/wireframes/blog-page.png">
+<img src="docs/wireframes/authentication_tablet.png">
 </details>
 
 
@@ -556,15 +556,15 @@ fields:
 </details>
 
 <details><summary>Profile</summary>
-<img src="docs/wireframes/blog-page.png">
+<img src="docs/wireframes/Profile_mob.png">
 </details>
 
 <details><summary>Add product</summary>
-<img src="docs/wireframes/blog-page.png">
+<img src="docs/wireframes/add prodct mobile.png">
 </details>
 
 <details><summary>Authentication pages</summary>
-<img src="docs/wireframes/blog-page.png">
+<img src="docs/wireframes/Authentication_mob.png">
 </details>
 
 
@@ -581,13 +581,6 @@ fields:
 </details>
 
 ***
-
-
-
-
-
-
-
 
 
 
@@ -1727,5 +1720,56 @@ upload poor-quality images in our e-commerce app. This choice prioritizes visual
     </details>
 
 
+## Testing
+***
+
+- Knowledge flow was tested during and post development and all
+results for
+    - Device Testing
+    - Browser Compatibility
+    - Manual Testing
+    - Automated Testing
+
+    are contained in TESTING.md file that you can see [here.](https://github.com/rockroman/CI_PP5_Blade/blob/main/TESTING.md)
+
+## Bugs
+***
+- During the development of this project those Bugs are found and documented:
+
+1. JSfile not loading
+
+    <details><summary>see bug</summary>
+    <img src="docs/bugs/bug1.png" width="800">
+    </details>
+
+2. Stripe cache_checkout_data typo
+
+    <details><summary>see bug</summary>
+    <img src="docs/bugs/bug2.png" width="800">
+    </details>
+
+3. Cart item count indicator not updating on click
+
+    <details><summary>see bug</summary>
+    <img src="docs/bugs/bug3.png" width="800">
+    </details>
+
+4. Wishlist bug
+
+    <details><summary>see bug</summary>
+    <img src="docs/bugs/bug4.png" width="800">
+    </details>
+
+5. No value for update shopping cart product quantity
+
+    <details><summary>see bug</summary>
+    <img src="docs/bugs/bug5.png" width="800">
+    </details>
+
+6. Review model wrong field
+
+    <details><summary>see bug</summary>
+    <img src="docs/bugs/bug6.png" width="800">
+    </details>
 
 
