@@ -342,13 +342,16 @@ navigating to user profile | shipping and billing data is saved and displayed in
 
 <details><summary>Screenshot</summary>
 <img src="docs/user_story_test/story_13.png" >
+
 <img src="docs/user_story_test/story_13a.png" >
+
 <img src="docs/user_story_test/story_13c.png" >
+
 <img src="docs/user_story_test/story_13e.png" >
+
 <img src="docs/user_story_test/story_13f.png" >
+
 <img src="docs/user_story_test/story_11g.png" >
-
-
 
 </details>
 
@@ -397,8 +400,8 @@ navigating to product detail  page with  band scrolling to a product review sect
 User reads a reviews if there is any |user can read reviews and make better informed decision about purchase   | WAS       |
 
 <details><summary>Screenshot</summary>
-<img src="CI_PP5_Blade/docs/user_story_test/story_15.png" >
-<img src="CI_PP5_Blade/docs/user_story_test/story_15a.png" >
+<img src="docs/user_story_test/story_15.png" >
+<img src="docs/user_story_test/story_15a.png" >
 
 </details>
 
@@ -414,10 +417,22 @@ User reads a reviews if there is any |user can read reviews and make better info
 When on products detail page logged in user can input product review text in a form that is clearly visible in product review section | product review text is visible to user    | WAS       |
 Clicking "add review" button | product review is posted with a success prompt to user    | WAS       |
 
+<details><summary>Screenshot</summary>
+<img src="docs/user_story_test/story_16.png" >
+<img src="docs/user_story_test/story_16a.png" >
+
+</details>
+
 Negative  or boundary test case:
 **Step** | **Expected Result** | **Actual Result**
 ------------ | ------------ | ------------ |
 user didn't put any text in a form and trying to post a review | django validates a fom and gives user an info text to 'fill the textfield of a review form" | WAS |
+
+<details><summary>Screenshot</summary>
+<img src="docs/user_story_test/story_16b.png" >
+<img src="docs/user_story_test/story_16c.png" >
+
+</details>
 
 ### user story:
 [#17](https://github.com/rockroman/CI_PP5_Blade/issues/26) As a authenticated user/customer I would Like functionality to edit or delete my product review so that information given in review are up to date and can help other users /customers
@@ -429,12 +444,31 @@ User is changing the review content in a review form and clicking a "update revi
 When on products detail page user who is the author of review is clicking the red "delete" button  | delete review modal pops up and asking for confirmation to delete review   | WAS       |
 user clicks "delete" button of delete review modal| reviews is deleted with a info prompt to a user  | WAS       |
 
+
+<details><summary>Screenshot</summary>
+<img src="docs/user_story_test/story_17.png" >
+<img src="docs/user_story_test/story_17a.png" >
+<img src="docs/user_story_test/story_17b.png" >
+<img src="docs/user_story_test/story_17c.png" >
+
+</details>
+
 Negative  or boundary test case:
 **Step** | **Expected Result** | **Actual Result**
 ------------ | ------------ | ------------ |
 user is trying to delete review and changes his mind so in delete modal he is clicking "go back" button | delete modal closes and review is unchanged | WAS |
 user is trying to edit  review and changes his mind so leaves the page| review stays unchanged | WAS |
 user is trying to edit  review and leaves reviews content unchanged| review stays unchanged but time since of posting a review resets  | WAS |
+
+
+<details><summary>Screenshot</summary>
+<img src="docs/user_story_test/story_17e.png" >
+<img src="docs/user_story_test/story_17f.png" >
+<img src="docs/user_story_test/story_17i.png" >
+
+</details>
+
+***
 
 ### user story:
 [#18](https://github.com/rockroman/CI_PP5_Blade/issues/28) As an authenticated user/customer, I want to have the option to add products to my wishlist for future reference and easy access.
@@ -446,11 +480,28 @@ When on all products  page logged in user clicks on "heart" icon in products car
 Logged in user clicks on "heart" shaped icon in navigation  |wishlist page loads displaying all  products added to wishlist | WAS       |
 
 
+
+<details><summary>Screenshot</summary>
+<img src="docs/user_story_test/story_18.png" >
+<img src="docs/user_story_test/story_18a.png" >
+<img src="docs/user_story_test/story_18b.png" >
+
+</details>
+
 Negative  or boundary test case:
 **Step** | **Expected Result** | **Actual Result**
 ------------ | ------------ | ------------ |
 Unauthenticated user clicks on ""heart" shaped icon on product card element or in navigation  | login page loads since only authenticated logged in users have functionality to add product to wishlist and view the wishlist | WAS |
 Logged in user clicks on "heart" shaped icon on product card of a product that is already on a wishlist| info message pops up informing a user that product is already on a wishlist | WAS |
+
+<details><summary>Screenshot</summary>
+<img src="docs/user_story_test/story_18e.png" >
+<img src="docs/user_story_test/story_18f.png" >
+<img src="docs/user_story_test/story_18g.png" >
+
+</details>
+
+***
 
 ### user story:
 [#19](https://github.com/rockroman/CI_PP5_Blade/issues/29) As an authenticated user/customer, I want to be able to remove items from my wishlist, so that I can manage my saved products effectively and remove those that I am no longer interested in
@@ -460,12 +511,32 @@ Logged in user clicks on "heart" shaped icon on product card of a product that i
 When on wishlist page logged in user clicks on "delete" button under the product he wants to remove from wishlist   | delete from wishlist modal pops up asking for user confirmation to delete product from wishlist| WAS       |
 Logged in user clicks on delete button of delete from wishlist modal  |product is deleted from wishlist and success message pops up to inform user about successful  deletion operation  | WAS  |
 
+<details><summary>Screenshot</summary>
+<img src="docs/user_story_test/story_19.png" >
+<img src="docs/user_story_test/story_19a.png" >
+
+
+</details>
+
+***
+
 ### user story:
 [#20](https://github.com/rockroman/CI_PP5_Blade/issues/30) As an authenticated user/customer, I want to receive email notifications for order confirmations, shipping updates, and special promotions.
 
 **Step** | **Expected Result** | **Actual Result**
 ------------ | ------------ | ------------ |
 When on secure checkout page  user clicks on "complete order" button | after processing order checkout success page loads and confirmation email is sent to an email address indicated on a checkout form| WAS       |
+
+<details><summary>Screenshot</summary>
+<img src="docs/user_story_test/story_20.png" >
+<img src="docs/user_story_test/story_20a.png" >
+<img src="docs/user_story_test/story_20b.png" >
+<img src="docs/user_story_test/story_20c.png" >
+
+
+</details>
+
+***
 
 
 ### user story:
@@ -479,12 +550,30 @@ User navigates to a contact link in the navigation| about us page loads and curs
 User is filling out a form by choosing "purpose of inquiry", inputs his, name, email address and message while phone number field is optional then user is clicking send message button | message is sent and success message is presented to user| WAS     |
 
 
+<details><summary>Screenshot</summary>
+<img src="docs/user_story_test/story_21.png" >
+<img src="docs/user_story_test/story_21a.png" >
+<img src="docs/user_story_test/story_21c.png" >
+<img src="docs/user_story_test/story_21e.png" >
+<img src="docs/user_story_test/story_21i.png" >
+
+
+</details>
+
+
 
 Negative  or boundary test case:
 **Step** | **Expected Result** | **Actual Result**
 ------------ | ------------ | ------------ |
 user didn't put any text in a form and trying to send message | django validates a form and gives user an info text to 'fill the missing field " of a form | WAS |
 user forgets to put  text in any form field except "phone number field" and trying to send message | django validates a form and gives user an info text to 'fill the missing field " of a form | WAS |
+
+<details><summary>Screenshot</summary>
+<img src="docs/user_story_test/story_22.png" >
+
+</details>
+
+***
 
 
 ### user story:
@@ -495,6 +584,13 @@ user forgets to put  text in any form field except "phone number field" and tryi
 ------------ | ------------ | ------------ |
 When navigating throughout the project| project footer is present at the bottom of a page| WAS       |
 User navigates to a media marketing feature of a home page | instagram business page link is presented to a user| WAS       |
+
+<details><summary>Screenshot</summary>
+<img src="docs/user_story_test/story_21o.png" >
+
+</details>
+
+***
 
 
 
@@ -507,6 +603,15 @@ When navigating throughout the project| project footer is present at the bottom 
 User navigates to a facebook link in a footer and clicks on it  | facebook  business page loads in a separate window| WAS       |
 User navigates to a instagram link in a footer and clicks on it  | instagram  business page loads in a separate window| WAS       |
 
+<details><summary>Screenshot</summary>
+<img src="docs/user_story_test/story_23.png" >
+<img src="docs/user_story_test/story_23a.png" >
+<img src="docs/user_story_test/story_23b.png" >
+
+</details>
+
+***
+
 
 ### user story:
 [#24](https://github.com/rockroman/CI_PP5_Blade/issues/43) As an unauthenticated user/customer, if I encounter a page not found error, I want to be redirected to a relevant page or provided with suggestions to navigate back to valid areas of the site.
@@ -517,12 +622,27 @@ User navigates to a instagram link in a footer and clicks on it  | instagram  bu
 User types nonexisting page of project or url in a url bar | 404 error page loads | WAS |
 User navigates to a  "back home"  button on error page clicks on it  | project home page loads | WAS  |
 
+<details><summary>Screenshot</summary>
+<img src="docs/user_story_test/story_24.png" >
+<img src="docs/user_story_test/story_24a.png" >
+
+
+</details>
+
 
 Negative  or boundary test case:
 **Step** | **Expected Result** | **Actual Result**
 ------------ | ------------ | ------------ |
 User clicks on a footer facebook link (and page is under maintenance at the moment) | 404 error page loads | WAS |
 User types partially correct page address of project | 404 error page loads  | WAS |
+
+<details><summary>Screenshot</summary>
+<img src="docs/user_story_test/story_24b.png" >
+<img src="docs/user_story_test/story_24c.png" >
+
+</details>
+
+***
 
 
 ### user story:
@@ -535,6 +655,14 @@ Select a product and proceed to the secure checkout | The checkout page loads su
 Scroll to the payment section of checkout page  | The payment section is displayed| WAS  |
 Enter valid payment details (e.g., card number, expiration date, CVV)| payment animation is displayed ,payment information is accepted and checkout success page loads   | WAS    |
 
+<details><summary>Screenshot</summary>
+<img src="docs/user_story_test/story_25.png" >
+<img src="docs/user_story_test/story_25b.png" >
+<img src="docs/user_story_test/story_25e.png" >
+<img src="docs/user_story_test/story_25o.png" >
+
+</details>
+
 
 
 Negative  or boundary test case:
@@ -542,6 +670,14 @@ Negative  or boundary test case:
 ------------ | ------------ | ------------ |
 User inputs invalid card details | Stripe validates card information and returns error message to user| WAS |
 User inputs  card details and there is insufficient funds on the card | Stripe validates card information and "Your card has been declined"| WAS |
+
+<details><summary>Screenshot</summary>
+<img src="docs/user_story_test/story_14d.png" >
+<img src="docs/user_story_test/story_25f.png" >
+
+</details>
+
+***
 
 
 
@@ -554,6 +690,16 @@ User inputs  card details and there is insufficient funds on the card | Stripe v
 Site owner navigates to " Shop management link" under user submenu | Product management or add product page is loaded| WAS       |
 Site owner fills in all details of a new product in a product form and clicks "add product" button | new product is added to a web-shop and success message pops up| WAS |
 
+<details><summary>Screenshot</summary>
+<img src="docs/user_story_test/story_26.png" >
+<img src="docs/user_story_test/story_26a.png" >
+<img src="docs/user_story_test/story_26b.png" >
+<img src="docs/user_story_test/story_26f.png" >
+
+</details>
+
+
+
 
 
 Negative  or boundary test case:
@@ -562,6 +708,15 @@ Negative  or boundary test case:
 Not site owner user types in a 'add product' page address in url bar | error message pops up notifying that only "site owner has access" to that address| WAS |
 Site owner fills in add product forms but forgets any field except image field |django validates the form informing site owner to fill the missing field| WAS |
 Site owner fills in add product forms but not uploading image for product | product is added to a web-shop and default image for products without images is used to represent the product| WAS |
+
+<details><summary>Screenshot</summary>
+
+<img src="docs/user_story_test/story_26f.png" >
+<img src="docs/user_story_test/story_26o.png" >
+
+</details>
+
+***
 
 ### user story:
 [#27](https://github.com/rockroman/CI_PP5_Blade/issues/37) As a site owner, I want to be able to delete existing products from the web-shop that are no longer available or relevant.
@@ -574,6 +729,17 @@ Site owner navigates to product detail page  |  product detail  page is loaded| 
 Site owner clicks "delete" button of a product he wants to delete | delete product modal pops up asking to confirm deletion of product| WAS |
 Site owner clicks "delete" button on delete product modal | product is deleted from web-shop with pop up message informing user about deletion| WAS |
 
+<details><summary>Screenshot</summary>
+
+<img src="docs/user_story_test/story_27.png" >
+<img src="docs/user_story_test/story_27a.png" >
+<img src="docs/user_story_test/story_27b.png" >
+
+
+</details>
+
+***
+
 
 
 ### user story:
@@ -584,6 +750,17 @@ Site owner clicks "delete" button on delete product modal | product is deleted f
 Site owner navigates to product detail page  |  product detail  page is loaded| WAS       |
 Site owner clicks "edit" button of a product he wants to edit | edit product page is loaded with info pop up " you are editing product"| WAS |
 Site owner edits the information of a product and clicks edit product  | product is updated and success message pops up | WAS |
+
+<details><summary>Screenshot</summary>
+
+<img src="docs/user_story_test/story_28.png" >
+<img src="docs/user_story_test/story_28a.png" >
+<img src="docs/user_story_test/story_28c.png" >
+
+
+</details>
+
+***
 
 
 
@@ -598,11 +775,33 @@ User types in his email address and clicks "subscribe" | success message "thank 
 
 
 
+<details><summary>Screenshot</summary>
+
+<img src="docs/user_story_test/story_29.png" >
+<img src="docs/user_story_test/story_29a.png" >
+
+
+
+</details>
+
+
+
+
+
 Negative  or boundary test case:
 **Step** | **Expected Result** | **Actual Result**
 ------------ | ------------ | ------------ |
 User types in invalid form of email address and presses "subscribe"| "mailchimp" validates the form and outputs the error message to user to put in valid email address| WAS |
 User types no text in newsletter sign up form  and presses "subscribe"| "mailchimp" validates the form and outputs the error message to user that field in a form is required| WAS |
+
+
+<details><summary>Screenshot</summary>
+
+<img src="docs/user_story_test/story_29b.png" >
+
+
+</details>
+
 
 
 
@@ -616,11 +815,27 @@ User types nonexisting page of project or url in a url bar | 404 error page load
 User navigates to a  "back home"  button on error page clicks on it  | project home page loads | WAS  |
 
 
+<details><summary>Screenshot</summary>
+<img src="docs/user_story_test/story_24.png" >
+<img src="docs/user_story_test/story_24a.png" >
+
+
+</details>
+
+
 Negative  or boundary test case:
 **Step** | **Expected Result** | **Actual Result**
 ------------ | ------------ | ------------ |
 User clicks on a footer facebook link (and page is under maintenance at the moment) | 404 error page loads | WAS |
 User types partially correct page address of project | 404 error page loads  | WAS |
+
+<details><summary>Screenshot</summary>
+<img src="docs/user_story_test/story_24b.png" >
+<img src="docs/user_story_test/story_24c.png" >
+
+</details>
+
+***
 
 
 
