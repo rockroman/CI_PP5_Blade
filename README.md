@@ -666,7 +666,7 @@ By focusing on these specific areas during the third sprint, I made substantial 
 
 [Link to 3rd Sprint Kanban board.](https://github.com/users/rockroman/projects/8)
 
-<details><summary>See 2nd sprint progress</summary>
+<details><summary>See 3nd sprint progress</summary>
 <img src="docs/agile/sprint3.png">
 </details>
 
@@ -1314,7 +1314,7 @@ The Order Confirmation Thank You Form Feature serves as a confirmation and ackno
     </details>
 
     <details><summary>Add product</summary>
-    <img src="CI_PP5_Blade/docs/validation/html_validator/add_product_html.png" width="800">
+    <img src="docs/validation/html_validator/add_product_html.png" width="800">
     </details>
 
     <details><summary>Login</summary>
@@ -1483,7 +1483,7 @@ The Order Confirmation Thank You Form Feature serves as a confirmation and ackno
     </details>
 
     <details><summary>urls.py</summary>
-    <img src="docs/validation/python/shop_cart/cart_urls.png" width="800" >
+    <img src="docs/validation/python/shop_cart/shopp_cart_url.png" width="800" >
     </details>
 
     <details><summary>context.py</summary>
