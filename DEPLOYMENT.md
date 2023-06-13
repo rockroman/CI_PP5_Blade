@@ -53,7 +53,7 @@ based IDE the deployment process will follow the path specific to a local enviro
         ![ElephantSQL](docs/deployment/postgres_url.png)
         </details>
 
-
+***
 ### Heroku Initial
  - Initial steps: Few things need to be prepared before initiating deployment to Heroku
     - `SECRET_KEY` variable should be generated in env.py file that will be added to Heroku.
@@ -94,6 +94,8 @@ based IDE the deployment process will follow the path specific to a local enviro
 
         ![heroku](docs/deployment/heroku5.png)
         </details>
+
+***
 
 
 ### Stripe payment gateway
@@ -157,8 +159,11 @@ add endpoint
 
 ![heroku](docs/deployment/stripe3.png)
 </details>
-
 will be needed for heroku deployment
+
+***
+
+
 ### AWS (S3 bucket):
 
 - Sign in or create an account on  [AWS](https://signin.aws.amazon.com/)
@@ -274,5 +279,42 @@ will be needed for heroku deployment
         * Navigate and Click "Download .csv" to download the credentials.
         * Navigate and Click "Close."
 
+4. Connect S3 Bucket to Project by adding folloeing code t
+your settings.py file:
 
+![AWS setup](docs/deployment/aws20.png)
 
+### Finish Heroku configuration for deployment
+
+1. Add following config. variables to heroku
+
+![AWS setup](docs/deployment/heroku_final1.png)
+![AWS setup](docs/deployment/heroku_final2.png)
+
+2. Select Deploy option from the heroku dashboard 'tabs'
+
+<details><summary>See Image</summary>
+
+![heroku](docs/deployment/heroku_final4.png)
+</details>
+
+3. From Deployment method section choose Connect to GitHub and click on it
+
+<details><summary>See Image</summary>
+
+![heroku](docs/deployment/heroku3.png)
+</details>
+
+4. Find your github repository by name and connect
+
+<details><summary>See Image</summary>
+
+![heroku](docs/deployment/heroku_final5.png)
+</details>
+
+5. At the bottom of the page choose either automatic deployment manual deployment(deploy by branch) choose an option and DEPLOY the project
+
+<details><summary>See Image</summary>
+
+![heroku](docs/deployment/heroku_final6.png)
+</details>
