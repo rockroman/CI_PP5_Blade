@@ -1,12 +1,27 @@
 # DEPLOYMENT
 
-![Mockup image](docs/deployment/deploy_hero.png)
+
+<div style="display: flex; justify-content: center;">
+  <img src="docs/deployment/deploy_hero.png" alt="Mockup image">
+</div>
 
 
-<img src="https://user-images.githubusercontent.com/25181517/117208740-bfb78400-adf5-11eb-97bb-09072b6bedfc.png" width=125  style="border:solid 1px white; padding: 5px;">
-<img src="https://user-images.githubusercontent.com/25181517/183896132-54262f2e-6d98-41e3-8888-e40ab5a17326.png" width=125 style="border:solid 1px white; padding: 5px;">
-<img src="docs/deployment/stripe.png" width=125 style="border:solid 1px white; padding: 5px;">
-<img src="docs/deployment/heroku_logo.png" width=125 style="border:solid 1px white; padding: 5px;">
+<div class="image-container" style=" display:flex; flex-wrap:wrap; justify-content:center;">
+
+<img src="https://user-images.githubusercontent.com/25181517/117208740-bfb78400-adf5-11eb-97bb-09072b6bedfc.png"  style="border:solid 1px white; padding: 5px;" class="my-img" width="40%">
+<img src="https://user-images.githubusercontent.com/25181517/183896132-54262f2e-6d98-41e3-8888-e40ab5a17326.png" style="border:solid 1px white; padding: 5px;" class="my-img" width="40%">
+<img src="docs/deployment/stripe.png"  style="border:solid 1px white; padding: 5px;" class="my-img" width="45%">
+<img src="docs/deployment/heroku_logo.png" style="border:solid 1px white; padding: 5px;" class="my-img" width="45%">
+
+</div>
+
+<style>
+    .my-img{
+        margin:10px
+    }
+</style>
+
+
 
 
 
@@ -318,3 +333,30 @@ your settings.py file:
 
 ![heroku](docs/deployment/heroku_final6.png)
 </details>
+
+***
+
+
+### Forking the GitHub Repository
+
+1. Login or Signup to [Github](https://github.com/)
+2. Navigate to  the GitHub repository link https://github.com/rockroman/CI_PP5_Blade
+2. Click on the Fork button in the top right corner
+
+<img src="docs/deployment/fork_repo.png">
+
+3. Copy of the repository will be in your own GitHub account.
+
+
+### Clone a GitHub Repo
+
+1. Go to the GitHub repository  https://github.com/rockroman/CI_PP5_Blade
+2. Locate the Code button above the list of files (next to 'Add file') and click it
+
+<img src="docs/deployment/clone_repo.png">
+
+3. choose a preferred cloning option by selecting either HTTPS or GitHub CLI.
+4. Open Git Bash
+5. Change the current working directory to the one where you want the cloned directory
+6. Type git clone and paste the URL from the clipboard ($ git clone <span>https://</span>github.com/YOUR-USERNAME/YOUR-REPOSITORY)
+7. Press Enter to create your local clone
