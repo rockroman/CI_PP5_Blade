@@ -1569,7 +1569,7 @@ upload poor-quality images in our e-commerce app. This choice prioritizes visual
 
 
 <details><summary>Product detail Desktop-screen</summary>
-<img src="docs/validation/lighthouse/home-desk.png" >
+<img src="docs/validation/lighthouse/prod_detail.png" >
 
 </details>
 <details><summary>Product detail Mobile-screen</summary>

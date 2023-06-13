@@ -10,6 +10,10 @@
 4. [Automated Testing](#automated-testing)
 
 
+## Note
+- During the development of the Blade e-commerce app, I decided to challenge myself by adopting a more modern approach, utilizing Ajax calls to dynamically update certain features. However, I encountered some challenging situations that provided valuable learning experiences. One inconsistency that could arise is the incorrect information displayed for shopping cart and wishlist counters, particularly due to caching mechanisms in different browsers and mobile devices. To mitigate this issue, I employed two methods. First, I utilized the JQuery 'document ready' functionality, which helped resolve the issue specifically in Chrome browser. Second, I used the 'addEventListener('pageshow')' event to determine whether the page was loaded or served from the cache, ensuring that the correct information was updated and displayed.
+
+
 
 ***
 ## Device testing
@@ -17,22 +21,65 @@
 
 - The project was thoroughly tested on multiple devices both during the development phase and after its completion.
 
-### Mobile devices
+###  devices
 
 
 #### Samsung A52
 - Results are here:
 
     <details><summary>Screenshot</summary>
-      <img src="./device-testing/samsung1.jpg" >
-      <img src="./device-testing/samsung2.jpg" >
-      <img src="./device-testing/samsung3.jpg" >
-      <img src="./device-testing/samsung4.jpg" >
-      <img src="./device-testing/samsung5.jpg" >
-      <img src="./device-testing/samsung6.jpg" >
-      <img src="./device-testing/samsung7.jpg" >
+      <img src="docs/device_test/device7.jpg" >
+      <img src="docs/device_test/device6.jpg" >
+      <img src="docs/device_test/device1.jpg" >
+      <img src="docs/device_test/device2.jpg" >
+      <img src="docs/device_test/device3.jpg" >
+      <img src="docs/device_test/device4.jpg" >
+      <img src="docs/device_test/device5.jpg" >
 
     </details>
+
+
+#### Ipad (3rd generation)
+- Results are here:
+
+    <details><summary>Screenshot</summary>
+      <img src="docs/device_test/device7.jpg" >
+      <img src="docs/device_test/device6.jpg" >
+      <img src="docs/device_test/device1.jpg" >
+      <img src="docs/device_test/device2.jpg" >
+      <img src="docs/device_test/device3.jpg" >
+      <img src="docs/device_test/device4.jpg" >
+      <img src="docs/device_test/device5.jpg" >
+
+    </details>
+
+#### Huawei
+- Results are here:
+
+    <details><summary>Screenshot</summary>
+      <img src="docs/device_test/device10.jpg" >
+      <img src="docs/device_test/device11.jpg" >
+      <img src="docs/device_test/device12.jpg" >
+      <img src="docs/device_test/device13.jpg" >
+      <img src="docs/device_test/device14.jpg" >
+      <img src="docs/device_test/device15.jpg" >
+
+
+    </details>
+
+
+
+## Browser compatibility
+
+- To ensure browser compatibility for my e-commerce app, I conducted thorough testing on Chrome, Opera, and Firefox. I verified that all major features, such as product listings, shopping cart, and payment gateways, functioned correctly across these browsers. I also ensured adherence to HTML, CSS, and JavaScript standards recommended by W3C. Additionally, I tested the app's responsiveness on various devices to guarantee a consistent user experience.Regular updates and testing on the latest browser versions were performed to maintain compatibility over
+
+### Chrome
+
+
+### Opera
+
+
+### Firefox
 
 
 ## Manual testing of user stories
