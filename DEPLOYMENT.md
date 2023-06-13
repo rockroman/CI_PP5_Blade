@@ -71,12 +71,14 @@ based IDE the deployment process will follow the path specific to a local enviro
  - creating an App
     -  sign up or sign in to your Heroku account. Next, create a new app from the Heroku dashboard.
         <details><summary>See Image</summary>
+
         ![heroku](docs/deployment/heroku-app.png)
         </details>
 
     - Choose a unique name for your app and enter the region.Then, click  on the 'Create App' button.
         Once your app has been created, select the 'Settings' tab from the dashboard and navigate to 'Reveal Config Vars'. From there, go to setting tab of your app and in config vars menu paste the:
          <details><summary>See Image</summary>
+
         ![heroku](docs/deployment/heroku2.png)
         </details>
         - ElephantSQL Database URL into the DATABASE_URL environment variable.
@@ -84,10 +86,12 @@ based IDE the deployment process will follow the path specific to a local enviro
         - add DISABLE_COLLECTSTATIC variable with value of 1 (for initial deployment, later this variable can be removed)
 
         <details><summary>See Image</summary>
+
         ![heroku](docs/deployment/heroku4.png)
         </details>
 
         <details><summary>See Image</summary>
+
         ![heroku](docs/deployment/heroku5.png)
         </details>
 
@@ -96,8 +100,22 @@ based IDE the deployment process will follow the path specific to a local enviro
 
 - Create an account or login  to  [Stripe](https://dashboard.stripe.com/)
 - Navigate to home tab
+
+
+<details><summary>See Image</summary>
+
+![heroku](docs/deployment/stripe1.png)
+</details>
+
 - under developers section copy the values of:
  `SECRET_KEY ` and `PUBLIC_KEY`
+
+
+<details><summary>See Image</summary>
+
+![heroku](docs/deployment/stripe2.png)
+</details>
+
 - Add those keys as env variables to your env.py file and settings.py file while later those values
 will be needed for heroku deployment
 ### AWS (S3 bucket):
