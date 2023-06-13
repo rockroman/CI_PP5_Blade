@@ -43,17 +43,16 @@
 - Results are here:
 
     <details><summary>Screenshot</summary>
-      <img src="docs/device_test/device7.jpg" >
-      <img src="docs/device_test/device6.jpg" >
-      <img src="docs/device_test/device1.jpg" >
-      <img src="docs/device_test/device2.jpg" >
-      <img src="docs/device_test/device3.jpg" >
-      <img src="docs/device_test/device4.jpg" >
-      <img src="docs/device_test/device5.jpg" >
+      <img src="docs/device_test/device20.jpg" >
+      <img src="docs/device_test/device21.jpg" >
+      <img src="docs/device_test/device22.jpg" >
+      <img src="docs/device_test/device23.jpg" >
+      <img src="docs/device_test/device24.jpg" >
+
 
     </details>
 
-#### Huawei
+#### Huawei P20 lite
 - Results are here:
 
     <details><summary>Screenshot</summary>
@@ -75,11 +74,35 @@
 
 ### Chrome
 
+   <details><summary>Screenshots</summary>
+      <img src="docs/browser_test/chrom1.png" >
+      <img src="docs/browser_test/chrom2.png" >
+      <img src="docs/browser_test/chrom3.png" >
+      <img src="docs/browser_test/chrom4.png" >
+
+  </details>
+
 
 ### Opera
 
+   <details><summary>Screenshots</summary>
+      <img src="docs/browser_test/opera1.png" >
+      <img src="docs/browser_test/opera2.pngg" >
+      <img src="docs/browser_test/opera3.png" >
+      <img src="docs/browser_test/opera4.png" >
+
+  </details>
+
 
 ### Firefox
+
+   <details><summary>Screenshots</summary>
+      <img src="docs/browser_test/fire1.png" >
+      <img src="docs/browser_test/fire2.png" >
+      <img src="docs/browser_test/fire3.png" >
+      <img src="docs/browser_test/fire4.png" >
+
+  </details>
 
 
 ## Manual testing of user stories
