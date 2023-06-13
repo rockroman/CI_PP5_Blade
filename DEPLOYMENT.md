@@ -116,7 +116,48 @@ based IDE the deployment process will follow the path specific to a local enviro
 ![heroku](docs/deployment/stripe2.png)
 </details>
 
+- Navigate to developer section of stripe dashboard
+and Click on the `webhooks` tab to add an endpoint
+
+<details><summary>See Image</summary>
+
+![heroku](docs/deployment/stripe10.png)
+![heroku](docs/deployment/stripe11.png)
+</details>
+
+- Create a webhook with url of deployed project in this format
+https://yourwebsite.com/checkout/wh/
+
+<details><summary>See Image</summary>
+
+![heroku](docs/deployment/stripe12.png)
+</details>
+
+
+
+- Choose events the webhook will receive(payment intent events) and
+add endpoint
+<details><summary>See Image</summary>
+
+![heroku](docs/deployment/stripe13.png)
+</details>
+
+- Ensure your webhook is working by doing test with various events
+
+<details><summary>See Image</summary>
+
+![heroku](docs/deployment/stripe14.png)
+</details>
+
+
+
 - Add those keys as env variables to your env.py file and settings.py file while later those values
+
+<details><summary>See Image</summary>
+
+![heroku](docs/deployment/stripe3.png)
+</details>
+
 will be needed for heroku deployment
 ### AWS (S3 bucket):
 
