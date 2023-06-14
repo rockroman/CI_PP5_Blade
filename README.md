@@ -1811,3 +1811,16 @@ to cart functionality
  with his approval.
 -  Forging fre (About page)[Pixabay](https://pixabay.com/) author: https://pixabay.com/users/1pianystrom-10782093/
 - Hero image  (About page) taken from [Unsplash](https://unsplash.com/)
+
+
+
+## Acknowledgements
+
+***
+I would like to take a few moments to say Thank you to the following people:
+
+- First, I would like to thank my wife Una, and my daughter Tara for their continuous support and understanding while working on the development of this project.
+
+-  Huge "THANK YOU" to  my Mentor Mo.Shami for his support, insight expertise, and guidance.
+
+-  Awesome Code Institute Slack community for being there

@@ -8,16 +8,11 @@
 
 <div class="image-container" style=" display:flex; flex-wrap:wrap; justify-content:center;">
 
-<img src="https://user-images.githubusercontent.com/25181517/117208740-bfb78400-adf5-11eb-97bb-09072b6bedfc.png"  style="border:solid 1px white; padding: 5px;" class="my-img" width="40%">
-<img src="https://user-images.githubusercontent.com/25181517/183896132-54262f2e-6d98-41e3-8888-e40ab5a17326.png" style="border:solid 1px white; padding: 5px;" class="my-img" width="40%">
-<img src="docs/deployment/stripe.png"  style="border:solid 1px white; padding: 5px;" class="my-img" width="45%">
-<img src="docs/deployment/heroku_logo.png" style="border:solid 1px white; padding: 5px;" class="my-img" width="45%">
+<img src="https://user-images.githubusercontent.com/25181517/117208740-bfb78400-adf5-11eb-97bb-09072b6bedfc.png"  style="border:solid 1px white; padding: 5px; margin:10px;" width="40%">
+<img src="https://user-images.githubusercontent.com/25181517/183896132-54262f2e-6d98-41e3-8888-e40ab5a17326.png" style="border:solid 1px white; padding: 5px; margin:10px;"  width="40%">
+<img src="docs/deployment/stripe.png"  style="border:solid 1px white !important; padding: 5px; margin:10px;"  width="45%">
+<img src="docs/deployment/heroku_logo.png" style="border:solid 1px white; padding: 5px; margin:10px;"  width="45%">
 
-<style>
-    .my-img{
-        margin:10px
-    }
-</style>
 
 </div>
 
