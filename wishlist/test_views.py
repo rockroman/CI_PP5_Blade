@@ -77,6 +77,7 @@ class TestAddingToWishlist(TestCase):
         """
         creating and saving a new test user
         """
+
         self.user = User.objects.create(
             username='MyTestUser',
             password='mypass79',
@@ -86,6 +87,7 @@ class TestAddingToWishlist(TestCase):
         self.user.save()
         self.user.set_password('mypass799')
         self.user.save()
+
 
         self.my_category = Category.objects.create(
             name='Savage',
@@ -106,11 +108,19 @@ class TestAddingToWishlist(TestCase):
             blade='Steel',
             id=23,
         )
+        self.product.save()
 
-    def test_adding_to_wishlist(self):
+    def test_removing_from_wishlist(self):
+        self.client = Client()
         self.client.login(username='MyTestUser', password='mypass79')
-        response = self.client.post('/wishlist/add_to_wishlist/', data={'product': 'self.product'},follow=True)
-        self.assertEqual(response.status_code, 200)
-        self.assertEqual(Wishlist.objects.count(), 0)
-        # self.assertTrue(Wishlist.objects.filter(id=23).exists())s
+        if self.client._login:
+            print("User is logged in")
+        else:
+            print("User is not logged in")
 
+        print(f"Product ID: {self.product.id}")
+        wishlist_item = Wishlist.objects.create(user=self.user, product_id=23)
+        wishlist_item_id = wishlist_item.id
+        response = self.client.post('/wishlist/remove_from_wishlist/', data={'item-id': wishlist_item_id})
+        print(f"Wishlist count: {Wishlist.objects.count()}")
+        self.assertEqual(response.status_code, 302)
