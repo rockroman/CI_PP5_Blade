@@ -88,7 +88,6 @@ class TestAddingToWishlist(TestCase):
         self.user.set_password('mypass799')
         self.user.save()
 
-
         self.my_category = Category.objects.create(
             name='Savage',
             notes='test notes',
