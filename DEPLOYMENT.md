@@ -13,13 +13,15 @@
 <img src="docs/deployment/stripe.png"  style="border:solid 1px white; padding: 5px;" class="my-img" width="45%">
 <img src="docs/deployment/heroku_logo.png" style="border:solid 1px white; padding: 5px;" class="my-img" width="45%">
 
-</div>
-
 <style>
     .my-img{
         margin:10px
     }
 </style>
+
+</div>
+
+
 
 
 
