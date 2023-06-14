@@ -66,7 +66,6 @@ def store_products(request):
 
     }
     my_product = products.filter(image='')
-    print(my_product)
 
     return render(request, template, context)
 

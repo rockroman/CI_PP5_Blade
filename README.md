@@ -1796,6 +1796,8 @@ results for
 
 - code for product detail page was taken and adjusted for project needs from :  https://startbootstrap.com/template/shop-item
 
+- code for shopping cart taken and adjusted to project needs from: https://mdbootstrap.com/docs/standard/extended/shopping-carts/#section-2
+
 - code for all products page was taken and adjusted for project needs from: https://bbbootstrap.com/
 
 ### Tutorials

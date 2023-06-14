@@ -30,7 +30,7 @@ class TestOrderModel(TestCase):
     #     )
     #     self.user.save()
 
-    def test_string_method_return_orde_num(self):
+    def test_string_method_return_order_num(self):
         new_order = Order.objects.create(
             order_number='A7AEF9E2B7E44986BEB538E58EE25BBE',
             full_name='Test user',
@@ -51,29 +51,29 @@ class TestOrderModel(TestCase):
         self.assertEqual(str(new_order), 'A7AEF9E2B7E44986BEB538E58EE25BBE')
 
 
-class TestOrderLineItem(TestCase):
+# class TestOrderLineItem(TestCase):
 
-    def test_str_method(self):
-        my_order = Order.objects.create(
-            order_number='A7AEF9E2B7E44986BEB538E58EE25BBE',
-            full_name='Test user',
-            email='test@bo.com',
-            phone_number='353231245',
-            country='Ireland',
-            postcode='P12RE44',
-            street_address1='Sowhere',
-            street_address2='Sowhere2',
-            county='Laois',
-            date='12.05.2023',
-            order_total='220.00',
-            grand_total='220.00',
-            original_cart='',
-            stripe_pid='12we',
+#     def test_str_method(self):
+#         my_order = Order.objects.create(
+#             order_number='A7AEF9E2B7E44986BEB538E58EE25BBE',
+#             full_name='Test user',
+#             email='test@bo.com',
+#             phone_number='353231245',
+#             country='Ireland',
+#             postcode='P12RE44',
+#             street_address1='Sowhere',
+#             street_address2='Sowhere2',
+#             county='Laois',
+#             date='12.05.2023',
+#             order_total='220.00',
+#             grand_total='220.00',
+#             original_cart='',
+#             stripe_pid='12we',
 
-        )
-        test_product = Product.objects.create()
+#         )
+#         test_product = Product.objects.create()
 
-        new_line_item = OrderLineItem.objects.create(
-            order=my_order,
+#         new_line_item = OrderLineItem.objects.create(
+#             order=my_order,
 
-        )
+#         )

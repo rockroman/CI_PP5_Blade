@@ -89,13 +89,11 @@ def update_review(request):
 
 def delete_review(request):
     """
-    daleting the review
+    deleting the review
     """
     if request.method == 'POST':
         review_id = request.POST.get('review_id')
         review = get_object_or_404(Review, id=review_id)
-
-        print(review.author)
 
         if request.user == review.author:
             review.delete()
