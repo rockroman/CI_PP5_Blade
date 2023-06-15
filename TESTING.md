@@ -943,6 +943,57 @@ Automated testing was performed using the built-in "unittest" module from Python
 
 <img src="docs/unittests/total_tests.png">
 
+***
+###  Checkout app
+<img src="docs/unittests/checkout-test.png">
+<img src="docs/unittests/chckout_cover.png">
 
+***
 
+### Contact_about app
+<img src="docs/unittests/contact_tests.png">
+<img src="docs/unittests/contact_coverage.png">
 
+***
+
+- Core app
+<img src="docs/unittests/core_test.png">
+<img src="docs/unittests/core_cover.png">
+
+***
+
+### Customer_profile app
+<img src="docs/unittests/profile_test.png">
+<img src="docs/unittests/profile_cover.png">
+
+***
+
+### Home app
+<img src="docs/unittests/home_tests.png">
+<img src="docs/unittests/home_coverage.png">
+
+***
+
+### Products app
+<img src="docs/unittests/product_test.png">
+<img src="docs/unittests/product_cover.png">
+
+***
+
+### Reviews app
+<img src="docs/unittests/review_test.png">
+<img src="docs/unittests/review_cover.png">
+
+***
+
+### Shopping_cart app
+<img src="docs/unittests/cart_test.png">
+<img src="docs/unittests/cart_cover.png">
+
+***
+
+### Wishlist app
+<img src="docs/unittests/wish_test.png">
+<img src="docs/unittests/wish_cover.png">
+
+***
