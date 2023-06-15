@@ -87,7 +87,7 @@
 
    <details><summary>Screenshots</summary>
       <img src="docs/browser_test/opera1.png" >
-      <img src="docs/browser_test/opera2.pngg" >
+      <img src="docs/browser_test/opera2.png" >
       <img src="docs/browser_test/opera3.png" >
       <img src="docs/browser_test/opera4.png" >
 
