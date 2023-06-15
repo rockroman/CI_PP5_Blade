@@ -8,6 +8,7 @@ from django.contrib.auth.models import User
 from .models import Category, Product
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+
 class TestCategoryModel(TestCase):
 
     @classmethod
@@ -66,6 +67,3 @@ class TestProductModel(TestCase):
 
     def test_string_method_return(self):
         self.assertEqual(str(self.product), 'Test Hunter')
-
-
-

@@ -123,7 +123,6 @@ class TestAddingToWishlist(TestCase):
         self.assertRedirects(response, reverse('products:store_products'))
 
 
-
 class TestRemovingFromWishlist(TestCase):
 
     @classmethod
@@ -168,6 +167,7 @@ class TestRemovingFromWishlist(TestCase):
         self.client.force_login(self.user)
         wishlist_item = Wishlist.objects.create(user=self.user, product_id=23)
         wishlist_item_id = wishlist_item.id
-        response = self.client.post('/wishlist/remove_from_wishlist/', data={'item-id': wishlist_item_id})
+        response = self.client.post('/wishlist/remove_from_wishlist/',
+                                    data={'item-id': wishlist_item_id})
         self.assertEqual(response.status_code, 302)
         self.assertEqual(Wishlist.objects.count(), 0)

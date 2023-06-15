@@ -140,7 +140,8 @@ class TestAddProduct(TestCase):
         self.assertTrue(form.is_valid())
         form.save()
         self.assertTrue(self.user.is_superuser)
-        response = self.client.post(reverse('products:add_product'), data=form.data)
+        response = self.client.post(reverse('products:add_product'),
+                                    data=form.data)
         self.assertEqual(response.status_code, 200)
 
 

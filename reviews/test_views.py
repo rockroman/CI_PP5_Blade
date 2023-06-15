@@ -71,7 +71,7 @@ class TestReviewViews(TestCase):
             id='5'
 
         )
-        response = self.client.post('/review/update_review/',data={
+        response = self.client.post('/review/update_review/', data={
             'product_id': self.my_review.id,
             'content': 'just Review',
             'current_time': '2023-06-13T12:00:20',
@@ -90,7 +90,7 @@ class TestReviewViews(TestCase):
 
         )
         # user author of review deleting review
-        response = self.client.post('/review/delete_review/',data={
+        response = self.client.post('/review/delete_review/', data={
                 'review_id': self.my_review.id
 
         })

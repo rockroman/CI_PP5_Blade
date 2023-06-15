@@ -10,7 +10,7 @@ from django.contrib.auth.models import User
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
-class TestWishlisttModel(TestCase):
+class TestWishlistModel(TestCase):
 
     @classmethod
     def setUp(self):
