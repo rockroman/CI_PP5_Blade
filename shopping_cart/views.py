@@ -111,7 +111,7 @@ def update_cart(request, product_id):
 
 def remove_from_cart(request, product_id):
     """
-    update quantity of items in a bag to desired value
+    delete product from shopping cart
     """
     product = get_object_or_404(Product, pk=product_id)
     cart_data = request.session.get('cart', {})

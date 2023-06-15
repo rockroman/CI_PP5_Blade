@@ -124,4 +124,4 @@ class TestOrderLineItemModel(TestCase):
 
     def test_orderlineitem_creation(self):
         self.assertEqual(OrderLineItem.objects.count(), 1)
-        self.assertEqual(str(self.new_oderlineitem),f'ITEM_NO {self.product.item_no} on order {self.my_order.order_number}')
+        self.assertEqual(str(self.new_oderlineitem), f'ITEM_NO {self.product.item_no} on order {self.my_order.order_number}')

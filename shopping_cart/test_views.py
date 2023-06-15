@@ -42,5 +42,3 @@ class TestAddToCartView(TestCase):
         self.assertEqual(cart_item['qty'], 2)
         self.assertEqual(cart_item['price'], 245.50)
         self.assertEqual(cart_item['image'], 'dark_moon.jpg')
-
-
