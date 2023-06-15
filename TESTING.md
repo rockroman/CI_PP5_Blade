@@ -937,7 +937,12 @@ Automated testing was performed using the built-in "unittest" module from Python
 
 - Whole  project:
 
-<img src="./automated-testing/project-coverage1.png">
+
+<img src="docs/unittests/project_cover_2.png">
+<img src="docs/unittests/project_cover_1.png">
+
+<img src="docs/unittests/total_tests.png">
+
 
 
 
