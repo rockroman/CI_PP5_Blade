@@ -44,6 +44,11 @@ class TestReviewViews(TestCase):
             id='1'
         )
 
+    def tearDown(self):
+        self.product.delete()
+        self.my_category.delete()
+        self.user.delete()
+
     def test_review_creation(self):
         self.client.force_login(self.user)
         response = self.client.post('/review/create_review/', data={

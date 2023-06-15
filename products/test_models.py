@@ -39,7 +39,7 @@ class TestProductModel(TestCase):
     @classmethod
     def setUp(self):
         """
-        creating and saving a new test \Product
+        creating and saving a new test Product
         """
         self.my_category = Category.objects.create(
             name='Savage',
