@@ -239,6 +239,8 @@ Price ,rating, and alphabet
 
 [#24](https://github.com/rockroman/CI_PP5_Blade/issues/43) As an unauthenticated user/customer, if I encounter a page not found error, I want to be redirected to a relevant page or provided with suggestions to navigate back to valid areas of the site.
 
+
+### Site Owner Stories
 - From site owner perspective:
 
 [#25](https://github.com/rockroman/CI_PP5_Blade/issues/35) As a site owner, I want to provide secure payment options for customers, such as integrating with secure payment gateways (e.g. Stripe)
@@ -605,7 +607,7 @@ fields:
 ***
 
 
-
+##### Back to [top](#table-of-contents)
 
 ## Agile Design
 
@@ -1275,6 +1277,7 @@ The Order Confirmation Thank You Form Feature serves as a confirmation and ackno
     3. Add more types of payment options(paypal, gift-cards,crypto currencies)
 
 
+##### Back to [top](#table-of-contents)
 ## Validation
 ***
 
@@ -1742,6 +1745,7 @@ upload poor-quality images in our e-commerce app. This choice prioritizes visual
     </details>
 
 
+##### Back to [top](#table-of-contents)
 ## Testing
 ***
 
