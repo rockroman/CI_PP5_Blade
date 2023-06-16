@@ -931,3 +931,69 @@ User types partially correct page address of project | 404 error page loads  | W
 ***
 
 
+## Automated testing
+
+Automated testing was performed using the built-in "unittest" module from Python, which seamlessly integrates with Django's unit testing framework. Test cases were created to cover different aspects of the application's functionality. The coverage tool was utilized to generate reports, providing insights into the code coverage achieved by the tests. The results of the testing and code coverage can be found below.
+
+- Whole  project:
+
+
+<img src="docs/unittests/project_cover_2.png">
+<img src="docs/unittests/project_cover_1.png">
+
+<img src="docs/unittests/total_tests.png">
+
+***
+###  Checkout app
+<img src="docs/unittests/checkout-test.png">
+<img src="docs/unittests/chckout_cover.png">
+
+***
+
+### Contact_about app
+<img src="docs/unittests/contact_tests.png">
+<img src="docs/unittests/contact_coverage.png">
+
+***
+
+- Core app
+<img src="docs/unittests/core_test.png">
+<img src="docs/unittests/core_cover.png">
+
+***
+
+### Customer_profile app
+<img src="docs/unittests/profile_test.png">
+<img src="docs/unittests/profile_cover.png">
+
+***
+
+### Home app
+<img src="docs/unittests/home_tests.png">
+<img src="docs/unittests/home_coverage.png">
+
+***
+
+### Products app
+<img src="docs/unittests/product_test.png">
+<img src="docs/unittests/product_cover.png">
+
+***
+
+### Reviews app
+<img src="docs/unittests/review_test.png">
+<img src="docs/unittests/review_cover.png">
+
+***
+
+### Shopping_cart app
+<img src="docs/unittests/cart_test.png">
+<img src="docs/unittests/cart_cover.png">
+
+***
+
+### Wishlist app
+<img src="docs/unittests/wish_test.png">
+<img src="docs/unittests/wish_cover.png">
+
+***
