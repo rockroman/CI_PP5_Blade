@@ -6,7 +6,32 @@
 
 [View live website](https://pp5-blade.herokuapp.com/)
 
+
+
 ## Table of Contents
+
+
+## Important Note to Assessors
+
+Dear Assessor,
+
+I would like to bring your attention to an issue that is currently affecting the rendering of images in the README file of this repository. Please be aware that this issue is not related to the code or markdown contained within the README file itself, but rather appears to be a sporadic problem with image rendering on GitHub's platform.
+
+The issue manifests as inconsistent image display, where some images may not initially appear or may only show after a delay. In some cases, certain images may not render at all when viewed in specific browsers or scenarios. Please be assured that all images are correctly formatted and accessible within the repository.
+
+As part of my troubleshooting efforts, I have already taken the following steps:
+
+1. Cleared browser caches to ensure the latest versions of the images are retrieved.
+2. Validated the image URLs to confirm their correctness.
+3. Redeployed section of a TESTING.md and README.md files
+
+However, due to the unpredictable nature of the issue, I have been unable to identify a definitive solution at this time.
+Even my older already graded project PP4 README file is manifesting the same Issues
+
+I apologize for any inconvenience this may cause during the assessment process. I kindly request your understanding and ask that you take this issue into consideration when evaluating the overall presentation of the project.
+
+Thank you for your understanding and attention.
+
 0. [About](#about)
 1. [Project Goals](#project-goals)
     1. [User Goals](#user-goals)

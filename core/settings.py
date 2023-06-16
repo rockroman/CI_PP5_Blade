@@ -31,7 +31,6 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 DEBUG = False
 
 
-
 ALLOWED_HOSTS = ['pp5-blade.herokuapp.com', '127.0.0.1', 'localhost']
 
 # Application definition
@@ -154,7 +153,6 @@ if 'test' in sys.argv:
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': ':memory:',
     }
-
 
 
 # Password validation

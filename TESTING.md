@@ -956,7 +956,7 @@ Automated testing was performed using the built-in "unittest" module from Python
 
 ***
 
-- Core app
+### Core app
 <img src="docs/unittests/core_test.png">
 <img src="docs/unittests/core_cover.png">
 
@@ -997,3 +997,5 @@ Automated testing was performed using the built-in "unittest" module from Python
 <img src="docs/unittests/wish_cover.png">
 
 ***
+
+Return to  [README](https://github.com/rockroman/CI_PP5_Blade/blob/main/README.md) document.
