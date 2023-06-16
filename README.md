@@ -13,7 +13,7 @@
 
 ## Important Note to Assessors
 
-Dear Assessor,
+Dear Assessment Team
 
 I would like to bring your attention to an issue that is currently affecting the rendering of images in the README file of this repository. Please be aware that this issue is not related to the code or markdown contained within the README file itself, but rather appears to be a sporadic problem with image rendering on GitHub's platform.
 
