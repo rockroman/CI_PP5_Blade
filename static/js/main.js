@@ -282,7 +282,7 @@ function modalFading(){
     setTimeout(function(){
         $('.success-modal').modal('hide');
 
-    }, 2000);
+    }, 1500);
 }
 
 
