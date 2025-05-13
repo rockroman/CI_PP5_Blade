@@ -22,9 +22,11 @@
             <form enctype="multipart/form-data" method="POST" action="{% url 'products:add_product' %}"
                 class="mb-2 product-form ">
                 {% csrf_token %}
+
                 <div class="row">
                     <div class="col-md-6">
                         {{ form.category|as_crispy_field }}
+                        {{ form.category.errors }}
                     </div>
                     <div class="col-md-6">
                         {{ form.item_no|as_crispy_field }}
@@ -36,6 +38,7 @@
                     </div>
                     <div class="col-md-6">
                         {{ form.price|as_crispy_field }}
+                        {{ form.price.error }}
                     </div>
                 </div>
                 <div class="row">

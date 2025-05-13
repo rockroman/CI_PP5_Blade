@@ -14,6 +14,7 @@
             <h2 class="logo-font mb-4">Product Management</h2>
             <h3 class="h5 text-muted">Edit Product -<span class="text-dark fw-bold">{{product.name}}</span></h3>
             <hr>
+
             <div class="d-flex justify-content-center">
                 {% if product.image %}
                 <a href="{{ product.image.url }}" target="_blank">
@@ -31,6 +32,8 @@
             <form enctype="multipart/form-data" method="POST" action="{% url 'products:edit_product' product.id %}"
                 class="mb-2 product-form ">
                 {% csrf_token %}
+
+
                 <div class="row">
                     <div class="col-md-6">
                         {{ form.category|as_crispy_field }}
@@ -45,6 +48,7 @@
                     </div>
                     <div class="col-md-6">
                         {{ form.price|as_crispy_field }}
+                        {{ form.price.errors }}
                     </div>
                 </div>
                 <div class="row">
